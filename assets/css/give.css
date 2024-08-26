@@ -900,8 +900,8 @@ body.mfp-active {
       .elementor-give-totals--skin-swiss .elementor-gt-form form[id*=give-form] .give-total-wrap .give-currency-symbol {
         font-size: 20px;
         font-weight: 700;
-        color: #111111;
-        background: #E1D3FA;
+        color: #FFFFFF;
+        background: #111111;
         border-radius: 100px 0 0 100px; }
       .elementor-give-totals--skin-swiss .elementor-gt-form form[id*=give-form] .give-total-wrap #give-amount {
         font-size: 20px;
@@ -914,18 +914,17 @@ body.mfp-active {
           font-size: 14px;
           font-weight: 700;
           color: #111111;
-          background: #E1D3FA;
-          border-color: #E1D3FA;
+          border-color: rgba(0, 0, 0, 0.1);
           border-radius: 100px; }
           .elementor-give-totals--skin-swiss .elementor-gt-form form[id*=give-form] #give-donation-level-button-wrap .give-btn.give-default-level {
             color: #FFFFFF;
-            background: #4D5EF6;
-            border-color: #4D5EF6; }
+            background: #111111;
+            border-color: #111111; }
       .elementor-give-totals--skin-swiss .elementor-gt-form form[id*=give-form] .give-btn-modal {
         font-size: 16px;
         font-weight: 700;
         color: #FFFFFF;
-        background: #4D5EF6;
+        background: #111111;
         border-radius: 100px;
         -webkit-transition: all .3s;
         transition: all .3s; }

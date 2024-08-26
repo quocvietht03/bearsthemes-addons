@@ -221,11 +221,8 @@ class Skin_Swiss extends Skin_Base {
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
-					'{{WRAPPER}} .elementor-gt-form form[id*=give-form] .give-total-wrap #give-amount' => 'color: {{VALUE}};',
-					'{{WRAPPER}} .elementor-gt-form form[id*=give-form] .give-btn-modal:hover,
-					.give-form[data-style="elementor-give-totals--swiss"] .give-submit:hover,
-					 {{WRAPPER}} .elementor-gt-form form[id*=give-form] #give-donation-level-button-wrap .give-btn:not(.give-default-level)' => 'background-color: {{VALUE}};',
-					'{{WRAPPER}} .elementor-gt-form form[id*=give-form] #give-donation-level-button-wrap .give-btn:not(.give-default-level)' => 'border-color: {{VALUE}};',
+					'{{WRAPPER}} .elementor-gt-form form[id*=give-form] .give-total-wrap #give-amount,
+					{{WRAPPER}} .elementor-gt-form form[id*=give-form] #give-donation-level-button-wrap .give-btn:not(.give-default-level)' => 'color: {{VALUE}};',
 					'{{WRAPPER}} .elementor-gt-form form[id*=give-form] .give-total-wrap .give-currency-symbol' => 'background-color: {{VALUE}};',
 				],
 			]
@@ -250,7 +247,8 @@ class Skin_Swiss extends Skin_Base {
 					'.give-form[data-style="elementor-give-totals--swiss"] #give-gateway-radio-list > li.give-gateway-option-selected label:after,
 					 .give-form[data-style="elementor-give-totals--swiss"] #give_terms_agreement input[type=checkbox]:checked + label:before,
 					 .give-form[data-style="elementor-give-totals--swiss"] #give-final-total-wrap .give-donation-total-label,
-					 .give-form[data-style="elementor-give-totals--swiss"] .give-submit' => 'background-color: {{VALUE}};',
+					 .give-form[data-style="elementor-give-totals--swiss"] .give-submit,
+					 .give-form[data-style="elementor-give-totals--swiss"] .give-submit:hover' => 'background-color: {{VALUE}};',
 					'.give-form[data-style="elementor-give-totals--swiss"] #give_terms_agreement input[type=checkbox]:checked + label:before' => 'border-color: {{VALUE}};',
 				],
 			]
