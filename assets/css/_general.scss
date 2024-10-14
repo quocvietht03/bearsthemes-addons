@@ -1,3 +1,12 @@
+.elementor-widget-button .elementor-button-icon {
+  display: inline-flex;
+}
+.elementor-counter .elementor-counter-number-wrapper {
+  flex: unset;
+}
+.elementor-widget-icon .elementor-icon-wrapper {
+  line-height: 0;
+}
 .elementor-widget-text-editor .elementor-widget-container,
 .elementor-widget-text-editor.elementor-element-edit-mode .elementor-text-editor {
   > * {

@@ -11,7 +11,7 @@ use Elementor\Group_Control_Typography;
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-class Skin_Grid_Swiss extends Skin_Base {
+class Skin_Grid_Toluca extends Skin_Base {
 
 	protected function _register_controls_actions() {
 		add_action( 'elementor/element/be-give-forms/section_layout/before_section_end', [ $this, 'register_layout_controls' ] );
@@ -19,16 +19,16 @@ class Skin_Grid_Swiss extends Skin_Base {
 		add_action( 'elementor/element/be-give-forms/section_design_layout/after_section_end', [ $this, 'register_design_box_section_controls' ] );
 		add_action( 'elementor/element/be-give-forms/section_design_layout/after_section_end', [ $this, 'register_design_image_section_controls' ] );
 		add_action( 'elementor/element/be-give-forms/section_design_layout/after_section_end', [ $this, 'register_design_content_section_controls' ] );
-		add_action( 'elementor/element/be-give-forms/section_design_layout/after_section_end', [ $this, 'register_design_give_form_section_controls' ] );
+		add_action( 'elementor/element/be-give-forms/section_design_layout/after_section_end', [ $this, 'register_design_goal_progress_section_controls' ] );
 	}
 
 	public function get_id() {
-		return 'skin-grid-swiss';
+		return 'skin-grid-toluca';
 	}
 
 
 	public function get_title() {
-		return __( 'Grid Swiss', 'bearsthemes-addons' );
+		return __( 'Grid Toluca', 'bearsthemes-addons' );
 	}
 
 
@@ -83,7 +83,7 @@ class Skin_Grid_Swiss extends Skin_Base {
                 'default' => 'medium',
                 'exclude' => [ 'custom' ],
                         'condition' => [
-                            'skin_grid_swiss_show_thumbnail!'=> '',
+                            'skin_grid_toluca_show_thumbnail!'=> '',
                         ],
             ]
         );
@@ -107,7 +107,7 @@ class Skin_Grid_Swiss extends Skin_Base {
                 '{{WRAPPER}} .give-card__media' => 'padding-bottom: calc( {{SIZE}} * 100% );',
                 ],
                         'condition' => [
-                            'skin_grid_swiss_show_thumbnail!'=> '',
+                            'skin_grid_toluca_show_thumbnail!'=> '',
                         ],
             ]
         );
@@ -120,11 +120,21 @@ class Skin_Grid_Swiss extends Skin_Base {
                 'label_on' => __( 'Show', 'bearsthemes-addons'),
                 'label_off' => __( 'Hide', 'bearsthemes-addons'),
                 'default' => 'yes',
-                'separator' => 'before',
             ]
         );
 
-        $this->add_control(
+		$this->add_control(
+			'show_category',
+			[
+				'label' => __( 'Category', 'bearsthemes-addons' ),
+				'type'  => Controls_Manager::SWITCHER,
+				'label_on' => __( 'Show', 'bearsthemes-addons' ),
+				'label_off' => __( 'Hide', 'bearsthemes-addons'),
+				'default' => 'yes',
+			]
+		);
+
+		$this->add_control(
             'show_goal_progress',
             [
                 'label' => __( 'Goal Progress', 'bearsthemes-addons' ),
@@ -143,18 +153,6 @@ class Skin_Grid_Swiss extends Skin_Base {
 				'label_on' => __( 'Show', 'bearsthemes-addons' ),
 				'label_off' => __( 'Hide', 'bearsthemes-addons' ),
 				'default' => 'yes',
-			]
-		);
-
-		$this->add_control(
-			'donation_button_label',
-			[
-				'label' => __( 'Donation button Label', 'bearsthemes-addons' ),
-				'type' => Controls_Manager::TEXT,
-				'default' => __( 'Donate Now', 'bearsthemes-addons' ),
-				'condition' => [
-					'skin_grid_swiss_show_donation_button!' => '',
-				],
 			]
 		);
 
@@ -295,25 +293,6 @@ class Skin_Grid_Swiss extends Skin_Base {
 			]
 		);
 
-		$this->add_responsive_control(
-			'content_padding',
-			[
-				'label' => __( 'Content Padding', 'bearsthemes-addons' ),
-				'type' => Controls_Manager::DIMENSIONS,
-				'size_units' => [ 'px' ],
-				'range' => [
-					'px' => [
-						'min' => 0,
-						'max' => 100,
-					],
-				],
-				'selectors' => [
-					'{{WRAPPER}} .give-card__body' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
-				],
-				'separator' => 'after',
-			]
-		);
-
 		$this->start_controls_tabs( 'bg_effects_tabs' );
 
 		$this->start_controls_tab( 'classic_style_normal',
@@ -336,7 +315,8 @@ class Skin_Grid_Swiss extends Skin_Base {
 				'label' => __( 'Background Color', 'bearsthemes-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
-					'{{WRAPPER}} .elementor-give-form' => 'background-color: {{VALUE}}',
+					'{{WRAPPER}} .elementor-give-form,
+					 {{WRAPPER}} .give-card__body' => 'background-color: {{VALUE}}',
 				],
 			]
 		);
@@ -374,7 +354,8 @@ class Skin_Grid_Swiss extends Skin_Base {
 				'label' => __( 'Background Color', 'bearsthemes-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
-					'{{WRAPPER}} .elementor-give-form:hover' => 'background-color: {{VALUE}}',
+					'{{WRAPPER}} .elementor-give-form:hover,
+					 {{WRAPPER}} .elementor-give-form:hover .give-card__body' => 'background-color: {{VALUE}}',
 				],
 			]
 		);
@@ -407,19 +388,25 @@ class Skin_Grid_Swiss extends Skin_Base {
 				'label' => __( 'Image', 'bearsthemes-addons' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 				'condition' => [
-					'skin_grid_swiss_show_thumbnail!' => '',
+					'skin_grid_toluca_show_thumbnail!' => '',
 				],
 			]
 		);
 
-		$this->add_control(
-			'thumbnail_overlay',
-			[
-				'label' => __( 'Color Overlay', 'bearsthemes-addons' ),
-				'type' => Controls_Manager::COLOR,
-				'default' => '',
+    $this->add_control(
+			'thumbnail_border_radius',
+      [
+				'label' => __( 'Border Radius', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::DIMENSIONS,
+				'size_units' => [ 'px' ],
+				'range' => [
+					'px' => [
+						'min' => 0,
+						'max' => 100,
+					],
+				],
 				'selectors' => [
-					' {{WRAPPER}} .give-card__overlay' => 'background-color: {{VALUE}};',
+					'{{WRAPPER}} .give-card__media' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
 				],
 			]
 		);
@@ -448,7 +435,7 @@ class Skin_Grid_Swiss extends Skin_Base {
 			]
 		);
 
-    $this->add_group_control(
+    	$this->add_group_control(
 			Group_Control_Css_Filter::get_type(),
 			[
 				'name' => 'thumbnail_hover_filters',
@@ -456,7 +443,7 @@ class Skin_Grid_Swiss extends Skin_Base {
 			]
 		);
 
-    $this->end_controls_tab();
+    	$this->end_controls_tab();
 
 		$this->end_controls_tabs();
 
@@ -481,12 +468,12 @@ class Skin_Grid_Swiss extends Skin_Base {
 				'label' => __( 'Title', 'bearsthemes-addons' ),
 				'type' => Controls_Manager::HEADING,
 				'condition' => [
-					'skin_grid_swiss_show_title!' => '',
+					'skin_grid_toluca_show_title!' => '',
 				],
 			]
 		);
 
-    	$this->add_control(
+    $this->add_control(
 			'title_color',
 			[
 				'label' => __( 'Color', 'bearsthemes-addons' ),
@@ -496,12 +483,12 @@ class Skin_Grid_Swiss extends Skin_Base {
 					'{{WRAPPER}} .give-card__title' => 'color: {{VALUE}};',
 				],
 				'condition' => [
-					'skin_grid_swiss_show_title!' => '',
+					'skin_grid_toluca_show_title!' => '',
 				],
 			]
 		);
 
-    	$this->add_control(
+    $this->add_control(
 			'title_color_hover',
 			[
 				'label' => __( 'Color Hover', 'bearsthemes-addons' ),
@@ -511,30 +498,82 @@ class Skin_Grid_Swiss extends Skin_Base {
 					' {{WRAPPER}} .give-card__title a:hover' => 'color: {{VALUE}};',
 				],
 				'condition' => [
-					'skin_grid_swiss_show_title!' => '',
+					'skin_grid_toluca_show_title!' => '',
 				],
 			]
 		);
 
-    	$this->add_group_control(
+    $this->add_group_control(
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'title_typography',
 				'default' => '',
 				'selector' => '{{WRAPPER}} .give-card__title',
 				'condition' => [
-					'skin_grid_swiss_show_title!' => '',
+					'skin_grid_toluca_show_title!' => '',
+				],
+			]
+		);
+
+    	$this->add_control(
+			'heading_category_style',
+			[
+				'label' => __( 'Category', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::HEADING,
+				'condition' => [
+					'skin_grid_toluca_show_category!' => '',
 				],
 			]
 		);
 
 		$this->add_control(
+			'category_color',
+			[
+				'label' => __( 'Color', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::COLOR,
+				'selectors' => [
+					'{{WRAPPER}} .give-card__category' => 'color: {{VALUE}};',
+				],
+				'condition' => [
+					'skin_grid_toluca_show_category!' => '',
+				],
+			]
+		);
+
+        $this->add_control(
+            'category_color_hover',
+            [
+            'label' => __( 'Color Hover', 'bearsthemes-addons' ),
+            'type' => Controls_Manager::COLOR,
+            'selectors' => [
+                '{{WRAPPER}} .give-card__category a:hover' => 'color: {{VALUE}};',
+            ],
+            'condition' => [
+                'skin_grid_toluca_show_category!' => '',
+            ],
+            ]
+        );
+
+		$this->add_group_control(
+			Group_Control_Typography::get_type(),
+			[
+				'name' => 'category_typography',
+				'label' => __( 'Typography', 'bearsthemes-addons' ),
+				'default' => '',
+				'selector' => '{{WRAPPER}} .give-card__category',
+				'condition' => [
+					'skin_grid_toluca_show_category!' => '',
+				],
+			]
+		);
+
+    	$this->add_control(
 			'heading_goal_progress_style',
 			[
 				'label' => __( 'Goal Progress', 'bearsthemes-addons' ),
 				'type' => Controls_Manager::HEADING,
 				'condition' => [
-					'skin_grid_swiss_show_goal_progress!' => '',
+					'skin_grid_toluca_show_goal_progress!' => '',
 				],
 			]
 		);
@@ -550,7 +589,7 @@ class Skin_Grid_Swiss extends Skin_Base {
 					 {{WRAPPER}} .give-goal-progress .goal-text' => 'color: {{VALUE}};',
 				],
 				'condition' => [
-					'skin_grid_swiss_show_goal_progress!' => '',
+					'skin_grid_toluca_show_goal_progress!' => '',
 				],
 			]
 		);
@@ -564,7 +603,7 @@ class Skin_Grid_Swiss extends Skin_Base {
 				'selector' => '{{WRAPPER}} .give-goal-progress .income,
 				 							 {{WRAPPER}} .give-goal-progress .goal-text',
 				'condition' => [
-					'skin_grid_swiss_show_goal_progress!' => '',
+					'skin_grid_toluca_show_goal_progress!' => '',
 				],
 			]
 		);
@@ -579,7 +618,7 @@ class Skin_Grid_Swiss extends Skin_Base {
 					'{{WRAPPER}} .give-goal-progress' => 'color: {{VALUE}};',
 				],
 				'condition' => [
-					'skin_grid_swiss_show_goal_progress!' => '',
+					'skin_grid_toluca_show_goal_progress!' => '',
 				],
 			]
 		);
@@ -592,7 +631,7 @@ class Skin_Grid_Swiss extends Skin_Base {
 				'default' => '',
 				'selector' => '{{WRAPPER}} .give-goal-progress',
 				'condition' => [
-					'skin_grid_swiss_show_goal_progress!' => '',
+					'skin_grid_toluca_show_goal_progress!' => '',
 				],
 			]
 		);
@@ -603,7 +642,7 @@ class Skin_Grid_Swiss extends Skin_Base {
 				'label' => __( 'Donation Button', 'bearsthemes-addons' ),
 				'type' => Controls_Manager::HEADING,
 				'condition' => [
-					'skin_grid_swiss_show_donation_button!' => '',
+					'skin_grid_toluca_show_donation_button!' => '',
 				],
 			]
 		);
@@ -615,7 +654,7 @@ class Skin_Grid_Swiss extends Skin_Base {
 				'default' => '',
 				'selector' => '{{WRAPPER}} .give-btn-modal',
 				'condition' => [
-					'skin_grid_swiss_show_donation_button!' => '',
+					'skin_grid_toluca_show_donation_button!' => '',
 				],
 			]
 		);
@@ -633,7 +672,7 @@ class Skin_Grid_Swiss extends Skin_Base {
 					],
 				],
 				'condition' => [
-					'skin_grid_swiss_show_donation_button!' => '',
+					'skin_grid_toluca_show_donation_button!' => '',
 				],
 				'selectors' => [
 					'{{WRAPPER}} .give-btn-modal' => 'border-style: solid; border-width: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
@@ -654,7 +693,7 @@ class Skin_Grid_Swiss extends Skin_Base {
 					],
 				],
 				'condition' => [
-					'skin_grid_swiss_show_donation_button!' => '',
+					'skin_grid_toluca_show_donation_button!' => '',
 				],
 				'selectors' => [
 					'{{WRAPPER}} .give-btn-modal' => 'border-radius: {{SIZE}}{{UNIT}}',
@@ -675,7 +714,7 @@ class Skin_Grid_Swiss extends Skin_Base {
 					],
 				],
 				'condition' => [
-					'skin_grid_swiss_show_donation_button!' => '',
+					'skin_grid_toluca_show_donation_button!' => '',
 				],
 				'selectors' => [
 					'{{WRAPPER}} .give-btn-modal' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
@@ -689,7 +728,7 @@ class Skin_Grid_Swiss extends Skin_Base {
 			[
 				'label' => __( 'Normal', 'bearsthemes-addons' ),
 				'condition' => [
-					'skin_grid_swiss_show_donation_button!' => '',
+					'skin_grid_toluca_show_donation_button!' => '',
 				],
 			]
 		);
@@ -734,7 +773,7 @@ class Skin_Grid_Swiss extends Skin_Base {
 			[
 				'label' => __( 'Hover', 'bearsthemes-addons' ),
 				'condition' => [
-					'skin_grid_swiss_show_donation_button!' => '',
+					'skin_grid_toluca_show_donation_button!' => '',
 				],
 			]
 		);
@@ -780,74 +819,126 @@ class Skin_Grid_Swiss extends Skin_Base {
 		$this->end_controls_section();
     }
 
-    public function register_design_give_form_section_controls(Widget_Base $widget) {
+	public function register_design_goal_progress_section_controls(Widget_Base $widget){
+
 		$this->parent = $widget;
 
 		$this->start_controls_section(
-			'section_design_give_form',
+			'section_goal_progress',
 			[
-				'label' => __( 'Give Form', 'bearsthemes-addons' ),
+				'label' => __( 'Goal Progress', 'bearsthemes-addons' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 				'condition' => [
-					'skin_grid_swiss_show_donation_button!' => '',
+					'skin_grid_toluca_show_goal_progress!' => '',
 				],
 			]
 		);
 
 		$this->add_control(
-			'form_main_color',
+			'custom_goal_progress',
 			[
-				'label' => __( 'Main Color', 'bearsthemes-addons' ),
-				'type' => Controls_Manager::COLOR,
-				'default' => '',
-				'selectors' => [
-					'.give-form[data-style="elementor-give-forms--swiss"] .give-total-wrap #give-amount,
-					.give-form[data-style="elementor-give-forms--swiss"] #give-donation-level-button-wrap .give-btn:hover,
-					.give-form[data-style="elementor-give-forms--swiss"] #give-gateway-radio-list > li.give-gateway-option-selected label,
-					.give-form[data-style="elementor-give-forms--swiss"] #give-gateway-radio-list > li label:hover,
-					.give-form[data-style="elementor-give-forms--swiss"] #give-donation-level-radio-list li input.give-default-level + label,
-					.give-form[data-style="elementor-give-forms--swiss"] #give-donation-level-radio-list li label:hover,
-					.give-form[data-style="elementor-give-forms--swiss"] #give-gateway-radio-list > li label:hover,
-					.give-form[data-style="elementor-give-forms--swiss"] #give_terms_agreement label:hover,
-					.give-form[data-style="elementor-give-forms--swiss"] #give_terms_agreement label:hover,
-					.give-form[data-style="elementor-give-forms--swiss"] #give_terms_agreement input[type=checkbox]:checked + label,
-					.give-form[data-style="elementor-give-forms--swiss"] .give_terms_links:hover,
-					.give-form[data-style="elementor-give-forms--swiss"] #give-final-total-wrap .give-final-total-amount' => 'color: {{VALUE}};',
+				'label' => __( 'Custom Goal Progress', 'bearsthemes-addons' ),
+				'description' => __( 'Check this to custom goal progress in give forms.', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::SWITCHER,
+				'label_on' => __( 'On', 'bearsthemes-addons' ),
+				'label_off' => __( 'Off', 'bearsthemes-addons' ),
+				'default' => 'yes',
+			]
+		);
 
-				 '.give-form[data-style="elementor-give-forms--swiss"] .give-total-wrap .give-currency-symbol,
-				 .give-form[data-style="elementor-give-forms--swiss"] #give-donation-level-button-wrap .give-btn.give-default-level,
-				 .give-form[data-style="elementor-give-forms--swiss"] #give-donation-level-radio-list li label:after,
-				 .give-form[data-style="elementor-give-forms--swiss"] #give-gateway-radio-list > li label:after,
-				 .give-form[data-style="elementor-give-forms--swiss"] #give_terms_agreement input[type=checkbox]:checked + label:before,
-				 .give-form[data-style="elementor-give-forms--swiss"] #give-final-total-wrap .give-donation-total-label,
-				 .give-form[data-style="elementor-give-forms--swiss"] .give-submit' => 'background-color: {{VALUE}};',
-
-				 '.give-form[data-style="elementor-give-forms--swiss"] #give-donation-level-button-wrap .give-btn.give-default-level,
-				 .give-form[data-style="elementor-give-forms--swiss"] #give-donation-level-button-wrap .give-btn:hover,
-				 .give-form[data-style="elementor-give-forms--swiss"] #give_terms_agreement input[type=checkbox]:checked + label:before' => 'border-color: {{VALUE}};',
+		$this->add_control(
+			'goal_progress_easing',
+			[
+				'label' => __( 'Easing', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::SELECT,
+				'default' => 'linear',
+				'options' => [
+					'linear' => __( 'Linear', 'bearsthemes-addons' ),
+					'easeOut' => __( 'EaseOut', 'bearsthemes-addons' ),
+					'bounce' => __( 'Bounce', 'bearsthemes-addons' ),
+				],
+				'condition' => [
+					'skin_grid_toluca_custom_goal_progress!' => '',
 				],
 			]
 		);
 
 		$this->add_control(
-			'form_main_color_hover',
+			'goal_progress_duration',
 			[
-				'label' => __( 'Main Color Hover', 'bearsthemes-addons' ),
-				'type' => Controls_Manager::COLOR,
-				'default' => '',
-				'selectors' => [
-					'.give-form[data-style="elementor-give-forms--swiss"] .give-submit:hover' => 'background-color: {{VALUE}};',
+				'label' => __( 'Duration', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::SLIDER,
+				'default' => [
+					'size' => 800,
+				],
+				'range' => [
+					'px' => [
+						'min' => 0,
+						'max' => 2000,
+					],
+				],
+				'condition' => [
+					'skin_grid_toluca_custom_goal_progress!' => '',
 				],
 			]
 		);
 
-		$this->add_group_control(
-			Group_Control_Typography::get_type(),
+		$this->add_control(
+			'goal_progress_color_from',
 			[
-				'name' => 'form_typography',
-				'label' => __( 'Typography', 'bearsthemes-addons' ),
-				'default' => '',
-				'selector' => '.give-form[data-style="elementor-give-forms--swiss"]',
+				'label' => __( 'from Color', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::COLOR,
+				'default' => '#FFEA82',
+				'condition' => [
+					'skin_grid_toluca_custom_goal_progress!' => '',
+				],
+			]
+		);
+
+		$this->add_control(
+			'goal_progress_color_to',
+			[
+				'label' => __( 'to Color', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::COLOR,
+				'default' => '#ED6A5A',
+				'condition' => [
+					'skin_grid_toluca_custom_goal_progress!' => '',
+				],
+			]
+		);
+
+		$this->add_control(
+			'goal_progress_trailcolor',
+			[
+				'label' => __( 'Trail Color', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::COLOR,
+				'default' => '#EEEEEE',
+				'condition' => [
+					'skin_grid_toluca_custom_goal_progress!' => '',
+				],
+			]
+		);
+
+		$this->add_control(
+			'goal_progress_padding',
+			[
+				'label' => __( 'Padding', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::DIMENSIONS,
+				'size_units' => [ 'px', '%' ],
+				'selectors' => [
+					'{{WRAPPER}} .give-goal-progress svg' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+				],
+			]
+		);
+
+		$this->add_control(
+			'goal_progress_background',
+			[
+				'label' => __( 'Background', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::COLOR,
+				'selectors' => [
+					'{{WRAPPER}} .give-goal-progress svg' => 'background: {{VALUE}};',
+				]
 			]
 		);
 
@@ -860,83 +951,94 @@ class Skin_Grid_Swiss extends Skin_Base {
 
 		$form_id = get_the_ID(); // Form ID.
 
+		$form_class = 'elementor-give-form';
+
+    if( '' !== $this->parent->get_instance_value_skin('show_thumbnail') ) {
+      $form_class .= ' has-thumbnail';
+    }
+
 		?>
-			<article id="post-<?php the_ID();  ?>" <?php post_class( 'elementor-give-form' ); ?> >
-				<div class="give-card__media">
-                    <?php
-                        if( '' !== $this->parent->get_instance_value_skin('show_thumbnail') ){
-                        // Maybe display the featured image.
-                        printf(
-                            '%s<div class="give-card__overlay"></div>',
-                            get_the_post_thumbnail( $form_id, $this->parent->get_instance_value_skin( 'thumbnail_size' ) )
-                        );
-                        }
-                    ?>
-                </div>
+			<article id="post-<?php the_ID();  ?>" <?php post_class( $form_class ); ?> >
+				<?php if( '' !== $this->parent->get_instance_value_skin('show_thumbnail') ) { ?>
+  				<div class="give-card__media">
+						<a href="<?php the_permalink(); ?>">
+	  	        <?php
+	  	          // Maybe display the featured image.
+	  	          printf(
+	  	            '%s<div class="give-card__overlay"></div>',
+	  	            get_the_post_thumbnail( $form_id, $this->parent->get_instance_value_skin( 'thumbnail_size' ) )
+	  	          );
 
-                <div class="give-card__body">
-                <?php
-                    if( '' !== $this->parent->get_instance_value_skin('show_goal_progress') && give_is_setting_enabled( get_post_meta( $form_id, '_give_goal_option', true ) ) ) {
-                        $args = array(
-                            'show_text' => true,
-                            'show_bar' => false,
-                            'income_text' => __( 'Raised of', 'bearsthemes-addons' ),
-                            'goal_text' => '',
-                            'custom_goal_progress' => $this->parent->get_instance_value_skin('custom_goal_progress'),
+	  	        ?>
+						</a>
+  				</div>
+        <?php } ?>
 
-                        );
-
-                        $bar_opts = array(
-                            'type' => 'line',
-                            'strokewidth' => 1,
-                            'easing' => $this->parent->get_instance_value_skin('goal_progress_easing'),
-                            'duration' => !empty( $this->parent->get_instance_value_skin('goal_progress_duration')['size'] ) ? absint( $this->parent->get_instance_value_skin('goal_progress_duration')['size'] ) : 0,
-                            'color' => $this->parent->get_instance_value_skin('goal_progress_color_from'),
-                            'trailcolor' => $this->parent->get_instance_value_skin('goal_progress_trailcolor'),
-                            'trailwidth' => 1,
-                            'tocolor' => $this->parent->get_instance_value_skin('goal_progress_color_to'),
-                            'width' => '100%',
-                            'height' => '20px',
-                        );
-
-                        bearsthemes_addons_goal_progress( $form_id, $args, $bar_opts );
-                    }
-
-                    if( '' !== $this->parent->get_instance_value_skin( 'show_title' ) ){
-                        // Maybe display the form title.
-                        printf(
-                            '<h3 class="give-card__title">
+        <div class="give-card__body">
+          <?php
+            if( '' !== $this->parent->get_instance_value_skin( 'show_title' ) ){
+                // Maybe display the form title.
+                printf(
+                    '<h3 class="give-card__title">
                                 <a href="%s">%s</a>
                             </h3>',
                             get_the_permalink(),
                             get_the_title()
-                        );
-                    }
+                );
+            }
 
-                    if( '' !== $this->parent->get_instance_value_skin( 'show_donation_button' ) ) {
-                        // Maybe display the form donate button.
-                        $atts = array(
-                            'id' => $form_id,  // integer.
-                            'show_title' => false, // boolean.
-                            'show_goal' => false, // boolean.
-                            'show_content' => 'none', //above, below, or none
-                            'display_style' => 'button', //modal, button, and reveal
-                            'continue_button_title' => $this->parent->get_instance_value_skin( 'donation_button_label' ) //string
+            if( '' !== $this->parent->get_instance_value_skin( 'show_category' ) ){
+                the_terms( $form_id, 'give_forms_category', '<div class="give-card__category">' , ', ', '</div>' );
+            }
 
-                        );
+            if( '' !== $this->parent->get_instance_value_skin( 'show_donation_button' ) ) {
+                // Maybe display the form donate button.
+                $atts = array(
+                    'id' => $form_id,  // integer.
+                    'show_title' => false, // boolean.
+                    'show_goal' => false, // boolean.
+                    'show_content' => 'none', //above, below, or none
+                    'display_style' => 'button', //modal, button, and reveal
+                    'continue_button_title' => $this->parent->get_instance_value_skin( 'donation_button_label' ) //string
 
-                        add_filter('give_form_html_tags', function($form_html_tags, $form) {
-                            $form_html_tags['data-style'] = 'elementor-give-forms--swiss';
+                );
 
-                            return $form_html_tags;
-                        }, 10, 2);
+                add_filter('give_form_html_tags', function($form_html_tags, $form) {
+                    $form_html_tags['data-style'] = 'elementor-give-forms--swiss';
 
-                        echo give_get_donation_form( $atts );
-                    }
+                    return $form_html_tags;
+                }, 10, 2);
 
-                ?>
-                </div>
+                echo give_get_donation_form( $atts );
+            }
 
+            if( '' !== $this->parent->get_instance_value_skin('show_goal_progress') && give_is_setting_enabled( get_post_meta( $form_id, '_give_goal_option', true ) ) ) {
+              $args = array(
+                'show_text' => true,
+                'show_bar' => true,
+                'income_text' => __( 'Raised', 'bearsthemes-addons' ),
+                'goal_text' => __( 'Goal', 'bearsthemes-addons' ),
+                'custom_goal_progress' => $this->parent->get_instance_value_skin('custom_goal_progress'),
+
+              );
+
+              $bar_opts = array(
+                'type' => 'line',
+                'strokewidth' => 1,
+                'easing' => $this->parent->get_instance_value_skin('goal_progress_easing'),
+                'duration' => !empty( $this->parent->get_instance_value_skin('goal_progress_duration')['size'] ) ? absint( $this->parent->get_instance_value_skin('goal_progress_duration')['size'] ) : 0,
+                'color' => $this->parent->get_instance_value_skin('goal_progress_color_from'),
+                'trailcolor' => $this->parent->get_instance_value_skin('goal_progress_trailcolor'),
+                'trailwidth' => 1,
+                'tocolor' => $this->parent->get_instance_value_skin('goal_progress_color_to'),
+                'width' => '100%',
+                'height' => '14px',
+              );
+
+              bearsthemes_addons_goal_progress( $form_id, $args, $bar_opts );
+            }
+          ?>
+        </div>
 			</article>
 		<?php
 	}

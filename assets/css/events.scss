@@ -3495,4 +3495,195 @@
     }
   }
 
+  &--skin-cobble-toluca {
+    grid-template-areas:
+    'item1 item2'
+    'item1 item3';
+    grid-template-columns: 1fr 1fr;
+    @media( max-width: $break-md - 0.02 ) {
+      grid-template-areas:
+      'item1'
+      'item2'
+      'item3';
+      grid-template-columns: 1fr;
+    }
+    .elementor-event {
+      position: relative;
+      background: #FFFFFF;
+      margin-left: 45px;
+      padding: 25px 25px 25px 0;
+      border-radius: 20px;
+      -webkit-transition: all .3s;
+      transition: all .3s;
+      &--1 { grid-area: item1; }
+      &--2 { grid-area: item2; }
+      &--3 { grid-area: item3; }
+      &:first-child {
+        .elementor-event {
+          &__inner {
+            height: 100%;
+            align-items: unset;
+            padding-right: 0;
+          }
+          &__thumbnail {
+            width: calc(50% + 20px);
+            height: unset;
+          }
+          &__date {
+            top: 15px;
+            right: 15px;
+          }
+          &__content {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: center;
+          }
+          &__location {
+            margin-bottom: 16px;
+          }
+          &__excerpt {
+            margin-bottom: 20px;
+          }
+          &__read-more {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 17px;
+            font-weight: 500;
+            line-height: 150%;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+            color: #222222;
+            &:hover {
+              color: #DD3B32;
+            }
+            svg {
+              fill: currentColor;
+            }
+          }
+        }
+      }
+      &__inner {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        position: relative;
+        padding-right: 120px;
+      }
+      &__thumbnail {
+        position: relative;
+        overflow: hidden;
+        line-height: 0;
+        width: 166px;
+        height: 145px;
+        margin-left: -45px;
+        border-radius: 20px;
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      &__content {
+        width: calc(100% - 145px);
+      }
+      &__date {
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        .day {
+          font-size: 30px;
+          font-weight: 600;
+          line-height: 150%;
+          min-width: 94px;
+          color: #222222;
+          background: #D2F4F4;
+          padding: 8px 8px 25px;
+          border-radius: 10px;
+        }
+        .month {
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 150%;
+          text-transform: uppercase;
+          min-width: 78px;
+          margin: -20px 8px 0;
+          padding: 6px;
+          color: #FFFFFF;
+          background: #DD3B32;
+          border-radius: 10px;
+        }
+      }
+      &__time {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 16px;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: #DD3B32;
+        margin-bottom: 8px;
+        svg {
+          fill: currentColor;
+        }
+      }
+      &__title {
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 130%;
+        margin: 0 0 12px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+      }
+      &__location {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 16px;
+        font-weight: 400;
+        color: #DD3B32;
+        svg {
+          fill: currentColor;
+        }
+      }
+      @media( max-width: $break-xs - 0.02 ) {
+        margin-top: 40px;
+        margin-left: 0;
+        padding: 20px;
+        &:first-child .elementor-event {
+          &__thumbnail {
+            width: 100%;
+            height: 300px;
+          }
+          &__content {
+            width: 100%;
+          }
+        }
+        &__inner {
+          flex-direction: column;
+          align-items: start;
+          padding-right: 0;
+        }
+        &__thumbnail {
+          margin-top: -60px;
+          margin-left: 0;
+        }
+        &__content {
+          width: 100%;
+        }
+      }
+    }
+  }
+
 }

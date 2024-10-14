@@ -40,6 +40,7 @@ class Be_Give_Totals extends Widget_Base {
 		$this->add_skin( new Skins\Skin_Wilson( $this ) );
 		$this->add_skin( new Skins\Skin_Jorasses( $this ) );
 		$this->add_skin( new Skins\Skin_Swiss( $this ) );
+		$this->add_skin( new Skins\Skin_Toluca( $this ) );
 
 	}
 

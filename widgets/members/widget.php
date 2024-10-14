@@ -44,6 +44,7 @@ class Be_Members extends Widget_Base {
 		$this->add_skin( new Skins\Skin_Jimara( $this ) );
 		$this->add_skin( new Skins\Skin_Nuptse( $this ) );
 		$this->add_skin( new Skins\Skin_Cruces( $this ) );
+		$this->add_skin( new Skins\Skin_Toluca( $this ) );
 
 	}
 

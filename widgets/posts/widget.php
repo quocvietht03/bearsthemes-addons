@@ -55,6 +55,7 @@ class Be_Posts extends Widget_Base {
 		$this->add_skin( new Skins\Skin_Grid_Cruces( $this ) );
 		$this->add_skin( new Skins\Skin_Grid_Somoni( $this ) );
 		$this->add_skin( new Skins\Skin_Grid_Swiss( $this ) );
+		$this->add_skin( new Skins\Skin_Grid_Toluca( $this ) );
 
 		$this->add_skin( new Skins\Skin_List_Ampato( $this ) );
 		$this->add_skin( new Skins\Skin_List_Hardeol( $this ) );

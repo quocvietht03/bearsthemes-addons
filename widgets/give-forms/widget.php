@@ -52,6 +52,7 @@ class Be_Give_Forms extends Widget_Base {
 		$this->add_skin( new Skins\Skin_Grid_Gamin( $this ) );
 		$this->add_skin( new Skins\Skin_Grid_Cruces( $this ) );
 		$this->add_skin( new Skins\Skin_Grid_Swiss( $this ) );
+		$this->add_skin( new Skins\Skin_Grid_Toluca( $this ) );
 
 		$this->add_skin( new Skins\Skin_Cobble_Paradis( $this ) );
 		$this->add_skin( new Skins\Skin_Cobble_Castor( $this ) );

@@ -512,6 +512,8 @@
 		elementorFrontend.hooks.addAction( 'frontend/element_ready/be-give-totals.skin-jorasses', GivePopupHandler );
 		elementorFrontend.hooks.addAction( 'frontend/element_ready/be-give-totals.skin-swiss', ProgressbarHandler );
 		elementorFrontend.hooks.addAction( 'frontend/element_ready/be-give-totals.skin-swiss', GivePopupHandler );
+		elementorFrontend.hooks.addAction( 'frontend/element_ready/be-give-totals.skin-toluca', ProgressbarHandler );
+		elementorFrontend.hooks.addAction( 'frontend/element_ready/be-give-totals.skin-toluca', GivePopupHandler );
 
 		elementorFrontend.hooks.addAction( 'frontend/element_ready/be-give-form.skin-andrus', GivePopupHandler );
 		elementorFrontend.hooks.addAction( 'frontend/element_ready/be-give-form.skin-tronador', GivePopupHandler );
@@ -548,6 +550,8 @@
 		elementorFrontend.hooks.addAction( 'frontend/element_ready/be-give-forms.skin-grid-nuptse', GivePopupHandler );
 		elementorFrontend.hooks.addAction( 'frontend/element_ready/be-give-forms.skin-grid-gamin', ProgressbarHandler );
 		elementorFrontend.hooks.addAction( 'frontend/element_ready/be-give-forms.skin-grid-gamin', GivePopupHandler );
+		elementorFrontend.hooks.addAction( 'frontend/element_ready/be-give-forms.skin-grid-toluca', ProgressbarHandler );
+		elementorFrontend.hooks.addAction( 'frontend/element_ready/be-give-forms.skin-grid-toluca', GivePopupHandler );
 
 		elementorFrontend.hooks.addAction( 'frontend/element_ready/be-give-forms-carousel.default', SwiperSliderHandler );
 		elementorFrontend.hooks.addAction( 'frontend/element_ready/be-give-forms-carousel.default', ProgressbarHandler );

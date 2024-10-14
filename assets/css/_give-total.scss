@@ -1235,6 +1235,50 @@
 
   }
 
+  &--skin-toluca {
+    background: #DD3B32;
+    padding: 30px;
+    border-radius: 20px;
+    .elementor-gt-header {
+      color: #FFFFFF;
+      text-align: center;
+      &__title {
+        font-size: 28px;
+        font-weight: 600;
+        line-height: 1.4;
+        color: #FFFFFF;
+        margin-bottom: 20px;
+        span {
+          font-family: "Edu NSW ACT Foundation", Sans-serif;
+          font-weight: 400;
+        }
+      }
+    }
+    .elementor-gt-form {
+      background: rgba(0, 0, 0, 0.25);
+      padding: 30px;
+      border-radius: 20px;
+      .give-totals-shortcode-wrap {
+        margin-bottom: 30px;
+      }
+      .give-goal-progress {
+        color: #FFFFFF;
+        .income,
+        .goal-text {
+          color: #FFFFFF;
+        }
+      }
+      form.give-form {
+        margin: 0;
+      }
+    }
+    @media(max-width: $break-xs - 0.02) {
+      padding: 30px 20px;
+      .elementor-gt-form {
+        padding: 30px 20px;
+      }
+    }
+  }
 }
 
 

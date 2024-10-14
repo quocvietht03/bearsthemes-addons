@@ -944,6 +944,40 @@ body.mfp-active {
   @media (max-width: 575.98px) {
     .elementor-give-totals--skin-swiss {
       padding: 30px 16px; } }
+.elementor-give-totals--skin-toluca {
+  background: #DD3B32;
+  padding: 30px;
+  border-radius: 20px; }
+  .elementor-give-totals--skin-toluca .elementor-gt-header {
+    color: #FFFFFF;
+    text-align: center; }
+    .elementor-give-totals--skin-toluca .elementor-gt-header__title {
+      font-size: 28px;
+      font-weight: 600;
+      line-height: 1.4;
+      color: #FFFFFF;
+      margin-bottom: 20px; }
+      .elementor-give-totals--skin-toluca .elementor-gt-header__title span {
+        font-family: "Edu NSW ACT Foundation", Sans-serif;
+        font-weight: 400; }
+  .elementor-give-totals--skin-toluca .elementor-gt-form {
+    background: rgba(0, 0, 0, 0.25);
+    padding: 30px;
+    border-radius: 20px; }
+    .elementor-give-totals--skin-toluca .elementor-gt-form .give-totals-shortcode-wrap {
+      margin-bottom: 30px; }
+    .elementor-give-totals--skin-toluca .elementor-gt-form .give-goal-progress {
+      color: #FFFFFF; }
+      .elementor-give-totals--skin-toluca .elementor-gt-form .give-goal-progress .income,
+      .elementor-give-totals--skin-toluca .elementor-gt-form .give-goal-progress .goal-text {
+        color: #FFFFFF; }
+    .elementor-give-totals--skin-toluca .elementor-gt-form form.give-form {
+      margin: 0; }
+  @media (max-width: 575.98px) {
+    .elementor-give-totals--skin-toluca {
+      padding: 30px 20px; }
+      .elementor-give-totals--skin-toluca .elementor-gt-form {
+        padding: 30px 20px; } }
 
 .elementor-give-form--skin-andrus {
   display: flex;
@@ -4266,6 +4300,79 @@ body.mfp-active {
     .elementor-give-forms--skin-grid-swiss .elementor-give-form .give-btn-modal:hover {
       color: #ffffff;
       background: #4D5EF6; }
+.elementor-give-forms--skin-grid-toluca .elementor-give-form {
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: all .3s;
+  transition: all .3s; }
+  .elementor-give-forms--skin-grid-toluca .elementor-give-form:hover .give-card__media img {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1); }
+  .elementor-give-forms--skin-grid-toluca .elementor-give-form .give-card__media {
+    position: relative;
+    padding-bottom: 66%;
+    background: #e7e6e4;
+    overflow: hidden;
+    border-radius: 20px; }
+    .elementor-give-forms--skin-grid-toluca .elementor-give-form .give-card__media img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      -webkit-transition: all 1.5s cubic-bezier(0.11, 0.52, 0.53, 0.79) 0s;
+      transition: all 1.5s cubic-bezier(0.11, 0.52, 0.53, 0.79) 0s; }
+  .elementor-give-forms--skin-grid-toluca .elementor-give-form .give-card__body {
+    position: relative;
+    background: #FFFFFF;
+    margin: -50px 30px 0;
+    padding: 48px 40px 0;
+    border-radius: 20px; }
+  .elementor-give-forms--skin-grid-toluca .elementor-give-form .give-card__title {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 150%;
+    margin: 0 0 10px; }
+  .elementor-give-forms--skin-grid-toluca .elementor-give-form .give-card__category {
+    font-size: 18px;
+    color: #555555; }
+    .elementor-give-forms--skin-grid-toluca .elementor-give-form .give-card__category a {
+      color: inherit; }
+      .elementor-give-forms--skin-grid-toluca .elementor-give-form .give-card__category a:hover {
+        color: #DD3B32; }
+  .elementor-give-forms--skin-grid-toluca .elementor-give-form .give-card__progress {
+    background: #FDF0DD;
+    margin: 25px -40px 0;
+    padding: 25px 40px;
+    border-radius: 0 0 20px 20px; }
+    .elementor-give-forms--skin-grid-toluca .elementor-give-form .give-card__progress .give-goal-progress {
+      margin: 0; }
+      .elementor-give-forms--skin-grid-toluca .elementor-give-form .give-card__progress .give-goal-progress .income,
+      .elementor-give-forms--skin-grid-toluca .elementor-give-form .give-card__progress .give-goal-progress .goal-text {
+        font-weight: 600; }
+      .elementor-give-forms--skin-grid-toluca .elementor-give-form .give-card__progress .give-goal-progress svg {
+        height: 8px !important;
+        border-radius: 4px; }
+  .elementor-give-forms--skin-grid-toluca .elementor-give-form .give-btn-modal {
+    position: absolute;
+    top: 0;
+    left: 30px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 150%;
+    text-transform: capitalize;
+    background: #DD3B32;
+    padding: 12px 35px;
+    border-radius: 24px;
+    transform: translateY(-50%); }
+  @media (max-width: 575.98px) {
+    .elementor-give-forms--skin-grid-toluca .elementor-give-form .give-card__body {
+      margin: -50px 20px 0;
+      padding: 48px 20px 0; }
+    .elementor-give-forms--skin-grid-toluca .elementor-give-form .give-card__progress {
+      margin: 25px -20px 0;
+      padding: 25px 20px; } }
 
 .elementor-donors--default .elementor-donor {
   position: relative;

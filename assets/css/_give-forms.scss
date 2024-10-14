@@ -3232,4 +3232,104 @@
       }
     }
   }
+  &--skin-grid-toluca {
+    .elementor-give-form {
+      position: relative;
+      overflow: hidden;
+      -webkit-transition: all .3s;
+      transition: all .3s;
+      &:hover {
+        .give-card {
+          &__media img {
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+          }
+        }
+      }
+      .give-card {
+        &__media {
+          position: relative;
+          padding-bottom: 66%;
+          background: #e7e6e4;
+          overflow: hidden;
+          border-radius: 20px;
+          img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            -webkit-transition: all 1.5s cubic-bezier(.11,.52,.53,.79) 0s;
+            transition: all 1.5s cubic-bezier(.11,.52,.53,.79) 0s;
+          }
+        }
+        &__body {
+          position: relative;
+          background: #FFFFFF;
+          margin: -50px 30px 0;
+          padding: 48px 40px 0;
+          border-radius: 20px;
+        }
+        &__title {
+          font-size: 22px;
+          font-weight: 600;
+          line-height: 150%;
+          margin: 0 0 10px;
+        }
+        &__category {
+          font-size: 18px;
+          color: #555555;
+          a {
+            color: inherit;
+            &:hover {
+              color: #DD3B32;
+            }
+          }
+        }
+        &__progress {
+          background: #FDF0DD;
+          margin: 25px -40px 0;
+          padding: 25px 40px;
+          border-radius: 0 0 20px 20px;
+          .give-goal-progress {
+            margin: 0;
+            .income,
+            .goal-text {
+              font-weight: 600;
+            }
+            svg {
+              height: 8px !important;
+              border-radius: 4px;
+            }
+          }
+        }
+      }
+      .give-btn-modal {
+        position: absolute;
+        top: 0;
+        left: 30px;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 150%;
+        text-transform: capitalize;
+        background: #DD3B32;
+        padding: 12px 35px;
+        border-radius: 24px;
+            transform: translateY(-50%);
+      }
+      @media(max-width: $break-xs - 0.02) {
+        .give-card {
+          &__body {
+            margin: -50px 20px 0;
+            padding: 48px 20px 0;
+          }
+          &__progress {
+            margin: 25px -20px 0;
+            padding: 25px 20px;
+          }
+        }
+      }
+    }
+  }
 }

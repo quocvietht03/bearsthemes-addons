@@ -56,6 +56,7 @@ class Be_Events extends Widget_Base {
 		$this->add_skin( new Skins\Skin_List_Cruces( $this ) );
 		$this->add_skin( new Skins\Skin_Cobble_Michelson( $this ) );
 		$this->add_skin( new Skins\Skin_Cobble_Vaccine( $this ) );
+		$this->add_skin( new Skins\Skin_Cobble_Toluca( $this ) );
 
 	}
 
