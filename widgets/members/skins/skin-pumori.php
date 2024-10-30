@@ -490,7 +490,7 @@ class Skin_Pumori extends Skin_Base {
 		$this->add_control(
 			'filter_bg_color_hover',
 			[
-				'label' => __( 'Color', 'bearsthemes-addons' ),
+				'label' => __( 'Background Color', 'bearsthemes-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -512,7 +512,7 @@ class Skin_Pumori extends Skin_Base {
 			[
 				'name' => 'filter_typography',
 				'default' => '',
-				'selector' => '{{WRAPPER}} .elementor-filter',
+				'selector' => '{{WRAPPER}} .elementor-filter-wrap .elementor-filter li a',
 				'condition' => [
 					'skin_pumori_show_filter!' => '',
 				],
