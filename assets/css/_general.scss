@@ -26,6 +26,11 @@
   }
 }
 
+.elementor-select-wrapper.remove-before:before,
+.elementor-select-wrapper.remove-before .select-caret-down-wrapper {
+  display: none !important;
+}
+
 .elementor-lightbox .elementor-slideshow__header {
   width: calc(100vw - 90px);
 }
