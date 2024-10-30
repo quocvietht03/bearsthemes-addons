@@ -422,6 +422,15 @@ class Skin_Pumori extends Skin_Base {
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
+		
+		$this->start_controls_tabs( 'tabs_filter' );
+
+		$this->start_controls_tab(
+			'tabs_filter_normal',
+			[
+				'label' => __( 'Normal', 'bearsthemes-addons' ),
+			]
+		);
 
 		$this->add_control(
 			'filter_color',
@@ -439,34 +448,6 @@ class Skin_Pumori extends Skin_Base {
 		);
 
 		$this->add_control(
-			'filter_color_hover',
-			[
-				'label' => __( 'Color Hover', 'bearsthemes-addons' ),
-				'type' => Controls_Manager::COLOR,
-				'default' => '',
-				'selectors' => [
-					'{{WRAPPER}} .elementor-filter-wrap .elementor-filter li a.active,
-					 {{WRAPPER}} .elementor-filter-wrap .elementor-filter li a:hover' => 'color: #FFFFFF; background-color: {{VALUE}};',
-				],
-				'condition' => [
-					'skin_pumori_show_filter!' => '',
-				],
-			]
-		);
-
-		$this->add_group_control(
-			Group_Control_Typography::get_type(),
-			[
-				'name' => 'filter_typography',
-				'default' => '',
-				'selector' => '{{WRAPPER}} .elementor-filter',
-				'condition' => [
-					'skin_pumori_show_filter!' => '',
-				],
-			]
-		);
-
-		$this->add_control(
 			'filter_bg_color',
 			[
 				'label' => __( 'Background Color', 'bearsthemes-addons' ),
@@ -475,6 +456,63 @@ class Skin_Pumori extends Skin_Base {
 				'selectors' => [
 					'{{WRAPPER}} .elementor-filter-wrap .elementor-filter li a' => 'background-color: {{VALUE}};',
 				],
+				'condition' => [
+					'skin_pumori_show_filter!' => '',
+				],
+			]
+		);
+
+		$this->end_controls_tab();
+
+		$this->start_controls_tab(
+			'tabs_filter_hover',
+			[
+				'label' => __( 'Hover', 'bearsthemes-addons' ),
+			]
+		);
+
+		$this->add_control(
+			'filter_color_hover',
+			[
+				'label' => __( 'Color', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::COLOR,
+				'default' => '',
+				'selectors' => [
+					'{{WRAPPER}} .elementor-filter-wrap .elementor-filter li a.active,
+					 {{WRAPPER}} .elementor-filter-wrap .elementor-filter li a:hover' => 'color: {{VALUE}};',
+				],
+				'condition' => [
+					'skin_pumori_show_filter!' => '',
+				],
+			]
+		);
+
+		$this->add_control(
+			'filter_bg_color_hover',
+			[
+				'label' => __( 'Color', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::COLOR,
+				'default' => '',
+				'selectors' => [
+					'{{WRAPPER}} .elementor-filter-wrap .elementor-filter li a.active,
+					 {{WRAPPER}} .elementor-filter-wrap .elementor-filter li a:hover' => 'background-color: {{VALUE}};',
+				],
+				'condition' => [
+					'skin_pumori_show_filter!' => '',
+				],
+			]
+		);
+
+		$this->end_controls_tab();
+
+		$this->end_controls_tabs();
+
+		$this->add_group_control(
+			Group_Control_Typography::get_type(),
+			[
+				'name' => 'filter_typography',
+				'default' => '',
+				'selector' => '{{WRAPPER}} .elementor-filter',
 				'condition' => [
 					'skin_pumori_show_filter!' => '',
 				],

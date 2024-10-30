@@ -68,18 +68,26 @@
           font-weight: 700;
           line-height: 1.5;
           text-transform: uppercase;
-          border-right: 1px solid #4D6995;
+          &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 1px;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.25);
+          }
           &:first-child{
             a{
-              border-top-left-radius: 50px;
-              border-bottom-left-radius: 50px;
+              border-radius: 50px 0 0 50px;
             }
           }
           &:last-child{
-            border-right: none;
+            &:after {
+              display: none;
+            }
             a {
-              border-top-right-radius: 50px;
-              border-bottom-right-radius: 50px;
+              border-radius: 0 50px 50px 0;
             }
           }
           a {
