@@ -220,5 +220,10 @@ final class Bearsthemes_Addons {
 	}
 }
 
+function bearsthemes_addons_load_textdomain() {
+	load_plugin_textdomain( 'bearsthemes-addons', false, dirname( plugin_basename( _FILE_ ) ) . '/languages' );
+}
+add_action( 'plugins_loaded', 'bearsthemes_addons_load_textdomain' );
+
 // Instantiate Bearsthemes_Addons.
 new Bearsthemes_Addons();
