@@ -1,5 +1,8 @@
 .elementor-counter {
   text-align: center;
+  flex-direction: unset;
+  justify-content: unset;
+  display: block;
   &--icon-position-left .elementor-counter {
       display: flex;
       text-align: left;

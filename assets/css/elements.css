@@ -5671,7 +5671,10 @@
       padding: 24px 16px; } }
 
 .elementor-counter {
-  text-align: center; }
+  text-align: center;
+  flex-direction: unset;
+  justify-content: unset;
+  display: block; }
   .elementor-counter--icon-position-left .elementor-counter {
     display: flex;
     text-align: left; }
