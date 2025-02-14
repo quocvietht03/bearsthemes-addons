@@ -6,13 +6,15 @@ use Elementor\Skin_Base;
 use Elementor\Controls_Manager;
 use Elementor\Group_Control_Typography;
 
+use Give\Helpers\Form\Template;
+
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 class Skin_Swiss extends Skin_Base {
 
 	protected function _register_controls_actions() {
 		add_action( 'elementor/element/be-give-totals/section_layout/before_section_end', [ $this, 'register_layout_section_controls' ] );
-    add_action( 'elementor/element/be-give-totals/section_design_layout/after_section_end', [ $this, 'register_design_give_total_box_controls' ] );
+    	add_action( 'elementor/element/be-give-totals/section_design_layout/after_section_end', [ $this, 'register_design_give_total_box_controls' ] );
 		add_action( 'elementor/element/be-give-totals/section_design_layout/after_section_end', [ $this, 'register_design_give_total_section_controls' ] );
 		add_action( 'elementor/element/be-give-totals/section_design_layout/after_section_end', [ $this, 'register_design_give_form_section_controls' ] );
 
@@ -208,7 +210,7 @@ class Skin_Swiss extends Skin_Base {
 		$this->add_control(
 			'heading_form',
 			[
-				'label' => __( 'Give Form', 'bearsthemes-addons' ),
+				'label' => __( 'Give Form (Apply On Legacy)', 'bearsthemes-addons' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -319,24 +321,28 @@ class Skin_Swiss extends Skin_Base {
 
 				<?php
 					if( !empty( $settings['form_id'] ) ) {
-						// Maybe display the form donate button.
-						$atts = array(
-							'id' => $settings['form_id'],  // integer.
-							'show_title' => false, // boolean.
-							'show_goal' => false, // boolean.
-							'show_content' => 'none', //above, below, or none
-							'display_style' => 'modal', //modal, button, and reveal
-							'continue_button_title' => '' //string
-
-						);
-
-						add_filter('give_form_html_tags', function($form_html_tags, $form) {
-							$form_html_tags['data-style'] = 'elementor-give-totals--swiss';
-
-							return $form_html_tags;
-						}, 10, 2);
-
-						echo give_get_donation_form( $atts );
+						if( !Template::getActiveID($settings['form_id']) ) {
+							echo do_shortcode('[give_form id="' . $settings['form_id'] . '"]');
+						} else {
+							// Maybe display the form donate button.
+							$atts = array(
+								'id' => $settings['form_id'],  // integer.
+								'show_title' => false, // boolean.
+								'show_goal' => false, // boolean.
+								'show_content' => 'none', //above, below, or none
+								'display_style' => 'modal', //modal, button, and reveal
+								'continue_button_title' => '' //string
+			
+							);
+			
+							add_filter('give_form_html_tags', function($form_html_tags, $form) {
+								$form_html_tags['data-style'] = 'elementor-give-totals--swiss';
+			
+								return $form_html_tags;
+							}, 10, 2);
+			
+							echo give_get_donation_form( $atts );
+						}
 					}
 				?>
 

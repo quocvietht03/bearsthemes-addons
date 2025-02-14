@@ -808,94 +808,92 @@ class Skin_Grid_Cruces extends Skin_Base {
 
 	protected function render_post() {
 
-    $settings = $this->parent->get_settings_for_display();
+		$settings = $this->parent->get_settings_for_display();
 
-		$form_id = get_the_ID(); // Form ID.
+		$post_id = get_the_ID();
+		$form_id = get_field('give_form', $post_id);
 
 		$form_class = 'elementor-give-form';
 
-    if( '' !== $this->parent->get_instance_value_skin('show_thumbnail') ) {
-      $form_class .= ' has-thumbnail';
-    }
+		if( '' !== $this->parent->get_instance_value_skin('show_thumbnail') ) {
+			$form_class .= ' has-thumbnail';
+		}
 
 		?>
-      <div class="swiper-slide">
-        <article id="post-<?php the_ID();  ?>" <?php post_class( $form_class ); ?> >
-  				<?php if( '' !== $this->parent->get_instance_value_skin('show_thumbnail') ) { ?>
-    				<div class="give-card__media">
-  						<a href="<?php the_permalink(); ?>">
-  	  	        <?php
-  	  	          // Maybe display the featured image.
-  	  	          printf(
-  	  	            '%s<div class="give-card__overlay"></div>',
-  	  	            get_the_post_thumbnail( $form_id, $this->parent->get_instance_value_skin( 'thumbnail_size' ) )
-  	  	          );
+		<div class="swiper-slide">
+		<article id="post-<?php the_ID();  ?>" <?php post_class( $form_class ); ?> >
+				<?php if( '' !== $this->parent->get_instance_value_skin('show_thumbnail') ) { ?>
+					<div class="give-card__media">
+						<a href="<?php the_permalink(); ?>">
+							<?php
+							// Maybe display the featured image.
+							printf(
+								'%s<div class="give-card__overlay"></div>',
+								get_the_post_thumbnail( $post_id, $this->parent->get_instance_value_skin( 'thumbnail_size' ) )
+							);
 
-  	  	        ?>
-  						</a>
-    				</div>
-          <?php } ?>
+							?>
+						</a>
+					</div>
+				<?php } ?>
 
-          <div class="give-card__body">
-            <?php
-              if( '' !== $this->parent->get_instance_value_skin( 'show_category' ) ){
-                the_terms( $form_id, 'give_forms_category', '<div class="give-card__category">' , ',', '</div>' );
-              }
+				<div class="give-card__body">
+					<?php
+						if( '' !== $this->parent->get_instance_value_skin( 'show_category' ) ){
+							the_terms( $post_id, 'give_posts_category', '<div class="give-card__category">' , ',', '</div>' );
+						}
 
-  	          if( '' !== $this->parent->get_instance_value_skin( 'show_title' ) ){
-  	            // Maybe display the form title.
-  	            printf(
-  	              '<h3 class="give-card__title">
-  	  							<a href="%s">%s</a>
-  	  						</h3>',
-  	  						get_the_permalink(),
-  	  						get_the_title()
-  	            );
-  	          }
+						if( '' !== $this->parent->get_instance_value_skin( 'show_title' ) ){
+							// Maybe display the form title.
+							printf(
+							'<h3 class="give-card__title">
+											<a href="%s">%s</a>
+										</h3>',
+										get_the_permalink(),
+										get_the_title()
+							);
+						}
 
-              if( '' !== $this->parent->get_instance_value_skin( 'show_excerpt' ) ){
-  	            $content      = give_get_meta( $form_id, '_give_form_content', true );
-  	          	$display_content = give_get_meta( $form_id, '_give_display_content', true );
+						if( '' !== $this->parent->get_instance_value_skin( 'show_excerpt' ) ){
+							$content = get_the_excerpt( $post_id );
 
-  							$excerpt_length = $this->parent->get_instance_value_skin( 'excerpt_length' );
-  							$excerpt_more = $this->parent->get_instance_value_skin( 'excerpt_more' );
+							$excerpt_length = $this->parent->get_instance_value_skin( 'excerpt_length' );
+							$excerpt_more = $this->parent->get_instance_value_skin( 'excerpt_more' );
 
-  	            if('enabled' == $display_content) {
-  	              echo '<div class="give-card__excerpt">' . wp_trim_words( $content, $excerpt_length, $excerpt_more ) . '</div>';
-  	            }
-  						}
-            ?>
+							echo '<div class="give-card__excerpt">' . wp_trim_words( $content, $excerpt_length, $excerpt_more ) . '</div>';
+						}
+					?>
 
-            <?php
-              if( '' !== $this->parent->get_instance_value_skin('show_goal_progress') && give_is_setting_enabled( get_post_meta( $form_id, '_give_goal_option', true ) ) ) {
-                $args = array(
-                  'show_text' => true,
-                  'show_bar' => false,
-                  'income_text' => __( 'Raised Donation', 'bearsthemes-addons' ),
-                  'goal_text' => __( 'Goal Donation', 'bearsthemes-addons' ),
-                  'custom_goal_progress' => $this->parent->get_instance_value_skin('custom_goal_progress'),
+					<?php
+						if( '' !== $this->parent->get_instance_value_skin('show_goal_progress') && give_is_setting_enabled( get_post_meta( $form_id, '_give_goal_option', true ) ) ) {
+						$args = array(
+							'show_text' => true,
+							'show_bar' => false,
+							'income_text' => __( 'Raised Donation', 'bearsthemes-addons' ),
+							'goal_text' => __( 'Goal Donation', 'bearsthemes-addons' ),
+							'custom_goal_progress' => $this->parent->get_instance_value_skin('custom_goal_progress'),
 
-                );
+						);
 
-                $bar_opts = array(
-                  'type' => 'line',
-                  'strokewidth' => 1,
-                  'easing' => $this->parent->get_instance_value_skin('goal_progress_easing'),
-                  'duration' => !empty( $this->parent->get_instance_value_skin('goal_progress_duration')['size'] ) ? absint( $this->parent->get_instance_value_skin('goal_progress_duration')['size'] ) : 0,
-                  'color' => $this->parent->get_instance_value_skin('goal_progress_color_from'),
-                  'trailcolor' => $this->parent->get_instance_value_skin('goal_progress_trailcolor'),
-                  'trailwidth' => 1,
-                  'tocolor' => $this->parent->get_instance_value_skin('goal_progress_color_to'),
-                  'width' => '100%',
-                  'height' => '6px',
-                );
+						$bar_opts = array(
+							'type' => 'line',
+							'strokewidth' => 1,
+							'easing' => $this->parent->get_instance_value_skin('goal_progress_easing'),
+							'duration' => !empty( $this->parent->get_instance_value_skin('goal_progress_duration')['size'] ) ? absint( $this->parent->get_instance_value_skin('goal_progress_duration')['size'] ) : 0,
+							'color' => $this->parent->get_instance_value_skin('goal_progress_color_from'),
+							'trailcolor' => $this->parent->get_instance_value_skin('goal_progress_trailcolor'),
+							'trailwidth' => 1,
+							'tocolor' => $this->parent->get_instance_value_skin('goal_progress_color_to'),
+							'width' => '100%',
+							'height' => '6px',
+						);
 
-                bearsthemes_addons_goal_progress( $form_id, $args, $bar_opts );
-              }
-            ?>
-          </div>
-  			</article>
-      </div>
+						bearsthemes_addons_goal_progress( $form_id, $args, $bar_opts );
+						}
+					?>
+				</div>
+			</article>
+		</div>
 		<?php
 	}
 

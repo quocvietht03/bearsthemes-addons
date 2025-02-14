@@ -9,6 +9,8 @@ use Elementor\Group_Control_Box_Shadow;
 use Elementor\Group_Control_Css_Filter;
 use Elementor\Group_Control_Typography;
 
+use Give\Helpers\Form\Template;
+
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 class Skin_Grid_Toluca extends Skin_Base {
@@ -19,6 +21,7 @@ class Skin_Grid_Toluca extends Skin_Base {
 		add_action( 'elementor/element/be-give-forms/section_design_layout/after_section_end', [ $this, 'register_design_box_section_controls' ] );
 		add_action( 'elementor/element/be-give-forms/section_design_layout/after_section_end', [ $this, 'register_design_image_section_controls' ] );
 		add_action( 'elementor/element/be-give-forms/section_design_layout/after_section_end', [ $this, 'register_design_content_section_controls' ] );
+		add_action( 'elementor/element/be-give-forms/section_design_layout/after_section_end', [ $this, 'register_design_give_form_section_controls' ] );
 		add_action( 'elementor/element/be-give-forms/section_design_layout/after_section_end', [ $this, 'register_design_goal_progress_section_controls' ] );
 	}
 
@@ -131,6 +134,29 @@ class Skin_Grid_Toluca extends Skin_Base {
 				'label_on' => __( 'Show', 'bearsthemes-addons' ),
 				'label_off' => __( 'Hide', 'bearsthemes-addons'),
 				'default' => 'yes',
+			]
+		);
+
+		$this->add_control(
+			'show_donation_button',
+			[
+				'label' => __( 'Donation Button', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::SWITCHER,
+				'label_on' => __( 'Show', 'bearsthemes-addons' ),
+				'label_off' => __( 'Hide', 'bearsthemes-addons' ),
+				'default' => 'yes',
+			]
+		);
+
+		$this->add_control(
+			'donation_button_label',
+			[
+				'label' => __( 'Donation button Label', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::TEXT,
+				'default' => __( 'Donate Now', 'bearsthemes-addons' ),
+				'condition' => [
+					'skin_grid_coropuna_show_donation_button!' => '',
+				],
 			]
 		);
 
@@ -652,7 +678,8 @@ class Skin_Grid_Toluca extends Skin_Base {
 			[
 				'name' => 'donation_button_typography',
 				'default' => '',
-				'selector' => '{{WRAPPER}} .give-btn-modal',
+				'selector' => '{{WRAPPER}} .give-btn-modal,
+								{{WRAPPER}} .root-data-givewp-embed .givewp-donation-form-modal__open',
 				'condition' => [
 					'skin_grid_toluca_show_donation_button!' => '',
 				],
@@ -675,7 +702,8 @@ class Skin_Grid_Toluca extends Skin_Base {
 					'skin_grid_toluca_show_donation_button!' => '',
 				],
 				'selectors' => [
-					'{{WRAPPER}} .give-btn-modal' => 'border-style: solid; border-width: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
+					'{{WRAPPER}} .give-btn-modal,
+					{{WRAPPER}} .root-data-givewp-embed .givewp-donation-form-modal__open' => 'border-style: solid; border-width: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
 				],
 			]
 		);
@@ -696,7 +724,8 @@ class Skin_Grid_Toluca extends Skin_Base {
 					'skin_grid_toluca_show_donation_button!' => '',
 				],
 				'selectors' => [
-					'{{WRAPPER}} .give-btn-modal' => 'border-radius: {{SIZE}}{{UNIT}}',
+					'{{WRAPPER}} .give-btn-modal,
+					{{WRAPPER}} .root-data-givewp-embed .givewp-donation-form-modal__open' => 'border-radius: {{SIZE}}{{UNIT}}',
 				],
 			]
 		);
@@ -718,6 +747,7 @@ class Skin_Grid_Toluca extends Skin_Base {
 				],
 				'selectors' => [
 					'{{WRAPPER}} .give-btn-modal' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
+					'{{WRAPPER}} .root-data-givewp-embed .givewp-donation-form-modal__open' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}} !important',
 				],
 			]
 		);
@@ -741,6 +771,7 @@ class Skin_Grid_Toluca extends Skin_Base {
 				'default' => '',
 				'selectors' => [
 					'{{WRAPPER}} .give-btn-modal' => 'color: {{VALUE}};',
+					'{{WRAPPER}} .root-data-givewp-embed .givewp-donation-form-modal__open' => 'color: {{VALUE}} !important;',
 				],
 			]
 		);
@@ -751,7 +782,8 @@ class Skin_Grid_Toluca extends Skin_Base {
 				'label' => __( 'Background Color', 'bearsthemes-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
-					'{{WRAPPER}} .give-btn-modal' => 'background-color: {{VALUE}}',
+					'{{WRAPPER}} .give-btn-modal,
+					{{WRAPPER}} .root-data-givewp-embed .givewp-donation-form-modal__open' => 'background-color: {{VALUE}}',
 				],
 			]
 		);
@@ -762,7 +794,8 @@ class Skin_Grid_Toluca extends Skin_Base {
 				'label' => __( 'Border Color', 'bearsthemes-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
-					'{{WRAPPER}} .give-btn-modal' => 'border-color: {{VALUE}}',
+					'{{WRAPPER}} .give-btn-modal,
+					{{WRAPPER}} .root-data-givewp-embed .givewp-donation-form-modal__open' => 'border-color: {{VALUE}}',
 				],
 			]
 		);
@@ -785,7 +818,8 @@ class Skin_Grid_Toluca extends Skin_Base {
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
-					' {{WRAPPER}} .give-btn-modal:hover' => 'color: {{VALUE}};',
+					'{{WRAPPER}} .give-btn-modal:hover' => 'color: {{VALUE}};',
+					'{{WRAPPER}} .root-data-givewp-embed .givewp-donation-form-modal__open:hover' => 'color: {{VALUE}} !important;',
 				],
 			]
 		);
@@ -796,7 +830,8 @@ class Skin_Grid_Toluca extends Skin_Base {
 				'label' => __( 'Background Color', 'bearsthemes-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
-					'{{WRAPPER}} .give-btn-modal:hover' => 'background-color: {{VALUE}}',
+					'{{WRAPPER}} .give-btn-modal:hover,
+					{{WRAPPER}} .root-data-givewp-embed .givewp-donation-form-modal__open:hover' => 'background-color: {{VALUE}}',
 				],
 			]
 		);
@@ -807,7 +842,8 @@ class Skin_Grid_Toluca extends Skin_Base {
 				'label' => __( 'Border Color', 'bearsthemes-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
-					'{{WRAPPER}} .give-btn-modal:hover' => 'border-color: {{VALUE}}',
+					'{{WRAPPER}} .give-btn-modal:hover,
+					{{WRAPPER}} .root-data-givewp-embed .givewp-donation-form-modal__open:hover' => 'border-color: {{VALUE}}',
 				],
 			]
 		);
@@ -818,6 +854,80 @@ class Skin_Grid_Toluca extends Skin_Base {
 
 		$this->end_controls_section();
     }
+
+	public function register_design_give_form_section_controls(Widget_Base $widget) {
+		$this->parent = $widget;
+
+		$this->start_controls_section(
+			'section_design_give_form',
+			[
+				'label' => __( 'Give Form (Apply On Legacy)', 'bearsthemes-addons' ),
+				'tab' => Controls_Manager::TAB_STYLE,
+				'condition' => [
+					'skin_grid_toluca_show_donation_button!' => '',
+				],
+			]
+		);
+
+		$this->add_control(
+			'form_main_color',
+			[
+				'label' => __( 'Main Color', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::COLOR,
+				'default' => '',
+				'selectors' => [
+					'.give-form[data-style="elementor-give-forms--toluca"] .give-total-wrap #give-amount,
+					.give-form[data-style="elementor-give-forms--toluca"] #give-donation-level-button-wrap .give-btn:hover,
+					.give-form[data-style="elementor-give-forms--toluca"] #give-gateway-radio-list > li.give-gateway-option-selected label,
+					.give-form[data-style="elementor-give-forms--toluca"] #give-gateway-radio-list > li label:hover,
+					.give-form[data-style="elementor-give-forms--toluca"] #give-donation-level-radio-list li input.give-default-level + label,
+					.give-form[data-style="elementor-give-forms--toluca"] #give-donation-level-radio-list li label:hover,
+					.give-form[data-style="elementor-give-forms--toluca"] #give-gateway-radio-list > li label:hover,
+					.give-form[data-style="elementor-give-forms--toluca"] #give_terms_agreement label:hover,
+					.give-form[data-style="elementor-give-forms--toluca"] #give_terms_agreement label:hover,
+					.give-form[data-style="elementor-give-forms--toluca"] #give_terms_agreement input[type=checkbox]:checked + label,
+					.give-form[data-style="elementor-give-forms--toluca"] .give_terms_links:hover,
+					.give-form[data-style="elementor-give-forms--toluca"] #give-final-total-wrap .give-final-total-amount' => 'color: {{VALUE}};',
+
+				 '.give-form[data-style="elementor-give-forms--toluca"] .give-total-wrap .give-currency-symbol,
+				 .give-form[data-style="elementor-give-forms--toluca"] #give-donation-level-button-wrap .give-btn.give-default-level,
+				 .give-form[data-style="elementor-give-forms--toluca"] #give-donation-level-radio-list li label:after,
+				 .give-form[data-style="elementor-give-forms--toluca"] #give-gateway-radio-list > li label:after,
+				 .give-form[data-style="elementor-give-forms--toluca"] #give_terms_agreement input[type=checkbox]:checked + label:before,
+				 .give-form[data-style="elementor-give-forms--toluca"] #give-final-total-wrap .give-donation-total-label,
+				 .give-form[data-style="elementor-give-forms--toluca"] .give-submit' => 'background-color: {{VALUE}};',
+
+				 '.give-form[data-style="elementor-give-forms--toluca"] #give-donation-level-button-wrap .give-btn.give-default-level,
+				 .give-form[data-style="elementor-give-forms--toluca"] #give-donation-level-button-wrap .give-btn:hover,
+				 .give-form[data-style="elementor-give-forms--toluca"] #give_terms_agreement input[type=checkbox]:checked + label:before' => 'border-color: {{VALUE}};',
+				],
+			]
+		);
+
+		$this->add_control(
+			'form_main_color_hover',
+			[
+				'label' => __( 'Main Color Hover', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::COLOR,
+				'default' => '',
+				'selectors' => [
+					'.give-form[data-style="elementor-give-forms--toluca"] .give-submit:hover' => 'background-color: {{VALUE}};',
+				],
+			]
+		);
+
+		$this->add_group_control(
+			Group_Control_Typography::get_type(),
+			[
+				'name' => 'form_typography',
+				'label' => __( 'Typography', 'bearsthemes-addons' ),
+				'default' => '',
+				'selector' => '.give-form[data-style="elementor-give-forms--toluca"]',
+			]
+		);
+
+		$this->end_controls_section();
+	}
 
 	public function register_design_goal_progress_section_controls(Widget_Base $widget){
 
@@ -947,99 +1057,108 @@ class Skin_Grid_Toluca extends Skin_Base {
 
 	protected function render_post() {
 
-    $settings = $this->parent->get_settings_for_display();
+		$settings = $this->parent->get_settings_for_display();
 
-		$form_id = get_the_ID(); // Form ID.
+		$post_id = get_the_ID();
+		$form_id = get_field('give_form', $post_id);
 
 		$form_class = 'elementor-give-form';
 
-    if( '' !== $this->parent->get_instance_value_skin('show_thumbnail') ) {
-      $form_class .= ' has-thumbnail';
-    }
+		if( '' !== $this->parent->get_instance_value_skin('show_thumbnail') ) {
+			$form_class .= ' has-thumbnail';
+		}
 
 		?>
-			<article id="post-<?php the_ID();  ?>" <?php post_class( $form_class ); ?> >
-				<?php if( '' !== $this->parent->get_instance_value_skin('show_thumbnail') ) { ?>
-  				<div class="give-card__media">
-						<a href="<?php the_permalink(); ?>">
-	  	        <?php
-	  	          // Maybe display the featured image.
-	  	          printf(
-	  	            '%s<div class="give-card__overlay"></div>',
-	  	            get_the_post_thumbnail( $form_id, $this->parent->get_instance_value_skin( 'thumbnail_size' ) )
-	  	          );
+		<article id="post-<?php the_ID();  ?>" <?php post_class( $form_class ); ?> >
+			<?php if( '' !== $this->parent->get_instance_value_skin('show_thumbnail') ) { ?>
+				<div class="give-card__media">
+					<a href="<?php the_permalink(); ?>">
+						<?php
+							// Maybe display the featured image.
+							printf(
+							'%s<div class="give-card__overlay"></div>',
+							get_the_post_thumbnail( $post_id, $this->parent->get_instance_value_skin( 'thumbnail_size' ) )
+							);
 
-	  	        ?>
-						</a>
-  				</div>
-        <?php } ?>
+						?>
+					</a>
+				</div>
+			<?php } ?>
 
-        <div class="give-card__body">
-          <?php
-            if( '' !== $this->parent->get_instance_value_skin( 'show_title' ) ){
-                // Maybe display the form title.
-                printf(
-                    '<h3 class="give-card__title">
-                                <a href="%s">%s</a>
-                            </h3>',
-                            get_the_permalink(),
-                            get_the_title()
-                );
-            }
+			<div class="give-card__body">
+				<?php
+					if( '' !== $this->parent->get_instance_value_skin( 'show_title' ) ){
+						// Maybe display the form title.
+						printf(
+							'<h3 class="give-card__title">
+										<a href="%s">%s</a>
+									</h3>',
+									get_the_permalink(),
+									get_the_title()
+						);
+					}
 
-            if( '' !== $this->parent->get_instance_value_skin( 'show_category' ) ){
-                the_terms( $form_id, 'give_forms_category', '<div class="give-card__category">' , ', ', '</div>' );
-            }
+					if( '' !== $this->parent->get_instance_value_skin( 'show_category' ) ){
+						the_terms( $post_id, 'give_posts_category', '<div class="give-card__category">' , ', ', '</div>' );
+					}
 
-            if( '' !== $this->parent->get_instance_value_skin( 'show_donation_button' ) ) {
-                // Maybe display the form donate button.
-                $atts = array(
-                    'id' => $form_id,  // integer.
-                    'show_title' => false, // boolean.
-                    'show_goal' => false, // boolean.
-                    'show_content' => 'none', //above, below, or none
-                    'display_style' => 'button', //modal, button, and reveal
-                    'continue_button_title' => $this->parent->get_instance_value_skin( 'donation_button_label' ) //string
+					if( '' !== $this->parent->get_instance_value_skin( 'show_donation_button' ) ) {
+						if( !Template::getActiveID($form_id) ) {
+							if ( $this->parent->get_is_edit_mode() ) {
+								echo '<div class="root-data-givewp-embed"><button type="button" class="givewp-donation-form-modal__open">' . $this->parent->get_instance_value_skin('donation_button_label') . '</button></div>';
+							} else {
+								echo do_shortcode('[give_form id="' . $form_id . '" display_style="modal" continue_button_title="' . $this->parent->get_instance_value_skin('donation_button_label') . '"]');
+							}
+						} else {
+							// Maybe display the form donate button.
+							$atts = array(
+								'id' => $form_id,  // integer.
+								'show_title' => false, // boolean.
+								'show_goal' => false, // boolean.
+								'show_content' => 'none', //above, below, or none
+								'display_style' => 'button', //modal, button, and reveal
+								'continue_button_title' => $this->parent->get_instance_value_skin('donation_button_label') //string
 
-                );
+							);
 
-                add_filter('give_form_html_tags', function($form_html_tags, $form) {
-                    $form_html_tags['data-style'] = 'elementor-give-forms--swiss';
+							add_filter('give_form_html_tags', function($form_html_tags, $form) {
+								$form_html_tags['data-style'] = 'elementor-give-forms--toluca';
 
-                    return $form_html_tags;
-                }, 10, 2);
+								return $form_html_tags;
+							}, 10, 2);
 
-                echo give_get_donation_form( $atts );
-            }
+							echo give_get_donation_form( $atts );
+						}
+					}
 
-            if( '' !== $this->parent->get_instance_value_skin('show_goal_progress') && give_is_setting_enabled( get_post_meta( $form_id, '_give_goal_option', true ) ) ) {
-              $args = array(
-                'show_text' => true,
-                'show_bar' => true,
-                'income_text' => __( 'Raised', 'bearsthemes-addons' ),
-                'goal_text' => __( 'Goal', 'bearsthemes-addons' ),
-                'custom_goal_progress' => $this->parent->get_instance_value_skin('custom_goal_progress'),
+					if( '' !== $this->parent->get_instance_value_skin('show_goal_progress') && give_is_setting_enabled( get_post_meta( $form_id, '_give_goal_option', true ) ) ) {
+					$args = array(
+						'show_text' => true,
+						'show_bar' => true,
+						'income_text' => __( 'Raised', 'bearsthemes-addons' ),
+						'goal_text' => __( 'Goal', 'bearsthemes-addons' ),
+						'custom_goal_progress' => $this->parent->get_instance_value_skin('custom_goal_progress'),
 
-              );
+					);
 
-              $bar_opts = array(
-                'type' => 'line',
-                'strokewidth' => 1,
-                'easing' => $this->parent->get_instance_value_skin('goal_progress_easing'),
-                'duration' => !empty( $this->parent->get_instance_value_skin('goal_progress_duration')['size'] ) ? absint( $this->parent->get_instance_value_skin('goal_progress_duration')['size'] ) : 0,
-                'color' => $this->parent->get_instance_value_skin('goal_progress_color_from'),
-                'trailcolor' => $this->parent->get_instance_value_skin('goal_progress_trailcolor'),
-                'trailwidth' => 1,
-                'tocolor' => $this->parent->get_instance_value_skin('goal_progress_color_to'),
-                'width' => '100%',
-                'height' => '14px',
-              );
+					$bar_opts = array(
+						'type' => 'line',
+						'strokewidth' => 1,
+						'easing' => $this->parent->get_instance_value_skin('goal_progress_easing'),
+						'duration' => !empty( $this->parent->get_instance_value_skin('goal_progress_duration')['size'] ) ? absint( $this->parent->get_instance_value_skin('goal_progress_duration')['size'] ) : 0,
+						'color' => $this->parent->get_instance_value_skin('goal_progress_color_from'),
+						'trailcolor' => $this->parent->get_instance_value_skin('goal_progress_trailcolor'),
+						'trailwidth' => 1,
+						'tocolor' => $this->parent->get_instance_value_skin('goal_progress_color_to'),
+						'width' => '100%',
+						'height' => '14px',
+					);
 
-              bearsthemes_addons_goal_progress( $form_id, $args, $bar_opts );
-            }
-          ?>
-        </div>
-			</article>
+					bearsthemes_addons_goal_progress( $form_id, $args, $bar_opts );
+					}
+				?>
+			</div>
+		</article>
 		<?php
 	}
 

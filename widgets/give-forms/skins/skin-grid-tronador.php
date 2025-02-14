@@ -905,7 +905,9 @@ class Skin_Grid_Tronador extends Skin_Base {
 
     $settings = $this->parent->get_settings_for_display();
 
-		$form_id = get_the_ID(); // Form ID.
+		$post_id = get_the_ID();
+		$form_id = get_field('give_form', $post_id);
+
 		$form_currency = apply_filters( 'give_goal_form_currency', give_get_currency( $form_id ), $form_id );
 		$form_class = 'elementor-give-form elementor-item';
 		$goal_format_args = apply_filters(
@@ -933,8 +935,8 @@ class Skin_Grid_Tronador extends Skin_Base {
 			$total = give_format_amount( $total_income,$goal_format_args ) . $currency_symbol;
 			$total_goal = give_format_amount( $goal_amount,$goal_format_args ) . $currency_symbol;
 		}
-    $group = array();
-		foreach ( get_the_terms( get_the_ID(), 'give_forms_category' ) as $tax ) {
+    	$group = array();
+		foreach ( get_the_terms( $post_id, 'give_posts_category' ) as $tax ) {
 			$group[] = $tax->slug;
 		}
 		?>
@@ -945,7 +947,7 @@ class Skin_Grid_Tronador extends Skin_Base {
             // Maybe display the featured image.
             printf(
               '%s<div class="give-card__overlay"></div>',
-              get_the_post_thumbnail( $form_id, $this->parent->get_instance_value_skin( 'thumbnail_size' ) )
+              get_the_post_thumbnail( $post_id, $this->parent->get_instance_value_skin( 'thumbnail_size' ) )
             );
           }
         ?>

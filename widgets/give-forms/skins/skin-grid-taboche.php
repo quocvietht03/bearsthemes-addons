@@ -839,79 +839,79 @@ class Skin_Grid_Taboche extends Skin_Base {
 
 	protected function render_post() {
 
-    $settings = $this->parent->get_settings_for_display();
+    	$settings = $this->parent->get_settings_for_display();
 
-		$form_id = get_the_ID(); // Form ID.
+		$post_id = get_the_ID();
+		$form_id = get_field('give_form', $post_id);
 
 		$form_class = 'elementor-give-form';
 
 		?>
-    <article id="post-<?php the_ID();  ?>" <?php post_class( $form_class ); ?> >
+    	<article id="post-<?php the_ID();  ?>" <?php post_class( $form_class ); ?> >
 			<?php if( '' !== $this->parent->get_instance_value_skin('show_thumbnail') ) { ?>
 				<div class="give-card__media">
 					<a href="<?php the_permalink(); ?>">
 						<?php
-							// Maybe display the featured image.
-							printf(
-								'%s<div class="give-card__overlay"></div>',
-								get_the_post_thumbnail( $form_id, $this->parent->get_instance_value_skin( 'thumbnail_size' ) )
-							);
-
+						// Maybe display the featured image.
+						printf(
+							'%s<div class="give-card__overlay"></div>',
+							get_the_post_thumbnail( $post_id, $this->parent->get_instance_value_skin( 'thumbnail_size' ) )
+						);
 						?>
 					</a>
 				</div>
 			<?php } ?>
 
-      <div class="give-card__body">
-        <?php if( '' !== $this->parent->get_instance_value_skin( 'show_meta' ) ) { ?>
-          <div class="give-card__meta-date">
-              <?php echo bearsthemes_addons_get_icon_svg('calendar', 14) . esc_html( get_the_date() ); ?>
-          </div>
-        <?php } ?>
-        <?php
-          if( '' !== $this->parent->get_instance_value_skin( 'show_title' ) ){
-            // Maybe display the form title.
-            printf(
-              '<h3 class="give-card__title">
-                <a href="%s">%s</a>
-              </h3>',
-              get_the_permalink(),
-              get_the_title()
-            );
-          }
-        ?>
-        <div class="give-card__progress-bar">
-          <?php
-            if( '' !== $this->parent->get_instance_value_skin('show_goal_progress') && give_is_setting_enabled( get_post_meta( $form_id, '_give_goal_option', true ) ) ) {
-              $args = array(
-                'show_text' => true,
-                'show_bar' => true,
-                'income_text' => __( 'Raised', 'bearsthemes-addons' ),
-                'goal_text' => __( 'Goal', 'bearsthemes-addons' ),
-                'custom_goal_progress' => $this->parent->get_instance_value_skin('custom_goal_progress'),
+			<div class="give-card__body">
+				<?php if( '' !== $this->parent->get_instance_value_skin( 'show_meta' ) ) { ?>
+				<div class="give-card__meta-date">
+					<?php echo bearsthemes_addons_get_icon_svg('calendar', 14) . esc_html( get_the_date() ); ?>
+				</div>
+				<?php } ?>
+				<?php
+				if( '' !== $this->parent->get_instance_value_skin( 'show_title' ) ){
+					// Maybe display the form title.
+					printf(
+					'<h3 class="give-card__title">
+									<a href="%s">%s</a>
+								</h3>',
+								get_the_permalink(),
+								get_the_title()
+					);
+				}
+				?>
+				<div class="give-card__progress-bar">
+					<?php
+						if( '' !== $this->parent->get_instance_value_skin('show_goal_progress') && give_is_setting_enabled( get_post_meta( $form_id, '_give_goal_option', true ) ) ) {
+						$args = array(
+							'show_text' => true,
+							'show_bar' => true,
+							'income_text' => __( 'Raised', 'bearsthemes-addons' ),
+							'goal_text' => __( 'Goal', 'bearsthemes-addons' ),
+							'custom_goal_progress' => $this->parent->get_instance_value_skin('custom_goal_progress'),
 
-              );
+						);
 
-              $bar_opts = array(
-                'type' => 'line',
-                'strokewidth' => 1,
-                'easing' => $this->parent->get_instance_value_skin('goal_progress_easing'),
-                'duration' => !empty( $this->parent->get_instance_value_skin('goal_progress_duration')['size'] ) ? absint( $this->parent->get_instance_value_skin('goal_progress_duration')['size'] ) : 0,
-                'color' => $this->parent->get_instance_value_skin('goal_progress_color_from'),
-                'trailcolor' => $this->parent->get_instance_value_skin('goal_progress_trailcolor'),
-                'trailwidth' => 1,
-                'tocolor' => $this->parent->get_instance_value_skin('goal_progress_color_to'),
-                'width' => '100%',
-                'height' => '14px',
-              );
+						$bar_opts = array(
+							'type' => 'line',
+							'strokewidth' => 1,
+							'easing' => $this->parent->get_instance_value_skin('goal_progress_easing'),
+							'duration' => !empty( $this->parent->get_instance_value_skin('goal_progress_duration')['size'] ) ? absint( $this->parent->get_instance_value_skin('goal_progress_duration')['size'] ) : 0,
+							'color' => $this->parent->get_instance_value_skin('goal_progress_color_from'),
+							'trailcolor' => $this->parent->get_instance_value_skin('goal_progress_trailcolor'),
+							'trailwidth' => 1,
+							'tocolor' => $this->parent->get_instance_value_skin('goal_progress_color_to'),
+							'width' => '100%',
+							'height' => '14px',
+						);
 
-              bearsthemes_addons_goal_progress( $form_id, $args, $bar_opts );
-              echo '<div class="give-card__completed">' . esc_html__('Donation Completed', 'bearsthemes-addons') . '</div>';
-            }
-          ?>
-        </div>
-      </div>
-    </article>
+						bearsthemes_addons_goal_progress( $form_id, $args, $bar_opts );
+						echo '<div class="give-card__completed">' . esc_html__('Donation Completed', 'bearsthemes-addons') . '</div>';
+						}
+					?>
+				</div>
+			</div>
+		</article>
 		<?php
 	}
 

@@ -9,6 +9,8 @@ use Elementor\Group_Control_Box_Shadow;
 use Elementor\Group_Control_Css_Filter;
 use Elementor\Group_Control_Typography;
 
+use Give\Helpers\Form\Template;
+
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 class Skin_Grid_Yutmaru extends Skin_Base {
@@ -665,7 +667,8 @@ class Skin_Grid_Yutmaru extends Skin_Base {
 			[
 				'name' => 'donation_button_typography',
 				'default' => '',
-				'selector' => '{{WRAPPER}} .give-btn-modal',
+				'selector' => '{{WRAPPER}} .give-btn-modal,
+								{{WRAPPER}} .root-data-givewp-embed .givewp-donation-form-modal__open',
 				'condition' => [
 					'skin_grid_yutmaru_show_donation_button!' => '',
 				],
@@ -688,7 +691,8 @@ class Skin_Grid_Yutmaru extends Skin_Base {
 					'skin_grid_yutmaru_show_donation_button!' => '',
 				],
 				'selectors' => [
-					'{{WRAPPER}} .give-btn-modal' => 'border-style: solid; border-width: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
+					'{{WRAPPER}} .give-btn-modal,
+					{{WRAPPER}} .root-data-givewp-embed .givewp-donation-form-modal__open' => 'border-style: solid; border-width: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
 				],
 			]
 		);
@@ -709,7 +713,8 @@ class Skin_Grid_Yutmaru extends Skin_Base {
 					'skin_grid_yutmaru_show_donation_button!' => '',
 				],
 				'selectors' => [
-					'{{WRAPPER}} .give-btn-modal' => 'border-radius: {{SIZE}}{{UNIT}}',
+					'{{WRAPPER}} .give-btn-modal,
+					{{WRAPPER}} .root-data-givewp-embed .givewp-donation-form-modal__open' => 'border-radius: {{SIZE}}{{UNIT}}',
 				],
 			]
 		);
@@ -731,6 +736,7 @@ class Skin_Grid_Yutmaru extends Skin_Base {
 				],
 				'selectors' => [
 					'{{WRAPPER}} .give-btn-modal' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
+					'{{WRAPPER}} .root-data-givewp-embed .givewp-donation-form-modal__open' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}} !important',
 				],
 			]
 		);
@@ -754,6 +760,7 @@ class Skin_Grid_Yutmaru extends Skin_Base {
 				'default' => '',
 				'selectors' => [
 					'{{WRAPPER}} .give-btn-modal' => 'color: {{VALUE}};',
+					'{{WRAPPER}} .root-data-givewp-embed .givewp-donation-form-modal__open' => 'color: {{VALUE}} !important;',
 				],
 			]
 		);
@@ -775,7 +782,8 @@ class Skin_Grid_Yutmaru extends Skin_Base {
 				'label' => __( 'Border Color', 'bearsthemes-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
-					'{{WRAPPER}} .give-btn-modal' => 'border-color: {{VALUE}}',
+					'{{WRAPPER}} .give-btn-modal,
+					{{WRAPPER}} .root-data-givewp-embed .givewp-donation-form-modal__open' => 'border-color: {{VALUE}}',
 				],
 			]
 		);
@@ -798,7 +806,8 @@ class Skin_Grid_Yutmaru extends Skin_Base {
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
-					' {{WRAPPER}} .give-btn-modal:hover' => 'color: {{VALUE}};',
+					'{{WRAPPER}} .give-btn-modal:hover' => 'color: {{VALUE}};',
+					'{{WRAPPER}} .root-data-givewp-embed .givewp-donation-form-modal__open:hover' => 'color: {{VALUE}} !important;',
 				],
 			]
 		);
@@ -809,7 +818,8 @@ class Skin_Grid_Yutmaru extends Skin_Base {
 				'label' => __( 'Background Color', 'bearsthemes-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
-					'{{WRAPPER}} .give-btn-modal:hover' => 'background-color: {{VALUE}}',
+					'{{WRAPPER}} .give-btn-modal:hover,
+					{{WRAPPER}} .root-data-givewp-embed .givewp-donation-form-modal__open:hover' => 'background-color: {{VALUE}}',
 				],
 			]
 		);
@@ -820,7 +830,8 @@ class Skin_Grid_Yutmaru extends Skin_Base {
 				'label' => __( 'Border Color', 'bearsthemes-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
-					'{{WRAPPER}} .give-btn-modal:hover' => 'border-color: {{VALUE}}',
+					'{{WRAPPER}} .give-btn-modal:hover,
+					{{WRAPPER}} .root-data-givewp-embed .givewp-donation-form-modal__open:hover' => 'border-color: {{VALUE}}',
 				],
 			]
 		);
@@ -838,7 +849,7 @@ class Skin_Grid_Yutmaru extends Skin_Base {
 		$this->start_controls_section(
 			'section_design_give_form',
 			[
-				'label' => __( 'Give Form', 'bearsthemes-addons' ),
+				'label' => __( 'Give Form (Apply On Legacy)', 'bearsthemes-addons' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'skin_grid_yutmaru_show_donation_button!' => '',
@@ -1034,84 +1045,92 @@ class Skin_Grid_Yutmaru extends Skin_Base {
 
 	protected function render_post() {
 
-    $settings = $this->parent->get_settings_for_display();
+		$settings = $this->parent->get_settings_for_display();
 
-		$form_id = get_the_ID(); // Form ID.
+		$post_id = get_the_ID();
+		$form_id = get_field('give_form', $post_id);
 
 		$form_class = 'elementor-give-form';
 
-    if( '' !== $this->parent->get_instance_value_skin('show_thumbnail') ) {
-      $form_class .= ' has-thumbnail';
-    }
+		if( '' !== $this->parent->get_instance_value_skin('show_thumbnail') ) {
+			$form_class .= ' has-thumbnail';
+		}
 
 		?>
-			<article id="post-<?php the_ID();  ?>" <?php post_class( $form_class ); ?> >
-				<?php if( '' !== $this->parent->get_instance_value_skin('show_thumbnail') ) { ?>
-  				<div class="give-card__media">
-						<a href="<?php the_permalink(); ?>">
-	  	        <?php
-	  	          // Maybe display the featured image.
-	  	          printf(
-	  	            '%s<div class="give-card__overlay"></div>',
-	  	            get_the_post_thumbnail( $form_id, $this->parent->get_instance_value_skin( 'thumbnail_size' ) )
-	  	          );
+		<article id="post-<?php the_ID();  ?>" <?php post_class( $form_class ); ?> >
+			<?php if( '' !== $this->parent->get_instance_value_skin('show_thumbnail') ) { ?>
+				<div class="give-card__media">
+					<a href="<?php the_permalink(); ?>">
+						<?php
+							// Maybe display the featured image.
+							printf(
+							'%s<div class="give-card__overlay"></div>',
+							get_the_post_thumbnail( $post_id, $this->parent->get_instance_value_skin( 'thumbnail_size' ) )
+							);
 
-	  	        ?>
-						</a>
-  				</div>
-        <?php } ?>
+						?>
+					</a>
+				</div>
+			<?php } ?>
 
-        <div class="give-card__body">
-          <?php
-            if( '' !== $this->parent->get_instance_value_skin( 'show_category' ) ){
-              the_terms( $form_id, 'give_forms_category', '<div class="give-card__category"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M19.1189 0.00111195C19.3568 -0.0111482 19.5886 0.0784274 19.7565 0.24744C19.9242 0.416219 20.0122 0.64834 19.9986 0.885881C19.3334 12.5839 8.91975 16.9743 8.81501 17.017C8.50285 17.1446 8.14459 17.0726 7.90595 16.8344L3.16623 12.0946C2.92911 11.8571 2.85658 11.5011 2.9819 11.1898C3.0238 11.0842 7.36553 0.614418 19.1189 0.00111195ZM11.0886 9.81891C11.7148 10.0782 12.4356 9.93479 12.9148 9.45544C13.5689 8.80108 13.5689 7.74036 12.9148 7.086C12.4356 6.60665 11.7148 6.46319 11.0886 6.72253C10.4623 6.98186 10.054 7.59292 10.054 8.27072C10.054 8.94852 10.4623 9.55958 11.0886 9.81891Z" fill="white"/>
-                                                            <path d="M0.932527 15.6808C1.5338 15.0754 2.41288 14.8377 3.2373 15.0576C4.06172 15.2775 4.70564 15.9214 4.92554 16.7458C5.14544 17.5703 4.90775 18.4493 4.30236 19.0506C3.37151 19.9815 0 20.0007 0 20.0007C0 20.0007 0 16.6108 0.932527 15.6808Z" fill="white"/>
-                                                            <path opacity="0.59854" d="M8.67745 1.85335C6.28088 1.43624 3.83137 2.21283 2.1129 3.93457C1.66482 4.38681 1.27525 4.89347 0.953317 5.4427C0.759417 5.77195 0.812835 6.19067 1.08318 6.46069L2.74967 8.12801C4.2982 5.67044 6.31182 3.53899 8.67745 1.85335Z" fill="white"/>
-                                                            <path opacity="0.59854" d="M18.1466 11.3228C18.5637 13.7193 17.7871 16.1688 16.0654 17.8873C15.6132 18.3354 15.1065 18.725 14.5573 19.0469C14.228 19.2408 13.8093 19.1874 13.5393 18.917L11.8719 17.2505C14.3295 15.702 16.461 13.6884 18.1466 11.3228Z" fill="white"/>
-                                                            </svg>' , ',', '</div>' );
-            }
+			<div class="give-card__body">
+				<?php
+					if( '' !== $this->parent->get_instance_value_skin( 'show_category' ) ){
+					the_terms( $post_id, 'give_posts_category', '<div class="give-card__category"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+																	<path fill-rule="evenodd" clip-rule="evenodd" d="M19.1189 0.00111195C19.3568 -0.0111482 19.5886 0.0784274 19.7565 0.24744C19.9242 0.416219 20.0122 0.64834 19.9986 0.885881C19.3334 12.5839 8.91975 16.9743 8.81501 17.017C8.50285 17.1446 8.14459 17.0726 7.90595 16.8344L3.16623 12.0946C2.92911 11.8571 2.85658 11.5011 2.9819 11.1898C3.0238 11.0842 7.36553 0.614418 19.1189 0.00111195ZM11.0886 9.81891C11.7148 10.0782 12.4356 9.93479 12.9148 9.45544C13.5689 8.80108 13.5689 7.74036 12.9148 7.086C12.4356 6.60665 11.7148 6.46319 11.0886 6.72253C10.4623 6.98186 10.054 7.59292 10.054 8.27072C10.054 8.94852 10.4623 9.55958 11.0886 9.81891Z" fill="white"/>
+																	<path d="M0.932527 15.6808C1.5338 15.0754 2.41288 14.8377 3.2373 15.0576C4.06172 15.2775 4.70564 15.9214 4.92554 16.7458C5.14544 17.5703 4.90775 18.4493 4.30236 19.0506C3.37151 19.9815 0 20.0007 0 20.0007C0 20.0007 0 16.6108 0.932527 15.6808Z" fill="white"/>
+																	<path opacity="0.59854" d="M8.67745 1.85335C6.28088 1.43624 3.83137 2.21283 2.1129 3.93457C1.66482 4.38681 1.27525 4.89347 0.953317 5.4427C0.759417 5.77195 0.812835 6.19067 1.08318 6.46069L2.74967 8.12801C4.2982 5.67044 6.31182 3.53899 8.67745 1.85335Z" fill="white"/>
+																	<path opacity="0.59854" d="M18.1466 11.3228C18.5637 13.7193 17.7871 16.1688 16.0654 17.8873C15.6132 18.3354 15.1065 18.725 14.5573 19.0469C14.228 19.2408 13.8093 19.1874 13.5393 18.917L11.8719 17.2505C14.3295 15.702 16.461 13.6884 18.1466 11.3228Z" fill="white"/>
+																	</svg>' , ',', '</div>' );
+					}
 
-	          if( '' !== $this->parent->get_instance_value_skin( 'show_title' ) ){
-	            // Maybe display the form title.
-	            printf(
-	              '<h3 class="give-card__title">
-	  							<a href="%s">%s</a>
-	  						</h3>',
-	  						get_the_permalink(),
-	  						get_the_title()
-	            );
-	          }
-          ?>
+					if( '' !== $this->parent->get_instance_value_skin( 'show_title' ) ){
+						// Maybe display the form title.
+						printf(
+						'<h3 class="give-card__title">
+										<a href="%s">%s</a>
+									</h3>',
+									get_the_permalink(),
+									get_the_title()
+						);
+					}
+				?>
 
-          <?php
-            if( '' !== $this->parent->get_instance_value_skin('show_goal_progress') && give_is_setting_enabled( get_post_meta( $form_id, '_give_goal_option', true ) ) ) {
-              $args = array(
-                'show_text' => true,
-                'show_bar' => true,
-                'income_text' => __( 'Raised', 'bearsthemes-addons' ),
-                'goal_text' => __( 'Goal', 'bearsthemes-addons' ),
-                'custom_goal_progress' => $this->parent->get_instance_value_skin('custom_goal_progress'),
+				<?php
+					if( '' !== $this->parent->get_instance_value_skin('show_goal_progress') && give_is_setting_enabled( get_post_meta( $form_id, '_give_goal_option', true ) ) ) {
+					$args = array(
+						'show_text' => true,
+						'show_bar' => true,
+						'income_text' => __( 'Raised', 'bearsthemes-addons' ),
+						'goal_text' => __( 'Goal', 'bearsthemes-addons' ),
+						'custom_goal_progress' => $this->parent->get_instance_value_skin('custom_goal_progress'),
 
-              );
+					);
 
-              $bar_opts = array(
-                'type' => 'line',
-                'strokewidth' => 1,
-                'easing' => $this->parent->get_instance_value_skin('goal_progress_easing'),
-                'duration' => !empty( $this->parent->get_instance_value_skin('goal_progress_duration')['size'] ) ? absint( $this->parent->get_instance_value_skin('goal_progress_duration')['size'] ) : 0,
-                'color' => $this->parent->get_instance_value_skin('goal_progress_color_from'),
-                'trailcolor' => $this->parent->get_instance_value_skin('goal_progress_trailcolor'),
-                'trailwidth' => 1,
-                'tocolor' => $this->parent->get_instance_value_skin('goal_progress_color_to'),
-                'width' => '100%',
-                'height' => '6px',
-              );
+					$bar_opts = array(
+						'type' => 'line',
+						'strokewidth' => 1,
+						'easing' => $this->parent->get_instance_value_skin('goal_progress_easing'),
+						'duration' => !empty( $this->parent->get_instance_value_skin('goal_progress_duration')['size'] ) ? absint( $this->parent->get_instance_value_skin('goal_progress_duration')['size'] ) : 0,
+						'color' => $this->parent->get_instance_value_skin('goal_progress_color_from'),
+						'trailcolor' => $this->parent->get_instance_value_skin('goal_progress_trailcolor'),
+						'trailwidth' => 1,
+						'tocolor' => $this->parent->get_instance_value_skin('goal_progress_color_to'),
+						'width' => '100%',
+						'height' => '6px',
+					);
 
-              bearsthemes_addons_goal_progress( $form_id, $args, $bar_opts );
-            }
+					bearsthemes_addons_goal_progress( $form_id, $args, $bar_opts );
+					}
 
-						if( '' !== $this->parent->get_instance_value_skin( 'show_donation_button' ) ) {
+					if( '' !== $this->parent->get_instance_value_skin( 'show_donation_button' ) ) {
+						if( !Template::getActiveID($form_id) ) {
+							if ( $this->parent->get_is_edit_mode() ) {
+								echo '<div class="root-data-givewp-embed"><button type="button" class="givewp-donation-form-modal__open">' . $this->parent->get_instance_value_skin('donation_button_label') . '</button></div>';
+							} else {
+								echo do_shortcode('[give_form id="' . $form_id . '" display_style="modal" continue_button_title="' . $this->parent->get_instance_value_skin('donation_button_label') . '"]');
+							}
+						} else {
 							// Maybe display the form donate button.
 							$atts = array(
 								'id' => $form_id,  // integer.
@@ -1119,7 +1138,7 @@ class Skin_Grid_Yutmaru extends Skin_Base {
 								'show_goal' => false, // boolean.
 								'show_content' => 'none', //above, below, or none
 								'display_style' => 'button', //modal, button, and reveal
-								'continue_button_title' => $this->parent->get_instance_value_skin( 'donation_button_label' ) //string
+								'continue_button_title' => $this->parent->get_instance_value_skin('donation_button_label') //string
 
 							);
 
@@ -1131,9 +1150,10 @@ class Skin_Grid_Yutmaru extends Skin_Base {
 
 							echo give_get_donation_form( $atts );
 						}
-          ?>
-        </div>
-			</article>
+					}
+				?>
+			</div>
+		</article>
 		<?php
 	}
 

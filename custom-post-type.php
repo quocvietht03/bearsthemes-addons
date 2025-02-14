@@ -23,13 +23,14 @@ class Bearsthemes_Custom_Post_Type {
 	 *
 	 * @var bool
 	 */
+	private $give_posts_option = 'give_posts_slug';
 	private $project_option = 'project_slug';
 	private $team_option = 'team_slug';
 
 
 
 	public function __construct() {
-		if ( post_type_exists( 'project' ) && post_type_exists( 'team' ) ) {
+		if ( post_type_exists( 'give_posts' ) && post_type_exists( 'project' ) && post_type_exists( 'team' ) ) {
 			return;
 		}
 
@@ -54,6 +55,108 @@ class Bearsthemes_Custom_Post_Type {
 	 * @return void
 	 */
 	public function register_custom_post_type() {
+		/**
+		 * Register Give Posts CPT
+		 */
+		if ( ( ! post_type_exists( 'give_posts' ) && ! get_option( $this->give_posts_option ) ) ) {
+			// Register post type
+			$labels = array(
+				"name" => __( "Give Posts", "bearsthemes-addons" ),
+				"singular_name" => __( "Give Post", "bearsthemes-addons" )
+			);
+
+			$give_posts_permalinks = get_option( 'give_posts_permalinks' );
+			$give_posts_base = empty( $give_posts_permalinks['give_posts_base'] ) ? _x( 'give_posts', 'slug', 'bearsthemes-addons' ) : $give_posts_permalinks['give_posts_base'];
+
+			$args = array(
+				"label" => __( "Give Post", "bearsthemes-addons" ),
+				"labels" => $labels,
+				"description" => "",
+				"public" => true,
+				"publicly_queryable" => true,
+				"show_ui" => true,
+				"show_in_rest" => true,
+				"rest_base" => "",
+				"rest_controller_class" => "WP_REST_Posts_Controller",
+				"has_archive" => false,
+				"show_in_menu" => true,
+				"show_in_nav_menus" => true,
+				"menu_icon" => "dashicons-heart",
+				"delete_with_user" => false,
+				"exclude_from_search" => false,
+				"capability_type" => "post",
+				"map_meta_cap" => true,
+				"hierarchical" => false,
+				"rewrite" => [
+					"slug" => $give_posts_base,
+					"with_front" => true
+				],
+				"query_var" => true,
+				"supports" => array( "title", "editor", "excerpt", "thumbnail" ),
+			);
+			register_post_type( "give_posts", $args );
+
+			// Register category
+			$labels = array(
+				"name" => __( "Categories", "bearsthemes-addons" ),
+				"singular_name" => __( "Category", "bearsthemes-addons" ),
+				"menu_name" => __( "Categories", "bearsthemes-addons" ),
+				"all_items" => __( "All Categories", "bearsthemes-addons" ),
+			);
+
+			$give_posts_tax_permalinks = get_option( 'give_posts_taxt_permalinks' );
+			$give_posts_tax_base = empty( $give_posts_tax_permalinks['give_posts_tax_base'] ) ? _x( 'give_posts-category', 'slug', 'bearsthemes-addons' ) : $give_posts_tax_permalinks['give_posts_tax_base'];
+
+			$args = array(
+				"label" => __( "Categories", "bearsthemes-addons" ),
+				"labels" => $labels,
+				"public" => true,
+				"publicly_queryable" => true,
+				"hierarchical" => true,
+				"show_ui" => true,
+				"show_in_menu" => true,
+				"show_in_nav_menus" => true,
+				"query_var" => true,
+				"rewrite" => [
+					"slug" => $give_posts_tax_base,
+					"with_front" => true
+				],
+				"show_admin_column" => true,
+				"show_in_rest" => true,
+				"rest_base" => "give_posts_category",
+				"rest_controller_class" => "WP_REST_Terms_Controller",
+				"show_in_quick_edit" => true,
+			);
+			register_taxonomy( "give_posts_category", array( "give_posts" ), $args );
+
+			// Register tags
+			$labels = array(
+				"name" => __( "Tags", "bearsthemes-addons" ),
+				"singular_name" => __( "Tag", "bearsthemes-addons" ),
+				"menu_name" => __( "Tags", "bearsthemes-addons" ),
+				"all_items" => __( "All Tags", "bearsthemes-addons" ),
+			);
+
+			$args = array(
+				"label" => __( "Tags", "bearsthemes-addons" ),
+				"labels" => $labels,
+				"public" => true,
+				"publicly_queryable" => true,
+				"hierarchical" => false,
+				"show_ui" => true,
+				"show_in_menu" => true,
+				"show_in_nav_menus" => true,
+				"query_var" => true,
+				"rewrite" => false,
+				"show_admin_column" => true,
+				"show_in_rest" => true,
+				"rest_base" => "give_posts_tag",
+				"rest_controller_class" => "WP_REST_Terms_Controller",
+				"show_in_quick_edit" => true,
+			);
+			register_taxonomy( "give_posts_tag", array( "give_posts" ), $args );
+		}
+
 		/**
 		 * Register project CPT
 		 */
@@ -120,11 +223,11 @@ class Bearsthemes_Custom_Post_Type {
 					"slug" => $project_tax_base,
 					"with_front" => true
 				],
-				"show_admin_column" => false,
-				"show_in_rest" => false,
+				"show_admin_column" => true,
+				"show_in_rest" => true,
 				"rest_base" => "project_category",
 				"rest_controller_class" => "WP_REST_Terms_Controller",
-				"show_in_quick_edit" => false,
+				"show_in_quick_edit" => true,
 			);
 			register_taxonomy( "project_category", array( "project" ), $args );
 
@@ -223,11 +326,11 @@ class Bearsthemes_Custom_Post_Type {
 					"slug" => $team_tax_base,
 					"with_front" => true
 				],
-				"show_admin_column" => false,
-				"show_in_rest" => false,
+				"show_admin_column" => true,
+				"show_in_rest" => true,
 				"rest_base" => "team_category",
 				"rest_controller_class" => "WP_REST_Terms_Controller",
-				"show_in_quick_edit" => false,
+				"show_in_quick_edit" => true,
 			);
 			register_taxonomy( "team_category", array( "team" ), $args );
 
@@ -423,10 +526,10 @@ class Bearsthemes_Custom_Post_Type {
 		);
 
 		add_meta_box(
-			'bearsthemes_give_box',
+			'bearsthemes_give_posts_box',
 			esc_html__('Form Settings', 'bearsthemes-addons'),
-			array( $this, 'give_box_field_html' ),
-			array( 'give_forms' ),
+			array( $this, 'give_posts_box_field_html' ),
+			array( 'give_posts_forms' ),
 			'side'
 		);
 
@@ -458,10 +561,10 @@ class Bearsthemes_Custom_Post_Type {
 	}
 
 	/**
-	 * HTML code to display give options
-	 * for the give box.
+	 * HTML code to display give_posts options
+	 * for the give_posts box.
 	 */
-	public function give_box_options() {
+	public function give_posts_box_options() {
 		$options = array(
 			array(
 				'type' => 'select',
@@ -475,16 +578,16 @@ class Bearsthemes_Custom_Post_Type {
 					'5' => esc_html__( 'Custom style 5', 'bearsthemes-addons' ),
 				),
 				'desc' => esc_html__( 'Select style display.', 'bearsthemes-addons' ),
-				'meta_key' => 'give_style_display_field'
+				'meta_key' => 'give_posts_style_display_field'
 			),
 		);
 
-		return apply_filters( 'bearsthemes_meta_box_give_fields', $options );
+		return apply_filters( 'bearsthemes_meta_box_give_posts_fields', $options );
 	}
 
-	public function give_box_field_html() {
+	public function give_posts_box_field_html() {
 
-		$options = $this->give_box_options();
+		$options = $this->give_posts_box_options();
 
 		$this->render_meta_box_field( $options );
 
@@ -504,9 +607,9 @@ class Bearsthemes_Custom_Post_Type {
 			return;
 		}
 
-		if ( $screen->post_type == 'give_forms' ) {
+		if ( $screen->post_type == 'give_posts_forms' ) {
 
-			$options = $this->give_box_options();
+			$options = $this->give_posts_box_options();
 
 			foreach( $options as $option ) {
 				$meta_key = $option['meta_key'];
@@ -530,6 +633,33 @@ class Bearsthemes_Custom_Post_Type {
 			'<span id="custom-post-type-options">' . esc_html__( 'Custom Post Type', 'bearsthemes-addons' ) . '</span>',
 			array( $this, 'writing_section_html' ),
 			'writing'
+		);
+
+		// Give CPT
+		add_settings_field(
+			$this->give_posts_option,
+			'<span class="project-options">' . esc_html__( 'Give Posts', 'bearsthemes-addons' ) . '</span>',
+			array( $this, 'disable_project_field_html' ),
+			'writing',
+			'bearsthemes_cpt_section'
+		);
+		register_setting(
+			'writing',
+			$this->give_posts_option,
+			'intval'
+		);
+
+		add_settings_field(
+			'give_posts_tax_slug',
+			'<label for="give_posts_tax_slug">' . esc_html__( 'Give Post Category base', 'bearsthemes-addons' ) . '</label>',
+			array( $this, 'give_posts_tax_slug_input' ),
+			'permalink',
+			'optional'
+		);
+		register_setting(
+			'permalink',
+			'give_posts_tax_slug',
+			'sanitize_text_field'
 		);
 
 		// Project CPT
@@ -589,6 +719,19 @@ class Bearsthemes_Custom_Post_Type {
 	}
 
 	/**
+	 * Show a give_posts tax slug input box.
+	 */
+	public function give_posts_tax_slug_input() {
+		$give_posts_tax_permalinks = get_option( 'give_posts_tax_permalinks' );
+		$give_posts_tax_base = isset( $give_posts_tax_permalinks['project_tax_base'] ) ? $give_posts_tax_permalinks['project_tax_base'] : '';
+
+		?>
+		<input name="give_posts_tax_slug" type="text" class="regular-text code" value="<?php echo esc_attr( $give_posts_tax_base ); ?>" placeholder="<?php echo esc_attr_x( 'give_posts-category', 'slug', 'bearsthemes-addons' ) ?>" />
+		<?php
+
+	}
+
+	/**
 	 * Show a project tax slug input box.
 	 */
 	public function project_tax_slug_input() {
@@ -629,6 +772,15 @@ class Bearsthemes_Custom_Post_Type {
 		if ( 'options-permalink' != $screen->id ) {
 			return;
 		}
+
+		// Give Post CPT
+		$give_posts_tax_permalinks = get_option( 'give_posts_tax_permalinks' );
+
+		if ( isset( $_POST['give_posts_tax_slug'] ) ) {
+			$give_posts_tax_permalinks['give_posts_tax_base'] = $this->sanitize_permalink( trim( $_POST['give_posts_tax_slug'] ) );
+		}
+
+		update_option( 'give_posts_tax_permalinks', $give_posts_tax_permalinks );
 
 		// Project CPT
 		$project_tax_permalinks = get_option( 'project_tax_permalinks' );
@@ -679,6 +831,23 @@ class Bearsthemes_Custom_Post_Type {
 		<p>
 			<?php esc_html_e( 'Use these settings to disable custom types of content on your site', 'bearsthemes-addons' ); ?>
 		</p>
+		<?php
+	}
+
+	/**
+	 * HTML code to display a checkbox true/false option
+	 * for the Give Post setting.
+	 */
+	public function disable_give_posts_field_html() {
+		?>
+
+		<label for="<?php echo esc_attr( $this->give_posts_option ); ?>">
+			<input name="<?php echo esc_attr( $this->give_posts_option ); ?>"
+				   id="<?php echo esc_attr( $this->give_posts_option ); ?>" <?php checked( get_option( $this->give_posts_option ), true ); ?>
+				   type="checkbox" value="1" />
+			<?php esc_html_e( 'Disable Give Post for this site.', 'bearsthemes-addons' ); ?>
+		</label>
+
 		<?php
 	}
 

@@ -6,13 +6,15 @@ use Elementor\Skin_Base;
 use Elementor\Controls_Manager;
 use Elementor\Group_Control_Typography;
 
+use Give\Helpers\Form\Template;
+
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 class Skin_Wilson extends Skin_Base {
 
 	protected function _register_controls_actions() {
 		add_action( 'elementor/element/be-give-totals/section_layout/before_section_end', [ $this, 'register_layout_section_controls' ] );
-  	add_action( 'elementor/element/be-give-totals/section_design_layout/after_section_end', [ $this, 'register_design_give_total_box_controls' ] );
+  		add_action( 'elementor/element/be-give-totals/section_design_layout/after_section_end', [ $this, 'register_design_give_total_box_controls' ] );
 		add_action( 'elementor/element/be-give-totals/section_design_layout/after_section_end', [ $this, 'register_design_give_total_section_controls' ] );
 		add_action( 'elementor/element/be-give-totals/section_design_layout/after_section_end', [ $this, 'register_design_give_form_section_controls' ] );
 
@@ -42,6 +44,15 @@ class Skin_Wilson extends Skin_Base {
 				'label' => __( 'Title', 'bearsthemes-addons' ),
 				'type' => Controls_Manager::TEXTAREA,
 				'default' => __( 'Campaign', 'bearsthemes-addons' ),
+			]
+		);
+
+		$this->add_control(
+			'donation_button_label',
+			[
+				'label' => __( 'Donation button Label', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::TEXT,
+				'default' => __( 'Donate Now', 'bearsthemes-addons' ),
 			]
 		);
 
@@ -231,6 +242,178 @@ class Skin_Wilson extends Skin_Base {
 			]
 		);
 
+		$this->add_control(
+			'heading_donation_button_style',
+			[
+				'label' => __( 'Donation Button', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::HEADING,
+			]
+		);
+
+		$this->add_group_control(
+			Group_Control_Typography::get_type(),
+			[
+				'name' => 'donation_button_typography',
+				'default' => '',
+				'selector' => '{{WRAPPER}} .give-btn-modal,
+								{{WRAPPER}} .root-data-givewp-embed .givewp-donation-form-modal__open',
+			]
+		);
+
+		$this->add_control(
+			'donation_button_width',
+			[
+				'label' => __( 'Border Width', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::DIMENSIONS,
+				'size_units' => [ 'px' ],
+				'range' => [
+					'px' => [
+						'min' => 0,
+						'max' => 50,
+					],
+				],
+				'selectors' => [
+					'{{WRAPPER}} .give-btn-modal,
+					{{WRAPPER}} .root-data-givewp-embed .givewp-donation-form-modal__open' => 'border-style: solid; border-width: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
+				],
+			]
+		);
+
+		$this->add_control(
+			'donation_button_radius',
+			[
+				'label' => __( 'Border Radius', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::SLIDER,
+				'size_units' => [ 'px', '%' ],
+				'range' => [
+					'px' => [
+						'min' => 0,
+						'max' => 200,
+					],
+				],
+				'selectors' => [
+					'{{WRAPPER}} .give-btn-modal,
+					{{WRAPPER}} .root-data-givewp-embed .givewp-donation-form-modal__open' => 'border-radius: {{SIZE}}{{UNIT}}',
+				],
+			]
+		);
+
+		$this->add_control(
+			'donation_button_padding',
+			[
+				'label' => __( 'Padding', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::DIMENSIONS,
+				'size_units' => [ 'px' ],
+				'range' => [
+					'px' => [
+						'min' => 0,
+						'max' => 50,
+					],
+				],
+				'selectors' => [
+					'{{WRAPPER}} .give-btn-modal' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
+					'{{WRAPPER}} .root-data-givewp-embed .givewp-donation-form-modal__open' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}} !important',
+				],
+			]
+		);
+
+		$this->start_controls_tabs( 'donation_button_tabs' );
+
+		$this->start_controls_tab( 'donation_button_normal',
+			[
+				'label' => __( 'Normal', 'bearsthemes-addons' ),
+				'condition' => [
+					'skin_grid_coropuna_show_donation_button!' => '',
+				],
+			]
+		);
+
+		$this->add_control(
+			'donation_button_color',
+			[
+				'label' => __( 'Color', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::COLOR,
+				'default' => '',
+				'selectors' => [
+					'{{WRAPPER}} .give-btn-modal' => 'color: {{VALUE}};',
+					'{{WRAPPER}} .root-data-givewp-embed .givewp-donation-form-modal__open' => 'color: {{VALUE}} !important;',
+				],
+			]
+		);
+
+		$this->add_control(
+			'donation_button_bg_color',
+			[
+				'label' => __( 'Background Color', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::COLOR,
+				'selectors' => [
+					'{{WRAPPER}} .give-btn-modal,
+					{{WRAPPER}} .root-data-givewp-embed .givewp-donation-form-modal__open' => 'background-color: {{VALUE}}',
+				],
+			]
+		);
+
+		$this->add_control(
+			'donation_button_border_color',
+			[
+				'label' => __( 'Border Color', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::COLOR,
+				'selectors' => [
+					'{{WRAPPER}} .give-btn-modal,
+					{{WRAPPER}} .root-data-givewp-embed .givewp-donation-form-modal__open' => 'border-color: {{VALUE}}',
+				],
+			]
+		);
+
+		$this->end_controls_tab();
+
+		$this->start_controls_tab( 'donation_button',
+			[
+				'label' => __( 'Hover', 'bearsthemes-addons' ),
+			]
+		);
+
+		$this->add_control(
+			'donation_button_hover',
+			[
+				'label' => __( 'Color', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::COLOR,
+				'default' => '',
+				'selectors' => [
+					'{{WRAPPER}} .give-btn-modal:hover' => 'color: {{VALUE}};',
+					'{{WRAPPER}} .root-data-givewp-embed .givewp-donation-form-modal__open:hover' => 'color: {{VALUE}} !important;',
+				],
+			]
+		);
+
+		$this->add_control(
+			'donation_button_bg_color_hover',
+			[
+				'label' => __( 'Background Color', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::COLOR,
+				'selectors' => [
+					'{{WRAPPER}} .give-btn-modal:hover,
+					{{WRAPPER}} .root-data-givewp-embed .givewp-donation-form-modal__open:hover' => 'background-color: {{VALUE}}',
+				],
+			]
+		);
+
+		$this->add_control(
+			'donation_button_border_color_hover',
+			[
+				'label' => __( 'Border Color', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::COLOR,
+				'selectors' => [
+					'{{WRAPPER}} .give-btn-modal:hover,
+					{{WRAPPER}} .root-data-givewp-embed .givewp-donation-form-modal__open:hover' => 'border-color: {{VALUE}}',
+				],
+			]
+		);
+
+		$this->end_controls_tab();
+
+		$this->end_controls_tabs();
+
 		$this->end_controls_section();
 	}
 
@@ -240,7 +423,7 @@ class Skin_Wilson extends Skin_Base {
 		$this->start_controls_section(
 			'section_design_give_form',
 			[
-				'label' => __( 'Give Form', 'bearsthemes-addons' ),
+				'label' => __( 'Give Form (Apply On Legacy)', 'bearsthemes-addons' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -252,7 +435,6 @@ class Skin_Wilson extends Skin_Base {
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
-					'{{WRAPPER}} .elementor-gt-form .give-btn-modal:hover' => 'color: {{VALUE}};',
 					'.give-form[data-style="elementor-give-totals--wilson"] .give-total-wrap #give-amount,
 					 .give-form[data-style="elementor-give-totals--wilson"] #give-donation-level-button-wrap .give-btn:not(.give-default-level):hover,
 					 .give-form[data-style="elementor-give-totals--wilson"] #give-gateway-radio-list > li label:hover,
@@ -292,8 +474,7 @@ class Skin_Wilson extends Skin_Base {
 				'name' => 'form_typography',
 				'label' => __( 'Typography', 'bearsthemes-addons' ),
 				'default' => '',
-				'selector' => '{{WRAPPER}} .elementor-gt-form .give-btn-modal,
-											 .give-form[data-style="elementor-give-totals--wilson"]',
+				'selector' => '.give-form[data-style="elementor-give-totals--wilson"]',
 			]
 		);
 
@@ -357,24 +538,32 @@ class Skin_Wilson extends Skin_Base {
 
 				<?php
 					if( !empty( $settings['form_id'] ) ) {
-						// Maybe display the form donate button.
-						$atts = array(
-							'id' => $settings['form_id'],  // integer.
-							'show_title' => false, // boolean.
-							'show_goal' => false, // boolean.
-							'show_content' => 'none', //above, below, or none
-							'display_style' => 'button', //modal, button, and reveal
-							'continue_button_title' => '' //string
+						if( !Template::getActiveID($settings['form_id']) ) {
+							if ( $this->parent->get_is_edit_mode() ) {
+								echo '<div class="root-data-givewp-embed"><button type="button" class="givewp-donation-form-modal__open">' . $this->parent->get_instance_value_skin('donation_button_label') . '</button></div>';
+							} else {
+								echo do_shortcode('[give_form id="' . $settings['form_id']. '" display_style="modal" continue_button_title="' . $this->parent->get_instance_value_skin('donation_button_label') . '"]');
+							}
+						} else {
+							// Maybe display the form donate button.
+							$atts = array(
+								'id' => $settings['form_id'],  // integer.
+								'show_title' => false, // boolean.
+								'show_goal' => false, // boolean.
+								'show_content' => 'none', //above, below, or none
+								'display_style' => 'button', //modal, button, and reveal
+								'continue_button_title' => $this->parent->get_instance_value_skin('donation_button_label') //string
 
-						);
+							);
 
-						add_filter('give_form_html_tags', function($form_html_tags, $form) {
-							$form_html_tags['data-style'] = 'elementor-give-totals--wilson';
+							add_filter('give_form_html_tags', function($form_html_tags, $form) {
+								$form_html_tags['data-style'] = 'elementor-give-totals--wilson';
 
-							return $form_html_tags;
-						}, 10, 2);
+								return $form_html_tags;
+							}, 10, 2);
 
-						echo give_get_donation_form( $atts );
+							echo give_get_donation_form( $atts );
+						}
 					}
 				?>
 

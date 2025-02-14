@@ -764,7 +764,8 @@ class Skin_Grid_Pumori extends Skin_Base {
 
 		$settings = $this->parent->get_settings_for_display();
 
-		$form_id = get_the_ID(); // Form ID.
+		$post_id = get_the_ID();
+		$form_id = get_field('give_form', $post_id);
 
 		?>
 		<div class="swiper-slide">
@@ -775,7 +776,7 @@ class Skin_Grid_Pumori extends Skin_Base {
 		          // Maybe display the featured image.
 		          printf(
 		            '%s<div class="give-card__overlay"></div>',
-		            get_the_post_thumbnail( $form_id, $this->parent->get_instance_value_skin( 'thumbnail_size' ) )
+		            get_the_post_thumbnail( $post_id, $this->parent->get_instance_value_skin( 'thumbnail_size' ) )
 		          );
 		        }
 	        ?>
@@ -783,7 +784,7 @@ class Skin_Grid_Pumori extends Skin_Base {
 
 				<?php
 					if( '' !== $this->parent->get_instance_value_skin( 'show_category' ) ){
-						the_terms( $form_id, 'give_forms_category', '<div class="give-card__category">', ',', '</div>' );
+						the_terms( $post_id, 'give_posts_category', '<div class="give-card__category">', ',', '</div>' );
 					}
 				?>
 

@@ -9,6 +9,8 @@ use Elementor\Group_Control_Box_Shadow;
 use Elementor\Group_Control_Css_Filter;
 use Elementor\Group_Control_Typography;
 
+use Give\Helpers\Form\Template;
+
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 class Skin_List_Andrus extends Skin_Base {
@@ -16,7 +18,7 @@ class Skin_List_Andrus extends Skin_Base {
 	protected function _register_controls_actions() {
 		add_action( 'elementor/element/be-give-forms/section_layout/before_section_end', [ $this, 'register_layout_controls' ] );
 		add_action( 'elementor/element/be-give-forms/section_design_layout/before_section_end', [ $this, 'registerd_design_layout_controls' ] );
-    add_action( 'elementor/element/be-give-forms/section_design_layout/after_section_end', [ $this, 'register_design_image_section_controls' ] );
+    	add_action( 'elementor/element/be-give-forms/section_design_layout/after_section_end', [ $this, 'register_design_image_section_controls' ] );
 		add_action( 'elementor/element/be-give-forms/section_design_layout/after_section_end', [ $this, 'register_design_content_feature_section_controls' ] );
 		add_action( 'elementor/element/be-give-forms/section_design_layout/after_section_end', [ $this, 'register_design_content_section_controls' ] );
 		add_action( 'elementor/element/be-give-forms/section_design_layout/after_section_end', [ $this, 'register_design_give_form_section_controls' ] );
@@ -405,6 +407,156 @@ class Skin_List_Andrus extends Skin_Base {
 			]
 		);
 
+		$this->add_control(
+			'heading_donation_button_feature_style',
+			[
+				'label' => __( 'Donation Button', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::HEADING,
+			]
+		);
+
+		$this->add_group_control(
+			Group_Control_Typography::get_type(),
+			[
+				'name' => 'donation_button_feature_typography',
+				'default' => '',
+				'selector' => '{{WRAPPER}} .elementor-give-form-feature .give-btn-modal,
+								{{WRAPPER}} .elementor-give-form-feature .root-data-givewp-embed .givewp-donation-form-modal__open',
+			]
+		);
+
+		$this->add_control(
+			'donation_button_feature_width',
+			[
+				'label' => __( 'Border Width', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::DIMENSIONS,
+				'size_units' => [ 'px' ],
+				'range' => [
+					'px' => [
+						'min' => 0,
+						'max' => 50,
+					],
+				],
+				'selectors' => [
+					'{{WRAPPER}} .elementor-give-form-feature .give-btn-modal,
+					{{WRAPPER}} .elementor-give-form-feature .root-data-givewp-embed .givewp-donation-form-modal__open' => 'border-style: solid; border-width: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
+				],
+			]
+		);
+
+		$this->add_control(
+			'donation_button_feature_radius',
+			[
+				'label' => __( 'Border Radius', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::SLIDER,
+				'size_units' => [ 'px', '%' ],
+				'range' => [
+					'px' => [
+						'min' => 0,
+						'max' => 200,
+					],
+				],
+				'selectors' => [
+					'{{WRAPPER}} .elementor-give-form-feature .give-btn-modal,
+					{{WRAPPER}} .elementor-give-form-feature .root-data-givewp-embed .givewp-donation-form-modal__open' => 'border-radius: {{SIZE}}{{UNIT}}',
+				],
+			]
+		);
+
+		$this->start_controls_tabs( 'donation_button_feature_tabs' );
+
+		$this->start_controls_tab( 'donation_button_feature_normal',
+			[
+				'label' => __( 'Normal', 'bearsthemes-addons' ),
+			]
+		);
+
+		$this->add_control(
+			'donation_button_feature_color',
+			[
+				'label' => __( 'Color', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::COLOR,
+				'default' => '',
+				'selectors' => [
+					'{{WRAPPER}} .elementor-give-form-feature .give-btn-modal' => 'color: {{VALUE}};',
+					'{{WRAPPER}} .elementor-give-form-feature .root-data-givewp-embed .givewp-donation-form-modal__open' => 'color: {{VALUE}} !important;',
+				],
+			]
+		);
+
+		$this->add_control(
+			'donation_button_feature_bg_color',
+			[
+				'label' => __( 'Background Color', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::COLOR,
+				'selectors' => [
+					'{{WRAPPER}} .elementor-give-form-feature .give-btn-modal,
+					{{WRAPPER}} .elementor-give-form-feature .root-data-givewp-embed .givewp-donation-form-modal__open' => 'background-color: {{VALUE}}',
+				],
+			]
+		);
+
+		$this->add_control(
+			'donation_button_feature_border_color',
+			[
+				'label' => __( 'Border Color', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::COLOR,
+				'selectors' => [
+					'{{WRAPPER}} .elementor-give-form-feature .give-btn-modal,
+					{{WRAPPER}} .elementor-give-form-feature .root-data-givewp-embed .givewp-donation-form-modal__open' => 'border-color: {{VALUE}}',
+				],
+			]
+		);
+
+		$this->end_controls_tab();
+
+		$this->start_controls_tab( 'donation_button_feature_hover',
+			[
+				'label' => __( 'Hover', 'bearsthemes-addons' ),
+			]
+		);
+
+		$this->add_control(
+			'donation_button_feature_hover',
+			[
+				'label' => __( 'Color', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::COLOR,
+				'default' => '',
+				'selectors' => [
+					'{{WRAPPER}} .elementor-give-form-feature .give-btn-modal:hover' => 'color: {{VALUE}};',
+					'{{WRAPPER}} .elementor-give-form-feature .root-data-givewp-embed .givewp-donation-form-modal__open:hover' => 'color: {{VALUE}} !important;',
+				],
+			]
+		);
+
+		$this->add_control(
+			'donation_button_feature_bg_color_hover',
+			[
+				'label' => __( 'Background Color', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::COLOR,
+				'selectors' => [
+					'{{WRAPPER}} .elementor-give-form-feature .give-btn-modal:hover,
+					{{WRAPPER}} .elementor-give-form-feature .root-data-givewp-embed .givewp-donation-form-modal__open:hover' => 'background-color: {{VALUE}}',
+				],
+			]
+		);
+
+		$this->add_control(
+			'donation_button_feature_border_color_hover',
+			[
+				'label' => __( 'Border Color', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::COLOR,
+				'selectors' => [
+					'{{WRAPPER}} .elementor-give-form-feature .give-btn-modal:hover,
+					{{WRAPPER}} .elementor-give-form-feature .root-data-givewp-embed .givewp-donation-form-modal__open:hover' => 'border-color: {{VALUE}}',
+				],
+			]
+		);
+
+		$this->end_controls_tab();
+
+		$this->end_controls_tabs();
+
 		$this->end_controls_section();
   }
 
@@ -593,6 +745,77 @@ class Skin_List_Andrus extends Skin_Base {
 			]
 		);
 
+		$this->add_control(
+			'heading_donation_button_style',
+			[
+				'label' => __( 'Donation Button', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::HEADING,
+			]
+		);
+
+		$this->add_control(
+			'donation_button_radius',
+			[
+				'label' => __( 'Border Radius', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::SLIDER,
+				'size_units' => [ 'px', '%' ],
+				'range' => [
+					'px' => [
+						'min' => 0,
+						'max' => 200,
+					],
+				],
+				'selectors' => [
+					'{{WRAPPER}} .elementor-give-form .give-btn-modal,
+					{{WRAPPER}} .elementor-give-form .root-data-givewp-embed .givewp-donation-form-modal__open' => 'border-radius: {{SIZE}}{{UNIT}}',
+				],
+			]
+		);
+
+		$this->start_controls_tabs( 'donation_button_tabs' );
+
+		$this->start_controls_tab( 'donation_button_normal',
+			[
+				'label' => __( 'Normal', 'bearsthemes-addons' ),
+			]
+		);
+
+		$this->add_control(
+			'donation_button_bg_color',
+			[
+				'label' => __( 'Background Color', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::COLOR,
+				'selectors' => [
+					'{{WRAPPER}} .elementor-give-form .give-btn-modal,
+					{{WRAPPER}} .elementor-give-form .root-data-givewp-embed .givewp-donation-form-modal__open' => 'background-color: {{VALUE}}',
+				],
+			]
+		);
+
+		$this->end_controls_tab();
+
+		$this->start_controls_tab( 'donation_button',
+			[
+				'label' => __( 'Hover', 'bearsthemes-addons' ),
+			]
+		);
+
+		$this->add_control(
+			'donation_button_bg_color_hover',
+			[
+				'label' => __( 'Background Color', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::COLOR,
+				'selectors' => [
+					'{{WRAPPER}} .elementor-give-form .give-btn-modal:hover,
+					{{WRAPPER}} .elementor-give-form .root-data-givewp-embed .givewp-donation-form-modal__open:hover' => 'background-color: {{VALUE}}',
+				],
+			]
+		);
+
+		$this->end_controls_tab();
+
+		$this->end_controls_tabs();
+
 		$this->end_controls_section();
   }
 
@@ -602,7 +825,7 @@ class Skin_List_Andrus extends Skin_Base {
 		$this->start_controls_section(
 			'section_design_give_form',
 			[
-				'label' => __( 'Give Form', 'bearsthemes-addons' ),
+				'label' => __( 'Give Form (Apply On Legacy)', 'bearsthemes-addons' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'skin_list_andrus_show_donation_button!' => '',
@@ -617,8 +840,6 @@ class Skin_List_Andrus extends Skin_Base {
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
-					'{{WRAPPER}} .elementor-give-form-feature .give-btn-modal,
-					 {{WRAPPER}} .elementor-give-form .give-btn-modal' => 'background-color: {{VALUE}};',
 					 '.give-form[data-style="elementor-give-form--list-andrus"] .give-total-wrap #give-amount,
  					 .give-form[data-style="elementor-give-form--list-andrus"] #give-donation-level-button-wrap .give-btn:not(.give-default-level):hover,
  					 .give-form[data-style="elementor-give-form--list-andrus"] #give-gateway-radio-list > li label:hover,
@@ -647,9 +868,7 @@ class Skin_List_Andrus extends Skin_Base {
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
-					'{{WRAPPER}} .elementor-give-form-feature .give-btn-modal:hover,
-					 {{WRAPPER}} .elementor-give-form .give-btn-modal:hover,
-					 .give-form[data-style="elementor-give-form--list-andrus"] .give-submit:hover' => 'background-color: {{VALUE}};',
+					'.give-form[data-style="elementor-give-form--list-andrus"] .give-submit:hover' => 'background-color: {{VALUE}};',
 				],
 			]
 		);
@@ -660,10 +879,8 @@ class Skin_List_Andrus extends Skin_Base {
 				'name' => 'form_typography',
 				'label' => __( 'Typography', 'bearsthemes-addons' ),
 				'default' => '',
-				'selector' => '{{WRAPPER}} .elementor-give-form-feature .give-btn-modal,
-											 {{WRAPPER}} .elementor-give-form .give-btn-modal,
-											 {{WRAPPER}} form[id*=give-form] #give-donation-level-button-wrap .give-btn,
-											 .give-form[data-style="elementor-give-form--list-andrus"]',
+				'selector' => '{{WRAPPER}} form[id*=give-form] #give-donation-level-button-wrap .give-btn,
+								.give-form[data-style="elementor-give-form--list-andrus"]',
 			]
 		);
 
@@ -673,7 +890,8 @@ class Skin_List_Andrus extends Skin_Base {
 	protected function render_feature_post() {
 		$settings = $this->parent->get_settings_for_display();
 
-		$form_id = get_the_ID(); // Form ID.
+		$post_id = get_the_ID();
+		$form_id = get_field('give_form', $post_id);
 
 		$form_class = 'elementor-give-form-feature';
 
@@ -686,7 +904,7 @@ class Skin_List_Andrus extends Skin_Base {
 								// Maybe display the featured image.
 								printf(
 									'%s<div class="give-card__overlay"></div>',
-									get_the_post_thumbnail( $form_id, 'large' )
+									get_the_post_thumbnail( $post_id, 'large' )
 								);
 
 							}
@@ -697,7 +915,7 @@ class Skin_List_Andrus extends Skin_Base {
 					<div class="give-card__body">
 						<?php
 							if( '' !== $this->parent->get_instance_value_skin( 'show_category' ) ){
-								the_terms( $form_id, 'give_forms_category', '<div class="give-card__category">'. esc_html__( 'Project In: ', 'bearsthemes-addons' ) , ',', '</div>' );
+								the_terms( $post_id, 'give_posts_category', '<div class="give-card__category">'. esc_html__( 'Project In: ', 'bearsthemes-addons' ) , ',', '</div>' );
 							}
 
 							if( '' !== $this->parent->get_instance_value_skin( 'show_title' ) ){
@@ -738,24 +956,32 @@ class Skin_List_Andrus extends Skin_Base {
 							}
 
 							if( '' !== $this->parent->get_instance_value_skin( 'show_donation_button' ) ) {
-								// Maybe display the form donate button.
-								$atts = array(
-									'id' => $form_id,  // integer.
-									'show_title' => false, // boolean.
-									'show_goal' => false, // boolean.
-									'show_content' => 'none', //above, below, or none
-									'display_style' => 'button', //modal, button, and reveal
-									'continue_button_title' => '' //string
-
-								);
-
-								add_filter('give_form_html_tags', function($form_html_tags, $form) {
-									$form_html_tags['data-style'] = 'elementor-give-form--list-andrus';
-
-									return $form_html_tags;
-								}, 10, 2);
-
-								echo give_get_donation_form( $atts );
+								if( !Template::getActiveID($form_id) ) {
+									if ( $this->parent->get_is_edit_mode() ) {
+										echo '<div class="root-data-givewp-embed"><button type="button" class="givewp-donation-form-modal__open">' . __('Donate Now', 'bearsthemes-addons') . '</button></div>';
+									} else {
+										echo do_shortcode('[give_form id="' . $form_id . '" display_style="modal" continue_button_title="' . __('Donate Now', 'bearsthemes-addons') . '"]');
+									}
+								} else {
+									// Maybe display the form donate button.
+									$atts = array(
+										'id' => $form_id,  // integer.
+										'show_title' => false, // boolean.
+										'show_goal' => false, // boolean.
+										'show_content' => 'none', //above, below, or none
+										'display_style' => 'button', //modal, button, and reveal
+										'continue_button_title' => __('Donate Now', 'bearsthemes-addons') //string
+			
+									);
+			
+									add_filter('give_form_html_tags', function($form_html_tags, $form) {
+										$form_html_tags['data-style'] = 'elementor-give-form--list-andrus';
+			
+										return $form_html_tags;
+									}, 10, 2);
+			
+									echo give_get_donation_form( $atts );
+								}
 							}
 						?>
 					</div>
@@ -767,7 +993,8 @@ class Skin_List_Andrus extends Skin_Base {
 	protected function render_post() {
 		$settings = $this->parent->get_settings_for_display();
 
-		$form_id = get_the_ID(); // Form ID.
+		$post_id = get_the_ID();
+		$form_id = get_field('give_form', $post_id);
 
 		$form_class = 'elementor-give-form';
 
@@ -781,30 +1008,38 @@ class Skin_List_Andrus extends Skin_Base {
 									// Maybe display the featured image.
 									printf(
 										'%s<div class="give-card__overlay"></div>',
-										get_the_post_thumbnail( $form_id, $this->parent->get_instance_value_skin( 'thumbnail_size' ) )
+										get_the_post_thumbnail( $post_id, $this->parent->get_instance_value_skin( 'thumbnail_size' ) )
 									);
 
 								}
 
 								if( '' !== $this->parent->get_instance_value_skin( 'show_donation_button' ) ) {
-									// Maybe display the form donate button.
-									$atts = array(
-										'id' => $form_id,  // integer.
-										'show_title' => false, // boolean.
-										'show_goal' => false, // boolean.
-										'show_content' => 'none', //above, below, or none
-										'display_style' => 'button', //modal, button, and reveal
-										'continue_button_title' => '' //string
-
-									);
-
-									add_filter('give_form_html_tags', function($form_html_tags, $form) {
-										$form_html_tags['data-style'] = 'elementor-give-form--list-andrus';
-
-										return $form_html_tags;
-									}, 10, 2);
-
-									echo give_get_donation_form( $atts );
+									if( !Template::getActiveID($form_id) ) {
+										if ( $this->parent->get_is_edit_mode() ) {
+											echo '<div class="root-data-givewp-embed"><button type="button" class="givewp-donation-form-modal__open">' . __('Donate Now', 'bearsthemes-addons') . '</button></div>';
+										} else {
+											echo do_shortcode('[give_form id="' . $form_id . '" display_style="modal" continue_button_title="' . __('Donate Now', 'bearsthemes-addons') . '"]');
+										}
+									} else {
+										// Maybe display the form donate button.
+										$atts = array(
+											'id' => $form_id,  // integer.
+											'show_title' => false, // boolean.
+											'show_goal' => false, // boolean.
+											'show_content' => 'none', //above, below, or none
+											'display_style' => 'button', //modal, button, and reveal
+											'continue_button_title' => __('Donate Now', 'bearsthemes-addons') //string
+				
+										);
+				
+										add_filter('give_form_html_tags', function($form_html_tags, $form) {
+											$form_html_tags['data-style'] = 'elementor-give-form--list-andrus';
+				
+											return $form_html_tags;
+										}, 10, 2);
+				
+										echo give_get_donation_form( $atts );
+									}
 								}
 							?>
 						</div>
@@ -813,7 +1048,7 @@ class Skin_List_Andrus extends Skin_Base {
 					<div class="give-card__body">
 						<?php
 							if( '' !== $this->parent->get_instance_value_skin( 'show_category' ) ){
-								the_terms( $form_id, 'give_forms_category', '<div class="give-card__category">'. esc_html__( 'Project In: ', 'bearsthemes-addons' ) , ',', '</div>' );
+								the_terms( $post_id, 'give_posts_category', '<div class="give-card__category">'. esc_html__( 'Project In: ', 'bearsthemes-addons' ) , ',', '</div>' );
 							}
 
 							if( '' !== $this->parent->get_instance_value_skin( 'show_title' ) ){

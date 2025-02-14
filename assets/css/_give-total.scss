@@ -667,6 +667,7 @@
 
     }
     .elementor-gt-form {
+      .givewp-donation-form-modal__open,
       .give-btn-modal {
         display: inline-block;
         font-size: 14px;
@@ -686,7 +687,13 @@
           background: #1f3ddc;
         }
       }
-
+      .givewp-donation-form-modal__open {
+        color: #1f3ddc !important;
+        padding: 18px 35px !important;
+        &:hover {
+          color: #FFFFFF !important;
+        }
+      }
     }
 
   }
@@ -753,6 +760,7 @@
     .elementor-gt-form {
       position: relative;
       z-index: 3;
+      .givewp-donation-form-modal__open,
       .give-btn-modal {
         display: inline-block;
         font-size: 14px;
@@ -772,7 +780,13 @@
           background: #eba53a;
         }
       }
-
+      .givewp-donation-form-modal__open {
+        color: #fff !important;
+        padding: 20px 35px !important;
+        &:hover {
+          color: #fff !important;
+        }
+      }
     }
 
     @media( max-width: $break-xs - 0.02 ) {
@@ -877,6 +891,7 @@
       }
     }
     .elementor-gt-form {
+      .givewp-donation-form-modal__open,
       .give-btn-modal {
         display: inline-block;
         font-size: 14px;
@@ -896,7 +911,13 @@
           background: #f7db07;
         }
       }
-
+      .givewp-donation-form-modal__open {
+        color: #fff !important;
+        padding: 15px 35px !important;
+        &:hover {
+          color: #fff !important;
+        }
+      }
     }
     @media( max-width: $break-md - 0.02 ) {
       display: block;
@@ -1012,6 +1033,7 @@
     }
 
     .elementor-gt-form {
+      .givewp-donation-form-modal__open,
       .give-btn-modal {
         display: inline-block;
         font-size: 14px;
@@ -1031,7 +1053,12 @@
           background: #fff;
         }
       }
-
+      .givewp-donation-form-modal__open {
+        padding: 18px 35px !important;
+        &:hover {
+          color: #a08958 !important;
+        }
+      }
     }
   }
 
@@ -1100,6 +1127,7 @@
 
     }
     .elementor-gt-form {
+      .givewp-donation-form-modal__open,
       .give-btn-modal {
         display: inline-block;
         font-size: 14px;
@@ -1121,7 +1149,12 @@
           background: #FFFFFF;
         }
       }
-
+      .givewp-donation-form-modal__open {
+        padding: 15px 30px !important;
+        &:hover {
+          color: #ea0028 !important;
+        }
+      }
     }
 
   }

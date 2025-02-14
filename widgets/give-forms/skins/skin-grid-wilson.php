@@ -16,8 +16,8 @@ class Skin_Grid_Wilson extends Skin_Base {
 	protected function _register_controls_actions() {
 		add_action( 'elementor/element/be-give-forms/section_layout/before_section_end', [ $this, 'register_layout_controls' ] );
 		add_action( 'elementor/element/be-give-forms/section_design_layout/before_section_end', [ $this, 'registerd_design_layout_controls' ] );
-    add_action( 'elementor/element/be-give-forms/section_design_layout/after_section_end', [ $this, 'register_design_box_section_controls' ] );
-    add_action( 'elementor/element/be-give-forms/section_design_layout/after_section_end', [ $this, 'register_design_image_section_controls' ] );
+		add_action( 'elementor/element/be-give-forms/section_design_layout/after_section_end', [ $this, 'register_design_box_section_controls' ] );
+		add_action( 'elementor/element/be-give-forms/section_design_layout/after_section_end', [ $this, 'register_design_image_section_controls' ] );
 		add_action( 'elementor/element/be-give-forms/section_design_layout/after_section_end', [ $this, 'register_design_content_section_controls' ] );
 	}
 
@@ -657,93 +657,91 @@ class Skin_Grid_Wilson extends Skin_Base {
 
     $settings = $this->parent->get_settings_for_display();
 
-		$form_id = get_the_ID(); // Form ID.
+		$post_id = get_the_ID();
+		$form_id = get_field('give_form', $post_id);
 
 		$form_class = 'elementor-give-form';
 
-    if( '' !== $this->parent->get_instance_value_skin('show_thumbnail') ) {
-      $form_class .= ' has-thumbnail';
-    }
+		if( '' !== $this->parent->get_instance_value_skin('show_thumbnail') ) {
+			$form_class .= ' has-thumbnail';
+		}
 
 		?>
-			<article id="post-<?php the_ID();  ?>" <?php post_class( $form_class ); ?> >
+		<article id="post-<?php the_ID();  ?>" <?php post_class( $form_class ); ?> >
+			<?php
+				if( '' !== $this->parent->get_instance_value_skin( 'show_category' ) ){
+					the_terms( $post_id, 'give_posts_category', '<div class="give-card__category">' , ', ', '</div>' );
+				}
+			?>
+
+			<?php if( '' !== $this->parent->get_instance_value_skin('show_thumbnail') ) { ?>
+				<div class="give-card__media">
+					<a href="<?php the_permalink(); ?>">
 				<?php
-					if( '' !== $this->parent->get_instance_value_skin( 'show_category' ) ){
-						the_terms( $form_id, 'give_forms_category', '<div class="give-card__category">' , ', ', '</div>' );
-					}
+					// Maybe display the featured image.
+					printf(
+					'%s<div class="give-card__overlay"></div>',
+					get_the_post_thumbnail( $post_id, $this->parent->get_instance_value_skin( 'thumbnail_size' ) )
+					);
 				?>
+					</a>
+				</div>
+			<?php } ?>
 
-				<?php if( '' !== $this->parent->get_instance_value_skin('show_thumbnail') ) { ?>
-					<div class="give-card__media">
-						<a href="<?php the_permalink(); ?>">
-			        <?php
-			          // Maybe display the featured image.
-			          printf(
-			            '%s<div class="give-card__overlay"></div>',
-			            get_the_post_thumbnail( $form_id, $this->parent->get_instance_value_skin( 'thumbnail_size' ) )
-			          );
-			        ?>
-						</a>
-					</div>
-				<?php } ?>
+			<div class="give-card__body">
+				<?php
+					if( '' !== $this->parent->get_instance_value_skin( 'show_title' ) ){
+						// Maybe display the form title.
+						printf(
+						'<h3 class="give-card__title">
+										<a href="%s">%s</a>
+									</h3>',
+									get_the_permalink(),
+									get_the_title()
+						);
+					}
 
-        <div class="give-card__body">
-          <?php
-	          if( '' !== $this->parent->get_instance_value_skin( 'show_title' ) ){
-	            // Maybe display the form title.
-	            printf(
-	              '<h3 class="give-card__title">
-	  							<a href="%s">%s</a>
-	  						</h3>',
-	  						get_the_permalink(),
-	  						get_the_title()
-	            );
-	          }
+					if( '' !== $this->parent->get_instance_value_skin('show_goal_progress') && give_is_setting_enabled( get_post_meta( $form_id, '_give_goal_option', true ) ) ) {
 
-            if( '' !== $this->parent->get_instance_value_skin('show_goal_progress') && give_is_setting_enabled( get_post_meta( $form_id, '_give_goal_option', true ) ) ) {
+						$total_income = give_get_form_earnings_stats( $form_id );
+						$goal_amount = give_get_meta( $form_id, '_give_set_goal', true );
+						$goal_percentage_completed = ( $total_income < $goal_amount ) ? round( ( $total_income / $goal_amount ) * 100, 0 ) : 100;
 
-              $total_income = give_get_form_earnings_stats( $form_id );
-              $goal_amount = give_get_meta( $form_id, '_give_set_goal', true );
-              $goal_percentage_completed = ( $total_income < $goal_amount ) ? round( ( $total_income / $goal_amount ) * 100, 0 ) : 100;
+						$currency = give_get_currency();
+						$currency_symbol = give_currency_symbol( $currency );
+						$currency_pos = give_get_currency_position();
 
-              $currency = give_get_currency();
-              $currency_symbol = give_currency_symbol( $currency );
-              $currency_pos = give_get_currency_position();
+						if( 'before' == $currency_pos ) {
+							$total = $currency_symbol . give_format_amount( $total_income );
+							$total_goal = $currency_symbol . number_format( $goal_amount );
 
-              if( 'before' == $currency_pos ) {
-                $total = $currency_symbol . give_format_amount( $total_income );
-                $total_goal = $currency_symbol . number_format( $goal_amount );
+						} else {
+							$total = give_format_amount( $total_income ) . $currency_symbol;
+							$total_goal = number_format( $goal_amount ) . $currency_symbol;
+						}
+						?>
+						<div class="give-goal-progress">
+							<div class="bt-price">
+								<?php
+								echo '<div class="bt-goal">'.$total_goal.'</div>'.
+									'<div class="bt-collected">'.$goal_percentage_completed.esc_html__('% Donation Collected', 'bearsthemes-addons').'</div>';
+								?>
+							</div>
+							<div class="bt-progress">
+							<span></span><span></span><span></span>
+							<span></span><span></span><span></span>
+							<span></span><span></span><span></span>
 
-              } else {
-                $total = give_format_amount( $total_income ) . $currency_symbol;
-                $total_goal = number_format( $goal_amount ) . $currency_symbol;
-              }
-              ?>
-              <div class="give-goal-progress">
-                  <div class="bt-price">
-                    <?php
-                      echo '<div class="bt-goal">'.$total_goal.'</div>'.
-                        '<div class="bt-collected">'.$goal_percentage_completed.esc_html__('% Donation Collected', 'bearsthemes-addons').'</div>';
-                    ?>
-                  </div>
-                  <div class="bt-progress">
-                  <span></span><span></span><span></span>
-                  <span></span><span></span><span></span>
-                  <span></span><span></span><span></span>
+							<?php  echo '<div class="bt-percent" style="width: '.esc_attr($goal_percentage_completed).'%;"> </div>'; ?>
+							</div>
 
-                  <?php  echo '<div class="bt-percent" style="width: '.esc_attr($goal_percentage_completed).'%;"> </div>'; ?>
-                  </div>
+						</div><!-- /.goal-progress -->
+						<?php
+					}
 
-              </div><!-- /.goal-progress -->
-              <?php
-
-            }
-
-          ?>
-        </div>
-
-
-			</article>
+			?>
+			</div>
+		</article>
 		<?php
 	}
 

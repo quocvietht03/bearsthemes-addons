@@ -6,6 +6,8 @@ use Elementor\Skin_Base;
 use Elementor\Controls_Manager;
 use Elementor\Group_Control_Typography;
 
+use Give\Helpers\Form\Template;
+
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 class Skin_Saltoro extends Skin_Base {
@@ -282,7 +284,7 @@ class Skin_Saltoro extends Skin_Base {
 		$this->add_control(
 			'heading_form',
 			[
-				'label' => __( 'Give Form', 'bearsthemes-addons' ),
+				'label' => __( 'Give Form (Apply On Legacy)', 'bearsthemes-addons' ),
 				'type' => Controls_Manager::HEADING,
 			]
 		);
@@ -408,24 +410,28 @@ class Skin_Saltoro extends Skin_Base {
 
 				<?php
 					if( !empty( $settings['form_id'] ) ) {
-						// Maybe display the form donate button.
-						$atts = array(
-							'id' => $settings['form_id'],  // integer.
-							'show_title' => false, // boolean.
-							'show_goal' => false, // boolean.
-							'show_content' => 'none', //above, below, or none
-							'display_style' => 'modal', //modal, button, and reveal
-							'continue_button_title' => '' //string
+						if( !Template::getActiveID($settings['form_id']) ) {
+							echo do_shortcode('[give_form id="' . $settings['form_id'] . '"]');
+						} else {
+							// Maybe display the form donate button.
+							$atts = array(
+								'id' => $settings['form_id'],  // integer.
+								'show_title' => false, // boolean.
+								'show_goal' => false, // boolean.
+								'show_content' => 'none', //above, below, or none
+								'display_style' => 'modal', //modal, button, and reveal
+								'continue_button_title' => '' //string
 
-						);
+							);
 
-						add_filter('give_form_html_tags', function($form_html_tags, $form) {
-							$form_html_tags['data-style'] = 'elementor-give-totals--saltoro';
+							add_filter('give_form_html_tags', function($form_html_tags, $form) {
+								$form_html_tags['data-style'] = 'elementor-give-totals--saltoro';
 
-							return $form_html_tags;
-						}, 10, 2);
+								return $form_html_tags;
+							}, 10, 2);
 
-						echo give_get_donation_form( $atts );
+							echo give_get_donation_form( $atts );
+						}
 					}
 				?>
 
