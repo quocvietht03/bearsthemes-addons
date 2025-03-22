@@ -327,20 +327,8 @@
       .give-display-button button.give-btn{
         width: 100%;
         height: 46px;
-        font-size: 0 !important;
         padding: 0;
         border-radius: 0;
-        &:before{
-          content: '';
-          display: inline-block;
-          vertical-align: middle;
-          width: 18px;
-          height: 16px;
-          background-image: url(../images/heart-light.svg);
-          background-repeat: no-repeat;
-          background-position: center;
-          background-size: cover;
-        }
       }
     }
   }
