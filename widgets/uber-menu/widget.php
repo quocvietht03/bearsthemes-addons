@@ -12,6 +12,8 @@ use Elementor\Group_Control_Border;
 use Elementor\Group_Control_Box_Shadow;
 use Elementor\Modules\DynamicTags\Module as TagsModule;
 
+use Give\Helpers\Form\Template;
+
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 class Be_Uber_Menu extends Widget_Base {
@@ -579,7 +581,8 @@ class Be_Uber_Menu extends Widget_Base {
 			[
 				'name' => 'give_btn_typography',
 				'default' => '',
-				'selector' => '{{WRAPPER}} .give-btn',
+				'selector' => '{{WRAPPER}} .give-btn, 
+								{{WRAPPER}} .givewp-donation-form-modal__open',
 			]
 		);
 
@@ -600,27 +603,20 @@ class Be_Uber_Menu extends Widget_Base {
 				'default' => '',
 				'selectors' => [
 					'{{WRAPPER}} .give-btn' => 'fill: {{VALUE}}; color: {{VALUE}};',
+					'{{WRAPPER}} .givewp-donation-form-modal__open' => 'fill: {{VALUE}} !important; color: {{VALUE}} !important;',
 				],
 			]
 		);
 
-		$this->add_group_control(
-			Group_Control_Background::get_type(),
+		$this->add_control(
+			'button_bg_color',
 			[
-				'name' => 'background',
-				'label' => __( 'Background', 'bearsthemes-addons' ),
-				'types' => [ 'classic', 'gradient' ],
-				'exclude' => [ 'image' ],
-				'selector' => '{{WRAPPER}} .give-btn',
-				'fields_options' => [
-					'background' => [
-						'default' => 'classic',
-					],
-					'color' => [
-						'global' => [
-							'type' => Controls_Manager::COLOR,
-						],
-					],
+				'label' => __( 'Background Color', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::COLOR,
+				'default' => '',
+				'selectors' => [
+					'{{WRAPPER}} .give-btn' => 'background-color: {{VALUE}};',
+					'{{WRAPPER}} .givewp-donation-form-modal__open' => 'background-color: {{VALUE}} !important;',
 				],
 			]
 		);
@@ -642,22 +638,21 @@ class Be_Uber_Menu extends Widget_Base {
 				'selectors' => [
 					'{{WRAPPER}} .give-btn:hover, {{WRAPPER}} .give-btn:focus' => 'color: {{VALUE}};',
 					'{{WRAPPER}} .give-btn:hover svg, {{WRAPPER}} .give-btn:focus svg' => 'fill: {{VALUE}};',
+					'{{WRAPPER}} .givewp-donation-form-modal__open:hover, {{WRAPPER}} .givewp-donation-form-modal__open:focus' => 'color: {{VALUE}} !important;;',
+					'{{WRAPPER}} .givewp-donation-form-modal__open:hover svg, {{WRAPPER}} .givewp-donation-form-modal__open:focus svg' => 'fill: {{VALUE}} !important;;',
 				],
 			]
 		);
 
-		$this->add_group_control(
-			Group_Control_Background::get_type(),
+		$this->add_control(
+			'button_bg_color_hover',
 			[
-				'name' => 'button_background_hover',
-				'label' => __( 'Background', 'bearsthemes-addons' ),
-				'types' => [ 'classic', 'gradient' ],
-				'exclude' => [ 'image' ],
-				'selector' => '{{WRAPPER}} .give-btn:hover, {{WRAPPER}} .give-btn:focus',
-				'fields_options' => [
-					'background' => [
-						'default' => 'classic',
-					],
+				'label' => __( 'Background Color', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::COLOR,
+				'default' => '',
+				'selectors' => [
+					'{{WRAPPER}} .give-btn:hover, {{WRAPPER}} .give-btn:focus' => 'background-color: {{VALUE}};',
+					'{{WRAPPER}} .givewp-donation-form-modal__open:hover, {{WRAPPER}} .givewp-donation-form-modal__open:focus' => 'background-color: {{VALUE}} !important;',
 				],
 			]
 		);
@@ -672,6 +667,7 @@ class Be_Uber_Menu extends Widget_Base {
 				],
 				'selectors' => [
 					'{{WRAPPER}} .give-btn:hover, {{WRAPPER}} .give-btn:focus' => 'border-color: {{VALUE}};',
+					'{{WRAPPER}} .givewp-donation-form-modal__open:hover, {{WRAPPER}} .givewp-donation-form-modal__open:focus' => 'border-color: {{VALUE}};',
 				],
 			]
 		);
@@ -684,7 +680,8 @@ class Be_Uber_Menu extends Widget_Base {
 			Group_Control_Border::get_type(),
 			[
 				'name' => 'border',
-				'selector' => '{{WRAPPER}} .give-btn',
+				'selector' => '{{WRAPPER}} .give-btn, 
+								{{WRAPPER}} .givewp-donation-form-modal__open',
 				'separator' => 'before',
 			]
 		);
@@ -697,6 +694,7 @@ class Be_Uber_Menu extends Widget_Base {
 				'size_units' => [ 'px', '%', 'em' ],
 				'selectors' => [
 					'{{WRAPPER}} .give-btn' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					'{{WRAPPER}} .givewp-donation-form-modal__open' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				],
 			]
 		);
@@ -705,7 +703,8 @@ class Be_Uber_Menu extends Widget_Base {
 			Group_Control_Box_Shadow::get_type(),
 			[
 				'name' => 'button_box_shadow',
-				'selector' => '{{WRAPPER}} .give-btn',
+				'selector' => '{{WRAPPER}} .give-btn, 
+								{{WRAPPER}} .givewp-donation-form-modal__open',
 			]
 		);
 
@@ -717,6 +716,7 @@ class Be_Uber_Menu extends Widget_Base {
 				'size_units' => [ 'px', 'em', '%' ],
 				'selectors' => [
 					'{{WRAPPER}} .give-btn' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					'{{WRAPPER}} .givewp-donation-form-modal__open' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}} !important;;',
 				],
 				'separator' => 'before',
 			]
@@ -730,6 +730,7 @@ class Be_Uber_Menu extends Widget_Base {
 				'size_units' => [ 'px', 'em', '%' ],
 				'selectors' => [
 					'{{WRAPPER}} .give-btn' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					'{{WRAPPER}} .givewp-donation-form-modal__open' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				],
 				'separator' => 'before',
 			]
@@ -1200,14 +1201,22 @@ class Be_Uber_Menu extends Widget_Base {
 		$this->end_controls_section();
 	}
 
-  protected function register_controls() {
-    $this->register_layout_section_controls();
+	protected function register_controls() {
+		$this->register_layout_section_controls();
 
-    $this->register_design_layout_section_controls();
-		$this->register_design_button_donate_section_controls();
-		$this->register_design_form_section_controls();
-		$this->register_design_navigation_section_controls();
-  }
+		$this->register_design_layout_section_controls();
+			$this->register_design_button_donate_section_controls();
+			$this->register_design_form_section_controls();
+			$this->register_design_navigation_section_controls();
+	}
+
+  	public function get_is_edit_mode() {
+		if ( Plugin::$instance->editor->is_edit_mode() ) {
+			return true;
+		} else {
+			return false;
+		}
+	}
 
 	protected function render() {
     $settings = $this->get_settings_for_display();
@@ -1258,24 +1267,28 @@ class Be_Uber_Menu extends Widget_Base {
 				<?php
 				if ( class_exists( 'Give' ) ) {
 					if( '' !== $settings['show_button_donate'] && !empty( $settings['form_id'] ) ) {
-						// Maybe display the form donate button.
-						$atts = array(
-							'id' => $settings['form_id'],  // integer.
-							'show_title' => false, // boolean.
-							'show_goal' => false, // boolean.
-							'show_content' => 'none', //above, below, or none
-							'display_style' => 'button', //modal, button, and reveal
-							'continue_button_title' => $settings['form_button_text'] //string
+						$form_id = $settings['form_id'];
 
-						);
+						if( !Template::getActiveID($form_id) ) {
+							if ( $this->get_is_edit_mode() ) {
+								echo '<div class="root-data-givewp-embed"><button type="button" class="givewp-donation-form-modal__open">' . esc_html__( 'Donate Now', 'alone' ) . '</button></div>';
+							} else {
+								echo do_shortcode('[give_form id="' . $form_id . '" display_style="modal" continue_button_title="' . esc_html__( 'Donate Now', 'alone' ) . '"]');
+							}
+						} else {
+							// Maybe display the form donate button.
+							$atts = array(
+								'id' => $form_id,  // integer.
+								'show_title' => false, // boolean.
+								'show_goal' => false, // boolean.
+								'show_content' => 'none', //above, below, or none
+								'display_style' => 'button', //modal, button, and reveal
+								'continue_button_title' => esc_html__( 'Donate Now', 'alone' ) //string
 
-						add_filter('give_form_html_tags', function($form_html_tags, $form) {
-							$form_html_tags['data-style'] = 'elementor-give-uber-menu';
+							);
 
-							return $form_html_tags;
-						}, 10, 2);
-
-						echo give_get_donation_form( $atts );
+							echo give_get_donation_form( $atts );
+						}
 					}
 				}
 				?>
