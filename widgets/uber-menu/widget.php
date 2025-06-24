@@ -1287,6 +1287,12 @@ class Be_Uber_Menu extends Widget_Base {
 
 							);
 
+							add_filter('give_form_html_tags', function($form_html_tags, $form) {
+								$form_html_tags['data-style'] = 'elementor-give-uber-menu';
+
+								return $form_html_tags;
+							}, 10, 2);
+
 							echo give_get_donation_form( $atts );
 						}
 					}
