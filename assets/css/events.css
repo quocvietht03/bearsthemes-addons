@@ -417,7 +417,7 @@
     position: relative;
     display: inline-block;
     font-size: 18px;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.5;
     color: #FFFFFF;
     padding: 0 32px; }
@@ -520,27 +520,27 @@
   .elementor-events--skin-list-baruntse .elementor-event__read-more {
     width: 140px; }
   .elementor-events--skin-list-baruntse .elementor-event__title {
-    font-size: 24px;
-    font-weight: 700;
+    font-size: 20px;
+    font-weight: 600;
     line-height: 1.25;
     margin-bottom: 12px;
     color: #002866; }
     .elementor-events--skin-list-baruntse .elementor-event__title a {
       color: inherit; }
   .elementor-events--skin-list-baruntse .elementor-event__date {
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 400;
     line-height: 1.5;
     color: #7889A4; }
   .elementor-events--skin-list-baruntse .elementor-event__category, .elementor-events--skin-list-baruntse .elementor-event__address {
-    font-size: 18px;
+    font-size: 14px;
     line-height: 1.5;
     text-align: center;
     color: #7889A4; }
     .elementor-events--skin-list-baruntse .elementor-event__category a, .elementor-events--skin-list-baruntse .elementor-event__address a {
       color: inherit; }
   .elementor-events--skin-list-baruntse .elementor-event__category-title, .elementor-events--skin-list-baruntse .elementor-event__address-title {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.25;
     color: #002866;
     margin-bottom: 12px; }
@@ -549,7 +549,7 @@
     .elementor-events--skin-list-baruntse .elementor-event__read-more a {
       display: inline-block;
       font-size: 14px;
-      font-weight: 700;
+      font-weight: 600;
       line-height: 20px;
       text-transform: uppercase;
       color: #002866;
