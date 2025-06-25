@@ -152,7 +152,7 @@
           bottom: 0;
           left: 0;
           width: 100%;
-          padding: 40px;
+          padding: 36px;
           z-index: 3;
         }
         &__title{
@@ -195,17 +195,47 @@
         }
       }
 
-      @media( max-width: $break-xs - 0.02 ) {
+      @media(min-width: $break-tl) and (max-width: $break-lg - 0.02) {
         .give-card {
           &__title {
             font-size: 20px;
           }
           &__body {
-            padding: 30px 16px;
+            padding: 24px 16px;
           }
         }
         .give-goal-progress {
-          font-size: 13px;
+          margin-top: 16px;
+          .raised {
+            margin-bottom: 12px;
+            .income, .goal-text {
+              font-size: 22px;
+            }
+          }
+        }
+      }
+
+      @media(min-width: $break-sm) and (max-width: $break-md - 0.02) {
+        .give-card {
+          &__title {
+            font-size: 22px;
+          }
+          &__body {
+            padding: 24px;
+          }
+        }
+      }
+
+      @media(max-width: $break-xs - 0.02) {
+        .give-card {
+          &__title {
+            font-size: 20px;
+          }
+          &__body {
+            padding: 24px 16px;
+          }
+        }
+        .give-goal-progress {
           margin-top: 16px;
           .raised {
             margin-bottom: 12px;

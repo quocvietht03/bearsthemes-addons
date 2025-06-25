@@ -515,11 +515,9 @@
         color: inherit; }
   @media (max-width: 575.98px) {
     .elementor-posts--skin-grid-pumori .elementor-post__content {
-      padding: 30px 16px; }
-    .elementor-posts--skin-grid-pumori .elementor-post__date, .elementor-posts--skin-grid-pumori .elementor-post__read-more, .elementor-posts--skin-grid-pumori .elementor-post__meta li {
-      font-size: 13px; }
+      padding: 16px; }
     .elementor-posts--skin-grid-pumori .elementor-post__meta {
-      padding: 24px 16px; }
+      padding: 16px; }
       .elementor-posts--skin-grid-pumori .elementor-post__meta li:not(:last-child) {
         margin-right: 16px; } }
 .elementor-posts--skin-grid-baruntse .elementor-post {

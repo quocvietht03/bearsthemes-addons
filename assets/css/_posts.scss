@@ -234,13 +234,10 @@
 
       @media( max-width: $break-xs - 0.02 ) {
         &__content {
-          padding: 30px 16px;
-        }
-        &__date, &__read-more, &__meta li {
-          font-size: 13px;
+          padding: 16px;
         }
         &__meta {
-          padding: 24px 16px;
+          padding: 16px;
           li:not(:last-child) {
             margin-right: 16px;
           }

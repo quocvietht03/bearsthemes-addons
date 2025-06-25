@@ -123,7 +123,7 @@ body.mfp-active {
     .elementor-give-totals--skin-pumori .elementor-gt-header {
       padding: 30px 16px; }
       .elementor-give-totals--skin-pumori .elementor-gt-header__title {
-        font-size: 32px; }
+        font-size: 24px; }
       .elementor-give-totals--skin-pumori .elementor-gt-header__desc {
         font-size: 16px;
         line-height: 1.5; }
@@ -138,12 +138,12 @@ body.mfp-active {
       .elementor-give-totals--skin-pumori .elementor-gt-form__sub-title {
         font-size: 16px; }
       .elementor-give-totals--skin-pumori .elementor-gt-form__title {
-        font-size: 24px; }
+        font-size: 20px; }
       .elementor-give-totals--skin-pumori .elementor-gt-form__desc {
         font-size: 14px;
         line-height: 1.5; }
       .elementor-give-totals--skin-pumori .elementor-gt-form form[id*=give-form] .give-btn-modal {
-        font-size: 16px; } }
+        font-size: 14px; } }
 .elementor-give-totals--skin-baruntse {
   max-width: 460px;
   background: #FFFFFF;
@@ -2016,7 +2016,7 @@ body.mfp-active {
     bottom: 0;
     left: 0;
     width: 100%;
-    padding: 40px;
+    padding: 36px;
     z-index: 3; }
   .elementor-give-forms--skin-grid-pumori .elementor-give-form .give-card__title {
     font-size: 24px;
@@ -2049,13 +2049,28 @@ body.mfp-active {
         line-height: 1.25;
         color: #FFEE00;
         margin-bottom: 4px; }
+  @media (min-width: 1025px) and (max-width: 1199.98px) {
+    .elementor-give-forms--skin-grid-pumori .elementor-give-form .give-card__title {
+      font-size: 20px; }
+    .elementor-give-forms--skin-grid-pumori .elementor-give-form .give-card__body {
+      padding: 24px 16px; }
+    .elementor-give-forms--skin-grid-pumori .elementor-give-form .give-goal-progress {
+      margin-top: 16px; }
+      .elementor-give-forms--skin-grid-pumori .elementor-give-form .give-goal-progress .raised {
+        margin-bottom: 12px; }
+        .elementor-give-forms--skin-grid-pumori .elementor-give-form .give-goal-progress .raised .income, .elementor-give-forms--skin-grid-pumori .elementor-give-form .give-goal-progress .raised .goal-text {
+          font-size: 22px; } }
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    .elementor-give-forms--skin-grid-pumori .elementor-give-form .give-card__title {
+      font-size: 22px; }
+    .elementor-give-forms--skin-grid-pumori .elementor-give-form .give-card__body {
+      padding: 24px; } }
   @media (max-width: 575.98px) {
     .elementor-give-forms--skin-grid-pumori .elementor-give-form .give-card__title {
       font-size: 20px; }
     .elementor-give-forms--skin-grid-pumori .elementor-give-form .give-card__body {
-      padding: 30px 16px; }
+      padding: 24px 16px; }
     .elementor-give-forms--skin-grid-pumori .elementor-give-form .give-goal-progress {
-      font-size: 13px;
       margin-top: 16px; }
       .elementor-give-forms--skin-grid-pumori .elementor-give-form .give-goal-progress .raised {
         margin-bottom: 12px; }
