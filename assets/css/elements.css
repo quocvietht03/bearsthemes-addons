@@ -242,19 +242,18 @@
   align-items: center;
   height: 50px;
   min-width: 50px;
-  font-size: 24px;
+  font-size: 20px;
   color: #0073a8;
   outline: none;
   z-index: 3;
+  border-radius: 4px;
   -webkit-transition: all .3s;
   transition: all .3s; }
   .elementor-swiper-button span, .elementor-swiper-button i {
     -webkit-transition: all .3s;
     transition: all .3s; }
-  .elementor-swiper-button i, .elementor-swiper-button svg {
-    margin-top: -2px; }
   .elementor-swiper-button svg {
-    width: 24px;
+    width: 20px;
     height: auto; }
 
 .elementor-navigation-type-both .elementor-swiper-button-prev span {
