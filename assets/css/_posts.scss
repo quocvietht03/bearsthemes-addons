@@ -316,16 +316,19 @@
       &__read-more {
         position: relative;
         display: inline-block;
-        font-size: 14px;
-        font-weight: 700;
-        line-height: 20px;
-        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.5;
         color: #002866;
-        border-bottom: 1px solid;
+        text-decoration: underline;
+        text-underline-offset: 3px;
         svg {
           display: inline-block;
           vertical-align: middle;
           margin: -3px 1px 0 4px;
+          fill: currentColor;
+          width: 12px;
+          height: auto;
         }
       }
 
