@@ -13,6 +13,7 @@
       padding: 60px 55px;
       &__title {
         font-size: 36px;
+        font-weight: 600;
         line-height: 1.25;
         color: #FFFFFF;
         margin-bottom: 12px;
@@ -66,6 +67,7 @@
       }
       &__title {
         font-size: 30px;
+        font-weight: 600;
         line-height: 1.25;
         color: #002866;
         margin-bottom: 8px;
@@ -86,7 +88,7 @@
           width: 162px;
           .give-currency-symbol {
             font-size: 24px;
-            font-weight: 600;
+            font-weight: 400;
             background: #002866;
           }
           #give-amount {

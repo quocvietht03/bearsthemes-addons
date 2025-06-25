@@ -784,7 +784,7 @@ class Skin_Grid_Pumori extends Skin_Base {
 
 				<?php
 					if( '' !== $this->parent->get_instance_value_skin( 'show_category' ) ){
-						the_terms( $post_id, 'give_posts_category', '<div class="give-card__category">', ',', '</div>' );
+						the_terms( $post_id, 'give_posts_category', '<div class="give-card__category">', ', ', '</div>' );
 					}
 				?>
 

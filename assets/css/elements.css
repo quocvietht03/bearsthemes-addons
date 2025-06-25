@@ -452,9 +452,9 @@
       -webkit-transition: all 1.5s cubic-bezier(0.11, 0.52, 0.53, 0.79) 0s;
       transition: all 1.5s cubic-bezier(0.11, 0.52, 0.53, 0.79) 0s; }
   .elementor-posts--skin-grid-pumori .elementor-post__content {
-    padding: 30px 40px; }
+    padding: 20px 24px; }
   .elementor-posts--skin-grid-pumori .elementor-post__date {
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 400;
     line-height: 1.5;
     text-transform: uppercase;
@@ -470,29 +470,34 @@
     .elementor-posts--skin-grid-pumori .elementor-post__date a {
       color: inherit; }
   .elementor-posts--skin-grid-pumori .elementor-post__title {
-    font-size: 22px;
-    font-weight: 600;
+    font-size: 20px;
+    font-weight: 500;
     line-height: 1.25;
     color: #002866;
     margin-bottom: 16px; }
     .elementor-posts--skin-grid-pumori .elementor-post__title a {
       color: inherit; }
+      .elementor-posts--skin-grid-pumori .elementor-post__title a:hover {
+        text-decoration: underline;
+        text-underline-offset: 3px; }
   .elementor-posts--skin-grid-pumori .elementor-post__read-more {
     display: inline-block;
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 400;
     line-height: 20px;
-    text-transform: uppercase;
     color: #4D6995;
-    border-bottom: 1px solid; }
+    text-decoration: underline;
+    text-underline-offset: 3px; }
+    .elementor-posts--skin-grid-pumori .elementor-post__read-more:hover {
+      color: #002866; }
   .elementor-posts--skin-grid-pumori .elementor-post__meta {
     list-style: none;
-    padding: 24px 40px;
+    padding: 16px 24px;
     margin: 0;
     background: #FFEE00; }
     .elementor-posts--skin-grid-pumori .elementor-post__meta li {
       display: inline-block;
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 400;
       line-height: 1.5;
       text-transform: uppercase;

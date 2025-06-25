@@ -200,7 +200,7 @@
     left: 50%;
     display: inline-block;
     font-size: 13px;
-    font-weight: 700;
+    font-weight: 500;
     line-height: 20px;
     text-transform: uppercase;
     color: #002866;
@@ -218,17 +218,17 @@
     align-items: center; }
   .elementor-events--skin-list-pumori .elementor-event__content-header {
     width: 60%;
-    padding: 20px 40px; }
+    padding: 20px 30px; }
   .elementor-events--skin-list-pumori .elementor-event__title {
-    font-size: 22px;
-    font-weight: 600;
+    font-size: 20px;
+    font-weight: 500;
     line-height: 1.25;
     margin-bottom: 12px;
     color: #002866; }
     .elementor-events--skin-list-pumori .elementor-event__title a {
       color: inherit; }
   .elementor-events--skin-list-pumori .elementor-event__date {
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 400;
     line-height: 1.5;
     text-transform: uppercase;
@@ -236,7 +236,7 @@
   .elementor-events--skin-list-pumori .elementor-event__address {
     position: relative;
     width: 40%;
-    padding: 20px 40px; }
+    padding: 20px 30px; }
     .elementor-events--skin-list-pumori .elementor-event__address:before {
       content: "";
       position: absolute;
@@ -248,13 +248,13 @@
       margin-top: -25px; }
   .elementor-events--skin-list-pumori .elementor-event__address-tile {
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 1.25;
     color: #002866;
     margin-bottom: 8px; }
   .elementor-events--skin-list-pumori .elementor-event .tribe-address {
     display: block;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 400;
     line-height: 1.5;
     color: #4D6995; }
