@@ -1276,6 +1276,7 @@ class Be_Uber_Menu extends Widget_Base {
 								echo do_shortcode('[give_form id="' . $form_id . '" display_style="modal" continue_button_title="' . esc_html__( 'Donate Now', 'alone' ) . '"]');
 							}
 						} else {
+							$donation_btn_text = $settings['form_button_text'] ? $settings['form_button_text'] : esc_html__( 'Donate Now', 'alone' );
 							// Maybe display the form donate button.
 							$atts = array(
 								'id' => $form_id,  // integer.
@@ -1283,7 +1284,7 @@ class Be_Uber_Menu extends Widget_Base {
 								'show_goal' => false, // boolean.
 								'show_content' => 'none', //above, below, or none
 								'display_style' => 'button', //modal, button, and reveal
-								'continue_button_title' => esc_html__( 'Donate Now', 'alone' ) //string
+								'continue_button_title' => $donation_btn_text //string
 
 							);
 
