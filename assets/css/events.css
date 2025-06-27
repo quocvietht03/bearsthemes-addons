@@ -435,6 +435,12 @@
       color: inherit; }
       .elementor-events--skin-list-baruntse .elementor-filter li a.active, .elementor-events--skin-list-baruntse .elementor-filter li a:hover {
         color: #FFEE00; }
+  @media (max-width: 575.98px) {
+    .elementor-events--skin-list-baruntse .elementor-filter {
+      padding: 16px 0; }
+      .elementor-events--skin-list-baruntse .elementor-filter li {
+        font-size: 16px;
+        padding: 0 16px; } }
 .elementor-events--skin-list-baruntse .no-result {
   padding: 30px; }
 .elementor-events--skin-list-baruntse .elementor-event {
@@ -590,9 +596,7 @@
       width: 86px;
       height: 86px; }
     .elementor-events--skin-list-baruntse .elementor-event_title {
-      font-size: 20px; }
-    .elementor-events--skin-list-baruntse .elementor-event__date, .elementor-events--skin-list-baruntse .elementor-event__address {
-      font-size: 16px; } }
+      font-size: 18px; } }
 .elementor-events--skin-list-coropuna .elementor-event {
   position: relative;
   overflow: hidden;

@@ -295,7 +295,7 @@
         padding: 30px;
       }
       &__title {
-        font-size: 25px;
+        font-size: 24px;
         line-height: 1.25;
         color: #002866;
         margin-bottom: 12px;
@@ -309,6 +309,11 @@
         line-height: 1.75;
         color: #555555;
         margin-bottom: 16px;
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
         p {
           margin: 0;
         }
@@ -332,6 +337,31 @@
         }
       }
 
+      @media( max-width: $break-tl - 0.02 ) {
+          &.has-thumbnail {
+            .elementor-post {
+              &__content {
+                padding: 24px 16px;
+              }
+              &__title {
+                font-size: 20px;
+              }
+              &__excerpt {
+                font-size: 16px;
+              }
+            }
+          }
+      }
+
+      @media( min-width: $break-sm ) and ( max-width: $break-tl - 0.02 ) {
+        &__title {
+          font-size: 18px;
+        }
+        &__excerpt {
+          -webkit-line-clamp: 3;
+        }
+      }
+
       @media( max-width: $break-xs - 0.02 ) {
         &.has-thumbnail {
           flex-direction: column;
@@ -342,6 +372,13 @@
             }
             &__content {
               margin-left: 0;
+              padding: 24px 16px;
+            }
+            &__title {
+              font-size: 20px;
+            }
+            &__excerpt {
+              font-size: 16px;
             }
           }
         }
