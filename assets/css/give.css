@@ -4097,7 +4097,7 @@ body.mfp-active {
   .elementor-give-forms--skin-grid-nuptse .elementor-give-form .give-card__title {
     font-size: 20px;
     font-weight: 700;
-    line-height: 1.5;
+    line-height: 1.25;
     color: #151515;
     margin-bottom: 20px;
     overflow: hidden;
@@ -4110,16 +4110,16 @@ body.mfp-active {
   .elementor-give-forms--skin-grid-nuptse .elementor-give-form .give-card__completed {
     float: right;
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.5;
     color: #3F86ED;
-    margin-top: -55px; }
+    margin-top: -40px; }
   .elementor-give-forms--skin-grid-nuptse .elementor-give-form .givewp-donation-form-modal__open,
   .elementor-give-forms--skin-grid-nuptse .elementor-give-form .give-btn-modal {
     display: inline-block;
     width: auto;
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 24px;
     color: #011F51;
     margin-top: 20px;
@@ -4144,7 +4144,7 @@ body.mfp-active {
     .elementor-give-forms--skin-grid-nuptse .elementor-give-form .give-goal-progress svg {
       border-radius: 10px; }
     .elementor-give-forms--skin-grid-nuptse .elementor-give-form .give-goal-progress .raised {
-      margin-bottom: 0; }
+      margin-bottom: 4px; }
     .elementor-give-forms--skin-grid-nuptse .elementor-give-form .give-goal-progress .income {
       font-size: 16px;
       font-weight: 700;
@@ -4154,7 +4154,10 @@ body.mfp-active {
       color: #151515; }
   @media (max-width: 575.98px) {
     .elementor-give-forms--skin-grid-nuptse .elementor-give-form {
-      padding: 24px 16px; } }
+      padding: 24px 16px; }
+      .elementor-give-forms--skin-grid-nuptse .elementor-give-form .givewp-donation-form-modal__open,
+      .elementor-give-forms--skin-grid-nuptse .elementor-give-form .give-btn-modal {
+        font-size: 14px; } }
 .elementor-give-forms--skin-grid-gamin .elementor-give-form {
   position: relative;
   overflow: hidden;

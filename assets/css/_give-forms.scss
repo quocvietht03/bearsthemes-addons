@@ -2920,7 +2920,7 @@
         &__title {
           font-size: 20px;
           font-weight: 700;
-          line-height: 1.5;
+          line-height: 1.25;
           color: #151515;
           margin-bottom: 20px;
           overflow: hidden;
@@ -2935,10 +2935,10 @@
         &__completed {
             float: right;
             font-size: 16px;
-            font-weight: 700;
+            font-weight: 600;
             line-height: 1.5;
             color: #3F86ED;
-            margin-top: -55px;
+            margin-top: -40px;
         }
       }
       .givewp-donation-form-modal__open,
@@ -2946,7 +2946,7 @@
         display: inline-block;
         width: auto;
         font-size: 16px;
-        font-weight: 700;
+        font-weight: 600;
         line-height: 24px;
         color: #011F51;
         margin-top: 20px;
@@ -2975,7 +2975,7 @@
           border-radius: 10px;
         }
         .raised {
-          margin-bottom: 0;
+          margin-bottom: 4px;
         }
         .income {
           font-size: 16px;
@@ -2989,6 +2989,10 @@
       }
       @media( max-width: $break-xs - 0.02 ) {
         padding: 24px 16px;
+        .givewp-donation-form-modal__open,
+        .give-btn-modal {
+          font-size: 14px;
+        }
       }
     }
   }
