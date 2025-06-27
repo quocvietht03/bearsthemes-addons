@@ -2189,9 +2189,9 @@
       -webkit-transition: all 1.5s cubic-bezier(0.11, 0.52, 0.53, 0.79) 0s;
       transition: all 1.5s cubic-bezier(0.11, 0.52, 0.53, 0.79) 0s; }
   .elementor-posts--skin-grid-taboche .elementor-post__content {
-    padding: 20px; }
+    padding-top: 20px; }
   .elementor-posts--skin-grid-taboche .elementor-post__title {
-    font-size: 24px;
+    font-size: 22px;
     color: #222;
     line-height: 1.5;
     margin-top: 0;
@@ -2201,7 +2201,10 @@
     text-overflow: ellipsis;
     display: -webkit-box;
     margin-bottom: 10px;
-    font-weight: 700; }
+    font-weight: 600; }
+    @media (max-width: 575.98px) {
+      .elementor-posts--skin-grid-taboche .elementor-post__title {
+        font-size: 20px; } }
     .elementor-posts--skin-grid-taboche .elementor-post__title a {
       color: inherit; }
       .elementor-posts--skin-grid-taboche .elementor-post__title a:hover {
@@ -2211,14 +2214,14 @@
     color: #979797;
     font-size: 13px;
     text-transform: uppercase;
-    letter-spacing: 2px; }
+    letter-spacing: 1px; }
     .elementor-posts--skin-grid-taboche .elementor-post__author a {
       color: inherit; }
   .elementor-posts--skin-grid-taboche .elementor-post__date {
     display: inline-block;
     color: #979797;
-    letter-spacing: 2px;
-    font-size: 16px; }
+    letter-spacing: 1px;
+    font-size: 14px; }
 .elementor-posts--skin-grid-wilson .elementor-post {
   overflow: hidden;
   border-bottom: 1px solid #dcdcdc;
@@ -4802,11 +4805,14 @@
     -webkit-transition: all .3s;
     transition: all .3s; }
   .elementor-members--skin-taboche .elementor-member__title {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 700;
     line-height: 1.25;
     margin-bottom: 4px;
     color: #222222; }
+    @media (max-width: 575.98px) {
+      .elementor-members--skin-taboche .elementor-member__title {
+        font-size: 20px; } }
     .elementor-members--skin-taboche .elementor-member__title a {
       color: inherit; }
       .elementor-members--skin-taboche .elementor-member__title a:hover {
@@ -4815,7 +4821,8 @@
     font-size: 14px;
     line-height: 1.5;
     color: #979797;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    letter-spacing: 1px; }
   .elementor-members--skin-taboche .elementor-member__email {
     font-size: 16px;
     line-height: 1.5;
@@ -5982,6 +5989,10 @@
     height: 100px;
     align-items: center;
     justify-content: center; }
+    @media (max-width: 575.98px) {
+      .elementor-icon-box--icon-view-stacked .elementor-icon-box__icon, .elementor-icon-box--icon-view-framed .elementor-icon-box__icon {
+        width: 90px;
+        height: 90px; } }
   .elementor-icon-box--icon-view-stacked .elementor-icon-box__icon {
     background: #0073a8; }
     .elementor-icon-box--icon-view-stacked .elementor-icon-box__icon i {
@@ -6017,12 +6028,15 @@
       transition: all .3s; }
   .elementor-icon-box--default .elementor-icon-box__title {
     font-size: 22px;
-    font-weight: 500;
-    margin-bottom: 12px; }
+    font-weight: 600;
+    margin-bottom: 8px; }
     .elementor-icon-box--default .elementor-icon-box__title a {
       color: inherit; }
   .elementor-icon-box--default .elementor-icon-box__desc {
     font-size: 16px; }
+  @media (max-width: 575.98px) {
+    .elementor-icon-box--default .elementor-icon-box__title {
+      font-size: 20px; } }
   .elementor-icon-box--skin-pumori {
     position: relative;
     display: flex;

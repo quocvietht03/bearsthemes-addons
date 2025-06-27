@@ -37,6 +37,10 @@
     height: 100px;
     align-items: center;
     justify-content: center;
+    @media (max-width: $break-xs - 0.02) {
+      width: 90px;
+      height: 90px;
+    }
   }
 
   &--icon-view-stacked .elementor-icon-box__icon {
@@ -92,14 +96,19 @@
       }
       &__title {
         font-size: 22px;
-        font-weight: 500;
-        margin-bottom: 12px;
+        font-weight: 600;
+        margin-bottom: 8px;
         a {
           color: inherit;
         }
       }
       &__desc {
         font-size: 16px;
+      }
+      @media (max-width: $break-xs - 0.02) {
+        &__title {
+          font-size: 20px;
+        }
       }
     }
   }

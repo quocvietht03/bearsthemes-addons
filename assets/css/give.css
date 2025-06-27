@@ -619,51 +619,53 @@ body.mfp-active {
 .elementor-give-totals--skin-taboche {
   display: flex;
   align-items: center;
-  justify-content: space-between; }
+  justify-content: space-between;
+  gap: 20px; }
   .elementor-give-totals--skin-taboche .elementor-gt-header__title {
-    font-size: 50px;
+    font-size: 45px;
     line-height: 1.25;
     color: #f7db07;
-    margin-bottom: 8px; }
+    margin-bottom: 4px; }
   .elementor-give-totals--skin-taboche .elementor-gt-header__desc {
-    font-size: 30px;
-    line-height: 1.3;
+    font-size: 24px;
+    line-height: 1.5;
     color: #222; }
   .elementor-give-totals--skin-taboche .elementor-gt-header__sub-title {
-    font-size: 24px;
+    font-size: 18px;
     color: #222222;
-    line-height: 24px;
-    margin-bottom: 10px; }
+    line-height: 1.5;
+    margin-bottom: 4px; }
   .elementor-give-totals--skin-taboche .goal-progress {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 530px; }
+    gap: 60px; }
     .elementor-give-totals--skin-taboche .goal-progress .give-card__progress {
       display: flex;
-      align-items: center; }
+      align-items: center;
+      gap: 60px; }
       .elementor-give-totals--skin-taboche .goal-progress .give-card__progress .give-goal-progress {
         font-size: 18px;
         font-weight: 400;
         width: 150px;
         line-height: 1.25;
         color: #333333;
-        margin-right: 40px;
         margin-bottom: 0; }
       .elementor-give-totals--skin-taboche .goal-progress .give-card__progress .raised {
-        margin-bottom: 0;
-        margin-right: 50px; }
+        margin-bottom: 0; }
         .elementor-give-totals--skin-taboche .goal-progress .give-card__progress .raised .raised-income {
           margin-bottom: 20px; }
         .elementor-give-totals--skin-taboche .goal-progress .give-card__progress .raised .raised-income, .elementor-give-totals--skin-taboche .goal-progress .give-card__progress .raised .raised-goal {
           text-align: left;
           display: block;
-          font-size: 16px;
-          line-height: 20px; }
+          font-size: 14px;
+          line-height: 1.5;
+          color: #777; }
         .elementor-give-totals--skin-taboche .goal-progress .give-card__progress .raised .income, .elementor-give-totals--skin-taboche .goal-progress .give-card__progress .raised .goal-text {
           font-size: 24px;
-          color: #8e8e8e;
-          line-height: 30px;
+          font-weight: 600;
+          color: #303030;
+          line-height: 1.5;
           text-align: left;
           display: block; }
   .elementor-give-totals--skin-taboche .gt-remain .item-remain {
@@ -671,26 +673,28 @@ body.mfp-active {
     text-align: left; }
     .elementor-give-totals--skin-taboche .gt-remain .item-remain h4.gt-remain__remain-title {
       margin-bottom: 0;
-      font-size: 16px;
+      font-size: 14px;
       line-height: 20px;
-      color: #555;
+      color: #777;
       font-weight: 400; }
     .elementor-give-totals--skin-taboche .gt-remain .item-remain span.gt-remain__remain-value {
       font-size: 24px;
-      color: #8e8e8e;
-      line-height: 30px; }
+      font-weight: 600;
+      color: #303030;
+      line-height: 1.5; }
   .elementor-give-totals--skin-taboche .gt-remain .item-donate {
     text-align: left; }
     .elementor-give-totals--skin-taboche .gt-remain .item-donate h4.gt-remain__donate-title {
       margin-bottom: 0;
-      font-size: 16px;
+      font-size: 14px;
       line-height: 20px;
-      color: #555;
+      color: #777;
       font-weight: 400; }
     .elementor-give-totals--skin-taboche .gt-remain .item-donate span.gt-remain__donate-value {
       font-size: 24px;
-      color: #8e8e8e;
-      line-height: 30px; }
+      font-weight: 600;
+      color: #303030;
+      line-height: 1.5; }
   .elementor-give-totals--skin-taboche .elementor-gt-form .givewp-donation-form-modal__open,
   .elementor-give-totals--skin-taboche .elementor-gt-form .give-btn-modal {
     display: inline-block;
@@ -715,45 +719,50 @@ body.mfp-active {
     padding: 15px 35px !important; }
     .elementor-give-totals--skin-taboche .elementor-gt-form .givewp-donation-form-modal__open:hover {
       color: #fff !important; }
+  @media (max-width: 1199.98px) {
+    .elementor-give-totals--skin-taboche {
+      gap: 30px; }
+      .elementor-give-totals--skin-taboche .goal-progress,
+      .elementor-give-totals--skin-taboche .goal-progress .give-card__progress {
+        gap: 30px; }
+      .elementor-give-totals--skin-taboche .elementor-gt-header__title {
+        font-size: 40px; } }
   @media (max-width: 991.98px) {
     .elementor-give-totals--skin-taboche {
-      display: block;
-      text-align: center; }
-      .elementor-give-totals--skin-taboche .goal-progress {
-        margin: 20px auto; } }
+      flex-wrap: wrap;
+      justify-content: space-evenly; }
+      .elementor-give-totals--skin-taboche .elementor-gt-header__sub-title {
+        font-size: 16px; }
+      .elementor-give-totals--skin-taboche .elementor-gt-header__title {
+        font-size: 36px; }
+      .elementor-give-totals--skin-taboche .elementor-gt-header__desc {
+        font-size: 20px; }
+      .elementor-give-totals--skin-taboche .goal-progress .give-card__progress .raised .income,
+      .elementor-give-totals--skin-taboche .goal-progress .give-card__progress .raised .goal-text,
+      .elementor-give-totals--skin-taboche .gt-remain .item-remain span.gt-remain__remain-value,
+      .elementor-give-totals--skin-taboche .gt-remain .item-donate span.gt-remain__donate-value {
+        font-size: 20px; } }
   @media (max-width: 767.98px) {
-    .elementor-give-totals--skin-taboche .goal-progress {
-      margin: 30px auto;
-      justify-content: center; }
+    .elementor-give-totals--skin-taboche .elementor-gt-header__title {
+      font-size: 32px; }
+    .elementor-give-totals--skin-taboche .elementor-gt-header__desc {
+      font-size: 18px; } }
+  @media (max-width: 575.98px) {
+    .elementor-give-totals--skin-taboche {
+      flex-direction: column; }
+      .elementor-give-totals--skin-taboche .goal-progress,
+      .elementor-give-totals--skin-taboche .goal-progress .give-card__progress {
+        gap: 20px; }
+      .elementor-give-totals--skin-taboche .goal-progress .give-card__progress .raised .income,
+      .elementor-give-totals--skin-taboche .goal-progress .give-card__progress .raised .goal-text,
+      .elementor-give-totals--skin-taboche .gt-remain .item-remain span.gt-remain__remain-value,
+      .elementor-give-totals--skin-taboche .gt-remain .item-donate span.gt-remain__donate-value {
+        font-size: 18px; }
       .elementor-give-totals--skin-taboche .goal-progress .give-card__progress .give-goal-progress {
-        font-size: 16px;
-        width: 70px;
-        margin-right: 15px; }
-      .elementor-give-totals--skin-taboche .goal-progress .give-card__progress .raised {
-        margin-bottom: 0;
-        margin-right: 30px; }
-        .elementor-give-totals--skin-taboche .goal-progress .give-card__progress .raised .raised-income {
-          margin-bottom: 10px; }
-        .elementor-give-totals--skin-taboche .goal-progress .give-card__progress .raised .raised-income, .elementor-give-totals--skin-taboche .goal-progress .give-card__progress .raised .raised-goal {
-          text-align: left;
-          display: block;
-          font-size: 13px;
-          line-height: 20px; }
-        .elementor-give-totals--skin-taboche .goal-progress .give-card__progress .raised .income, .elementor-give-totals--skin-taboche .goal-progress .give-card__progress .raised .goal-text {
-          font-size: 16px;
-          line-height: 22px; }
-      .elementor-give-totals--skin-taboche .goal-progress .gt-remain .item-remain {
-        margin-bottom: 10px; }
-        .elementor-give-totals--skin-taboche .goal-progress .gt-remain .item-remain h4.gt-remain__remain-title {
-          font-size: 13px; }
-        .elementor-give-totals--skin-taboche .goal-progress .gt-remain .item-remain span.gt-remain__remain-value {
-          font-size: 16px;
-          line-height: 22px; }
-      .elementor-give-totals--skin-taboche .goal-progress .gt-remain .item-donate h4.gt-remain__donate-title {
-        font-size: 13px; }
-      .elementor-give-totals--skin-taboche .goal-progress .gt-remain .item-donate span.gt-remain__donate-value {
-        font-size: 16px;
-        line-height: 22px; } }
+        width: 120px; }
+      .elementor-give-totals--skin-taboche .goal-progress .give-card__progress .raised .raised-income,
+      .elementor-give-totals--skin-taboche .gt-remain .item-remain {
+        margin-bottom: 10px; } }
 .elementor-give-totals--skin-wilson .elementor-gt-header__title {
   font-size: 24px;
   line-height: 34px;
@@ -2885,36 +2894,41 @@ body.mfp-active {
       -webkit-transition: all 1.5s cubic-bezier(0.11, 0.52, 0.53, 0.79) 0s;
       transition: all 1.5s cubic-bezier(0.11, 0.52, 0.53, 0.79) 0s; }
   .elementor-give-forms--skin-grid-taboche .elementor-give-form .give-card__body {
-    padding: 30px;
+    padding: 24px;
     background: #fff; }
   .elementor-give-forms--skin-grid-taboche .elementor-give-form .give-card__title {
     color: #333;
-    font-size: 23px;
-    line-height: 1.2;
+    font-size: 22px;
+    line-height: 1.25;
     letter-spacing: 0;
-    font-weight: 400;
+    font-weight: 600;
     margin: 15px 0; }
     .elementor-give-forms--skin-grid-taboche .elementor-give-form .give-card__title a {
       color: inherit; }
   .elementor-give-forms--skin-grid-taboche .elementor-give-form .give-card__meta-date {
-    font-size: 15px;
-    line-height: 1.6;
+    font-size: 14px;
+    line-height: 1.5;
     letter-spacing: 0;
-    color: #f7db07; }
+    color: #777; }
     .elementor-give-forms--skin-grid-taboche .elementor-give-form .give-card__meta-date svg {
       display: inline-block;
-      fill: #f7db07;
-      margin-right: 6px; }
+      fill: currentColor;
+      margin: 0 8px -2px 0;
+      width: 16px;
+      height: auto; }
+  @media (max-width: 575.98px) {
+    .elementor-give-forms--skin-grid-taboche .elementor-give-form .give-card__body {
+      padding: 20px; }
+    .elementor-give-forms--skin-grid-taboche .elementor-give-form .give-card__title {
+      font-size: 20px; } }
   .elementor-give-forms--skin-grid-taboche .elementor-give-form .give-card__progress-bar {
     position: relative; }
     .elementor-give-forms--skin-grid-taboche .elementor-give-form .give-card__progress-bar .give-card__completed {
       position: absolute;
       top: 16px;
       font-size: 14px;
-      font-weight: 700;
-      line-height: 2.14;
-      letter-spacing: -.5px;
-      color: #555; }
+      line-height: 1.5;
+      color: #333; }
   .elementor-give-forms--skin-grid-taboche .elementor-give-form .give-goal-progress {
     font-size: 14px;
     font-weight: 400;
@@ -4606,7 +4620,7 @@ body.mfp-active {
 .elementor-donors--skin-taboche .elementor-donor {
   position: relative;
   background: #fff;
-  padding: 25px;
+  padding: 24px;
   border-radius: 3px; }
   .elementor-donors--skin-taboche .elementor-donor__thumbnail {
     position: relative;
@@ -4637,18 +4651,23 @@ body.mfp-active {
     vertical-align: middle;
     font-size: 14px;
     line-height: 1.3;
-    color: #0a0a0a;
-    font-weight: bold; }
+    letter-spacing: 1px;
+    color: #222;
+    font-weight: 600; }
   .elementor-donors--skin-taboche .elementor-donor__price {
     display: inline-block;
     margin-left: 0;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 22px;
-    color: #979494; }
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.5;
+    color: #222; }
+    .elementor-donors--skin-taboche .elementor-donor__price span {
+      font-size: 15px;
+      font-weight: 400;
+      color: #999; }
   .elementor-donors--skin-taboche .elementor-donor__title {
-    font-size: 24px;
-    line-height: 28px;
+    font-size: 22px;
+    line-height: 1.25;
     color: #222;
     margin-bottom: 15px;
     -webkit-line-clamp: 2;
@@ -4660,6 +4679,11 @@ body.mfp-active {
     display: -webkit-box; }
     .elementor-donors--skin-taboche .elementor-donor__title a {
       color: inherit; }
+  @media (max-width: 575.98px) {
+    .elementor-donors--skin-taboche .elementor-donor {
+      padding: 20px; }
+      .elementor-donors--skin-taboche .elementor-donor__title {
+        font-size: 20px; } }
 
 .elementor-sponsors-table {
   position: relative;

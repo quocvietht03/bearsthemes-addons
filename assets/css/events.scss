@@ -2054,7 +2054,7 @@
         .elementor-event {
           &__content {
             margin-left: 60px;
-            padding: 20px 150px 20px 100px;
+            padding: 30px 150px 30px 100px;
             min-height: 140px;
             display: flex;
             flex-direction: column;
@@ -2066,23 +2066,24 @@
         position: absolute;
         top: 50%;
         left: 0;
-        width: 140px;
-        height: 140px;
+        width: 120px;
+        height: 120px;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        font-size: 50px;
-        font-weight: 700;
-        line-height: 1.25;
+        font-size: 45px;
+        font-weight: 600;
+        line-height: 1;
         text-transform: uppercase;
         color: #222;
         background: #f7db07;
         z-index: 3;
-        margin-top: -70px;
         border-radius: 5px;
+        transform: translateY(-50%);
         .month {
           font-size: 16px;
+          line-height: 1.5;
         }
       }
       &__content {
@@ -2093,11 +2094,11 @@
         border-radius: 5px;
       }
       &__title {
-        font-size: 24px;
-        font-weight: 400;
+        font-size: 22px;
+        font-weight: 600;
         line-height: 1.25;
         color: #fff;
-        margin-bottom: 10px;
+        margin: 0 0 8px;
         a {
           color: inherit;
           &:hover {
@@ -2106,26 +2107,28 @@
         }
       }
       &__address {
-        font-size: 15px;
+        font-size: 14px;
         font-weight: 400;
-        line-height: 1.25;
+        line-height: 1.5;
         color: #bfbfbf;
         svg {
           display: inline-block;
           vertical-align: middle;
           fill: #f7db07;
-          margin: -3px 4px 0 1px;
+          margin: -3px 6px 0 0;
+          width: 16px;
+          height: auto;
         }
       }
       &__meta {
         list-style: none;
-        margin: 0;
+        margin: 0 0 8px;
         padding: 0;
         li {
           display: inline-block;
-          font-size: 15px;
+          font-size: 14px;
           font-weight: 400;
-          line-height: 1.25;
+          line-height: 1.5;
           color: #bfbfbf;
           &:not(:last-child) {
             padding-right: 20px;
@@ -2135,7 +2138,9 @@
             display: inline-block;
             vertical-align: middle;
             fill: #f7db07;
-            margin: -3px 4px 0 1px;
+            margin: -3px 6px 0 0;
+            width: 16px;
+            height: auto;
           }
           &.organizer {
               padding-left: 20px;
@@ -2148,7 +2153,8 @@
         align-items: center;
         justify-content: center;
         color: #333;
-        font-size: 16px;
+        font-size: 15px;
+        font-weight: 600;
         right: 20px;
         background: #fff;
         width: 130px;
@@ -2167,8 +2173,8 @@
         &.has-date {
           .elementor-event {
             &__content {
-              margin: 60px 0 0 0;
-              padding: 100px 15px 30px 15px;
+              margin: 40px 0 0 0;
+              padding: 50px 15px 15px 15px;
             }
           }
         }
@@ -2176,22 +2182,29 @@
           .elementor-event {
             &__content {
               margin: 0;
-              padding: 30px 88px 80px 16px;
+              padding: 15px 15px 80px 15px;
             }
           }
         }
         &.has-date.has-read-more {
           .elementor-event {
             &__content {
-              margin: 60px 0 0 0;
-              padding: 100px 15px 80px 15px;
+              margin: 40px 0 0 0;
+              padding: 50px 15px 80px 15px;
             }
           }
         }
         &__date {
           top: 0;
           left: 15px;
+          width: 80px;
+          height: 80px;
+          font-size: 36px;
           margin-top: 0;
+          transform: translateY(0);
+        }
+        &__title {
+          font-size: 20px;
         }
         &__content {
           padding: 30px 16px;

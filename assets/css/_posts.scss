@@ -2521,10 +2521,10 @@
         }
       }
       &__content {
-        padding: 20px;
+        padding-top: 20px;
       }
       &__title {
-        font-size: 24px;
+        font-size: 22px;
         color: #222;
         line-height: 1.5;
         margin-top: 0;
@@ -2534,7 +2534,10 @@
         text-overflow: ellipsis;
         display: -webkit-box;
         margin-bottom: 10px;
-        font-weight: 700;
+        font-weight: 600;
+        @media (max-width: $break-xs - 0.02) {
+          font-size: 20px;
+        }
         a {
           color: inherit;
           &:hover {
@@ -2547,7 +2550,7 @@
         color: #979797;
         font-size: 13px;
         text-transform: uppercase;
-        letter-spacing: 2px;
+        letter-spacing: 1px;
         a {
           color: inherit;
         }
@@ -2556,8 +2559,8 @@
       &__date {
         display: inline-block;
         color: #979797;
-        letter-spacing: 2px;
-        font-size: 16px;
+        letter-spacing: 1px;
+        font-size: 14px;
       }
 
     }
