@@ -615,7 +615,18 @@
       }
 
     }
-
+    @media (max-width: $break-sm - 0.02) {
+      padding: 20px;
+      .elementor-gt-header {
+        &__sub-title,
+        &__desc {
+          font-size: 16px;
+        }
+        &__title {
+          font-size: 32px;
+        }
+      }
+    }
   }
 
   &--skin-changla {

@@ -940,14 +940,8 @@
         text-decoration: none;
         color: #ffffff;
         background: #f97a60;
-        padding: 20px 35px;
-        border-radius: 30px;
-        &:hover {
-          background: #f7544f;
-        }
-      }
-      .givewp-donation-form-modal__open {
         padding: 20px 35px !important;
+        border-radius: 30px;
         &:hover {
           background: #f7544f;
         }
@@ -993,15 +987,24 @@
       @media( max-width: $break-md - 0.02 ) {
         flex-direction: column;
         text-align: center;
+        background: #fff;
+        position: relative;
+        overflow: hidden;
+        margin: 0 78px;
+        border: 1px solid #ece9f1;
+        border-radius: 4px;
         .give-card {
           &__header {
               width: 100%;
-              margin-bottom: 30px;
               padding: 0;
           }
           &__body {
             width: 100%;
-            padding: 0;
+            padding: 24px;
+          }
+          &__title {
+            font-size: 30px;
+            margin-bottom: 8px;
           }
         }
       }
@@ -1009,14 +1012,12 @@
       @media( max-width: $break-sm - 0.02 ) {
         flex-direction: column;
         .give-card {
-          &__header {
-              margin-bottom: 20px;
-          }
           &__title {
-            font-size: 30px;
+            font-size: 24px;
             margin-bottom: 8px;
           }
           &__excerpt {
+            font-size: 16px;
             margin-bottom: 16px;
           }
         }
@@ -1025,6 +1026,16 @@
         }
       }
 
+      @media( max-width: $break-xs - 0.02 ) {
+        margin: 0;
+        &__body {
+          padding: 20px;
+        }
+        .givewp-donation-form-modal__open,
+        .give-btn-modal {
+          padding: 15px 30px !important;
+        }
+      }
     }
 
   }

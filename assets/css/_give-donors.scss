@@ -127,6 +127,22 @@
           color: inherit;
         }
       }
+      @media (max-width: $break-sm - 0.02) {
+        &__price {
+          font-size: 24px;
+          span {
+            font-size: 14px;
+          }
+        }
+        &__title {
+          font-size: 20px;
+        }
+      }
+      @media (max-width: $break-xs - 0.02) {
+        &__title {
+          font-size: 18px;
+        }
+      }
     }
   }
   &--skin-taboche {

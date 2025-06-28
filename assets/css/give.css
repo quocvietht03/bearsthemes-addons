@@ -472,6 +472,13 @@ body.mfp-active {
       .elementor-give-totals--skin-saltoro .elementor-gt-form form[id*=give-form] .give-btn-modal:hover {
         color: #FFFFFF;
         background: #f7544f; }
+  @media (max-width: 767.98px) {
+    .elementor-give-totals--skin-saltoro {
+      padding: 20px; }
+      .elementor-give-totals--skin-saltoro .elementor-gt-header__sub-title, .elementor-give-totals--skin-saltoro .elementor-gt-header__desc {
+        font-size: 16px; }
+      .elementor-give-totals--skin-saltoro .elementor-gt-header__title {
+        font-size: 32px; } }
 .elementor-give-totals--skin-changla .elementor-gt-header {
   margin-bottom: 40px; }
   .elementor-give-totals--skin-changla .elementor-gt-header__title {
@@ -2614,14 +2621,10 @@ body.mfp-active {
     text-decoration: none;
     color: #ffffff;
     background: #f97a60;
-    padding: 20px 35px;
+    padding: 20px 35px !important;
     border-radius: 30px; }
     .elementor-give-forms--skin-list-saltoro .elementor-give-form .givewp-donation-form-modal__open:hover,
     .elementor-give-forms--skin-list-saltoro .elementor-give-form .give-btn-modal:hover {
-      background: #f7544f; }
-  .elementor-give-forms--skin-list-saltoro .elementor-give-form .givewp-donation-form-modal__open {
-    padding: 20px 35px !important; }
-    .elementor-give-forms--skin-list-saltoro .elementor-give-form .givewp-donation-form-modal__open:hover {
       background: #f7544f; }
   .elementor-give-forms--skin-list-saltoro .elementor-give-form .give-goal-progress {
     font-size: 16px;
@@ -2657,26 +2660,41 @@ body.mfp-active {
   @media (max-width: 991.98px) {
     .elementor-give-forms--skin-list-saltoro .elementor-give-form {
       flex-direction: column;
-      text-align: center; }
+      text-align: center;
+      background: #fff;
+      position: relative;
+      overflow: hidden;
+      margin: 0 78px;
+      border: 1px solid #ece9f1;
+      border-radius: 4px; }
       .elementor-give-forms--skin-list-saltoro .elementor-give-form .give-card__header {
         width: 100%;
-        margin-bottom: 30px;
         padding: 0; }
       .elementor-give-forms--skin-list-saltoro .elementor-give-form .give-card__body {
         width: 100%;
-        padding: 0; } }
+        padding: 24px; }
+      .elementor-give-forms--skin-list-saltoro .elementor-give-form .give-card__title {
+        font-size: 30px;
+        margin-bottom: 8px; } }
   @media (max-width: 767.98px) {
     .elementor-give-forms--skin-list-saltoro .elementor-give-form {
       flex-direction: column; }
-      .elementor-give-forms--skin-list-saltoro .elementor-give-form .give-card__header {
-        margin-bottom: 20px; }
       .elementor-give-forms--skin-list-saltoro .elementor-give-form .give-card__title {
-        font-size: 30px;
+        font-size: 24px;
         margin-bottom: 8px; }
       .elementor-give-forms--skin-list-saltoro .elementor-give-form .give-card__excerpt {
+        font-size: 16px;
         margin-bottom: 16px; }
       .elementor-give-forms--skin-list-saltoro .elementor-give-form .give-goal-progress .raised {
         margin-bottom: 30px; } }
+  @media (max-width: 575.98px) {
+    .elementor-give-forms--skin-list-saltoro .elementor-give-form {
+      margin: 0; }
+      .elementor-give-forms--skin-list-saltoro .elementor-give-form__body {
+        padding: 20px; }
+      .elementor-give-forms--skin-list-saltoro .elementor-give-form .givewp-donation-form-modal__open,
+      .elementor-give-forms--skin-list-saltoro .elementor-give-form .give-btn-modal {
+        padding: 15px 30px !important; } }
 .elementor-give-forms--skin-grid-hardeol .elementor-give-form {
   position: relative;
   background: #F5F5F5;
@@ -4617,6 +4635,16 @@ body.mfp-active {
     margin-bottom: 0; }
     .elementor-donors--skin-saltoro .elementor-donor__title a {
       color: inherit; }
+  @media (max-width: 767.98px) {
+    .elementor-donors--skin-saltoro .elementor-donor__price {
+      font-size: 24px; }
+      .elementor-donors--skin-saltoro .elementor-donor__price span {
+        font-size: 14px; }
+    .elementor-donors--skin-saltoro .elementor-donor__title {
+      font-size: 20px; } }
+  @media (max-width: 575.98px) {
+    .elementor-donors--skin-saltoro .elementor-donor__title {
+      font-size: 18px; } }
 .elementor-donors--skin-taboche .elementor-donor {
   position: relative;
   background: #fff;

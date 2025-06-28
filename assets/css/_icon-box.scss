@@ -606,6 +606,33 @@
         line-height: 1.75;
         color: #716886;
       }
+      @media (max-width: $break-md - 0.02) {
+        &__icon-wrap {
+          width: 120px;
+          height: 120px;
+          &:before, 
+          &:after {
+            top: 45px;
+            left: -26px;
+            width: 170px;
+          }
+          &:after {
+              top: 69px;
+              left: -24px;
+          }
+        }
+        &__icon svg {
+          width: 50px;
+        }
+      }
+      @media (max-width: $break-xs - 0.02) {
+        &__title {
+          font-size: 20px;
+        }
+        &__desc {
+          font-size: 16px;
+        }
+      }
     }
   }
 
