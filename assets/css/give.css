@@ -2599,7 +2599,7 @@ body.mfp-active {
     padding-left: 30px; }
   .elementor-give-forms--skin-list-saltoro .elementor-give-form .give-card__title {
     font-size: 36px;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.25;
     color: #4b3381;
     margin-bottom: 16px; }
@@ -2694,7 +2694,7 @@ body.mfp-active {
         padding: 20px; }
       .elementor-give-forms--skin-list-saltoro .elementor-give-form .givewp-donation-form-modal__open,
       .elementor-give-forms--skin-list-saltoro .elementor-give-form .give-btn-modal {
-        padding: 15px 30px !important; } }
+        padding: 14px 30px !important; } }
 .elementor-give-forms--skin-grid-hardeol .elementor-give-form {
   position: relative;
   background: #F5F5F5;
@@ -4629,13 +4629,13 @@ body.mfp-active {
       text-transform: uppercase; }
   .elementor-donors--skin-saltoro .elementor-donor__title {
     font-size: 22px;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.25;
     color: #4b3381;
     margin-bottom: 0; }
     .elementor-donors--skin-saltoro .elementor-donor__title a {
       color: inherit; }
-  @media (max-width: 767.98px) {
+  @media (max-width: 991.98px) {
     .elementor-donors--skin-saltoro .elementor-donor__price {
       font-size: 24px; }
       .elementor-donors--skin-saltoro .elementor-donor__price span {
