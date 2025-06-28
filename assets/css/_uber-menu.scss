@@ -343,3 +343,122 @@
     }
   }
 }
+
+
+:root {
+  --bum-font-family: "Poppins", Sans-serif;
+  --bum-head-color: #002866;
+  --bum-text-color: #4D6995;
+  --bum-accent-color: #FFEE00;
+  --bum-btn-color: #002866;
+  --bum-btn-bg-color: #FFEE00;
+  --bum-play-btn-color: #FFFFFF;
+  --bum-play-btn-bg-color: #FFEE00;
+}
+
+@-webkit-keyframes pulseBig {
+  0% {
+      box-shadow: 0 0 0 0 var(--bum-play-btn-bg-color)
+  }
+  70% {
+      box-shadow: 0 0 0 30px transparent
+  }
+  100% {
+      box-shadow: 0 0 0 0 transparent
+  }
+}
+@keyframes pulseBig {
+  0% {
+      box-shadow: 0 0 0 0 var(--bum-play-btn-bg-color)
+  }
+  70% {
+      box-shadow: 0 0 0 30px transparent
+  }
+  100% {
+      box-shadow: 0 0 0 0 transparent
+  }
+}
+
+.site-menu-wrap-bears {
+  .mega_donate_box {
+    .elementor-heading-title {
+      font-family: var(--bum-font-family) !important;
+    }
+    .bt-head .elementor-heading-title,
+    .bt-raised-income .elementor-heading-title {
+      color: var(--bum-head-color) !important;
+    }
+    .bt-desc .elementor-heading-title,
+    .bt-raised-text .elementor-heading-title {
+      color: var(--bum-text-color) !important;
+    }
+    .bt-donation-btn .elementor-button {
+      color: var(--bum-btn-color) !important;
+      fill: var(--bum-btn-color) !important;
+      background: var(--bum-btn-bg-color) !important;
+    }
+  }
+  .mega_video_box {
+    .elementor-video-play-button__icon {
+      background: var(--bum-play-btn-bg-color) !important;
+      -webkit-animation: pulseBig 2s infinite;
+      animation: pulseBig 2s infinite;
+      i, svg {
+        color: var(--bum-play-btn-color) !important;
+        fill: var(--bum-play-btn-color) !important;
+      }
+    }
+  }
+  .mega_plitical_box {
+    .elementor-heading-title {
+      font-family: var(--bum-font-family) !important;
+    }
+    .elementor-icon i,
+    .elementor-icon svg {
+      color: var(--bum-accent-color) !important;
+      fill: var(--bum-accent-color) !important;
+    }
+    .elementor-button {
+      color: var(--bum-btn-color) !important;
+      fill: var(--bum-btn-color) !important;
+      background: var(--bum-btn-bg-color) !important;
+      border-color: var(--bum-btn-bg-color) !important;
+    }
+  }
+  .mega_blog_box {
+    .elementor-post-feature,
+    .elementor-post {
+      &__meta li {
+        font-family: var(--bum-font-family) !important;
+        color: var(--bum-text-color) !important;
+        opacity: 0.5;
+      }
+      &__title {
+        font-family: var(--bum-font-family) !important;
+        color: var(--bum-head-color) !important;
+        a {
+          color: inherit;
+          &:hover {
+            text-decoration: underline;
+            text-underline-offset: 3px;
+          }
+        }
+      }
+    }
+  }
+  .mega_contact_box {
+    .elementor-widget-form {
+      .elementor-field, 
+      label {
+        font-family: var(--bum-font-family) !important;
+        color: var(--bum-text-color) !important;
+      }
+      .elementor-button {
+        font-family: var(--bum-font-family) !important;
+        font-weight: 600;
+        color: var(--bum-btn-color) !important;
+        background: var(--bum-btn-bg-color) !important;
+      }
+    }
+  }
+}
