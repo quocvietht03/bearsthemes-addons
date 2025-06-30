@@ -357,30 +357,29 @@
   --bum-play-btn-bg-color: #FFEE00;
 }
 
-@-webkit-keyframes pulseBig {
-  0% {
-      box-shadow: 0 0 0 0 var(--bum-play-btn-bg-color)
-  }
-  70% {
-      box-shadow: 0 0 0 30px transparent
-  }
-  100% {
-      box-shadow: 0 0 0 0 transparent
-  }
-}
-@keyframes pulseBig {
-  0% {
-      box-shadow: 0 0 0 0 var(--bum-play-btn-bg-color)
-  }
-  70% {
-      box-shadow: 0 0 0 30px transparent
-  }
-  100% {
-      box-shadow: 0 0 0 0 transparent
-  }
-}
-
 .site-menu-wrap-bears {
+  @-webkit-keyframes pulseBig {
+    0% {
+        box-shadow: 0 0 0 0 var(--bum-play-btn-bg-color)
+    }
+    70% {
+        box-shadow: 0 0 0 30px transparent
+    }
+    100% {
+        box-shadow: 0 0 0 0 transparent
+    }
+  }
+  @keyframes pulseBig {
+    0% {
+        box-shadow: 0 0 0 0 var(--bum-play-btn-bg-color)
+    }
+    70% {
+        box-shadow: 0 0 0 30px transparent
+    }
+    100% {
+        box-shadow: 0 0 0 0 transparent
+    }
+  }
   font-family: var(--bum-font-family);
   .mega_donate_box {
     .elementor-heading-title {

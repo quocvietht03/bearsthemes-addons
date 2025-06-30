@@ -8036,6 +8036,8 @@
   --bum-play-btn-color: #FFFFFF;
   --bum-play-btn-bg-color: #FFEE00; }
 
+.site-menu-wrap-bears {
+  font-family: var(--bum-font-family); }
 @-webkit-keyframes pulseBig {
   0% {
     box-shadow: 0 0 0 0 var(--bum-play-btn-bg-color); }
@@ -8050,8 +8052,6 @@
     box-shadow: 0 0 0 30px transparent; }
   100% {
     box-shadow: 0 0 0 0 transparent; } }
-.site-menu-wrap-bears {
-  font-family: var(--bum-font-family); }
   .site-menu-wrap-bears .mega_donate_box .elementor-heading-title {
     font-family: var(--bum-font-family) !important; }
   .site-menu-wrap-bears .mega_donate_box .bt-head .elementor-heading-title,
