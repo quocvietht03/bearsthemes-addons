@@ -163,12 +163,16 @@
         top: calc(100% + 10px);
       }
       .content-wrap {
-        padding: 24px;
+        padding: 20px;
         background: #fff;
         border: 1px solid rgba(0, 0, 0, 0.05);
         border-radius: 2px;
-        @media(max-width: $break-xs - 0.02) {
-          padding: 20px;
+      }
+      .elementor-menu-cart {
+        &__products {
+          overflow: auto;
+          margin-right: -15px;
+          padding-right: 15px;
         }
       }
     }
@@ -458,6 +462,32 @@
       .elementor-button {
         font-family: var(--bum-font-family) !important;
         font-weight: 600;
+        color: var(--bum-btn-color) !important;
+        background: var(--bum-btn-bg-color) !important;
+      }
+    }
+  }
+  .mini-cart {
+    .cart-title {
+      color: var(--bum-head-color);
+    }
+  }
+  .elementor-menu-cart {
+    &__product-name a {
+      color: var(--bum-head-color) !important;
+    }
+    &__product-price,
+    &__product-price .amount {
+      color: var(--bum-text-color) !important;
+    }
+    &__subtotal {
+      color: var(--bum-text-color);
+      .amount {
+        color: var(--bum-head-color) !important;
+      }
+    }
+    &__footer-buttons {
+      .elementor-button--checkout {
         color: var(--bum-btn-color) !important;
         background: var(--bum-btn-bg-color) !important;
       }

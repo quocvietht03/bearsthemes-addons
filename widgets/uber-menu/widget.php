@@ -1049,13 +1049,13 @@ class Be_Uber_Menu extends Widget_Base {
 		);
 
 		$this->add_control(
-			'icon_search_bg_color',
+			'icon_search_background_color',
 			[
 				'label' => __( 'Background Color', 'bearsthemes-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
-					'{{WRAPPER}} .extras-navigation .toggle-item.mini-search a.toggle-icon,' => 'background-color: {{VALUE}};',
+					'{{WRAPPER}} .extras-navigation .toggle-item.mini-search a.toggle-icon' => 'background-color: {{VALUE}};',
 				],
 			]
 		);
