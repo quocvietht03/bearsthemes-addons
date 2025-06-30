@@ -8050,61 +8050,63 @@
     box-shadow: 0 0 0 30px transparent; }
   100% {
     box-shadow: 0 0 0 0 transparent; } }
-.site-menu-wrap-bears .mega_donate_box .elementor-heading-title {
-  font-family: var(--bum-font-family) !important; }
-.site-menu-wrap-bears .mega_donate_box .bt-head .elementor-heading-title,
-.site-menu-wrap-bears .mega_donate_box .bt-raised-income .elementor-heading-title {
-  color: var(--bum-head-color) !important; }
-.site-menu-wrap-bears .mega_donate_box .bt-desc .elementor-heading-title,
-.site-menu-wrap-bears .mega_donate_box .bt-raised-text .elementor-heading-title {
-  color: var(--bum-text-color) !important; }
-.site-menu-wrap-bears .mega_donate_box .bt-donation-btn .elementor-button {
-  color: var(--bum-btn-color) !important;
-  fill: var(--bum-btn-color) !important;
-  background: var(--bum-btn-bg-color) !important; }
-.site-menu-wrap-bears .mega_video_box .elementor-video-play-button__icon {
-  background: var(--bum-play-btn-bg-color) !important;
-  -webkit-animation: pulseBig 2s infinite;
-  animation: pulseBig 2s infinite; }
-  .site-menu-wrap-bears .mega_video_box .elementor-video-play-button__icon i, .site-menu-wrap-bears .mega_video_box .elementor-video-play-button__icon svg {
-    color: var(--bum-play-btn-color) !important;
-    fill: var(--bum-play-btn-color) !important; }
-.site-menu-wrap-bears .mega_plitical_box .elementor-heading-title {
-  font-family: var(--bum-font-family) !important; }
-.site-menu-wrap-bears .mega_plitical_box .elementor-icon i,
-.site-menu-wrap-bears .mega_plitical_box .elementor-icon svg {
-  color: var(--bum-accent-color) !important;
-  fill: var(--bum-accent-color) !important; }
-.site-menu-wrap-bears .mega_plitical_box .elementor-button {
-  color: var(--bum-btn-color) !important;
-  fill: var(--bum-btn-color) !important;
-  background: var(--bum-btn-bg-color) !important;
-  border-color: var(--bum-btn-bg-color) !important; }
-.site-menu-wrap-bears .mega_blog_box .elementor-post-feature__meta li,
-.site-menu-wrap-bears .mega_blog_box .elementor-post__meta li {
-  font-family: var(--bum-font-family) !important;
-  color: var(--bum-text-color) !important;
-  opacity: 0.5; }
-.site-menu-wrap-bears .mega_blog_box .elementor-post-feature__title,
-.site-menu-wrap-bears .mega_blog_box .elementor-post__title {
-  font-family: var(--bum-font-family) !important;
-  color: var(--bum-head-color) !important; }
-  .site-menu-wrap-bears .mega_blog_box .elementor-post-feature__title a,
-  .site-menu-wrap-bears .mega_blog_box .elementor-post__title a {
-    color: inherit; }
-    .site-menu-wrap-bears .mega_blog_box .elementor-post-feature__title a:hover,
-    .site-menu-wrap-bears .mega_blog_box .elementor-post__title a:hover {
-      text-decoration: underline;
-      text-underline-offset: 3px; }
-.site-menu-wrap-bears .mega_contact_box .elementor-widget-form .elementor-field,
-.site-menu-wrap-bears .mega_contact_box .elementor-widget-form label {
-  font-family: var(--bum-font-family) !important;
-  color: var(--bum-text-color) !important; }
-.site-menu-wrap-bears .mega_contact_box .elementor-widget-form .elementor-button {
-  font-family: var(--bum-font-family) !important;
-  font-weight: 600;
-  color: var(--bum-btn-color) !important;
-  background: var(--bum-btn-bg-color) !important; }
+.site-menu-wrap-bears {
+  font-family: var(--bum-font-family); }
+  .site-menu-wrap-bears .mega_donate_box .elementor-heading-title {
+    font-family: var(--bum-font-family) !important; }
+  .site-menu-wrap-bears .mega_donate_box .bt-head .elementor-heading-title,
+  .site-menu-wrap-bears .mega_donate_box .bt-raised-income .elementor-heading-title {
+    color: var(--bum-head-color) !important; }
+  .site-menu-wrap-bears .mega_donate_box .bt-desc .elementor-heading-title,
+  .site-menu-wrap-bears .mega_donate_box .bt-raised-text .elementor-heading-title {
+    color: var(--bum-text-color) !important; }
+  .site-menu-wrap-bears .mega_donate_box .bt-donation-btn .elementor-button {
+    color: var(--bum-btn-color) !important;
+    fill: var(--bum-btn-color) !important;
+    background: var(--bum-btn-bg-color) !important; }
+  .site-menu-wrap-bears .mega_video_box .elementor-video-play-button__icon {
+    background: var(--bum-play-btn-bg-color) !important;
+    -webkit-animation: pulseBig 2s infinite;
+    animation: pulseBig 2s infinite; }
+    .site-menu-wrap-bears .mega_video_box .elementor-video-play-button__icon i, .site-menu-wrap-bears .mega_video_box .elementor-video-play-button__icon svg {
+      color: var(--bum-play-btn-color) !important;
+      fill: var(--bum-play-btn-color) !important; }
+  .site-menu-wrap-bears .mega_plitical_box .elementor-heading-title {
+    font-family: var(--bum-font-family) !important; }
+  .site-menu-wrap-bears .mega_plitical_box .elementor-icon i,
+  .site-menu-wrap-bears .mega_plitical_box .elementor-icon svg {
+    color: var(--bum-accent-color) !important;
+    fill: var(--bum-accent-color) !important; }
+  .site-menu-wrap-bears .mega_plitical_box .elementor-button {
+    color: var(--bum-btn-color) !important;
+    fill: var(--bum-btn-color) !important;
+    background: var(--bum-btn-bg-color) !important;
+    border-color: var(--bum-btn-bg-color) !important; }
+  .site-menu-wrap-bears .mega_blog_box .elementor-post-feature__meta li,
+  .site-menu-wrap-bears .mega_blog_box .elementor-post__meta li {
+    font-family: var(--bum-font-family) !important;
+    color: var(--bum-text-color) !important;
+    opacity: 0.5; }
+  .site-menu-wrap-bears .mega_blog_box .elementor-post-feature__title,
+  .site-menu-wrap-bears .mega_blog_box .elementor-post__title {
+    font-family: var(--bum-font-family) !important;
+    color: var(--bum-head-color) !important; }
+    .site-menu-wrap-bears .mega_blog_box .elementor-post-feature__title a,
+    .site-menu-wrap-bears .mega_blog_box .elementor-post__title a {
+      color: inherit; }
+      .site-menu-wrap-bears .mega_blog_box .elementor-post-feature__title a:hover,
+      .site-menu-wrap-bears .mega_blog_box .elementor-post__title a:hover {
+        text-decoration: underline;
+        text-underline-offset: 3px; }
+  .site-menu-wrap-bears .mega_contact_box .elementor-widget-form .elementor-field,
+  .site-menu-wrap-bears .mega_contact_box .elementor-widget-form label {
+    font-family: var(--bum-font-family) !important;
+    color: var(--bum-text-color) !important; }
+  .site-menu-wrap-bears .mega_contact_box .elementor-widget-form .elementor-button {
+    font-family: var(--bum-font-family) !important;
+    font-weight: 600;
+    color: var(--bum-btn-color) !important;
+    background: var(--bum-btn-bg-color) !important; }
 
 @media (max-width: 1199.98px) {
   .elementor-location-header nav.elementor-column {
