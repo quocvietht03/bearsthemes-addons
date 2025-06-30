@@ -8109,7 +8109,7 @@
     color: var(--bum-btn-color) !important;
     background: var(--bum-btn-bg-color) !important; }
 
-@media (max-width: 1199.98px) {
+@media (min-width: 992px) and (max-width: 1199.98px) {
   .elementor-location-header nav.elementor-column {
     position: static; }
     .elementor-location-header nav.elementor-column > div.elementor-widget-wrap,

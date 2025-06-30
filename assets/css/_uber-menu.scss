@@ -465,7 +465,7 @@
   }
 }
 
-@media(max-width: $break-lg - 0.02) {
+@media(min-width: $break-md) and (max-width: $break-lg - 0.02) {
   .elementor-location-header nav.elementor-column {
     position: static;
     > div.elementor-widget-wrap,
