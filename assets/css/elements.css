@@ -8038,7 +8038,7 @@
   --bum-play-btn-color: #FFFFFF;
   --bum-play-btn-bg-color: #FFEE00;
   --bum-menu-icon-filter: brightness(0) saturate(100%) invert(16%) sepia(69%) saturate(1589%) hue-rotate(195deg) brightness(87%) contrast(114%);
-  --bum-menu-icon-filter-hover: brightness(0) saturate(100%) invert(16%) sepia(69%) saturate(1589%) hue-rotate(195deg) brightness(87%) contrast(114%); }
+  --bum-menu-icon-filter-hover: var(--bum-menu-icon-filter); }
 
 .site-menu-wrap-bears {
   font-family: var(--bum-font-family); }

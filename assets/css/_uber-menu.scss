@@ -361,30 +361,30 @@
   --bum-play-btn-color: #FFFFFF;
   --bum-play-btn-bg-color: #FFEE00;
   --bum-menu-icon-filter: brightness(0) saturate(100%) invert(16%) sepia(69%) saturate(1589%) hue-rotate(195deg) brightness(87%) contrast(114%);
-  --bum-menu-icon-filter-hover: brightness(0) saturate(100%) invert(16%) sepia(69%) saturate(1589%) hue-rotate(195deg) brightness(87%) contrast(114%);
+  --bum-menu-icon-filter-hover: var(--bum-menu-icon-filter);
 }
 
 .site-menu-wrap-bears {
   @-webkit-keyframes pulseBig {
     0% {
-        box-shadow: 0 0 0 0 var(--bum-play-btn-bg-color)
+        box-shadow: 0 0 0 0 var(--bum-play-btn-bg-color);
     }
     70% {
-        box-shadow: 0 0 0 30px transparent
+        box-shadow: 0 0 0 30px transparent;
     }
     100% {
-        box-shadow: 0 0 0 0 transparent
+        box-shadow: 0 0 0 0 transparent;
     }
   }
   @keyframes pulseBig {
     0% {
-        box-shadow: 0 0 0 0 var(--bum-play-btn-bg-color)
+        box-shadow: 0 0 0 0 var(--bum-play-btn-bg-color);
     }
     70% {
-        box-shadow: 0 0 0 30px transparent
+        box-shadow: 0 0 0 30px transparent;
     }
     100% {
-        box-shadow: 0 0 0 0 transparent
+        box-shadow: 0 0 0 0 transparent;
     }
   }
   font-family: var(--bum-font-family);
