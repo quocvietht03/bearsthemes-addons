@@ -2838,9 +2838,9 @@
           padding: 20px 20px 30px;
         }
         &__title {
-          font-size: 24px;
-          font-weight: 800;
-          line-height: 1.5;
+          font-size: 22px;
+          font-weight: 600;
+          line-height: 1.25;
           color: #032F27;
           margin-bottom: 20px;
           overflow: hidden;
@@ -2851,14 +2851,20 @@
           a {
             color: inherit;
           }
+          @media (max-width: $break-xs - 0.02) {
+            font-size: 20px;
+          }
+        }
+        &__progress {
+          margin-bottom: 20px;
         }
       }
       .givewp-donation-form-modal__open,
       .give-btn-modal {
         display: inline-block;
         width: auto;
-        font-size: 16px;
-        font-weight: 800;
+        font-size: 14px;
+        font-weight: 600;
         line-height: 24px;
         color: #206155;
         padding: 10px 30px;
@@ -2872,10 +2878,11 @@
       }
       .givewp-donation-form-modal__open {
         color: #206155 !important;
+        background: #FFFFFF !important;
         padding: 10px 30px !important;
       }
       .give-goal-progress {
-        font-size: 16px;
+        font-size: 14px;
         line-height: 1.5;
         color: #FFFFFF;
         margin-bottom: 8px;
@@ -2886,12 +2893,12 @@
           margin-bottom: 8px;
         }
         .income {
-          font-size: 24px;
-          font-weight: 800;
+          font-size: 20px;
+          font-weight: 600;
           color: #FCD755;
         }
         .goal-text {
-          font-weight: 800;
+          font-weight: 600;
           color: #FCD755;
         }
       }

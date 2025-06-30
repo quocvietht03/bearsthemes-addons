@@ -4049,9 +4049,9 @@ body.mfp-active {
     margin: 0 -20px;
     padding: 20px 20px 30px; }
   .elementor-give-forms--skin-grid-platons .elementor-give-form .give-card__title {
-    font-size: 24px;
-    font-weight: 800;
-    line-height: 1.5;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.25;
     color: #032F27;
     margin-bottom: 20px;
     overflow: hidden;
@@ -4061,12 +4061,17 @@ body.mfp-active {
     -webkit-box-orient: vertical; }
     .elementor-give-forms--skin-grid-platons .elementor-give-form .give-card__title a {
       color: inherit; }
+    @media (max-width: 575.98px) {
+      .elementor-give-forms--skin-grid-platons .elementor-give-form .give-card__title {
+        font-size: 20px; } }
+  .elementor-give-forms--skin-grid-platons .elementor-give-form .give-card__progress {
+    margin-bottom: 20px; }
   .elementor-give-forms--skin-grid-platons .elementor-give-form .givewp-donation-form-modal__open,
   .elementor-give-forms--skin-grid-platons .elementor-give-form .give-btn-modal {
     display: inline-block;
     width: auto;
-    font-size: 16px;
-    font-weight: 800;
+    font-size: 14px;
+    font-weight: 600;
     line-height: 24px;
     color: #206155;
     padding: 10px 30px;
@@ -4079,9 +4084,10 @@ body.mfp-active {
       background: #FFFFFF; }
   .elementor-give-forms--skin-grid-platons .elementor-give-form .givewp-donation-form-modal__open {
     color: #206155 !important;
+    background: #FFFFFF !important;
     padding: 10px 30px !important; }
   .elementor-give-forms--skin-grid-platons .elementor-give-form .give-goal-progress {
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.5;
     color: #FFFFFF;
     margin-bottom: 8px; }
@@ -4090,11 +4096,11 @@ body.mfp-active {
     .elementor-give-forms--skin-grid-platons .elementor-give-form .give-goal-progress .raised {
       margin-bottom: 8px; }
     .elementor-give-forms--skin-grid-platons .elementor-give-form .give-goal-progress .income {
-      font-size: 24px;
-      font-weight: 800;
+      font-size: 20px;
+      font-weight: 600;
       color: #FCD755; }
     .elementor-give-forms--skin-grid-platons .elementor-give-form .give-goal-progress .goal-text {
-      font-weight: 800;
+      font-weight: 600;
       color: #FCD755; }
 .elementor-give-forms--skin-grid-nuptse .elementor-give-form {
   position: relative;

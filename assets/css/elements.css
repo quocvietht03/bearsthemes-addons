@@ -7916,6 +7916,7 @@
         height: 58px;
         padding: 0;
         font-size: 0;
+        background-color: #151515;
         background-image: url(../images/search-light.svg);
         background-size: 16px;
         background-repeat: no-repeat;

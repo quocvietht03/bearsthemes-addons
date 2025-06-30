@@ -1055,7 +1055,7 @@ class Be_Uber_Menu extends Widget_Base {
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
-					'{{WRAPPER}} .extras-navigation .toggle-item.mini-search a.toggle-icon' => 'background-color: {{VALUE}};',
+					'{{WRAPPER}} .extras-navigation .toggle-item.mini-search a.toggle-icon,' => 'background-color: {{VALUE}};',
 				],
 			]
 		);
