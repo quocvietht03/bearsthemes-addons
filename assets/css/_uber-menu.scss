@@ -211,70 +211,85 @@
     }
 
   }
-    .ubermenu-sub-indicators .ubermenu-has-submenu-drop>.ubermenu-target>.ubermenu-sub-indicator {
-      display: flex;
-      height: 12px;
-      align-items: center;
+  .ubermenu-sub-indicators .ubermenu-has-submenu-drop>.ubermenu-target>.ubermenu-sub-indicator {
+    display: flex;
+    height: 12px;
+    align-items: center;
+  }
+  .ubermenu-main {
+    .ubermenu-item-level-0 > .ubermenu-target {
+      font-size: 16px;
+      font-weight: 600;
+      color: #333333;
     }
-    .ubermenu-main {
-      .ubermenu-item-level-0 > .ubermenu-target {
+    .ubermenu-submenu {
+      .ubermenu-item-header > .ubermenu-target,
+      .ubermenu-target {
         font-size: 16px;
-        font-weight: 600;
-        color: #333333;
-      }
-      .ubermenu-submenu {
-        .ubermenu-item-header > .ubermenu-target,
-        .ubermenu-target {
-          font-size: 16px;
-          font-weight: 400;
-        }
-      }
-      ul.ubermenu-tabs-group li.ubermenu-active > a.ubermenu-target{
-         background: $main-color;
-      }
-      ul li a.ubermenu-target:hover{
-         background: $main-color;
-         color: #fff;
-      }
-      li.ubermenu-active>a{
-         background: $main-color;
-         color: #fff;
-      }
-      ul.ubermenu-tabs-group li.ubermenu-active a .ubermenu-target-description{
-       color: #fff;
-     }
-    }
-    .ubermenu-desktop-view {
-      &.ubermenu-main.ubermenu-horizontal .ubermenu-item > .ubermenu-submenu-drop {
-        background-color: #FFFFFF;
-        border:none;
-        border-top: 10px solid $main-color;
+        font-weight: 400;
       }
     }
-    .ubermenu-mobile-view {
-      &.ubermenu-responsive {
-        position: absolute;
-        top: calc(100% + 25px);
-        left: 0;
-        background-color: #FFFFFF;
-      }
-      &.ubermenu-main .ubermenu-submenu.ubermenu-submenu-drop {
-        background-color: #FFFFFF;
-        border: none;
-        border-top: 10px solid $main-color;
-      }
+    ul.ubermenu-tabs-group li.ubermenu-active > a.ubermenu-target{
+        background: $main-color;
     }
-    @media(max-width: $break-md - 0.02) {
-      .extras-navigation {
-        position: absolute;
-        top: 50%;
-        right: 54px;
-        margin: 0;
-        -webkit-transform: translateY(-50%);
-        transform: translateY(-50%);
-      }
+    ul li a.ubermenu-target:hover{
+        background: $main-color;
+        color: #fff;
     }
+    li.ubermenu-active>a{
+        background: $main-color;
+        color: #fff;
+    }
+    ul.ubermenu-tabs-group li.ubermenu-active a .ubermenu-target-description{
+      color: #fff;
+    }
+  }
+  .ubermenu-desktop-view {
+    &.ubermenu-main.ubermenu-horizontal .ubermenu-item > .ubermenu-submenu-drop {
+      background-color: #FFFFFF;
+      border:none;
+      border-top: 10px solid $main-color;
+    }
+  }
+  .ubermenu-mobile-view {
+    &.ubermenu-responsive {
+      position: absolute;
+      top: calc(100% + 25px);
+      left: 0;
+      background-color: #FFFFFF;
+    }
+    &.ubermenu-main .ubermenu-submenu.ubermenu-submenu-drop {
+      background-color: #FFFFFF;
+      border: none;
+      border-top: 10px solid $main-color;
+    }
+  }
+  @media(max-width: $break-md - 0.02) {
+    .extras-navigation {
+      position: absolute;
+      top: 50%;
+      right: 54px;
+      margin: 0;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+    }
+  }
 }
+
+@media(max-width: $break-md - 0.02) {
+  nav.ubermenu-main.ubermenu-mobile-modal.ubermenu-mobile-view{
+    position: fixed;
+    top:0;
+    background: #222222;
+    .ubermenu-mobile-header {
+        padding: 10px;
+    }
+    ul>li.ubermenu-item-level-0>a{
+      color: #fff;
+    }
+  }
+}
+
 @media(max-width: $break-xs - 0.02) {
   .has-mini-items {
     padding-bottom: 46px;
@@ -330,20 +345,6 @@
     }
   }
 }
-@media(max-width: $break-md - 0.02) {
-  nav.ubermenu-main.ubermenu-mobile-modal.ubermenu-mobile-view{
-    position: fixed;
-    top:0;
-    background: #222222;
-    .ubermenu-mobile-header {
-        padding: 10px;
-    }
-    ul>li.ubermenu-item-level-0>a{
-      color: #fff;
-    }
-  }
-}
-
 
 :root {
   --bum-font-family: "Poppins", Sans-serif;
@@ -459,6 +460,18 @@
         color: var(--bum-btn-color) !important;
         background: var(--bum-btn-bg-color) !important;
       }
+    }
+  }
+}
+
+@media(max-width: $break-lg - 0.02) {
+  .elementor-location-header nav.elementor-column {
+    position: static;
+    > div.elementor-widget-wrap,
+    .elementor-widget-be-uber-menu,
+    .elementor-widget-container,
+    .site-menu-wrap-bears {
+      position: static;
     }
   }
 }
