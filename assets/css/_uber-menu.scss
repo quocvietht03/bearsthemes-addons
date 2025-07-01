@@ -510,6 +510,11 @@
 }
 
 @media(min-width: $break-md) and (max-width: $break-lg - 0.02) {
+  .site-menu-wrap-bears .ubermenu-has-submenu-mega > .ubermenu-submenu-drop {
+    max-width: 994px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
   .elementor-location-header nav.elementor-column {
     position: static;
     > div.elementor-widget-wrap,
