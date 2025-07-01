@@ -352,8 +352,8 @@
 }
 
 :root {
-  --bum-text-font-family: "Poppins", Sans-serif;
-  --bum-head-font-family: var(--bum-text-font-family);
+  --bum-font-family: "Poppins", Sans-serif;
+  --bum-head-font-family: var(--bum-font-family);
   --bum-head-color: #002866;
   --bum-text-color: #4D6995;
   --bum-accent-color: #FFEE00;
@@ -388,7 +388,7 @@
         box-shadow: 0 0 0 0 transparent;
     }
   }
-  font-family: var(--bum-text-font-family);
+  font-family: var(--bum-font-family);
   .mega_donate_box {
     .elementor-heading-title {
       font-family: var(--bum-head-font-family) !important;
@@ -438,7 +438,7 @@
     .elementor-post-feature,
     .elementor-post {
       &__meta li {
-        font-family: var(--bum-text-font-family) !important;
+        font-family: var(--bum-font-family) !important;
         color: var(--bum-text-color) !important;
         opacity: 0.5;
       }
@@ -459,7 +459,7 @@
     .elementor-widget-form {
       .elementor-field, 
       label {
-        font-family: var(--bum-text-font-family) !important;
+        font-family: var(--bum-font-family) !important;
         color: var(--bum-text-color) !important;
       }
       .elementor-button {
