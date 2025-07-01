@@ -8139,9 +8139,11 @@
     color: var(--bum-btn-color) !important;
     background: var(--bum-btn-bg-color) !important; }
 
+.site-menu-wrap-bears .ubermenu-has-submenu-mega > .ubermenu-submenu-drop {
+  max-width: 994px; }
+
 @media (min-width: 992px) and (max-width: 1199.98px) {
   .site-menu-wrap-bears .ubermenu-has-submenu-mega > .ubermenu-submenu-drop {
-    max-width: 994px;
     left: 50%;
     transform: translateX(-50%); }
 
