@@ -351,12 +351,13 @@
   }
 }
 
-:root {
+.elementor-widget-be-uber-menu {
   --bum-font-family: "Poppins", Sans-serif;
   --bum-head-font-family: var(--bum-font-family);
   --bum-head-color: #002866;
   --bum-text-color: #4D6995;
   --bum-accent-color: #FFEE00;
+  --bum-btn-font-size: 14px;
   --bum-btn-color: #002866;
   --bum-btn-bg-color: #FFEE00;
   --bum-play-btn-color: #FFFFFF;
@@ -402,6 +403,8 @@
     }
     .bt-donation-btn .elementor-button {
       font-family: var(--bum-head-font-family) !important;
+      font-size: var(--bum-btn-font-size) !important;
+      letter-spacing: 0.3px;
       color: var(--bum-btn-color) !important;
       fill: var(--bum-btn-color) !important;
       background: var(--bum-btn-bg-color) !important;
@@ -429,6 +432,8 @@
       fill: var(--bum-accent-color) !important;
     }
     .elementor-button {
+      font-size: var(--bum-btn-font-size) !important;
+      letter-spacing: 0.3px;
       color: var(--bum-btn-color) !important;
       fill: var(--bum-btn-color) !important;
       background: var(--bum-btn-bg-color) !important;
