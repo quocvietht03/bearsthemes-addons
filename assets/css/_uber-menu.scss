@@ -390,18 +390,18 @@
   }
   font-family: var(--bum-font-family);
   .mega_donate_box {
-    .elementor-heading-title {
-      font-family: var(--bum-head-font-family) !important;
-    }
     .bt-head .elementor-heading-title,
     .bt-raised-income .elementor-heading-title {
+      font-family: var(--bum-head-font-family) !important;
       color: var(--bum-head-color) !important;
     }
     .bt-desc .elementor-heading-title,
     .bt-raised-text .elementor-heading-title {
+      font-family: var(--bum-font-family) !important;
       color: var(--bum-text-color) !important;
     }
     .bt-donation-btn .elementor-button {
+      font-family: var(--bum-head-font-family) !important;
       color: var(--bum-btn-color) !important;
       fill: var(--bum-btn-color) !important;
       background: var(--bum-btn-bg-color) !important;
@@ -419,7 +419,8 @@
     }
   }
   .mega_plitical_box {
-    .elementor-heading-title {
+    .elementor-heading-title,
+    .elementor-button {
       font-family: var(--bum-head-font-family) !important;
     }
     .elementor-icon i,
