@@ -8139,5 +8139,7 @@
     .elementor-location-header nav.elementor-column .elementor-widget-container,
     .elementor-location-header nav.elementor-column .site-menu-wrap-bears {
       position: static; } }
+.elementor-location-header .elementor-widget-nav-menu .elementor-nav-menu--dropdown .elementor-sub-item {
+  font-weight: 400 !important; }
 
 /*# sourceMappingURL=elements.css.map */
