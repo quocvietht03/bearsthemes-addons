@@ -826,17 +826,17 @@ class Skin_Grid_Swiss extends Skin_Base {
 					.give-form[data-style="elementor-give-forms--swiss"] .give_terms_links:hover,
 					.give-form[data-style="elementor-give-forms--swiss"] #give-final-total-wrap .give-final-total-amount' => 'color: {{VALUE}};',
 
-				 '.give-form[data-style="elementor-give-forms--swiss"] .give-total-wrap .give-currency-symbol,
-				 .give-form[data-style="elementor-give-forms--swiss"] #give-donation-level-button-wrap .give-btn.give-default-level,
-				 .give-form[data-style="elementor-give-forms--swiss"] #give-donation-level-radio-list li label:after,
-				 .give-form[data-style="elementor-give-forms--swiss"] #give-gateway-radio-list > li label:after,
-				 .give-form[data-style="elementor-give-forms--swiss"] #give_terms_agreement input[type=checkbox]:checked + label:before,
-				 .give-form[data-style="elementor-give-forms--swiss"] #give-final-total-wrap .give-donation-total-label,
-				 .give-form[data-style="elementor-give-forms--swiss"] .give-submit' => 'background-color: {{VALUE}};',
+					'.give-form[data-style="elementor-give-forms--swiss"] .give-total-wrap .give-currency-symbol,
+					.give-form[data-style="elementor-give-forms--swiss"] #give-donation-level-button-wrap .give-btn.give-default-level,
+					.give-form[data-style="elementor-give-forms--swiss"] #give-donation-level-radio-list li label:after,
+					.give-form[data-style="elementor-give-forms--swiss"] #give-gateway-radio-list > li label:after,
+					.give-form[data-style="elementor-give-forms--swiss"] #give_terms_agreement input[type=checkbox]:checked + label:before,
+					.give-form[data-style="elementor-give-forms--swiss"] #give-final-total-wrap .give-donation-total-label,
+					.give-form[data-style="elementor-give-forms--swiss"] .give-submit' => 'background-color: {{VALUE}};',
 
-				 '.give-form[data-style="elementor-give-forms--swiss"] #give-donation-level-button-wrap .give-btn.give-default-level,
-				 .give-form[data-style="elementor-give-forms--swiss"] #give-donation-level-button-wrap .give-btn:hover,
-				 .give-form[data-style="elementor-give-forms--swiss"] #give_terms_agreement input[type=checkbox]:checked + label:before' => 'border-color: {{VALUE}};',
+					'.give-form[data-style="elementor-give-forms--swiss"] #give-donation-level-button-wrap .give-btn.give-default-level,
+					.give-form[data-style="elementor-give-forms--swiss"] #give-donation-level-button-wrap .give-btn:hover,
+					.give-form[data-style="elementor-give-forms--swiss"] #give_terms_agreement input[type=checkbox]:checked + label:before' => 'border-color: {{VALUE}};',
 				],
 			]
 		);

@@ -1618,7 +1618,7 @@
     padding: 20px; }
   .elementor-posts--skin-grid-swiss .elementor-post__title {
     font-size: 18px;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.25;
     color: #111111;
     margin-bottom: 20px; }
@@ -1627,14 +1627,14 @@
   .elementor-posts--skin-grid-swiss .elementor-post__date {
     font-size: 14px;
     line-height: 150%;
-    color: #888888;
+    color: #999999;
     margin-bottom: 6px; }
   .elementor-posts--skin-grid-swiss .elementor-post__read-more {
     display: inline-flex;
     align-items: center;
     gap: 8px;
     font-size: 14px;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 150%;
     color: #4D5EF6; }
     .elementor-posts--skin-grid-swiss .elementor-post__read-more svg {

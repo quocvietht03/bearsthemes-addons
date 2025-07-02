@@ -1197,7 +1197,7 @@
           margin-bottom: 16px;
           .income {
             font-size: 20px;
-            font-weight: 700;
+            font-weight: 600;
             line-height: 1.25;
             color: #4D5EF6;
             margin-top: 4px;
@@ -1226,14 +1226,14 @@
         .give-total-wrap {
           .give-currency-symbol {
             font-size: 20px;
-            font-weight: 700;
+            font-weight: 600;
             color: #FFFFFF;
             background: #111111;
             border-radius: 100px 0 0 100px;
           }
           #give-amount {
             font-size: 20px;
-            font-weight: 700;
+            font-weight: 600;
             color: #111111;
             border-radius: 0 100px 100px 0;
           }
@@ -1241,8 +1241,8 @@
         #give-donation-level-button-wrap {
             grid-template-columns: repeat(auto-fit, minmax(85px, 1fr));
             .give-btn {
-              font-size: 14px;
-              font-weight: 700;
+              font-size: 16px;
+              font-weight: 600;
               color: #111111;
               border-color: rgba(0, 0, 0, 0.1);
               border-radius: 100px;
@@ -1255,7 +1255,8 @@
         }
         .give-btn-modal {
           font-size: 16px;
-          font-weight: 700;
+          font-weight: 600;
+          text-transform: capitalize;
           color: #FFFFFF;
           background: #111111;
           border-radius: 100px;
@@ -1271,7 +1272,7 @@
         color: #111111;
         a {
           display: inline-block;
-          font-weight: 700;
+          font-weight: 600;
           text-decoration: underline;
           text-underline-offset: 3px;
           color: #4D5EF6;
@@ -1883,7 +1884,7 @@
         .give-btn-modal {
           width: calc(50% - 10px);
           font-size: 16px;
-          font-weight: 700;
+          font-weight: 600;
           line-height: 20px;
           letter-spacing: 0;
           text-transform: uppercase;
