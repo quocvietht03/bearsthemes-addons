@@ -477,7 +477,7 @@ class Skin_Grid_Yutmaru extends Skin_Base {
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
-					'{{WRAPPER}} .elementor-filter-wrap .elementor-filter li a' => 'color: {{VALUE}};',
+					'{{WRAPPER}} .elementor-filter-wrap .elementor-filter li a:not(.active)' => 'color: {{VALUE}};',
 				],
 				'condition' => [
 					'skin_grid_yutmaru_show_filter!' => '',
@@ -508,7 +508,7 @@ class Skin_Grid_Yutmaru extends Skin_Base {
 			[
 				'name' => 'filter_typography',
 				'default' => '',
-				'selector' => '{{WRAPPER}} .elementor-filter',
+				'selector' => '{{WRAPPER}} .elementor-filter li',
 				'condition' => [
 					'skin_grid_yutmaru_show_filter!' => '',
 				],

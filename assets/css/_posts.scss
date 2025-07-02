@@ -3162,7 +3162,7 @@
         li {
           display: inline-block;
           font-size: 18px;
-          font-weight: 700;
+          font-weight: 600;
           line-height: 1.5;
           text-transform: uppercase;
           &:not(:last-child) {
@@ -3171,7 +3171,7 @@
           a {
             position: relative;
             display: inline-block;
-            color: #8A8A8A;
+            color: #151515;
             padding-bottom: 16px;
             &:after {
               content: "";

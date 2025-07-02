@@ -3927,7 +3927,7 @@ body.mfp-active {
     top: -20px;
     left: 50%;
     font-size: 18px;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.67;
     white-space: nowrap;
     color: #FFFFFF;
@@ -3946,7 +3946,7 @@ body.mfp-active {
       margin-right: 10px; }
   .elementor-give-forms--skin-grid-yutmaru .elementor-give-form .give-card__title {
     font-size: 30px;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.29;
     text-align: center;
     color: #151515;
@@ -3967,8 +3967,8 @@ body.mfp-active {
     display: inline-block;
     width: auto;
     font-size: 16px;
-    font-weight: 700;
-    line-height: 30px;
+    font-weight: 600;
+    line-height: 24px;
     text-transform: unset;
     color: #FFFFFF;
     float: right;
@@ -3992,13 +3992,13 @@ body.mfp-active {
       border-radius: 10px; }
     .elementor-give-forms--skin-grid-yutmaru .elementor-give-form .give-goal-progress .raised {
       margin: 40px 0 0;
-      padding-right: 130px; }
+      padding-right: 100px; }
     .elementor-give-forms--skin-grid-yutmaru .elementor-give-form .give-goal-progress .income {
       font-size: 24px;
-      font-weight: 700;
+      font-weight: 600;
       color: #F4B03E; }
     .elementor-give-forms--skin-grid-yutmaru .elementor-give-form .give-goal-progress .goal-text {
-      font-weight: 700;
+      font-weight: 600;
       color: #F4B03E; }
   @media (max-width: 1440px) {
     .elementor-give-forms--skin-grid-yutmaru .elementor-give-form {

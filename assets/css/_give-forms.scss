@@ -2678,7 +2678,7 @@
           top: -20px;
           left: 50%;
           font-size: 18px;
-          font-weight: 700;
+          font-weight: 600;
           line-height: 1.67;
           white-space: nowrap;
           color: #FFFFFF;
@@ -2700,7 +2700,7 @@
         }
         &__title {
           font-size: 30px;
-          font-weight: 700;
+          font-weight: 600;
           line-height: 1.29;
           text-align: center;
           color: #151515;
@@ -2725,8 +2725,8 @@
         display: inline-block;
         width: auto;
         font-size: 16px;
-        font-weight: 700;
-        line-height: 30px;
+        font-weight: 600;
+        line-height: 24px;
         text-transform: unset;
         color: #FFFFFF;
         float: right;
@@ -2753,15 +2753,15 @@
         }
         .raised {
           margin: 40px 0 0;
-          padding-right: 130px;
+          padding-right: 100px;
         }
         .income {
           font-size: 24px;
-          font-weight: 700;
+          font-weight: 600;
           color: #F4B03E;
         }
         .goal-text {
-          font-weight: 700;
+          font-weight: 600;
           color: #F4B03E;
         }
       }
