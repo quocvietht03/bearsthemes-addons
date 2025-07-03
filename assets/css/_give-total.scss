@@ -1,6 +1,8 @@
 .elementor-give-totals {
   &--default {
-
+    form.give-form {
+      margin: 20px 0 0;
+    }
   }
   &--skin-pumori {
     display: flex;
@@ -92,7 +94,7 @@
             background: #002866;
           }
           #give-amount {
-            font-size: 24px;
+            font-size: 20px;
             font-weight: 600;
             color: #002866;
           }
@@ -103,8 +105,6 @@
               font-size: 16px;
               font-weight: 600;
               color: #002866;
-              background: #FFEE00;
-              border-color: #FFEE00;
               &.give-default-level {
                 color: #FFFFFF;
                 background: #002866;
@@ -113,16 +113,16 @@
             }
         }
         .give-btn-modal {
-          font-size: 16px;
+          font-size: 14px;
           font-weight: 600;
           text-transform: uppercase;
-          color: #FFFFFF;
-          background: #002866;
+          color: #002866;
+          background: #FFEE00;
           -webkit-transition: all .3s;
           transition: all .3s;
           &:hover {
-            color: #002866;
-            background: #FFEE00;
+            color: #FFFFFF;
+            background: #002866;
           }
         }
       }

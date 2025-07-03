@@ -414,10 +414,9 @@ class Skin_Pumori extends Skin_Base {
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
-					'{{WRAPPER}} .elementor-gt-form form[id*=give-form] .give-btn-modal:hover,
-					 {{WRAPPER}} .elementor-gt-form form[id*=give-form] #give-donation-level-button-wrap .give-btn:not(.give-default-level)' => 'background-color: {{VALUE}};',
-					'{{WRAPPER}} .elementor-gt-form form[id*=give-form] #give-donation-level-button-wrap .give-btn:not(.give-default-level)' => 'border-color: {{VALUE}};',
-					'.give-form[data-style="elementor-give-totals--pumori"] .give-submit:hover' => 'background-color: {{VALUE}};',
+					'{{WRAPPER}} .elementor-gt-form form[id*=give-form] .give-btn-modal,
+					 .give-form[data-style="elementor-give-totals--pumori"] .give-submit,
+					 .give-form[data-style="elementor-give-totals--pumori"] .give-submit:hover' => 'background-color: {{VALUE}};',
 				],
 				'condition' => [
 					'form_id!'=> '',
@@ -434,22 +433,22 @@ class Skin_Pumori extends Skin_Base {
 				'selectors' => [
 					'{{WRAPPER}} .elementor-gt-form form[id*=give-form] .give-total-wrap #give-amount,
 					 {{WRAPPER}} .elementor-gt-form form[id*=give-form] #give-donation-level-button-wrap .give-btn:not(.give-default-level),
-					 {{WRAPPER}} .elementor-gt-form form[id*=give-form] .give-btn-modal:hover' => 'color: {{VALUE}};',
+					 {{WRAPPER}} .elementor-gt-form form[id*=give-form] .give-btn-modal,
+					 .give-form[data-style="elementor-give-totals--pumori"] .give-submit,
+					 .give-form[data-style="elementor-give-totals--pumori"] .give-submit:hover' => 'color: {{VALUE}};',
 					'{{WRAPPER}} .elementor-gt-form form[id*=give-form] .give-total-wrap .give-currency-symbol,
-					 {{WRAPPER}} .elementor-gt-form form[id*=give-form] #give-donation-level-button-wrap .give-btn.give-default-level,
-					 {{WRAPPER}} .elementor-gt-form form[id*=give-form] .give-btn-modal' => 'background-color: {{VALUE}};',
-					'{{WRAPPER}} .elementor-gt-form form[id*=give-form] #give-donation-level-button-wrap .give-btn.give-default-level' => 'border-color: {{VALUE}};',
+					 {{WRAPPER}} .elementor-gt-form form[id*=give-form] #give-donation-level-button-wrap .give-btn.give-default-level' => 'background-color: {{VALUE}};',
+					'{{WRAPPER}} .elementor-gt-form form[id*=give-form] #give-donation-level-button-wrap .give-btn:hover,
+					 {{WRAPPER}} .elementor-gt-form form[id*=give-form] #give-donation-level-button-wrap .give-btn.give-default-level' => 'border-color: {{VALUE}};',
 					'.give-form[data-style="elementor-give-totals--pumori"] #give-gateway-radio-list > li label:hover,
 					 .give-form[data-style="elementor-give-totals--pumori"] #give-gateway-radio-list > li.give-gateway-option-selected label,
 					 .give-form[data-style="elementor-give-totals--pumori"] #give_terms_agreement label:hover,
 					 .give-form[data-style="elementor-give-totals--pumori"] #give_terms_agreement input[type=checkbox]:checked + label,
 					 .give-form[data-style="elementor-give-totals--pumori"] .give_terms_links:hover,
-					 .give-form[data-style="elementor-give-totals--pumori"] #give-final-total-wrap .give-final-total-amount,
-					 .give-form[data-style="elementor-give-totals--pumori"] .give-submit:hover' => 'color: {{VALUE}};',
+					 .give-form[data-style="elementor-give-totals--pumori"] #give-final-total-wrap .give-final-total-amount' => 'color: {{VALUE}};',
 					'.give-form[data-style="elementor-give-totals--pumori"] #give-gateway-radio-list > li.give-gateway-option-selected label:after,
 					 .give-form[data-style="elementor-give-totals--pumori"] #give_terms_agreement input[type=checkbox]:checked + label:before,
-					 .give-form[data-style="elementor-give-totals--pumori"] #give-final-total-wrap .give-donation-total-label,
-					 .give-form[data-style="elementor-give-totals--pumori"] .give-submit' => 'background-color: {{VALUE}};',
+					 .give-form[data-style="elementor-give-totals--pumori"] #give-final-total-wrap .give-donation-total-label' => 'background-color: {{VALUE}};',
 					'.give-form[data-style="elementor-give-totals--pumori"] #give_terms_agreement input[type=checkbox]:checked + label:before' => 'border-color: {{VALUE}};',
 				],
 				'condition' => [
@@ -458,17 +457,32 @@ class Skin_Pumori extends Skin_Base {
 			]
 		);
 
-		$this->add_group_control(
-			Group_Control_Typography::get_type(),
+		$this->add_control(
+			'form_text_color',
 			[
-				'name' => 'form_typography',
-				'label' => __( 'Typography', 'bearsthemes-addons' ),
+				'label' => __( 'Text Color', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::COLOR,
 				'default' => '',
-				'selector' => '{{WRAPPER}} form[id*=give-form],
-											 {{WRAPPER}} form[id*=give-form] #give-donation-level-button-wrap .give-btn,
-											 .give-form[data-style="elementor-give-totals--pumori"]',
+				'selectors' => [
+					'{{WRAPPER}} .elementor-gt-form form[id*=give-form],
+					.give-form[data-style="elementor-give-totals--pumori"]' => 'color: {{VALUE}};',
+				],
 				'condition' => [
 					'form_id!'=> '',
+				],
+			]
+		);
+
+		$this->add_control(
+			'form_typography',
+			[
+				'label' => esc_html__( 'Typography', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::FONT,
+				'default' => '',
+				'selectors' => [
+					'{{WRAPPER}} form[id*=give-form],
+					{{WRAPPER}} form[id*=give-form] #give-donation-level-button-wrap .give-btn,
+					.give-form[data-style="elementor-give-totals--pumori"]' => 'font-family: {{VALUE}}',
 				],
 			]
 		);

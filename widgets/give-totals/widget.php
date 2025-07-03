@@ -376,13 +376,15 @@ class Be_Give_Totals extends Widget_Base {
 			]
 		);
 
-		$this->add_group_control(
-			Group_Control_Typography::get_type(),
+		$this->add_control(
+			'form_typography',
 			[
-				'name' => 'form_typography',
-				'label' => __( 'Typography', 'bearsthemes-addons' ),
+				'label' => esc_html__( 'Typography', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::FONT,
 				'default' => '',
-				'selector' => '.give-form[data-style="elementor-give-totals--default"]',
+				'selectors' => [
+					'.give-form[data-style="elementor-give-totals--default"]' => 'font-family: {{VALUE}}',
+				],
 			]
 		);
 

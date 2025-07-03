@@ -1,9 +1,11 @@
-body.mfp-active {
+body .mfp-active {
   width: 100%;
   position: fixed; }
-  body.mfp-active .mfp-wrap {
+  body .mfp-active .mfp-wrap {
     overflow: hidden auto; }
 
+.elementor-give-totals--default form.give-form {
+  margin: 20px 0 0; }
 .elementor-give-totals--skin-pumori {
   display: flex;
   background: #FFFFFF;
@@ -81,7 +83,7 @@ body.mfp-active {
           font-weight: 400;
           background: #002866; }
         .elementor-give-totals--skin-pumori .elementor-gt-form form[id*=give-form] .give-total-wrap #give-amount {
-          font-size: 24px;
+          font-size: 20px;
           font-weight: 600;
           color: #002866; }
       .elementor-give-totals--skin-pumori .elementor-gt-form form[id*=give-form] #give-donation-level-button-wrap {
@@ -89,24 +91,22 @@ body.mfp-active {
         .elementor-give-totals--skin-pumori .elementor-gt-form form[id*=give-form] #give-donation-level-button-wrap .give-btn {
           font-size: 16px;
           font-weight: 600;
-          color: #002866;
-          background: #FFEE00;
-          border-color: #FFEE00; }
+          color: #002866; }
           .elementor-give-totals--skin-pumori .elementor-gt-form form[id*=give-form] #give-donation-level-button-wrap .give-btn.give-default-level {
             color: #FFFFFF;
             background: #002866;
             border-color: #002866; }
       .elementor-give-totals--skin-pumori .elementor-gt-form form[id*=give-form] .give-btn-modal {
-        font-size: 16px;
+        font-size: 14px;
         font-weight: 600;
         text-transform: uppercase;
-        color: #FFFFFF;
-        background: #002866;
+        color: #002866;
+        background: #FFEE00;
         -webkit-transition: all .3s;
         transition: all .3s; }
         .elementor-give-totals--skin-pumori .elementor-gt-form form[id*=give-form] .give-btn-modal:hover {
-          color: #002866;
-          background: #FFEE00; }
+          color: #FFFFFF;
+          background: #002866; }
   @media (max-width: 991.98px) {
     .elementor-give-totals--skin-pumori {
       flex-direction: column; }
