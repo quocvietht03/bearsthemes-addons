@@ -346,19 +346,17 @@ class Be_Give_Totals extends Widget_Base {
 					.give-form[data-style="elementor-give-totals--default"] #give_terms_agreement input[type=checkbox]:checked + label,
 					.give-form[data-style="elementor-give-totals--default"] .give_terms_links:hover,
 					.give-form[data-style="elementor-give-totals--default"] #give-final-total-wrap .give-final-total-amount' => 'color: {{VALUE}};',
-
-				 '.give-form[data-style="elementor-give-totals--default"] .give-total-wrap .give-currency-symbol,
-				 .give-form[data-style="elementor-give-totals--default"] #give-donation-level-button-wrap .give-btn.give-default-level,
-				 .give-form[data-style="elementor-give-totals--default"] #give-donation-level-radio-list li label:after,
-				 .give-form[data-style="elementor-give-totals--default"] #give-gateway-radio-list > li label:after,
-				 .give-form[data-style="elementor-give-totals--default"] #give_terms_agreement input[type=checkbox]:checked + label:before,
-				 .give-form[data-style="elementor-give-totals--default"] #give-final-total-wrap .give-donation-total-label,
-				 .give-form[data-style="elementor-give-totals--default"] .give-submit,
-				 .give-form[data-style="elementor-give-totals--default"] .give-btn-modal' => 'background-color: {{VALUE}};',
-
-				 '.give-form[data-style="elementor-give-totals--default"] #give-donation-level-button-wrap .give-btn.give-default-level,
-				 .give-form[data-style="elementor-give-totals--default"] #give-donation-level-button-wrap .give-btn:hover,
-				 .give-form[data-style="elementor-give-totals--default"] #give_terms_agreement input[type=checkbox]:checked + label:before' => 'border-color: {{VALUE}};',
+					'.give-form[data-style="elementor-give-totals--default"] .give-total-wrap .give-currency-symbol,
+					.give-form[data-style="elementor-give-totals--default"] #give-donation-level-button-wrap .give-btn.give-default-level,
+					.give-form[data-style="elementor-give-totals--default"] #give-donation-level-radio-list li label:after,
+					.give-form[data-style="elementor-give-totals--default"] #give-gateway-radio-list > li label:after,
+					.give-form[data-style="elementor-give-totals--default"] #give_terms_agreement input[type=checkbox]:checked + label:before,
+					.give-form[data-style="elementor-give-totals--default"] #give-final-total-wrap .give-donation-total-label,
+					.give-form[data-style="elementor-give-totals--default"] .give-submit,
+					.give-form[data-style="elementor-give-totals--default"] .give-btn-modal' => 'background-color: {{VALUE}};',
+					'.give-form[data-style="elementor-give-totals--default"] #give-donation-level-button-wrap .give-btn.give-default-level,
+					.give-form[data-style="elementor-give-totals--default"] #give-donation-level-button-wrap .give-btn:hover,
+					.give-form[data-style="elementor-give-totals--default"] #give_terms_agreement input[type=checkbox]:checked + label:before' => 'border-color: {{VALUE}};',
 				],
 			]
 		);
@@ -383,7 +381,7 @@ class Be_Give_Totals extends Widget_Base {
 				'type' => Controls_Manager::FONT,
 				'default' => '',
 				'selectors' => [
-					'.give-form[data-style="elementor-give-totals--default"]' => 'font-family: {{VALUE}}',
+					'.give-form[data-style="elementor-give-totals--default"]' => 'font-family: "{{VALUE}}", sans-serif',
 				],
 			]
 		);

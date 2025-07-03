@@ -543,7 +543,14 @@ class Skin_Taboche extends Skin_Base {
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
+					'{{WRAPPER}} .elementor-gt-form form[id*=give-form] .give-total-wrap #give-amount,
+					 {{WRAPPER}} .elementor-gt-form form[id*=give-form] #give-donation-level-button-wrap .give-btn:not(.give-default-level)' => 'color: {{VALUE}};',
+					'{{WRAPPER}} .elementor-gt-form form[id*=give-form] .give-total-wrap .give-currency-symbol,
+					 {{WRAPPER}} .elementor-gt-form form[id*=give-form] #give-donation-level-button-wrap .give-btn.give-default-level' => 'background-color: {{VALUE}};',
+					'{{WRAPPER}} .elementor-gt-form form[id*=give-form] #give-donation-level-button-wrap .give-btn:hover,
+					 {{WRAPPER}} .elementor-gt-form form[id*=give-form] #give-donation-level-button-wrap .give-btn.give-default-level' => 'border-color: {{VALUE}};',
 					'.give-form[data-style="elementor-give-totals--taboche"] .give-total-wrap #give-amount,
+					 .give-form[data-style="elementor-give-totals--taboche"] #give-donation-level-button-wrap .give-btn:not(.give-default-level),
 					 .give-form[data-style="elementor-give-totals--taboche"] #give-donation-level-button-wrap .give-btn:not(.give-default-level):hover,
 					 .give-form[data-style="elementor-give-totals--taboche"] #give-gateway-radio-list > li label:hover,
 					 .give-form[data-style="elementor-give-totals--taboche"] #give-gateway-radio-list > li.give-gateway-option-selected label,
@@ -555,36 +562,146 @@ class Skin_Taboche extends Skin_Base {
 					 .give-form[data-style="elementor-give-totals--taboche"] #give-donation-level-button-wrap .give-btn.give-default-level,
 					 .give-form[data-style="elementor-give-totals--taboche"] #give-gateway-radio-list > li.give-gateway-option-selected label:after,
 					 .give-form[data-style="elementor-give-totals--taboche"] #give_terms_agreement input[type=checkbox]:checked + label:before,
-					 .give-form[data-style="elementor-give-totals--taboche"] #give-final-total-wrap .give-donation-total-label,
-					 .give-form[data-style="elementor-give-totals--taboche"] .give-submit' => 'background-color: {{VALUE}};',
+					 .give-form[data-style="elementor-give-totals--taboche"] #give-final-total-wrap .give-donation-total-label' => 'background-color: {{VALUE}};',
 					'.give-form[data-style="elementor-give-totals--taboche"] #give-donation-level-button-wrap .give-btn:hover,
 					 .give-form[data-style="elementor-give-totals--taboche"] #give-donation-level-button-wrap .give-btn.give-default-level,
 					 .give-form[data-style="elementor-give-totals--taboche"] #give_terms_agreement input[type=checkbox]:checked + label:before' => 'border-color: {{VALUE}};',
+				]
+			]
+		);
+
+		$this->add_control(
+			'form_text_color',
+			[
+				'label' => __( 'Text Color', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::COLOR,
+				'default' => '',
+				'selectors' => [
+					'{{WRAPPER}} .elementor-gt-form form[id*=give-form],
+					.give-form[data-style="elementor-give-totals--taboche"]' => 'color: {{VALUE}};',
 				],
 			]
 		);
 
 		$this->add_control(
-			'form_main_color_hover',
+			'form_typograph_heading',
 			[
-				'label' => __( 'Main Color Hover', 'bearsthemes-addons' ),
-				'type' => Controls_Manager::COLOR,
+				'label' => esc_html__( 'Fonts', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::HEADING,
+				'separator' => 'before',
+			]
+		);
+
+		$this->add_control(
+			'form_typography',
+			[
+				'label' => esc_html__( 'Typography', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::FONT,
 				'default' => '',
 				'selectors' => [
-					'.give-form[data-style="elementor-give-totals--taboche"] .give-submit:hover' => 'background-color: {{VALUE}};',
+					'{{WRAPPER}} form[id*=give-form],
+					.give-form[data-style="elementor-give-totals--taboche"]' => 'font-family: "{{VALUE}}", sans-serif',
 				],
 			]
 		);
 
-		$this->add_group_control(
-			Group_Control_Typography::get_type(),
+		$this->add_control(
+			'form_main_typography',
 			[
-				'name' => 'form_typography',
-				'label' => __( 'Typography', 'bearsthemes-addons' ),
+				'label' => esc_html__( 'Main Typography', 'bearsthemes-addons' ),
+				'description' => esc_html__( 'Used for heading, title, button', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::FONT,
 				'default' => '',
-				'selector' => '.give-form[data-style="elementor-give-totals--taboche"]',
+				'selectors' => [
+					'{{WRAPPER}} form[id*=give-form] #give-donation-level-button-wrap .give-btn,
+					 .give-form[data-style="elementor-give-totals--taboche"] legend,
+					 .give-form[data-style="elementor-give-totals--taboche"] .give-submit' => 'font-family: "{{VALUE}}", sans-serif',
+				],
 			]
 		);
+
+
+		$this->add_control(
+			'form_button_heading',
+			[
+				'label' => esc_html__( 'Button', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::HEADING,
+				'separator' => 'before',
+			]
+		);
+		
+		$this->start_controls_tabs( 'tabs_form_button_style' );
+
+		$this->start_controls_tab(
+			'tab_form_button_normal',
+			[
+				'label' => __( 'Normal', 'bearsthemes-addons' ),
+			]
+		);
+
+		$this->add_control(
+			'form_button_text_color',
+			[
+				'label' => __( 'Text Color', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::COLOR,
+				'default' => '',
+				'selectors' => [
+					'{{WRAPPER}} form[id*=give-form] .give-btn-modal,
+					 .give-form[data-style="elementor-give-totals--taboche"] .give-submit' => 'color: {{VALUE}};',
+				],
+			]
+		);
+
+		$this->add_control(
+			'form_button_bg_color',
+			[
+				'label' => __( 'Background Color', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::COLOR,
+				'default' => '',
+				'selectors' => [
+					'{{WRAPPER}} form[id*=give-form] .give-btn-modal,
+					 .give-form[data-style="elementor-give-totals--taboche"] .give-submit' => 'background-color: {{VALUE}};',
+				],
+			]
+		);
+
+		$this->end_controls_tab();
+
+		$this->start_controls_tab(
+			'tab_form_button_hover',
+			[
+				'label' => __( 'Hover', 'bearsthemes-addons' ),
+			]
+		);
+
+		$this->add_control(
+			'form_button_hover_color',
+			[
+				'label' => __( 'Text Color', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::COLOR,
+				'selectors' => [
+					'{{WRAPPER}} form[id*=give-form] .give-btn-modal:hover,
+					 .give-form[data-style="elementor-give-totals--taboche"] .give-submit:hover' => 'color: {{VALUE}};',
+				],
+			]
+		);
+
+		$this->add_control(
+			'form_button_bg_color_hover',
+			[
+				'label' => __( 'Background Color', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::COLOR,
+				'default' => '',
+				'selectors' => [
+					'{{WRAPPER}} form[id*=give-form] .give-btn-modal:hover,
+					 .give-form[data-style="elementor-give-totals--taboche"] .give-submit:hover' => 'background-color: {{VALUE}};',
+				],
+			]
+		);
+
+		$this->end_controls_tab();
+
+		$this->end_controls_tabs();
 
 		$this->end_controls_section();
 	}

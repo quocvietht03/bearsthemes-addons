@@ -289,8 +289,9 @@
               font-size: 16px;
               font-weight: 700;
               color: #002866;
-              background: #FFEE00;
-              border-color: #FFEE00;
+              &:hover {
+                border-color: #002866;
+              }
               &.give-default-level {
                 color: #FFFFFF;
                 background: #002866;
@@ -299,16 +300,16 @@
             }
         }
         .give-btn-modal {
-          font-size: 16px;
+          font-size: 14px;
           font-weight: 600;
           text-transform: uppercase;
-          color: #FFFFFF;
-          background: #002866;
+          color: #002866;
+          background: #FFEE00;
           -webkit-transition: all .3s;
           transition: all .3s;
           &:hover {
-            color: #002866;
-            background: #FFEE00;
+            color: #FFFFFF;
+            background: #002866;
           }
         }
       }
@@ -420,12 +421,12 @@
           .give-currency-symbol {
             font-size: 24px;
             font-weight: 500;
-            background: #BFCC80;
+            background: #215732;
           }
           #give-amount {
             font-size: 24px;
             font-weight: 500;
-            color: #BFCC80;
+            color: #215732;
           }
         }
         #give-donation-level-button-wrap {
@@ -433,9 +434,10 @@
             .give-btn {
               font-size: 16px;
               font-weight: 500;
-              color: #FFFFFF;
-              background: #BFCC80;
-              border-color: #BFCC80;
+              color: #215732;
+              &:hover {
+                border-color: #215732;
+              }
               &.give-default-level {
                 color: #FFFFFF;
                 background: #215732;
@@ -444,15 +446,16 @@
             }
         }
         .give-btn-modal {
-          font-size: 18px;
+          font-size: 16px;
           font-weight: 500;
           text-transform: uppercase;
-          color: #FFFFFF;
-          background: #215732;
+          color: #4E3629;
+          background: #BFCC80;
           -webkit-transition: all .3s;
           transition: all .3s;
           &:hover {
-            background: #BFCC80;
+            color: #FFFFFF;
+            background: #215732;
           }
         }
       }
@@ -476,19 +479,17 @@
           justify-content: center;
           width: 34px;
           height: 34px;
-          color: #FFFFFF;
-          background: #215732;
+          color: #4E3629;
+          background: #BFCC80;
           &:not(:last-child) {
             margin-right: 4px;
           }
           svg {
-            fill: #FFFFFF;
+            fill: currentColor;
           }
           &:hover {
-            background: #BFCC80;
-            svg {
-              fill: #4E3629;
-            }
+            color: #FFFFFF;
+            background: #215732;
           }
         }
       }
@@ -558,7 +559,7 @@
           }
           .income, .goal-text {
             font-size: 24px;
-            font-weight: 700;
+            font-weight: 600;
             line-height: 1.25;
             color: #FFFFFF;
             margin-top: 4px;
@@ -573,21 +574,21 @@
         margin-bottom: 0;
         .give-total-wrap {
           .give-currency-symbol {
-            font-size: 24px;
-            font-weight: 700;
+            font-size: 22px;
+            font-weight: 600;
             background: #f97a60;
           }
           #give-amount {
-            font-size: 24px;
-            font-weight: 700;
+            font-size: 22px;
+            font-weight: 600;
             color: #f97a60;
           }
         }
         #give-donation-level-button-wrap {
             grid-template-columns: repeat(auto-fit, minmax(85px, 1fr));
             .give-btn {
-              font-size: 14px;
-              font-weight: 700;
+              font-size: 16px;
+              font-weight: 600;
               color: #f97a60;
               background: #FFFFFF;
               border-color: #FFFFFF;
@@ -600,7 +601,7 @@
         }
         .give-btn-modal {
           font-size: 14px;
-          font-weight: 700;
+          font-weight: 600;
           text-transform: uppercase;
           color: #FFFFFF;
           background: #f97a60;
@@ -1228,13 +1229,13 @@
             font-size: 20px;
             font-weight: 600;
             color: #FFFFFF;
-            background: #111111;
+            background: #4D5EF6;
             border-radius: 100px 0 0 100px;
           }
           #give-amount {
             font-size: 20px;
             font-weight: 600;
-            color: #111111;
+            color: #4D5EF6;
             border-radius: 0 100px 100px 0;
           }
         }
@@ -1243,13 +1244,16 @@
             .give-btn {
               font-size: 16px;
               font-weight: 600;
-              color: #111111;
+              color: #4D5EF6;
               border-color: rgba(0, 0, 0, 0.1);
               border-radius: 100px;
+              &:hover {
+                border-color: #4D5EF6;
+              }
               &.give-default-level {
                 color: #FFFFFF;
-                background: #111111;
-                border-color: #111111;
+                background: #4D5EF6;
+                border-color: #4D5EF6;
               }
             }
         }
@@ -1258,7 +1262,7 @@
           font-weight: 600;
           text-transform: capitalize;
           color: #FFFFFF;
-          background: #111111;
+          background: #4D5EF6;
           border-radius: 100px;
           -webkit-transition: all .3s;
           transition: all .3s;

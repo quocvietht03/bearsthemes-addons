@@ -639,7 +639,7 @@ class Be_Uber_Menu extends Widget_Base {
 					'{{WRAPPER}} .give-btn:hover, {{WRAPPER}} .give-btn:focus' => 'color: {{VALUE}};',
 					'{{WRAPPER}} .give-btn:hover svg, {{WRAPPER}} .give-btn:focus svg' => 'fill: {{VALUE}};',
 					'{{WRAPPER}} .givewp-donation-form-modal__open:hover, {{WRAPPER}} .givewp-donation-form-modal__open:focus' => 'color: {{VALUE}} !important;;',
-					'{{WRAPPER}} .givewp-donation-form-modal__open:hover svg, {{WRAPPER}} .givewp-donation-form-modal__open:focus svg' => 'fill: {{VALUE}} !important;;',
+					'{{WRAPPER}} .givewp-donation-form-modal__open:hover svg, {{WRAPPER}} .givewp-donation-form-modal__open:focus svg' => 'fill: {{VALUE}} !important;',
 				],
 			]
 		);
@@ -753,6 +753,19 @@ class Be_Uber_Menu extends Widget_Base {
 		);
 
 		$this->add_control(
+			'form_text_color',
+			[
+				'label' => __( 'Text Color', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::COLOR,
+				'default' => '',
+				'selectors' => [
+					'.give-form[data-style="elementor-give-uber-menu"],
+					.give-form[data-style="elementor-give-uber-menu"] #give-donation-level-button-wrap .give-btn' => 'color: {{VALUE}};',
+				],
+			]
+		);
+
+		$this->add_control(
 			'form_main_color',
 			[
 				'label' => __( 'Main Color', 'bearsthemes-addons' ),
@@ -760,6 +773,7 @@ class Be_Uber_Menu extends Widget_Base {
 				'default' => '',
 				'selectors' => [
 					'.give-form[data-style="elementor-give-uber-menu"] .give-total-wrap #give-amount,
+					.give-form[data-style="elementor-give-uber-menu"] #give-donation-level-button-wrap .give-btn:not(.give-default-level),
 					 .give-form[data-style="elementor-give-uber-menu"] #give-donation-level-button-wrap .give-btn:not(.give-default-level):hover,
 					 .give-form[data-style="elementor-give-uber-menu"] #give-gateway-radio-list > li label:hover,
 					 .give-form[data-style="elementor-give-uber-menu"] #give-gateway-radio-list > li.give-gateway-option-selected label,
@@ -771,8 +785,7 @@ class Be_Uber_Menu extends Widget_Base {
 					 .give-form[data-style="elementor-give-uber-menu"] #give-donation-level-button-wrap .give-btn.give-default-level,
 					 .give-form[data-style="elementor-give-uber-menu"] #give-gateway-radio-list > li.give-gateway-option-selected label:after,
 					 .give-form[data-style="elementor-give-uber-menu"] #give_terms_agreement input[type=checkbox]:checked + label:before,
-					 .give-form[data-style="elementor-give-uber-menu"] #give-final-total-wrap .give-donation-total-label,
-					 .give-form[data-style="elementor-give-uber-menu"] .give-submit' => 'background-color: {{VALUE}};',
+					 .give-form[data-style="elementor-give-uber-menu"] #give-final-total-wrap .give-donation-total-label' => 'background-color: {{VALUE}};',
 					'.give-form[data-style="elementor-give-uber-menu"] #give-donation-level-button-wrap .give-btn:hover,
 					 .give-form[data-style="elementor-give-uber-menu"] #give-donation-level-button-wrap .give-btn.give-default-level,
 					 .give-form[data-style="elementor-give-uber-menu"] #give_terms_agreement input[type=checkbox]:checked + label:before' => 'border-color: {{VALUE}};',
@@ -781,9 +794,107 @@ class Be_Uber_Menu extends Widget_Base {
 		);
 
 		$this->add_control(
-			'form_main_color_hover',
+			'form_typograph_heading',
 			[
-				'label' => __( 'Main Color Hover', 'bearsthemes-addons' ),
+				'label' => esc_html__( 'Fonts', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::HEADING,
+				'separator' => 'before',
+			]
+		);
+
+		$this->add_control(
+			'form_typography',
+			[
+				'label' => esc_html__( 'Typography', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::FONT,
+				'default' => '',
+				'selectors' => [
+					'.give-form[data-style="elementor-give-uber-menu"]' => 'font-family: "{{VALUE}}", sans-serif',
+				],
+			]
+		);
+
+
+		$this->add_control(
+			'form_main_typography',
+			[
+				'label' => esc_html__( 'Main Typography', 'bearsthemes-addons' ),
+				'description' => esc_html__( 'Used for heading, title, button', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::FONT,
+				'default' => '',
+				'selectors' => [
+					'.give-form[data-style="elementor-give-uber-menu"] legend,
+					 .give-form[data-style="elementor-give-uber-menu"] .give-submit' => 'font-family: "{{VALUE}}", sans-serif',
+				],
+			]
+		);
+
+		$this->add_control(
+			'form_button_heading',
+			[
+				'label' => esc_html__( 'Button', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::HEADING,
+				'separator' => 'before',
+			]
+		);
+		
+		$this->start_controls_tabs( 'tabs_form_button_style' );
+
+		$this->start_controls_tab(
+			'tab_form_button_normal',
+			[
+				'label' => __( 'Normal', 'bearsthemes-addons' ),
+			]
+		);
+
+		$this->add_control(
+			'form_button_text_color',
+			[
+				'label' => __( 'Text Color', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::COLOR,
+				'default' => '',
+				'selectors' => [
+					'.give-form[data-style="elementor-give-uber-menu"] .give-submit' => 'color: {{VALUE}};',
+				],
+			]
+		);
+
+		$this->add_control(
+			'form_button_bg_color',
+			[
+				'label' => __( 'Background Color', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::COLOR,
+				'default' => '',
+				'selectors' => [
+					'.give-form[data-style="elementor-give-uber-menu"] .give-submit' => 'background-color: {{VALUE}};',
+				],
+			]
+		);
+
+		$this->end_controls_tab();
+
+		$this->start_controls_tab(
+			'tab_form_button_hover',
+			[
+				'label' => __( 'Hover', 'bearsthemes-addons' ),
+			]
+		);
+
+		$this->add_control(
+			'form_button_hover_color',
+			[
+				'label' => __( 'Text Color', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::COLOR,
+				'selectors' => [
+					'.give-form[data-style="elementor-give-uber-menu"] .give-submit:hover' => 'color: {{VALUE}};',
+				],
+			]
+		);
+
+		$this->add_control(
+			'form_button_bg_color_hover',
+			[
+				'label' => __( 'Background Color', 'bearsthemes-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -792,15 +903,9 @@ class Be_Uber_Menu extends Widget_Base {
 			]
 		);
 
-		$this->add_group_control(
-			Group_Control_Typography::get_type(),
-			[
-				'name' => 'form_typography',
-				'label' => __( 'Typography', 'bearsthemes-addons' ),
-				'default' => '',
-				'selector' => '.give-form[data-style="elementor-give-uber-menu"]',
-			]
-		);
+		$this->end_controls_tab();
+
+		$this->end_controls_tabs();
 
 		$this->end_controls_section();
 	}
