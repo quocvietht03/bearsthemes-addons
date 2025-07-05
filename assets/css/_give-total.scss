@@ -446,7 +446,7 @@
             }
         }
         .give-btn-modal {
-          font-size: 16px;
+          font-size: 14px;
           font-weight: 500;
           text-transform: uppercase;
           color: #4E3629;
@@ -1435,13 +1435,13 @@
               transition: all .3s;
             }
             &.give-default-level {
+              color: #FFFFFF;
               background: #fed700;
-              border-color: #fed700;
               &:after {
                 background: #fed700;
               }
               &:hover {
-                color: #333333;
+                color: #FFFFFF;
               }
             }
           }
@@ -1880,7 +1880,7 @@
             }
             &:hover,
             &.give-default-level {
-              color: #F4B03E;
+              color: #151515;
               background: #FFFFFF;
             }
           }

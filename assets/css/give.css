@@ -344,7 +344,7 @@ body .mfp-active {
             background: #215732;
             border-color: #215732; }
       .elementor-give-totals--skin-coropuna .elementor-gt-form form[id*=give-form] .give-btn-modal {
-        font-size: 16px;
+        font-size: 14px;
         font-weight: 500;
         text-transform: uppercase;
         color: #4E3629;
@@ -1122,14 +1122,14 @@ body .mfp-active {
             transition: all .3s; }
           .elementor-give-form--skin-andrus .elementor-gf-form form.give-form #give-donation-level-button-wrap .give-btn.give-default-level,
           .elementor-give-form--skin-andrus .elementor-gf-form form[id*=give-form] #give-donation-level-button-wrap .give-btn.give-default-level {
-            background: #fed700;
-            border-color: #fed700; }
+            color: #FFFFFF;
+            background: #fed700; }
             .elementor-give-form--skin-andrus .elementor-gf-form form.give-form #give-donation-level-button-wrap .give-btn.give-default-level:after,
             .elementor-give-form--skin-andrus .elementor-gf-form form[id*=give-form] #give-donation-level-button-wrap .give-btn.give-default-level:after {
               background: #fed700; }
             .elementor-give-form--skin-andrus .elementor-gf-form form.give-form #give-donation-level-button-wrap .give-btn.give-default-level:hover,
             .elementor-give-form--skin-andrus .elementor-gf-form form[id*=give-form] #give-donation-level-button-wrap .give-btn.give-default-level:hover {
-              color: #333333; }
+              color: #FFFFFF; }
       .elementor-give-form--skin-andrus .elementor-gf-form form.give-form .give-btn-modal,
       .elementor-give-form--skin-andrus .elementor-gf-form form[id*=give-form] .give-btn-modal {
         width: calc(50% - 7.5px);
@@ -1506,7 +1506,7 @@ body .mfp-active {
           .elementor-give-form--skin-yutmaru .elementor-gf-form form.give-form #give-donation-level-button-wrap .give-btn:hover, .elementor-give-form--skin-yutmaru .elementor-gf-form form.give-form #give-donation-level-button-wrap .give-btn.give-default-level,
           .elementor-give-form--skin-yutmaru .elementor-gf-form form[id*=give-form] #give-donation-level-button-wrap .give-btn:hover,
           .elementor-give-form--skin-yutmaru .elementor-gf-form form[id*=give-form] #give-donation-level-button-wrap .give-btn.give-default-level {
-            color: #F4B03E;
+            color: #151515;
             background: #FFFFFF; }
       .elementor-give-form--skin-yutmaru .elementor-gf-form form.give-form .give-btn-modal,
       .elementor-give-form--skin-yutmaru .elementor-gf-form form[id*=give-form] .give-btn-modal {
