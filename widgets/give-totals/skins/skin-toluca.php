@@ -289,7 +289,7 @@ class Skin_Toluca extends Skin_Base {
 				'type' => Controls_Manager::FONT,
 				'default' => '',
 				'selectors' => [
-					'{{WRAPPER}} form[id*=give-form] #give-donation-level-button-wrap .give-btn,
+					'{{WRAPPER}} form[id*=give-form] > .give-btn,
 					 .give-form[data-style="elementor-give-totals--toluca"] legend,
 					 .give-form[data-style="elementor-give-totals--toluca"] .give-submit' => 'font-family: "{{VALUE}}", sans-serif',
 				],

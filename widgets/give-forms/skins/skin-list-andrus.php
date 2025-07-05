@@ -879,7 +879,7 @@ class Skin_List_Andrus extends Skin_Base {
 				'name' => 'form_typography',
 				'label' => __( 'Typography', 'bearsthemes-addons' ),
 				'default' => '',
-				'selector' => '{{WRAPPER}} form[id*=give-form] #give-donation-level-button-wrap .give-btn,
+				'selector' => '{{WRAPPER}} form[id*=give-form] > .give-btn,
 								.give-form[data-style="elementor-give-form--list-andrus"]',
 			]
 		);

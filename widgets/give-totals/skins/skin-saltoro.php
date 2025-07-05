@@ -366,7 +366,7 @@ class Skin_Saltoro extends Skin_Base {
 				'type' => Controls_Manager::FONT,
 				'default' => '',
 				'selectors' => [
-					'{{WRAPPER}} form[id*=give-form] #give-donation-level-button-wrap .give-btn,
+					'{{WRAPPER}} form[id*=give-form] > .give-btn,
 					 .give-form[data-style="elementor-give-totals--saltoro"] legend,
 					 .give-form[data-style="elementor-give-totals--saltoro"] .give-submit' => 'font-family: "{{VALUE}}", sans-serif',
 				],

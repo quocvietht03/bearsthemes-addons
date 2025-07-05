@@ -404,7 +404,7 @@ class Be_Give_Totals extends Widget_Base {
 				'type' => Controls_Manager::FONT,
 				'default' => '',
 				'selectors' => [
-					'{{WRAPPER}} form[id*=give-form] #give-donation-level-button-wrap .give-btn,
+					'{{WRAPPER}} form[id*=give-form] > .give-btn,
 					 .give-form[data-style="elementor-give-totals--default"] legend,
 					 .give-form[data-style="elementor-give-totals--default"] .give-submit' => 'font-family: "{{VALUE}}", sans-serif',
 				],

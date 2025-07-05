@@ -445,7 +445,7 @@ class Skin_Baruntse extends Skin_Base {
 				'type' => Controls_Manager::FONT,
 				'default' => '',
 				'selectors' => [
-					'{{WRAPPER}} form[id*=give-form] #give-donation-level-button-wrap .give-btn,
+					'{{WRAPPER}} form[id*=give-form] > .give-btn,
 					 .give-form[data-style="elementor-give-totals--baruntse"] legend,
 					 .give-form[data-style="elementor-give-totals--baruntse"] .give-submit' => 'font-family: "{{VALUE}}", sans-serif',
 				],

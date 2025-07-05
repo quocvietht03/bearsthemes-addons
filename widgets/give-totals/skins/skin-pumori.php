@@ -484,7 +484,7 @@ class Skin_Pumori extends Skin_Base {
 				'type' => Controls_Manager::FONT,
 				'default' => '',
 				'selectors' => [
-					'{{WRAPPER}} form[id*=give-form] #give-donation-level-button-wrap .give-btn,
+					'{{WRAPPER}} form[id*=give-form] > .give-btn,
 					 .give-form[data-style="elementor-give-totals--pumori"] legend,
 					 .give-form[data-style="elementor-give-totals--pumori"] .give-submit' => 'font-family: "{{VALUE}}", sans-serif',
 				],

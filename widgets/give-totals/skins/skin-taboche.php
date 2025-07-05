@@ -613,7 +613,7 @@ class Skin_Taboche extends Skin_Base {
 				'type' => Controls_Manager::FONT,
 				'default' => '',
 				'selectors' => [
-					'{{WRAPPER}} form[id*=give-form] #give-donation-level-button-wrap .give-btn,
+					'{{WRAPPER}} form[id*=give-form] > .give-btn,
 					 .give-form[data-style="elementor-give-totals--taboche"] legend,
 					 .give-form[data-style="elementor-give-totals--taboche"] .give-submit' => 'font-family: "{{VALUE}}", sans-serif',
 				],
