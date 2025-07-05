@@ -1647,7 +1647,7 @@
   }
 
   &--skin-tronador {
-    background: #4B915A;
+    background: #000000;
     padding: 40px;
     border-radius: 5px;
     .elementor-gf-header {
@@ -1684,7 +1684,7 @@
           }
           .give-currency-symbol {
             font-weight: 700;
-            background: #000;
+            background: #4B915A;
             height: 54px;
             line-height: 54px;
             font-size: 20px;
@@ -1694,7 +1694,7 @@
           }
           #give-amount {
             font-weight: 700;
-            color: #222222;
+            color: #4B915A;
             background: #fff;
             border-color: #fff;
             height: 54px;
@@ -1711,23 +1711,21 @@
             font-size: 16px;
             font-weight: 700;
             color: #222222;
-            background: #fff;
+            background: #FFFFFF;
             overflow: unset;
-            border-color: #fff;
+            border-color: #FFFFFF;
             padding: 10px;
             height: 54px;
             border-radius: 30px;
             &:hover {
-              color: #fff;
-              background: #000;
-              border-color: #000;
+              border-color: #4B915A;
             }
             &.give-default-level {
-              background: #000;
-              border-color: #000;
+              background: #4B915A;
+              border-color: #4B915A;
               color: #fff;
               &:after {
-                background: #000;
+                background: #4B915A;
               }
             }
             &.give-btn-level-custom {
@@ -1742,7 +1740,7 @@
           line-height: 24px;
           letter-spacing: 0;
           text-transform: uppercase;
-          background: #000000;
+          background: #4B915A;
           border-radius: 30px;
           margin: 0;
           padding: 15px 30px;

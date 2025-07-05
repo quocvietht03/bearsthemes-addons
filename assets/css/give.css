@@ -1294,7 +1294,7 @@ body .mfp-active {
           width: 100%;
           margin: 0; } }
 .elementor-give-form--skin-tronador {
-  background: #4B915A;
+  background: #000000;
   padding: 40px;
   border-radius: 5px; }
   .elementor-give-form--skin-tronador .elementor-gf-header {
@@ -1330,7 +1330,7 @@ body .mfp-active {
         .elementor-give-form--skin-tronador .elementor-gf-form form.give-form .give-total-wrap .give-currency-symbol,
         .elementor-give-form--skin-tronador .elementor-gf-form form[id*=give-form] .give-total-wrap .give-currency-symbol {
           font-weight: 700;
-          background: #000;
+          background: #4B915A;
           height: 54px;
           line-height: 54px;
           font-size: 20px;
@@ -1340,7 +1340,7 @@ body .mfp-active {
         .elementor-give-form--skin-tronador .elementor-gf-form form.give-form .give-total-wrap #give-amount,
         .elementor-give-form--skin-tronador .elementor-gf-form form[id*=give-form] .give-total-wrap #give-amount {
           font-weight: 700;
-          color: #222222;
+          color: #4B915A;
           background: #fff;
           border-color: #fff;
           height: 54px;
@@ -1357,25 +1357,23 @@ body .mfp-active {
           font-size: 16px;
           font-weight: 700;
           color: #222222;
-          background: #fff;
+          background: #FFFFFF;
           overflow: unset;
-          border-color: #fff;
+          border-color: #FFFFFF;
           padding: 10px;
           height: 54px;
           border-radius: 30px; }
           .elementor-give-form--skin-tronador .elementor-gf-form form.give-form #give-donation-level-button-wrap .give-btn:hover,
           .elementor-give-form--skin-tronador .elementor-gf-form form[id*=give-form] #give-donation-level-button-wrap .give-btn:hover {
-            color: #fff;
-            background: #000;
-            border-color: #000; }
+            border-color: #4B915A; }
           .elementor-give-form--skin-tronador .elementor-gf-form form.give-form #give-donation-level-button-wrap .give-btn.give-default-level,
           .elementor-give-form--skin-tronador .elementor-gf-form form[id*=give-form] #give-donation-level-button-wrap .give-btn.give-default-level {
-            background: #000;
-            border-color: #000;
+            background: #4B915A;
+            border-color: #4B915A;
             color: #fff; }
             .elementor-give-form--skin-tronador .elementor-gf-form form.give-form #give-donation-level-button-wrap .give-btn.give-default-level:after,
             .elementor-give-form--skin-tronador .elementor-gf-form form[id*=give-form] #give-donation-level-button-wrap .give-btn.give-default-level:after {
-              background: #000; }
+              background: #4B915A; }
           .elementor-give-form--skin-tronador .elementor-gf-form form.give-form #give-donation-level-button-wrap .give-btn.give-btn-level-custom,
           .elementor-give-form--skin-tronador .elementor-gf-form form[id*=give-form] #give-donation-level-button-wrap .give-btn.give-btn-level-custom {
             font-size: 14px; }
@@ -1387,7 +1385,7 @@ body .mfp-active {
         line-height: 24px;
         letter-spacing: 0;
         text-transform: uppercase;
-        background: #000000;
+        background: #4B915A;
         border-radius: 30px;
         margin: 0;
         padding: 15px 30px;
