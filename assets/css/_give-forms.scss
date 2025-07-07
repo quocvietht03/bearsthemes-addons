@@ -350,6 +350,11 @@
       .givewp-donation-form-modal__open {
         font-weight: 500 !important;
         padding: 15px 35px !important;
+        color: #FFFFFF !important;
+        background: #BFCC80 !important;
+        &:hover {
+          background: #4E3629 !important;
+        }
       }
       .give-goal-progress {
         position: absolute;
@@ -538,6 +543,11 @@
       }
       .givewp-donation-form-modal__open {
         padding: 13px 20px !important;
+        color: #ffffff;
+        background: #fed700 !important;
+        &:hover {
+          background: #F1CD08 !important;
+        }
       }
       .give-goal-progress {
         font-size: 14px;
@@ -818,6 +828,10 @@
       }
       .givewp-donation-form-modal__open {
         padding: 0 !important;
+        background-color: #e05d41 !important;
+        &:hover {
+          background-color: #667A62 !important;
+        }
       }
 
       @media( max-width: $break-xs - 0.02 ) {
@@ -940,10 +954,18 @@
         text-decoration: none;
         color: #ffffff;
         background: #f97a60;
-        padding: 20px 35px !important;
+        padding: 20px 35px;
         border-radius: 30px;
         &:hover {
           background: #f7544f;
+        }
+      }
+      .givewp-donation-form-modal__open {
+        padding: 20px 35px !important;
+        color: #ffffff !important;
+        background: #f97a60 !important;
+        &:hover {
+          background: #f7544f !important;
         }
       }
       .give-goal-progress {
@@ -1161,6 +1183,11 @@
       }
       .givewp-donation-form-modal__open {
         padding: 12px 30px !important;
+        color: #FFFFFF !important;
+        background: #638c1c !important;
+        &:hover {
+          background: #4C691A !important;
+        }
       }
       .give-goal-progress {
         font-size: 18px;
@@ -2740,6 +2767,11 @@
       }
       .givewp-donation-form-modal__open {
         padding: 10px 20px !important;
+        color: #FFFFFF !important;
+        background: #151515 !important;
+        &:hover {
+          background: #F4B03E !important;
+        }
       }
       .give-goal-progress {
         display: flex;
@@ -2971,7 +3003,7 @@
       .give-btn-modal {
         display: inline-block;
         width: auto;
-        font-size: 16px;
+        font-size: 14px;
         font-weight: 600;
         line-height: 24px;
         color: #011F51;
@@ -2986,9 +3018,11 @@
       }
       .givewp-donation-form-modal__open {
         color: #011F51 !important;
+        background: #7CF2AD !important;
         padding: 10px 30px !important;
         &:hover {
           color: #FFFFFF !important;
+          background: #011F51 !important;
         }
       }
       .give-goal-progress {
@@ -3138,7 +3172,8 @@
         }
       }
       .givewp-donation-form-modal__open {
-        padding: 0 !important;
+        background-color: #FFFFFF !important;
+        padding: 0 !important; 
       }
     }
   }
@@ -3453,8 +3488,11 @@
       .givewp-donation-form-modal__open {
         font-weight: 500 !important;
         padding: 12px 35px !important;
+        width: auto;
+        color: #ffffff !important;
+        background: #DD3B32 !important;
         &:hover {
-          background: #d33128;
+          background: #d33128 !important;
         }
       }
       @media(max-width: $break-xs - 0.02) {

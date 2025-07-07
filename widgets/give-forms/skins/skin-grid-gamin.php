@@ -672,37 +672,140 @@ class Skin_Grid_Gamin extends Skin_Base {
 				'default' => '',
 				'selectors' => [
 					'.give-form[data-style="elementor-give-forms--gamin"] .give-total-wrap #give-amount,
-					.give-form[data-style="elementor-give-forms--gamin"] #give-donation-level-button-wrap .give-btn:hover,
-					.give-form[data-style="elementor-give-forms--gamin"] #give-gateway-radio-list > li.give-gateway-option-selected label,
-					.give-form[data-style="elementor-give-forms--gamin"] #give-gateway-radio-list > li label:hover,
-					.give-form[data-style="elementor-give-forms--gamin"] #give-donation-level-radio-list li input.give-default-level + label,
-					.give-form[data-style="elementor-give-forms--gamin"] #give-donation-level-radio-list li label:hover,
-					.give-form[data-style="elementor-give-forms--gamin"] #give-gateway-radio-list > li label:hover,
-					.give-form[data-style="elementor-give-forms--gamin"] #give_terms_agreement label:hover,
-					.give-form[data-style="elementor-give-forms--gamin"] #give_terms_agreement label:hover,
-					.give-form[data-style="elementor-give-forms--gamin"] #give_terms_agreement input[type=checkbox]:checked + label,
-					.give-form[data-style="elementor-give-forms--gamin"] .give_terms_links:hover,
-					.give-form[data-style="elementor-give-forms--gamin"] #give-final-total-wrap .give-final-total-amount' => 'color: {{VALUE}};',
+					 .give-form[data-style="elementor-give-forms--gamin"] #give-donation-level-button-wrap .give-btn:not(.give-default-level),
+					 .give-form[data-style="elementor-give-forms--gamin"] #give-donation-level-button-wrap .give-btn:not(.give-default-level):hover,
+					 .give-form[data-style="elementor-give-forms--gamin"] #give-gateway-radio-list > li label:hover,
+					 .give-form[data-style="elementor-give-forms--gamin"] #give-gateway-radio-list > li.give-gateway-option-selected label,
+					 .give-form[data-style="elementor-give-forms--gamin"] #give_terms_agreement label:hover,
+					 .give-form[data-style="elementor-give-forms--gamin"] #give_terms_agreement input[type=checkbox]:checked + label,
+					 .give-form[data-style="elementor-give-forms--gamin"] .give_terms_links:hover,
+					 .give-form[data-style="elementor-give-forms--gamin"] #give-final-total-wrap .give-final-total-amount' => 'color: {{VALUE}};',
+					'.give-form[data-style="elementor-give-forms--gamin"] .give-total-wrap .give-currency-symbol,
+					 .give-form[data-style="elementor-give-forms--gamin"] #give-donation-level-button-wrap .give-btn.give-default-level,
+					 .give-form[data-style="elementor-give-forms--gamin"] #give-gateway-radio-list > li.give-gateway-option-selected label:after,
+					 .give-form[data-style="elementor-give-forms--gamin"] #give_terms_agreement input[type=checkbox]:checked + label:before,
+					 .give-form[data-style="elementor-give-forms--gamin"] #give-final-total-wrap .give-donation-total-label' => 'background-color: {{VALUE}};',
+					'.give-form[data-style="elementor-give-forms--gamin"] #give-donation-level-button-wrap .give-btn:hover,
+					 .give-form[data-style="elementor-give-forms--gamin"] #give-donation-level-button-wrap .give-btn.give-default-level,
+					 .give-form[data-style="elementor-give-forms--gamin"] #give_terms_agreement input[type=checkbox]:checked + label:before' => 'border-color: {{VALUE}};',
+				]
+			]
+		);
 
-				 '.give-form[data-style="elementor-give-forms--gamin"] .give-total-wrap .give-currency-symbol,
-				 .give-form[data-style="elementor-give-forms--gamin"] #give-donation-level-button-wrap .give-btn.give-default-level,
-				 .give-form[data-style="elementor-give-forms--gamin"] #give-donation-level-radio-list li label:after,
-				 .give-form[data-style="elementor-give-forms--gamin"] #give-gateway-radio-list > li label:after,
-				 .give-form[data-style="elementor-give-forms--gamin"] #give_terms_agreement input[type=checkbox]:checked + label:before,
-				 .give-form[data-style="elementor-give-forms--gamin"] #give-final-total-wrap .give-donation-total-label,
-				 .give-form[data-style="elementor-give-forms--gamin"] .give-submit' => 'background-color: {{VALUE}};',
-
-				 '.give-form[data-style="elementor-give-forms--gamin"] #give-donation-level-button-wrap .give-btn.give-default-level,
-				 .give-form[data-style="elementor-give-forms--gamin"] #give-donation-level-button-wrap .give-btn:hover,
-				 .give-form[data-style="elementor-give-forms--gamin"] #give_terms_agreement input[type=checkbox]:checked + label:before' => 'border-color: {{VALUE}};',
+		$this->add_control(
+			'form_text_color',
+			[
+				'label' => __( 'Text Color', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::COLOR,
+				'default' => '',
+				'selectors' => [
+					'.give-form[data-style="elementor-give-forms--gamin"]' => 'color: {{VALUE}};',
 				],
 			]
 		);
 
 		$this->add_control(
-			'form_main_color_hover',
+			'form_typograph_heading',
 			[
-				'label' => __( 'Main Color Hover', 'bearsthemes-addons' ),
+				'label' => esc_html__( 'Fonts', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::HEADING,
+				'separator' => 'before',
+			]
+		);
+
+		$this->add_control(
+			'form_typography',
+			[
+				'label' => esc_html__( 'Typography', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::FONT,
+				'default' => '',
+				'selectors' => [
+					'.give-form[data-style="elementor-give-forms--gamin"]' => 'font-family: "{{VALUE}}", sans-serif',
+				],
+			]
+		);
+
+		$this->add_control(
+			'form_main_typography',
+			[
+				'label' => esc_html__( 'Main Typography', 'bearsthemes-addons' ),
+				'description' => esc_html__( 'Used for heading, title, button', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::FONT,
+				'default' => '',
+				'selectors' => [
+					'.give-form[data-style="elementor-give-forms--gamin"] legend,
+					 .give-form[data-style="elementor-give-forms--gamin"] .give-submit' => 'font-family: "{{VALUE}}", sans-serif',
+				],
+			]
+		);
+
+
+		$this->add_control(
+			'form_button_heading',
+			[
+				'label' => esc_html__( 'Button', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::HEADING,
+				'separator' => 'before',
+			]
+		);
+		
+		$this->start_controls_tabs( 'tabs_form_button_style' );
+
+		$this->start_controls_tab(
+			'tab_form_button_normal',
+			[
+				'label' => __( 'Normal', 'bearsthemes-addons' ),
+			]
+		);
+
+		$this->add_control(
+			'form_button_text_color',
+			[
+				'label' => __( 'Text Color', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::COLOR,
+				'default' => '',
+				'selectors' => [
+					'.give-form[data-style="elementor-give-forms--gamin"] .give-submit' => 'color: {{VALUE}};',
+				],
+			]
+		);
+
+		$this->add_control(
+			'form_button_bg_color',
+			[
+				'label' => __( 'Background Color', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::COLOR,
+				'default' => '',
+				'selectors' => [
+					'.give-form[data-style="elementor-give-forms--gamin"] .give-submit' => 'background-color: {{VALUE}};',
+				],
+			]
+		);
+
+		$this->end_controls_tab();
+
+		$this->start_controls_tab(
+			'tab_form_button_hover',
+			[
+				'label' => __( 'Hover', 'bearsthemes-addons' ),
+			]
+		);
+
+		$this->add_control(
+			'form_button_hover_color',
+			[
+				'label' => __( 'Text Color', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::COLOR,
+				'selectors' => [
+					'.give-form[data-style="elementor-give-forms--gamin"] .give-submit:hover' => 'color: {{VALUE}};',
+				],
+			]
+		);
+
+		$this->add_control(
+			'form_button_bg_color_hover',
+			[
+				'label' => __( 'Background Color', 'bearsthemes-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -711,15 +814,9 @@ class Skin_Grid_Gamin extends Skin_Base {
 			]
 		);
 
-		$this->add_group_control(
-			Group_Control_Typography::get_type(),
-			[
-				'name' => 'form_typography',
-				'label' => __( 'Typography', 'bearsthemes-addons' ),
-				'default' => '',
-				'selector' => '.give-form[data-style="elementor-give-forms--gamin"]',
-			]
-		);
+		$this->end_controls_tab();
+
+		$this->end_controls_tabs();
 
 		$this->end_controls_section();
 	}
@@ -1008,7 +1105,7 @@ class Skin_Grid_Gamin extends Skin_Base {
 								);
 		
 								add_filter('give_form_html_tags', function($form_html_tags, $form) {
-									$form_html_tags['data-style'] = 'elementor-give-forms--changtse';
+									$form_html_tags['data-style'] = 'elementor-give-forms--gamin';
 		
 									return $form_html_tags;
 								}, 10, 2);

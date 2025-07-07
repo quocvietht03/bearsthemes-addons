@@ -2167,7 +2167,11 @@ body .mfp-active {
       background: #4E3629; }
   .elementor-give-forms--skin-grid-coropuna .elementor-give-form .givewp-donation-form-modal__open {
     font-weight: 500 !important;
-    padding: 15px 35px !important; }
+    padding: 15px 35px !important;
+    color: #FFFFFF !important;
+    background: #BFCC80 !important; }
+    .elementor-give-forms--skin-grid-coropuna .elementor-give-form .givewp-donation-form-modal__open:hover {
+      background: #4E3629 !important; }
   .elementor-give-forms--skin-grid-coropuna .elementor-give-form .give-goal-progress {
     position: absolute;
     bottom: 0;
@@ -2303,7 +2307,11 @@ body .mfp-active {
     .elementor-give-forms--skin-list-andrus .elementor-give-form-feature .give-btn-modal:hover {
       background: #F1CD08; }
   .elementor-give-forms--skin-list-andrus .elementor-give-form-feature .givewp-donation-form-modal__open {
-    padding: 13px 20px !important; }
+    padding: 13px 20px !important;
+    color: #ffffff;
+    background: #fed700 !important; }
+    .elementor-give-forms--skin-list-andrus .elementor-give-form-feature .givewp-donation-form-modal__open:hover {
+      background: #F1CD08 !important; }
   .elementor-give-forms--skin-list-andrus .elementor-give-form-feature .give-goal-progress {
     font-size: 14px;
     font-weight: 400;
@@ -2525,7 +2533,10 @@ body .mfp-active {
     .elementor-give-forms--skin-grid-changtse .elementor-give-form .give-btn-modal:hover {
       background-color: #667A62; }
   .elementor-give-forms--skin-grid-changtse .elementor-give-form .givewp-donation-form-modal__open {
-    padding: 0 !important; }
+    padding: 0 !important;
+    background-color: #e05d41 !important; }
+    .elementor-give-forms--skin-grid-changtse .elementor-give-form .givewp-donation-form-modal__open:hover {
+      background-color: #667A62 !important; }
   @media (max-width: 575.98px) {
     .elementor-give-forms--skin-grid-changtse .elementor-give-form .give-card__title {
       font-size: 24px; }
@@ -2620,11 +2631,17 @@ body .mfp-active {
     text-decoration: none;
     color: #ffffff;
     background: #f97a60;
-    padding: 20px 35px !important;
+    padding: 20px 35px;
     border-radius: 30px; }
     .elementor-give-forms--skin-list-saltoro .elementor-give-form .givewp-donation-form-modal__open:hover,
     .elementor-give-forms--skin-list-saltoro .elementor-give-form .give-btn-modal:hover {
       background: #f7544f; }
+  .elementor-give-forms--skin-list-saltoro .elementor-give-form .givewp-donation-form-modal__open {
+    padding: 20px 35px !important;
+    color: #ffffff !important;
+    background: #f97a60 !important; }
+    .elementor-give-forms--skin-list-saltoro .elementor-give-form .givewp-donation-form-modal__open:hover {
+      background: #f7544f !important; }
   .elementor-give-forms--skin-list-saltoro .elementor-give-form .give-goal-progress {
     font-size: 16px;
     line-height: 1.25;
@@ -2788,7 +2805,11 @@ body .mfp-active {
     .elementor-give-forms--skin-grid-hardeol .elementor-give-form .give-btn-modal:hover {
       background: #4C691A; }
   .elementor-give-forms--skin-grid-hardeol .elementor-give-form .givewp-donation-form-modal__open {
-    padding: 12px 30px !important; }
+    padding: 12px 30px !important;
+    color: #FFFFFF !important;
+    background: #638c1c !important; }
+    .elementor-give-forms--skin-grid-hardeol .elementor-give-form .givewp-donation-form-modal__open:hover {
+      background: #4C691A !important; }
   .elementor-give-forms--skin-grid-hardeol .elementor-give-form .give-goal-progress {
     font-size: 18px;
     font-weight: 400;
@@ -3979,7 +4000,11 @@ body .mfp-active {
     .elementor-give-forms--skin-grid-yutmaru .elementor-give-form .give-btn-modal:hover {
       background: #F4B03E; }
   .elementor-give-forms--skin-grid-yutmaru .elementor-give-form .givewp-donation-form-modal__open {
-    padding: 10px 20px !important; }
+    padding: 10px 20px !important;
+    color: #FFFFFF !important;
+    background: #151515 !important; }
+    .elementor-give-forms--skin-grid-yutmaru .elementor-give-form .givewp-donation-form-modal__open:hover {
+      background: #F4B03E !important; }
   .elementor-give-forms--skin-grid-yutmaru .elementor-give-form .give-goal-progress {
     display: flex;
     flex-direction: column-reverse;
@@ -4155,7 +4180,7 @@ body .mfp-active {
   .elementor-give-forms--skin-grid-nuptse .elementor-give-form .give-btn-modal {
     display: inline-block;
     width: auto;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
     line-height: 24px;
     color: #011F51;
@@ -4169,9 +4194,11 @@ body .mfp-active {
       background: #011F51; }
   .elementor-give-forms--skin-grid-nuptse .elementor-give-form .givewp-donation-form-modal__open {
     color: #011F51 !important;
+    background: #7CF2AD !important;
     padding: 10px 30px !important; }
     .elementor-give-forms--skin-grid-nuptse .elementor-give-form .givewp-donation-form-modal__open:hover {
-      color: #FFFFFF !important; }
+      color: #FFFFFF !important;
+      background: #011F51 !important; }
   .elementor-give-forms--skin-grid-nuptse .elementor-give-form .give-goal-progress {
     font-size: 16px;
     line-height: 1.5;
@@ -4289,6 +4316,7 @@ body .mfp-active {
     .elementor-give-forms--skin-grid-gamin .elementor-give-form .give-btn-modal:hover {
       background-color: #FFFFFF; }
   .elementor-give-forms--skin-grid-gamin .elementor-give-form .givewp-donation-form-modal__open {
+    background-color: #FFFFFF !important;
     padding: 0 !important; }
 .elementor-give-forms--skin-grid-cruces .elementor-give-form {
   position: relative;
@@ -4529,9 +4557,12 @@ body .mfp-active {
       background: #d33128; }
   .elementor-give-forms--skin-grid-toluca .elementor-give-form .givewp-donation-form-modal__open {
     font-weight: 500 !important;
-    padding: 12px 35px !important; }
+    padding: 12px 35px !important;
+    width: auto;
+    color: #ffffff !important;
+    background: #DD3B32 !important; }
     .elementor-give-forms--skin-grid-toluca .elementor-give-form .givewp-donation-form-modal__open:hover {
-      background: #d33128; }
+      background: #d33128 !important; }
   @media (max-width: 575.98px) {
     .elementor-give-forms--skin-grid-toluca .elementor-give-form .give-card__body {
       margin: -50px 20px 0;
