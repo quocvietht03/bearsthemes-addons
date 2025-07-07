@@ -353,7 +353,7 @@ body .mfp-active {
         transition: all .3s; }
         .elementor-give-totals--skin-coropuna .elementor-gt-form form[id*=give-form] .give-btn-modal:hover {
           color: #FFFFFF;
-          background: #215732; }
+          background: #111111; }
   .elementor-give-totals--skin-coropuna .elementor-gt-socials {
     display: flex;
     align-items: center;
@@ -371,14 +371,14 @@ body .mfp-active {
       width: 34px;
       height: 34px;
       color: #4E3629;
-      background: #BFCC80; }
+      background: #FFFFFF; }
       .elementor-give-totals--skin-coropuna .elementor-gt-socials__list a:not(:last-child) {
         margin-right: 4px; }
       .elementor-give-totals--skin-coropuna .elementor-gt-socials__list a svg {
         fill: currentColor; }
       .elementor-give-totals--skin-coropuna .elementor-gt-socials__list a:hover {
         color: #FFFFFF;
-        background: #215732; }
+        background: #111111; }
   @media (max-width: 991.98px) {
     .elementor-give-totals--skin-coropuna {
       max-width: 420px;
@@ -2158,12 +2158,13 @@ body .mfp-active {
     font-size: 14px;
     line-height: 20px;
     text-transform: uppercase;
-    color: #FFFFFF;
+    color: #4E3629;
     background: #BFCC80;
     margin-top: -25px;
     padding: 15px 35px; }
     .elementor-give-forms--skin-grid-coropuna .elementor-give-form .givewp-donation-form-modal__open:hover,
     .elementor-give-forms--skin-grid-coropuna .elementor-give-form .give-btn-modal:hover {
+      color: #FFFFFF;
       background: #4E3629; }
   .elementor-give-forms--skin-grid-coropuna .elementor-give-form .givewp-donation-form-modal__open {
     font-weight: 500 !important;
