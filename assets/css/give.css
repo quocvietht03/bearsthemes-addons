@@ -1072,12 +1072,12 @@ body .mfp-active {
           margin-bottom: 0; }
         .elementor-give-form--skin-andrus .elementor-gf-form form.give-form .give-total-wrap .give-currency-symbol,
         .elementor-give-form--skin-andrus .elementor-gf-form form[id*=give-form] .give-total-wrap .give-currency-symbol {
-          font-weight: 800;
-          background: #fed700; }
+          font-weight: 600;
+          background: #111111; }
         .elementor-give-form--skin-andrus .elementor-gf-form form.give-form .give-total-wrap #give-amount,
         .elementor-give-form--skin-andrus .elementor-gf-form form[id*=give-form] .give-total-wrap #give-amount {
-          font-weight: 800;
-          color: #333333;
+          font-weight: 600;
+          color: #111111;
           background: #efefef;
           border-color: #efefef; }
       .elementor-give-form--skin-andrus .elementor-gf-form form.give-form #give-donation-level-button-wrap,
@@ -1088,8 +1088,8 @@ body .mfp-active {
           position: relative;
           width: calc(100% - 10px);
           font-size: 14px;
-          font-weight: 800;
-          color: #333333;
+          font-weight: 600;
+          color: #111111;
           background: #efefef;
           overflow: unset;
           border-color: #efefef; }
@@ -1122,16 +1122,16 @@ body .mfp-active {
             transition: all .3s; }
           .elementor-give-form--skin-andrus .elementor-gf-form form.give-form #give-donation-level-button-wrap .give-btn.give-default-level,
           .elementor-give-form--skin-andrus .elementor-gf-form form[id*=give-form] #give-donation-level-button-wrap .give-btn.give-default-level {
-            color: #333333;
-            background: #fed700; }
+            color: #FFFFFF;
+            background: #111111; }
             .elementor-give-form--skin-andrus .elementor-gf-form form.give-form #give-donation-level-button-wrap .give-btn.give-default-level:after,
             .elementor-give-form--skin-andrus .elementor-gf-form form[id*=give-form] #give-donation-level-button-wrap .give-btn.give-default-level:after {
-              background: #fed700; }
+              background: #111111; }
       .elementor-give-form--skin-andrus .elementor-gf-form form.give-form .give-btn-modal,
       .elementor-give-form--skin-andrus .elementor-gf-form form[id*=give-form] .give-btn-modal {
         width: calc(50% - 7.5px);
         font-size: 14px;
-        font-weight: 800;
+        font-weight: 600;
         line-height: 20px;
         letter-spacing: 0;
         text-transform: uppercase;

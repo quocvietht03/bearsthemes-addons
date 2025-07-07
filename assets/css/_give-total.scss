@@ -1386,12 +1386,12 @@
             margin-bottom: 0;
           }
           .give-currency-symbol {
-            font-weight: 800;
-            background: #fed700;
+            font-weight: 600;
+            background: #111111;
           }
           #give-amount {
-            font-weight: 800;
-            color: #333333;
+            font-weight: 600;
+            color: #111111;
             background: #efefef;
             border-color: #efefef;
           }
@@ -1402,8 +1402,8 @@
             position: relative;
             width: calc(100% - 10px);
             font-size: 14px;
-            font-weight: 800;
-            color: #333333;
+            font-weight: 600;
+            color: #111111;
             background: #efefef;
             overflow: unset;
             border-color: #efefef;
@@ -1435,10 +1435,10 @@
               transition: all .3s;
             }
             &.give-default-level {
-              color: #333333;
-              background: #fed700;
+              color: #FFFFFF;
+              background: #111111;
               &:after {
-                background: #fed700;
+                background: #111111;
               }
             }
           }
@@ -1446,7 +1446,7 @@
         .give-btn-modal {
           width: calc(50% - 7.5px);
           font-size: 14px;
-          font-weight: 800;
+          font-weight: 600;
           line-height: 20px;
           letter-spacing: 0;
           text-transform: uppercase;
