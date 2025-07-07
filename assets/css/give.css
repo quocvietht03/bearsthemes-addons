@@ -719,13 +719,13 @@ body .mfp-active {
     transition: all .3s; }
     .elementor-give-totals--skin-taboche .elementor-gt-form .givewp-donation-form-modal__open:hover,
     .elementor-give-totals--skin-taboche .elementor-gt-form .give-btn-modal:hover {
-      color: #fff;
+      color: #000;
       background: #f7db07; }
   .elementor-give-totals--skin-taboche .elementor-gt-form .givewp-donation-form-modal__open {
     color: #fff !important;
     padding: 15px 35px !important; }
     .elementor-give-totals--skin-taboche .elementor-gt-form .givewp-donation-form-modal__open:hover {
-      color: #fff !important; }
+      color: #000 !important; }
   @media (max-width: 1199.98px) {
     .elementor-give-totals--skin-taboche {
       gap: 30px; }

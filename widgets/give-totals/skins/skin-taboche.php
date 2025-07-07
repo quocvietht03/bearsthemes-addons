@@ -430,9 +430,6 @@ class Skin_Taboche extends Skin_Base {
 		$this->start_controls_tab( 'donation_button_normal',
 			[
 				'label' => __( 'Normal', 'bearsthemes-addons' ),
-				'condition' => [
-					'skin_grid_coropuna_show_donation_button!' => '',
-				],
 			]
 		);
 
@@ -475,7 +472,7 @@ class Skin_Taboche extends Skin_Base {
 
 		$this->end_controls_tab();
 
-		$this->start_controls_tab( 'donation_button',
+		$this->start_controls_tab( 'donation_button_hover',
 			[
 				'label' => __( 'Hover', 'bearsthemes-addons' ),
 			]
