@@ -1426,7 +1426,7 @@
     position: relative;
     background: #F8F8FF;
     margin: -110px 0 25px 55px;
-    padding: 35px 40px 65px;
+    padding: 35px 40px 55px;
     border-radius: 10px 0 10px 10px;
     z-index: 5; }
   .elementor-posts--skin-grid-cruces .elementor-post__date {
@@ -1497,6 +1497,17 @@
       background: #BFB170; }
     .elementor-posts--skin-grid-cruces .elementor-post__read-more svg {
       margin-left: 16px; }
+  @media (min-width: 768px) and (max-width: 1024.98px) {
+    .elementor-posts--skin-grid-cruces .elementor-post__thumbnail {
+      border-radius: 10px 10px 0 0; }
+    .elementor-posts--skin-grid-cruces .elementor-post__content {
+      margin: 0 0 25px 0;
+      padding: 25px 15px 45px;
+      border-radius: 0 0 10px 10px; }
+    .elementor-posts--skin-grid-cruces .elementor-post__title {
+      font-size: 24px; }
+    .elementor-posts--skin-grid-cruces .elementor-post__read-more {
+      left: 15px; } }
   @media (max-width: 575.98px) {
     .elementor-posts--skin-grid-cruces .elementor-post__thumbnail {
       border-radius: 10px 10px 0 0; }
@@ -1504,6 +1515,8 @@
       margin: 0 0 25px 0;
       padding: 25px 15px 45px;
       border-radius: 0 0 10px 10px; }
+    .elementor-posts--skin-grid-cruces .elementor-post__title {
+      font-size: 24px; }
     .elementor-posts--skin-grid-cruces .elementor-post__read-more {
       left: 15px; } }
 .elementor-posts--skin-grid-somoni .elementor-post {
@@ -4142,12 +4155,14 @@
   .elementor-testimonials--skin-list-cruces .elementor-swiper-button.elementor-swiper-button-next {
     right: 40px;
     left: auto; }
-@media (max-width: 575.98px) {
+@media (min-width: 768px) and (max-width: 1024.98px) {
   .elementor-testimonials--skin-list-cruces .elementor-testimonial {
     padding: 25px 15px; }
     .elementor-testimonials--skin-list-cruces .elementor-testimonial__thumbnail {
       width: 100px;
       height: 100px; }
+    .elementor-testimonials--skin-list-cruces .elementor-testimonial__content {
+      font-size: 18px; }
     .elementor-testimonials--skin-list-cruces .elementor-testimonial__infor {
       width: calc(100% - 100px); }
     .elementor-testimonials--skin-list-cruces .elementor-testimonial__name {
@@ -4155,7 +4170,27 @@
     .elementor-testimonials--skin-list-cruces .elementor-testimonial__job {
       font-size: 16px; }
   .elementor-testimonials--skin-list-cruces .elementor-swiper-button {
-    top: 50px; }
+    top: 38px; }
+    .elementor-testimonials--skin-list-cruces .elementor-swiper-button.elementor-swiper-button-prev {
+      right: 75px; }
+    .elementor-testimonials--skin-list-cruces .elementor-swiper-button.elementor-swiper-button-next {
+      right: 15px; } }
+@media (max-width: 767.98px) {
+  .elementor-testimonials--skin-list-cruces .elementor-testimonial {
+    padding: 25px 15px; }
+    .elementor-testimonials--skin-list-cruces .elementor-testimonial__thumbnail {
+      width: 100px;
+      height: 100px; }
+    .elementor-testimonials--skin-list-cruces .elementor-testimonial__content {
+      font-size: 18px; }
+    .elementor-testimonials--skin-list-cruces .elementor-testimonial__infor {
+      width: calc(100% - 100px); }
+    .elementor-testimonials--skin-list-cruces .elementor-testimonial__name {
+      font-size: 26px; }
+    .elementor-testimonials--skin-list-cruces .elementor-testimonial__job {
+      font-size: 16px; }
+  .elementor-testimonials--skin-list-cruces .elementor-swiper-button {
+    top: 38px; }
     .elementor-testimonials--skin-list-cruces .elementor-swiper-button.elementor-swiper-button-prev {
       right: 75px; }
     .elementor-testimonials--skin-list-cruces .elementor-swiper-button.elementor-swiper-button-next {
@@ -5223,6 +5258,9 @@
     text-transform: uppercase;
     margin-bottom: 0;
     color: #333356; }
+    @media (max-width: 575.98px) {
+      .elementor-members--skin-cruces .elementor-member__title {
+        font-size: 24px; } }
     .elementor-members--skin-cruces .elementor-member__title a {
       color: inherit; }
       .elementor-members--skin-cruces .elementor-member__title a:hover {

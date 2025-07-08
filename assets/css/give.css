@@ -4360,7 +4360,7 @@ body .mfp-active {
         padding: 15px; } }
   .elementor-give-forms--skin-grid-cruces .elementor-give-form .give-card__title {
     font-weight: 600;
-    font-size: 24px;
+    font-size: 28px;
     line-height: 1.3;
     color: #011E41;
     margin-bottom: 10px;
@@ -4369,6 +4369,9 @@ body .mfp-active {
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical; }
+    @media (max-width: 1024.98px) {
+      .elementor-give-forms--skin-grid-cruces .elementor-give-form .give-card__title {
+        font-size: 24px; } }
     .elementor-give-forms--skin-grid-cruces .elementor-give-form .give-card__title a {
       color: inherit; }
       .elementor-give-forms--skin-grid-cruces .elementor-give-form .give-card__title a:hover {

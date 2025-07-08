@@ -1146,6 +1146,9 @@
         text-transform: uppercase;
         margin-bottom: 0;
         color: #333356;
+        @media( max-width: $break-xs - 0.02 ) {
+          font-size: 24px;
+        }
         a {
           color: inherit;
           &:hover {

@@ -1483,7 +1483,7 @@
         position: relative;
         background: #F8F8FF;
         margin: -110px 0 25px 55px;
-        padding: 35px 40px 65px;
+        padding: 35px 40px 55px;
         border-radius: 10px 0 10px 10px;
         z-index: 5;
       }
@@ -1571,6 +1571,23 @@
         }
       }
 
+      @media(min-width: $break-sm) and ( max-width: $break-tl - 0.02 ) {
+        &__thumbnail {
+          border-radius: 10px 10px 0 0;
+        }
+        &__content {
+          margin: 0 0 25px 0;
+          padding: 25px 15px 45px;
+          border-radius: 0 0 10px 10px;
+        }
+        &__title {
+          font-size: 24px;
+        }
+        &__read-more {
+          left: 15px;
+        }
+      }
+
       @media( max-width: $break-xs - 0.02 ) {
         &__thumbnail {
           border-radius: 10px 10px 0 0;
@@ -1579,6 +1596,9 @@
           margin: 0 0 25px 0;
           padding: 25px 15px 45px;
           border-radius: 0 0 10px 10px;
+        }
+        &__title {
+          font-size: 24px;
         }
         &__read-more {
           left: 15px;

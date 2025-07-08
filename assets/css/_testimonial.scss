@@ -1062,12 +1062,15 @@
         left: auto;
       }
     }
-    @media( max-width: $break-xs - 0.02 ) {
+    @media(min-width: $break-sm) and ( max-width: $break-tl - 0.02 ) {
       .elementor-testimonial {
         padding: 25px 15px;
         &__thumbnail {
           width: 100px;
           height: 100px;
+        }
+        &__content {
+          font-size: 18px;
         }
         &__infor {
           width: calc(100% - 100px);
@@ -1080,7 +1083,37 @@
         }
       }
       .elementor-swiper-button {
-        top: 50px;
+        top: 38px;
+        &.elementor-swiper-button-prev{
+          right: 75px;
+        }
+        &.elementor-swiper-button-next{
+          right: 15px;
+        }
+      }
+    }
+    @media( max-width: $break-sm - 0.02 ) {
+      .elementor-testimonial {
+        padding: 25px 15px;
+        &__thumbnail {
+          width: 100px;
+          height: 100px;
+        }
+        &__content {
+          font-size: 18px;
+        }
+        &__infor {
+          width: calc(100% - 100px);
+        }
+        &__name {
+          font-size: 26px;
+        }
+        &__job {
+          font-size: 16px;
+        }
+      }
+      .elementor-swiper-button {
+        top: 38px;
         &.elementor-swiper-button-prev{
           right: 75px;
         }
