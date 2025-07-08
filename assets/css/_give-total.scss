@@ -2311,14 +2311,15 @@
     .elementor-gf-header {
       margin-bottom: 50px;
       &__sub-title {
-        font-size: 20px;
-        font-weight: 700;
+        font-size: 18px;
+        font-weight: 600;
         line-height: 1.5;
+        letter-spacing: 1px;
         color: #BD3C2B;
       }
       &__title {
         font-size: 42px;
-        font-weight: 700;
+        font-weight: 600;
         line-height: 1.2;
         color: #0A0A0A;
         margin: 4px 0 0 0;
