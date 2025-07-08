@@ -53,7 +53,6 @@ class Be_Give_Forms_Carousel extends Widget_Base {
 		$this->add_skin( new Skins\Skin_Grid_Nuptse( $this ) );
 		$this->add_skin( new Skins\Skin_Grid_Cruces( $this ) );
 		$this->add_skin( new Skins\Skin_Grid_Swiss( $this ) );
-
 		$this->add_skin( new Skins\Skin_List_Saltoro( $this ) );
 	}
 
@@ -61,15 +60,15 @@ class Be_Give_Forms_Carousel extends Widget_Base {
 		$supported_ids = [];
 
 		$wp_query = new \WP_Query( array(
-														'post_type' => 'give_posts',
-														'post_status' => 'publish'
-													) );
+			'post_type' => 'give_posts',
+			'post_status' => 'publish'
+		) );
 
 		if ( $wp_query->have_posts() ) {
-	    while ( $wp_query->have_posts() ) {
-        $wp_query->the_post();
-        $supported_ids[get_the_ID()] = get_the_title();
-	    }
+			while ( $wp_query->have_posts() ) {
+				$wp_query->the_post();
+				$supported_ids[get_the_ID()] = get_the_title();
+			}
 		}
 
 		return $supported_ids;
@@ -1321,63 +1320,6 @@ class Be_Give_Forms_Carousel extends Widget_Base {
 		$this->end_controls_tab();
 
 		$this->end_controls_tabs();
-
-		$this->add_control(
-			'form_main_color',
-			[
-				'label' => __( 'Main Color', 'bearsthemes-addons' ),
-				'type' => Controls_Manager::COLOR,
-				'default' => '',
-				'selectors' => [
-					'.give-form[data-style="elementor-give-forms-carousel--default"] .give-total-wrap #give-amount,
-					.give-form[data-style="elementor-give-forms-carousel--default"] #give-donation-level-button-wrap .give-btn:hover,
-					.give-form[data-style="elementor-give-forms-carousel--default"] #give-gateway-radio-list > li.give-gateway-option-selected label,
-					.give-form[data-style="elementor-give-forms-carousel--default"] #give-gateway-radio-list > li label:hover,
-					.give-form[data-style="elementor-give-forms-carousel--default"] #give-donation-level-radio-list li input.give-default-level + label,
-					.give-form[data-style="elementor-give-forms-carousel--default"] #give-donation-level-radio-list li label:hover,
-					.give-form[data-style="elementor-give-forms-carousel--default"] #give-gateway-radio-list > li label:hover,
-					.give-form[data-style="elementor-give-forms-carousel--default"] #give_terms_agreement label:hover,
-					.give-form[data-style="elementor-give-forms-carousel--default"] #give_terms_agreement label:hover,
-					.give-form[data-style="elementor-give-forms-carousel--default"] #give_terms_agreement input[type=checkbox]:checked + label,
-					.give-form[data-style="elementor-give-forms-carousel--default"] .give_terms_links:hover,
-					.give-form[data-style="elementor-give-forms-carousel--default"] #give-final-total-wrap .give-final-total-amount' => 'color: {{VALUE}};',
-
-				 '.give-form[data-style="elementor-give-forms-carousel--default"] .give-total-wrap .give-currency-symbol,
-				 .give-form[data-style="elementor-give-forms-carousel--default"] #give-donation-level-button-wrap .give-btn.give-default-level,
-				 .give-form[data-style="elementor-give-forms-carousel--default"] #give-donation-level-radio-list li label:after,
-				 .give-form[data-style="elementor-give-forms-carousel--default"] #give-gateway-radio-list > li label:after,
-				 .give-form[data-style="elementor-give-forms-carousel--default"] #give_terms_agreement input[type=checkbox]:checked + label:before,
-				 .give-form[data-style="elementor-give-forms-carousel--default"] #give-final-total-wrap .give-donation-total-label,
-				 .give-form[data-style="elementor-give-forms-carousel--default"] .give-submit' => 'background-color: {{VALUE}};',
-
-				 '.give-form[data-style="elementor-give-forms-carousel--default"] #give-donation-level-button-wrap .give-btn.give-default-level,
-				 .give-form[data-style="elementor-give-forms-carousel--default"] #give-donation-level-button-wrap .give-btn:hover,
-				 .give-form[data-style="elementor-give-forms-carousel--default"] #give_terms_agreement input[type=checkbox]:checked + label:before' => 'border-color: {{VALUE}};',
-				],
-			]
-		);
-
-		$this->add_control(
-			'form_main_color_hover',
-			[
-				'label' => __( 'Main Color Hover', 'bearsthemes-addons' ),
-				'type' => Controls_Manager::COLOR,
-				'default' => '',
-				'selectors' => [
-					'.give-form[data-style="elementor-give-forms-carousel--default"] .give-submit:hover' => 'background-color: {{VALUE}};',
-				],
-			]
-		);
-
-		$this->add_group_control(
-			Group_Control_Typography::get_type(),
-			[
-				'name' => 'form_typography',
-				'label' => __( 'Typography', 'bearsthemes-addons' ),
-				'default' => '',
-				'selector' => '.give-form[data-style="elementor-give-forms-carousel--default"]',
-			]
-		);
 
 		$this->end_controls_section();
 	}
