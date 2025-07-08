@@ -2379,7 +2379,7 @@
         color: #0A0A0A;
         margin-top: 20px;
         a {
-          color: #3F86ED;
+          color: #3E8959;
         }
       }
     }
@@ -2390,7 +2390,17 @@
           font-size: 16px;
         }
         &__title {
-          font-size: 36px;
+          font-size: 32px;
+        }
+      }
+    }
+    @media(max-width: $break-sm - 0.02) {
+      .elementor-gf-header {
+        &__sub-title {
+          font-size: 14px;
+        }
+        &__title {
+          font-size: 28px;
         }
       }
     }

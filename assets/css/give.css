@@ -1910,14 +1910,19 @@ body .mfp-active {
   color: #0A0A0A;
   margin-top: 20px; }
   .elementor-give-form--skin-somoni .elementor-gf-form__desc a {
-    color: #3F86ED; }
+    color: #3E8959; }
 @media (max-width: 991.98px) {
   .elementor-give-form--skin-somoni .elementor-gf-header {
     margin-bottom: 30px; }
     .elementor-give-form--skin-somoni .elementor-gf-header__sub-title {
       font-size: 16px; }
     .elementor-give-form--skin-somoni .elementor-gf-header__title {
-      font-size: 36px; } }
+      font-size: 32px; } }
+@media (max-width: 767.98px) {
+  .elementor-give-form--skin-somoni .elementor-gf-header__sub-title {
+    font-size: 14px; }
+  .elementor-give-form--skin-somoni .elementor-gf-header__title {
+    font-size: 28px; } }
 
 .elementor-give-forms--default .elementor-give-form {
   background: #F9F7F5;
