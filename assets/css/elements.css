@@ -1558,7 +1558,7 @@
       color: inherit; }
   .elementor-posts--skin-grid-somoni .elementor-post__title {
     font-size: 18px;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.5;
     color: #0A0A0A;
     margin-bottom: 24px;
@@ -1575,7 +1575,7 @@
     left: 12px;
     display: inline-block;
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.5;
     color: #0A0A0A; }
     .elementor-posts--skin-grid-somoni .elementor-post__read-more svg {
@@ -4187,7 +4187,7 @@
   align-items: center;
   gap: 8px;
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.5;
   color: #0A0A0A;
   background: #FFFFFF;
@@ -4233,7 +4233,7 @@
   padding: 50px 50px 120px; }
 .elementor-test-special__panel-title {
   font-size: 28px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.2;
   color: #0A0A0A;
   margin: 0 0 15px; }
@@ -4276,7 +4276,7 @@
   transform: translateX(-100%); }
 .elementor-test-special__info-name {
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.5;
   color: #FFFFFF;
   margin: 0; }
@@ -4284,7 +4284,7 @@
   font-size: 14px;
   font-weight: 400;
   line-height: 1.5;
-  color: #e2b6ad; }
+  color: #f3dcd8; }
 .elementor-test-special__nav {
   position: absolute;
   bottom: 50px;

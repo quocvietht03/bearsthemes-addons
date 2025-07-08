@@ -1878,7 +1878,7 @@ body .mfp-active {
   .elementor-give-form--skin-somoni .elementor-gf-form form.give-form #give-donation-level-button-wrap .give-btn,
   .elementor-give-form--skin-somoni .elementor-gf-form form[id*=give-form] #give-donation-level-button-wrap .give-btn {
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 600;
     border-radius: 10px; }
     .elementor-give-form--skin-somoni .elementor-gf-form form.give-form #give-donation-level-button-wrap .give-btn:not(.give-default-level):hover,
     .elementor-give-form--skin-somoni .elementor-gf-form form[id*=give-form] #give-donation-level-button-wrap .give-btn:not(.give-default-level):hover {
@@ -1892,7 +1892,7 @@ body .mfp-active {
   .elementor-give-form--skin-somoni .elementor-gf-form form.give-form .give-btn-modal,
   .elementor-give-form--skin-somoni .elementor-gf-form form[id*=give-form] .give-btn-modal {
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 600;
     text-transform: capitalize;
     color: #FFFFFF;
     background: #3E8959;
