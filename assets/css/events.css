@@ -1276,8 +1276,8 @@
       .elementor-events--skin-grid-manaslu .elementor-event__content {
         padding: 24px 16px; } }
   .elementor-events--skin-grid-manaslu .elementor-event__title {
-    font-size: 22px;
-    font-weight: 700;
+    font-size: 24px;
+    font-weight: 600;
     line-height: 1.25;
     color: #101318;
     margin-bottom: 12px; }
@@ -1319,7 +1319,7 @@
         padding: 2px; }
       .elementor-events--skin-grid-manaslu .elementor-event__date .calendar .month {
         font-size: 14px;
-        font-weight: 700;
+        font-weight: 600;
         background: #6EFACC; }
     .elementor-events--skin-grid-manaslu .elementor-event__date .detail {
       width: calc(100% - 60px);
@@ -1328,7 +1328,7 @@
         display: block; }
       .elementor-events--skin-grid-manaslu .elementor-event__date .detail .time {
         font-size: 14px;
-        font-weight: 700;
+        font-weight: 600;
         text-transform: uppercase; }
 .elementor-events--skin-grid-yutmaru .elementor-event {
   position: relative;
