@@ -3329,7 +3329,7 @@
         box-shadow: 0px 10px 20px rgba(0, 158, 116, 0.3);
         .day {
           font-size: 30px;
-          font-weight: 700;
+          font-weight: 600;
           line-height: 1;
           color: #FFFFFF;
           margin-bottom: 4px;
@@ -3358,8 +3358,8 @@
       }
       &__title {
         font-size: 24px;
-        font-weight: 700;
-        line-height: 1.29;
+        font-weight: 600;
+        line-height: 1.25;
         color: #151515;
         margin-bottom: 18px;
         overflow: hidden;
@@ -3401,7 +3401,7 @@
       &__excerpt {
         font-size: 18px;
         line-height: 1.67;
-        color: #8A8A8A;
+        color: #555;
         margin-bottom: 24px;
         p {
           margin: 0;
@@ -3410,7 +3410,7 @@
       &__read-more {
         display: inline-block;
         font-size: 18px;
-        font-weight: 700;
+        font-weight: 600;
         line-height: 30px;
         color: #FFFFFF;
         padding: 10px 30px;

@@ -3078,8 +3078,8 @@
       z-index: 3; }
     .elementor-posts--skin-cobble-vaccine .elementor-post__title {
       font-size: 18px;
-      font-weight: 700;
-      line-height: 1.29;
+      font-weight: 600;
+      line-height: 1.25;
       color: #FFFFFF;
       margin: 0;
       overflow: hidden;
@@ -8032,6 +8032,7 @@
       right: auto;
       width: 100%;
       background: #FFFFFF;
+      box-shadow: 0 0 1px #fff;
       z-index: 999;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
