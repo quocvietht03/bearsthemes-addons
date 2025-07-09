@@ -5921,11 +5921,12 @@
       line-height: 1.5;
       margin-top: 8px; }
   .elementor-pie-chart__progress {
-    margin-bottom: 12px; }
+    line-height: 0; }
   .elementor-pie-chart__title {
     font-size: 22px;
     font-weight: 700;
     line-height: 1.25;
+    margin-top: 12px;
     margin-bottom: 0; }
 
 @-webkit-keyframes hotspotEffect {

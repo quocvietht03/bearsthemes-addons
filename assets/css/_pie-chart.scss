@@ -13,12 +13,13 @@
     }
   }
   &__progress {
-    margin-bottom: 12px;
+    line-height: 0;
   }
   &__title {
     font-size: 22px;
     font-weight: 700;
     line-height: 1.25;
+    margin-top: 12px;
     margin-bottom: 0;
   }
 

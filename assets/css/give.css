@@ -1657,22 +1657,22 @@ body .mfp-active {
   .elementor-give-form--skin-jimara .elementor-gf-header {
     margin-bottom: 40px; }
     .elementor-give-form--skin-jimara .elementor-gf-header__sub-title {
-      font-size: 1.6vw;
+      font-size: 1.3vw;
       font-weight: 400;
       font-style: italic;
-      line-height: 1.4em;
+      line-height: 1.25em;
       color: #306F5E; }
     .elementor-give-form--skin-jimara .elementor-gf-header__title {
-      font-size: 3.6vw;
+      font-size: 3.2vw;
       font-weight: 700;
-      line-height: 1.29em;
+      line-height: 1.25em;
       color: #151515;
       margin: 12px 0 0; }
     .elementor-give-form--skin-jimara .elementor-gf-header__desc {
       font-size: 18px;
       font-weight: 400;
       line-height: 1.67em;
-      color: #151515;
+      color: #555555;
       margin-top: 30px; }
       .elementor-give-form--skin-jimara .elementor-gf-header__desc ul {
         list-style: none;
