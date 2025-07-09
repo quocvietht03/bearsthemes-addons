@@ -511,7 +511,7 @@ class Skin_Cobble_Gamin extends Skin_Base {
 				'default' => '',
 				'selectors' => [
 					'{{WRAPPER}} .elementor-post__date,
-           {{WRAPPER}} .elementor-post-feature__meta li' => 'color: {{VALUE}};',
+           {{WRAPPER}} elementor-post-feature__date' => 'color: {{VALUE}};',
 				],
 				'condition' => [
 					'skin_cobble_gamin_show_meta!' => '',
@@ -525,7 +525,7 @@ class Skin_Cobble_Gamin extends Skin_Base {
 				'name' => 'meta_typography',
 				'default' => '',
 				'selector' => '{{WRAPPER}} .elementor-post__date,
-                       {{WRAPPER}} .elementor-post-feature__meta li',
+                       {{WRAPPER}} elementor-post-feature__date',
 				'condition' => [
 					'skin_cobble_gamin_show_meta!' => '',
 				],
@@ -580,22 +580,12 @@ class Skin_Cobble_Gamin extends Skin_Base {
 
         <div class="elementor-post-feature__content">
           <?php if( '' !== $this->parent->get_instance_value_skin('show_meta') ) { ?>
-  					<ul class="elementor-post-feature__meta">
-              <li>
-                <?php
-                  echo '<a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">'.
-                    get_avatar( get_the_author_meta( 'ID' ), 40 ) .
-                    '<span>' . esc_html__('by ', 'bearsthemes-addons') . '</span>' . get_the_author() .
-                  '</a>';
-                ?>
-              </li>
-  	          <li>
-  	            <?php
-                  echo '<time class="entry-date published" datetime="' . esc_attr( get_the_date( DATE_W3C ) ) . '">' . esc_html( get_the_date() ) . '</time>';
-  							?>
-  	          </li>
-  	        </ul>
-  				<?php } ?>
+				<div class="elementor-post-feature__date">
+					<?php
+					echo '<time class="entry-date published" datetime="' . esc_attr( get_the_date( DATE_W3C ) ) . '">' . esc_html( get_the_date() ) . '</time>';
+					?>
+  	        	</div>
+			<?php } ?>
 
           <?php
 						if( '' !== $this->parent->get_instance_value_skin('show_title') ) {

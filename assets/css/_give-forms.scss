@@ -3111,20 +3111,23 @@
           padding: 30px;
         }
         &__completed {
-          font-size: 56px;
-          font-weight: 700;
+          font-size: 46px;
+          font-weight: 600;
           line-height: 1.4;
           color: #846DB7;
         }
         &__goal {
           font-size: 16px;
-          font-weight: 700;
+          font-weight: 400;
           line-height: 1.5;
-          color: #50426F;
+          color: #555555;
+          span {
+            font-weight: 600;
+          }
         }
         &__title {
           font-size: 24px;
-          font-weight: 700;
+          font-weight: 600;
           line-height: 1.5;
           color: #171717;
           margin-bottom: 8px;
@@ -3141,7 +3144,7 @@
           font-size: 16px;
           font-weight: 400;
           line-height: 1.6;
-          color: #737373;
+          color: #555;
         }
         &__footer {
           display: flex;
