@@ -621,7 +621,7 @@
     -webkit-transform: scale(1.1);
     transform: scale(1.1); }
   .elementor-posts--skin-grid-coropuna .elementor-post.has-thumbnail.has-date .elementor-post__content {
-    padding: 72px 20px 20px 40px; }
+    padding: 72px 20px 20px 30px; }
   .elementor-posts--skin-grid-coropuna .elementor-post.has-thumbnail.has-date .elementor-post__date {
     position: absolute;
     top: -52px;
@@ -685,7 +685,7 @@
     padding: 0; }
     .elementor-posts--skin-grid-coropuna .elementor-post__meta li {
       display: inline-block;
-      font-size: 16px;
+      font-size: 14px;
       font-weight: 400;
       line-height: 1.25;
       color: #999999; }
