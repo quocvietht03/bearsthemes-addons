@@ -3389,15 +3389,12 @@
   &--skin-cobble-grouse {
     grid-template-areas:
     'item1 item2'
-    'item1 item3'
-    'item4 item5';
+    'item1 item3';
     @media( max-width: $break-md - 0.02 ) {
       grid-template-areas:
       'item1'
       'item2'
-      'item3'
-      'item4'
-      'item5';
+      'item3';
     }
     .elementor-post {
       display: flex;
@@ -3445,7 +3442,7 @@
         }
       }
       &__content {
-        width: calc(100% - 300px);
+        width: calc(100% - 240px);
         padding-left: 30px;
       }
       &__category {
@@ -3566,7 +3563,7 @@
       }
       &__title {
         font-size: 20px;
-        font-weight: 700;
+        font-weight: 600;
         line-height: 1.25;
         color: #333333;
         margin-bottom: 12px;
