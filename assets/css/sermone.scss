@@ -681,7 +681,7 @@
         padding: 50px;
       }
       &__preacher {
-        font-size: 14px;
+        font-size: 16px;
         font-weight: 600;
         line-height: 1.5;
         color: #3780FF;
@@ -761,6 +761,22 @@
             -webkit-transform: scale(1);
             transform: scale(1);
           }
+        }
+      }
+
+      @media( max-width: $break-tl - 0.02 ) {
+        &__content {
+          padding: 30px;
+        }
+        &__title {
+          font-size: 22px;
+        }
+        &__preacher,
+        &__meta {
+          font-size: 14px;
+        }
+        &__excerpt {
+          font-size: 16px;
         }
       }
 

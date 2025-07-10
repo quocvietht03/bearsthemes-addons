@@ -515,7 +515,7 @@
   .elementor-sermone--skin-list-manaslu .elementor-sermon__content {
     padding: 50px; }
   .elementor-sermone--skin-list-manaslu .elementor-sermon__preacher {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 600;
     line-height: 1.5;
     color: #3780FF;
@@ -575,6 +575,15 @@
     opacity: 1;
     -webkit-transform: scale(1);
     transform: scale(1); }
+  @media (max-width: 1024.98px) {
+    .elementor-sermone--skin-list-manaslu .elementor-sermon__content {
+      padding: 30px; }
+    .elementor-sermone--skin-list-manaslu .elementor-sermon__title {
+      font-size: 22px; }
+    .elementor-sermone--skin-list-manaslu .elementor-sermon__preacher, .elementor-sermone--skin-list-manaslu .elementor-sermon__meta {
+      font-size: 14px; }
+    .elementor-sermone--skin-list-manaslu .elementor-sermon__excerpt {
+      font-size: 16px; } }
   @media (max-width: 767.98px) {
     .elementor-sermone--skin-list-manaslu .elementor-sermon.has-thumbnail {
       padding: 0; }
