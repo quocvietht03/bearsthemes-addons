@@ -359,9 +359,9 @@ body .mfp-active {
     align-items: center;
     justify-content: space-between; }
     .elementor-give-totals--skin-coropuna .elementor-gt-socials__title {
-      font-size: 18px;
-      font-weight: 500;
-      line-height: 1.25;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.5;
       color: #FFFFFF;
       margin: 0; }
     .elementor-give-totals--skin-coropuna .elementor-gt-socials__list a {
@@ -2132,11 +2132,10 @@ body .mfp-active {
     position: relative;
     padding: 30px 40px; }
   .elementor-give-forms--skin-grid-coropuna .elementor-give-form .give-card__category {
-    font-size: 13px;
-    font-weight: 500;
+    font-size: 16px;
+    font-weight: 400;
     line-height: 1.5;
-    text-transform: uppercase;
-    color: #BFCC80;
+    color: #999;
     margin-bottom: 8px; }
     .elementor-give-forms--skin-grid-coropuna .elementor-give-form .give-card__category svg {
       display: inline-block;
@@ -2148,7 +2147,7 @@ body .mfp-active {
   .elementor-give-forms--skin-grid-coropuna .elementor-give-form .give-card__title {
     font-weight: 500;
     font-size: 22px;
-    line-height: 128.5%;
+    line-height: 125%;
     color: #4E3629;
     margin: 0; }
     .elementor-give-forms--skin-grid-coropuna .elementor-give-form .give-card__title a {
@@ -2175,9 +2174,10 @@ body .mfp-active {
   .elementor-give-forms--skin-grid-coropuna .elementor-give-form .givewp-donation-form-modal__open {
     font-weight: 500 !important;
     padding: 15px 35px !important;
-    color: #FFFFFF !important;
+    color: #4E3629 !important;
     background: #BFCC80 !important; }
     .elementor-give-forms--skin-grid-coropuna .elementor-give-form .givewp-donation-form-modal__open:hover {
+      color: #FFFFFF !important;
       background: #4E3629 !important; }
   .elementor-give-forms--skin-grid-coropuna .elementor-give-form .give-goal-progress {
     position: absolute;
@@ -2185,10 +2185,9 @@ body .mfp-active {
     left: 0;
     width: 100%;
     z-index: 3;
-    font-size: 14px;
-    font-weight: 500;
+    font-size: 16px;
+    font-weight: 400;
     line-height: 1.25;
-    text-transform: uppercase;
     color: #BFCC80;
     margin-bottom: 0;
     padding: 30px 40px; }
@@ -2201,7 +2200,7 @@ body .mfp-active {
         flex-direction: row-reverse;
         align-items: baseline; }
       .elementor-give-forms--skin-grid-coropuna .elementor-give-form .give-goal-progress .raised .income, .elementor-give-forms--skin-grid-coropuna .elementor-give-form .give-goal-progress .raised .goal-text {
-        font-size: 18px;
+        font-size: 20px;
         font-weight: 500;
         line-height: 1.25;
         color: #BFCC80;

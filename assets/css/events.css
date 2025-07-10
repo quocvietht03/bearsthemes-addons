@@ -622,14 +622,14 @@
     align-items: center;
     justify-content: center;
     font-size: 40px;
-    font-weight: 700;
+    font-weight: 500;
     line-height: 1.25;
     text-transform: uppercase;
     color: #4E3629;
     background: #FFFFFF;
     z-index: 3;
     margin-top: -60px;
-    border: 5px solid #4E3629; }
+    border: 4px solid #4E3629; }
     .elementor-events--skin-list-coropuna .elementor-event__date:before {
       content: "";
       position: absolute;
@@ -640,7 +640,8 @@
       background: #BFCC80;
       margin-left: -20px; }
     .elementor-events--skin-list-coropuna .elementor-event__date .month {
-      font-size: 24px; }
+      font-size: 18px;
+      font-weight: 400; }
   .elementor-events--skin-list-coropuna .elementor-event__content {
     position: relative;
     background: #FFFFFF;
@@ -660,11 +661,11 @@
     padding: 0; }
     .elementor-events--skin-list-coropuna .elementor-event__meta li {
       display: inline-block;
-      font-size: 13px;
-      font-weight: 500;
+      font-size: 14px;
+      font-weight: 400;
       line-height: 1.25;
       text-transform: uppercase;
-      color: #BFCC80; }
+      color: #999999; }
       .elementor-events--skin-list-coropuna .elementor-event__meta li:not(:last-child) {
         margin-right: 40px; }
       .elementor-events--skin-list-coropuna .elementor-event__meta li svg {
