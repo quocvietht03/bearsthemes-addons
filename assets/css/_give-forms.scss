@@ -265,7 +265,7 @@
       &.has-btn-donation {
         .give-card {
           &__body {
-            padding: 30px 240px 30px 40px;
+            padding: 25px 180px 25px 30px;
           }
         }
       }
@@ -331,7 +331,7 @@
       .give-btn-modal {
         position: absolute;
         top: 50%;
-        right: 40px;
+        right: 30px;
         width: auto;
         display: inline-block;
         font-weight: 500;
@@ -340,8 +340,8 @@
         text-transform: uppercase;
         color: #4E3629;
         background: #BFCC80;
-        margin-top: -25px;
-        padding: 15px 35px;
+        margin-top: -22px;
+        padding: 12px 20px;
         &:hover {
           color: #FFFFFF;
           background: #4E3629;
@@ -349,7 +349,7 @@
       }
       .givewp-donation-form-modal__open {
         font-weight: 500 !important;
-        padding: 15px 35px !important;
+        padding: 12px 20px !important;
         color: #4E3629 !important;
         background: #BFCC80 !important;
         &:hover {
@@ -401,10 +401,10 @@
             padding: 25px 30px;
           }
         }
+        .givewp-donation-form-modal__open,
         .give-btn-modal {
           position: static;
           margin-top: 20px;
-          padding: 15px 30px;
         }
         .give-goal-progress {
           padding: 30px;

@@ -293,27 +293,43 @@
 
     @media( max-width: $break-md - 0.02 ) {
       &.swiper-main {
-        padding: 60px 30px 140px;
+        padding: 30px 30px 120px;
       }
       &.swiper-thumbs {
         max-width: 80%;
+      }
+      .elementor-testimonial {
+        padding-left: 70px;
+        &__icon svg {
+          width: 40px;
+          height: auto;
+        }
+        &__content {
+          font-size: 20px;
+        }
       }
     }
 
     @media( max-width: $break-xs - 0.02 ) {
       &.swiper-main {
-        padding: 40px 16px 100px;
+        padding: 20px 16px 85px;
       }
       &.swiper-thumbs {
         margin-top: -60px;
-        padding: 20px 10px;
+        padding: 10px;
       }
       .elementor-testimonial {
         text-align: center;
         padding-left: 0;
         &__icon {
           position: static;
-          margin-bottom: 16px;
+          margin-bottom: 8px;
+        }
+        &__content {
+          font-size: 18px;
+        }
+        &__name {
+          font-size: 20px;
         }
       }
     }

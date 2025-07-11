@@ -3534,21 +3534,32 @@
       transition: all .3s; }
 @media (max-width: 991.98px) {
   .elementor-testimonials--skin-list-coropuna.swiper-main {
-    padding: 60px 30px 140px; }
+    padding: 30px 30px 120px; }
   .elementor-testimonials--skin-list-coropuna.swiper-thumbs {
-    max-width: 80%; } }
+    max-width: 80%; }
+  .elementor-testimonials--skin-list-coropuna .elementor-testimonial {
+    padding-left: 70px; }
+    .elementor-testimonials--skin-list-coropuna .elementor-testimonial__icon svg {
+      width: 40px;
+      height: auto; }
+    .elementor-testimonials--skin-list-coropuna .elementor-testimonial__content {
+      font-size: 20px; } }
 @media (max-width: 575.98px) {
   .elementor-testimonials--skin-list-coropuna.swiper-main {
-    padding: 40px 16px 100px; }
+    padding: 20px 16px 85px; }
   .elementor-testimonials--skin-list-coropuna.swiper-thumbs {
     margin-top: -60px;
-    padding: 20px 10px; }
+    padding: 10px; }
   .elementor-testimonials--skin-list-coropuna .elementor-testimonial {
     text-align: center;
     padding-left: 0; }
     .elementor-testimonials--skin-list-coropuna .elementor-testimonial__icon {
       position: static;
-      margin-bottom: 16px; } }
+      margin-bottom: 8px; }
+    .elementor-testimonials--skin-list-coropuna .elementor-testimonial__content {
+      font-size: 18px; }
+    .elementor-testimonials--skin-list-coropuna .elementor-testimonial__name {
+      font-size: 20px; } }
 .elementor-testimonials--skin-list-ampato .elementor-testimonial {
   display: flex;
   align-items: center;
@@ -6252,6 +6263,18 @@
       font-weight: 400;
       line-height: 1.75;
       color: #555555; }
+    @media (max-width: 575.98px) {
+      .elementor-icon-box--skin-coropuna .elementor-icon-box__icon {
+        width: 50px;
+        height: 50px; }
+        .elementor-icon-box--skin-coropuna .elementor-icon-box__icon i {
+          font-size: 50px; }
+        .elementor-icon-box--skin-coropuna .elementor-icon-box__icon svg {
+          width: 50px; }
+      .elementor-icon-box--skin-coropuna .elementor-icon-box__title {
+        font-size: 16px; }
+      .elementor-icon-box--skin-coropuna .elementor-icon-box__desc {
+        font-size: 14px; } }
   .elementor-icon-box--skin-ampato {
     position: relative;
     text-align: center;

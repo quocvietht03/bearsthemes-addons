@@ -502,7 +502,16 @@
     }
 
     @media( max-width: $break-xs - 0.02 ) {
-      padding: 40px 16px 35px;
+      padding: 30px 16px 30px;
+      .elementor-gt-header {
+        &__sub-title, 
+        &__desc {
+          font-size: 16px;
+        }
+        &__title {
+          font-size: 36px;
+        }
+      }
     }
 
   }
