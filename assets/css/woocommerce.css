@@ -204,12 +204,12 @@
     left: 10px;
     width: 50px;
     height: 50px;
-    font-size: 13px;
-    font-weight: 700;
+    font-size: 14px;
+    font-weight: 400;
     line-height: 50px;
-    letter-spacing: 1px;
+    letter-spacing: 0.3px;
     text-align: center;
-    color: #FFFFFF;
+    color: #333;
     background-color: #fed700;
     z-index: 5;
     border-radius: 50px; }
@@ -292,10 +292,10 @@
   .elementor-products--skin-grid-andrus .elementor-product__content {
     padding: 25px 30px 20px; }
   .elementor-products--skin-grid-andrus .elementor-product__title {
-    font-size: 16px;
-    font-weight: 800;
+    font-size: 18px;
+    font-weight: 700;
     line-height: 1.25;
-    text-transform: uppercase;
+    color: #333333;
     margin-bottom: 8px; }
     .elementor-products--skin-grid-andrus .elementor-product__title a {
       color: inherit; }
@@ -313,7 +313,7 @@
       text-decoration: none; }
   .elementor-products--skin-grid-andrus .elementor-product__category {
     font-size: 14px;
-    font-weight: 700;
+    font-weight: 400;
     line-height: 1.5;
     color: #333333;
     padding: 12px 30px;

@@ -772,7 +772,7 @@
       border-radius: 40px; }
   .elementor-posts--skin-grid-andrus .elementor-post__title {
     font-size: 22px;
-    font-weight: 800;
+    font-weight: 700;
     line-height: 1.25;
     color: #FFFFFF;
     margin-bottom: 12px; }
@@ -3662,13 +3662,13 @@
     padding-left: 20px; }
   .elementor-testimonials--skin-list-andrus .elementor-testimonial__name {
     font-size: 24px;
-    font-weight: 800;
+    font-weight: 700;
     line-height: 1.25;
     color: #333333;
     margin-bottom: 0; }
   .elementor-testimonials--skin-list-andrus .elementor-testimonial__job {
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 400;
     line-height: 1.5;
     color: #fed700; }
 .elementor-testimonials--skin-list-saltoro .elementor-testimonial {
@@ -6381,7 +6381,7 @@
       transition: all .3s; }
   .elementor-icon-box--skin-andrus .elementor-icon-box__title {
     font-size: 22px;
-    font-weight: 800;
+    font-weight: 700;
     line-height: 1.25;
     color: #333333;
     margin-bottom: 12px; }
@@ -6389,7 +6389,7 @@
       color: inherit; }
   .elementor-icon-box--skin-andrus .elementor-icon-box__desc {
     max-width: 265px;
-    font-size: 17px;
+    font-size: 16px;
     font-weight: 400;
     line-height: 1.75;
     color: #555555;
@@ -6397,7 +6397,7 @@
   .elementor-icon-box--skin-andrus .elementor-icon-box__read-more {
     position: relative;
     font-size: 14px;
-    font-weight: 800;
+    font-weight: 700;
     line-height: 20px;
     text-transform: uppercase;
     color: #333333;

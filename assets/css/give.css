@@ -1046,8 +1046,8 @@ body .mfp-active {
   .elementor-give-form--skin-andrus .elementor-gf-header {
     width: 28%; }
     .elementor-give-form--skin-andrus .elementor-gf-header__title {
-      font-size: 34px;
-      font-weight: 800;
+      font-size: 32px;
+      font-weight: 700;
       line-height: 1.25;
       text-transform: uppercase;
       color: #333333;
@@ -2283,17 +2283,16 @@ body .mfp-active {
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px; }
   .elementor-give-forms--skin-list-andrus .elementor-give-form-feature .give-card__category {
-    font-size: 13px;
-    font-weight: 700;
+    font-size: 14px;
+    font-weight: 400;
     line-height: 1.5;
-    text-transform: uppercase;
     color: #bfbebe;
     margin-bottom: 5px; }
     .elementor-give-forms--skin-list-andrus .elementor-give-form-feature .give-card__category a {
       color: #fed700; }
   .elementor-give-forms--skin-list-andrus .elementor-give-form-feature .give-card__title {
     font-size: 22px;
-    font-weight: 800;
+    font-weight: 700;
     line-height: 1.25;
     color: #ffffff;
     margin-bottom: 5px; }
@@ -2332,7 +2331,7 @@ body .mfp-active {
       margin-bottom: 0; }
     .elementor-give-forms--skin-list-andrus .elementor-give-form-feature .give-goal-progress .income, .elementor-give-forms--skin-list-andrus .elementor-give-form-feature .give-goal-progress .goal-text {
       font-size: 24px;
-      font-weight: 800;
+      font-weight: 700;
       line-height: 1.25;
       color: #fed700; }
 .elementor-give-forms--skin-list-andrus .elementor-give-form {
@@ -2373,19 +2372,17 @@ body .mfp-active {
     position: relative;
     padding: 10px 30px; }
   .elementor-give-forms--skin-list-andrus .elementor-give-form .give-card__category {
-    font-size: 13px;
-    font-weight: 700;
+    font-size: 14px;
+    font-weight: 400;
     line-height: 1.5;
-    text-transform: uppercase;
-    color: #bfbebe;
+    color: #999;
     margin-bottom: 5px; }
     .elementor-give-forms--skin-list-andrus .elementor-give-form .give-card__category a {
       color: #fed700; }
   .elementor-give-forms--skin-list-andrus .elementor-give-form .give-card__title {
-    font-size: 16px;
-    font-weight: 800;
-    line-height: 24px;
-    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.25;
     color: #333333;
     margin-bottom: 5px; }
     .elementor-give-forms--skin-list-andrus .elementor-give-form .give-card__title a {
@@ -2417,13 +2414,13 @@ body .mfp-active {
     font-size: 14px;
     font-weight: 400;
     line-height: 1.25;
-    color: #666666;
+    color: #555;
     margin-bottom: 0; }
     .elementor-give-forms--skin-list-andrus .elementor-give-form .give-goal-progress .raised {
       margin-bottom: 0; }
     .elementor-give-forms--skin-list-andrus .elementor-give-form .give-goal-progress .income, .elementor-give-forms--skin-list-andrus .elementor-give-form .give-goal-progress .goal-text {
       font-size: 18px;
-      font-weight: 800;
+      font-weight: 700;
       line-height: 1.25;
       color: #fed700; }
 @media (max-width: 991.98px) {

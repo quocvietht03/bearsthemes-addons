@@ -502,10 +502,9 @@
           border-bottom-right-radius: 5px;
         }
         &__category {
-          font-size: 13px;
-          font-weight: 700;
+          font-size: 14px;
+          font-weight: 400;
           line-height: 1.5;
-          text-transform: uppercase;
           color: #bfbebe;
           margin-bottom: 5px;
           a {
@@ -514,7 +513,7 @@
         }
         &__title {
           font-size: 22px;
-          font-weight: 800;
+          font-weight: 700;
           line-height: 1.25;
           color: #ffffff;
           margin-bottom: 5px;
@@ -560,7 +559,7 @@
         }
         .income, .goal-text {
           font-size: 24px;
-          font-weight: 800;
+          font-weight: 700;
           line-height: 1.25;
           color: #fed700;
         }
@@ -610,21 +609,19 @@
           padding: 10px 30px;
         }
         &__category {
-          font-size: 13px;
-          font-weight: 700;
+          font-size: 14px;
+          font-weight: 400;
           line-height: 1.5;
-          text-transform: uppercase;
-          color: #bfbebe;
+          color: #999;
           margin-bottom: 5px;
           a {
             color: #fed700;
           }
         }
         &__title {
-          font-size: 16px;
-          font-weight: 800;
-          line-height: 24px;
-          text-transform: uppercase;
+          font-size: 20px;
+          font-weight: 700;
+          line-height: 1.25;
           color: #333333;
           margin-bottom: 5px;
           a {
@@ -661,14 +658,14 @@
         font-size: 14px;
         font-weight: 400;
         line-height: 1.25;
-        color: #666666;
+        color: #555;
         margin-bottom: 0;
         .raised {
           margin-bottom: 0;
         }
         .income, .goal-text {
           font-size: 18px;
-          font-weight: 800;
+          font-weight: 700;
           line-height: 1.25;
           color: #fed700;
         }
