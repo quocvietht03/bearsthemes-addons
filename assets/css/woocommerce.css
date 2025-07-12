@@ -220,11 +220,10 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 700;
     line-height: 20px;
-    text-transform: uppercase;
-    color: #fed700;
+    color: #333333;
     background-color: #FFFFFF;
     margin: 0;
     padding: 0 15px 0 0;
@@ -245,7 +244,7 @@
       -webkit-transition: all .3s;
       transition: all .3s; }
       .elementor-products--skin-grid-andrus .elementor-product .button .icon svg {
-        fill: #FFFFFF;
+        fill: currentColor;
         margin-top: -2px; }
     .elementor-products--skin-grid-andrus .elementor-product .button .text {
       display: inline-block;
@@ -275,12 +274,11 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 700;
     line-height: 20px;
-    text-transform: uppercase;
     text-align: center;
-    color: #FFFFFF;
+    color: #333333;
     background: #fed700;
     padding: 8px 0;
     z-index: 5;
@@ -290,7 +288,8 @@
     -webkit-transform: translateY(100%);
     transform: translateY(100%); }
   .elementor-products--skin-grid-andrus .elementor-product__content {
-    padding: 25px 30px 20px; }
+    min-height: 115px;
+    padding: 20px; }
   .elementor-products--skin-grid-andrus .elementor-product__title {
     font-size: 18px;
     font-weight: 700;
@@ -316,7 +315,7 @@
     font-weight: 400;
     line-height: 1.5;
     color: #333333;
-    padding: 12px 30px;
+    padding: 10px 20px;
     border-top: 1px solid #e7e5e4; }
     .elementor-products--skin-grid-andrus .elementor-product__category a {
       color: inherit; }

@@ -563,7 +563,8 @@ class Skin_Grid_Andrus extends Skin_Base {
 			[
 				'name' => 'add_to_cart_typography',
 				'default' => '',
-				'selector' => '{{WRAPPER}} .elementor-product .button',
+				'selector' => '{{WRAPPER}} .elementor-product .button,
+								{{WRAPPER}} .elementor-product .added_to_cart',
 				'condition' => [
 					'skin_grid_andrus_show_thumbnail!' => '',
 				],

@@ -1008,7 +1008,8 @@
         }
       }
       &__content {
-        padding: 30px;
+        min-height: 185px;
+        padding: 24px;
       }
       &__date {
         font-size: 14px;

@@ -531,7 +531,7 @@
         font-weight: 700;
         line-height: 24px;
         text-transform: uppercase;
-        color: #ffffff;
+        color: #333333;
         background: #fed700;
         margin: 0;
         padding: 13px 20px;
@@ -541,8 +541,9 @@
         }
       }
       .givewp-donation-form-modal__open {
+        font-weight: 700 !important;
         padding: 13px 20px !important;
-        color: #ffffff;
+        color: #333333 !important;
         background: #fed700 !important;
         &:hover {
           background: #F1CD08 !important;
@@ -638,7 +639,7 @@
         height: 40px;
         font-size: 0;
         background-color: #fed700;
-        background-image: url('../images/heart-light.svg');
+        background-image: url('../images/heart-dark.svg');
         background-repeat: no-repeat;
         background-position: center;
         background-size: 16px;

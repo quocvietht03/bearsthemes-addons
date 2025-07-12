@@ -735,7 +735,8 @@
       -webkit-transition: all 1.5s cubic-bezier(0.11, 0.52, 0.53, 0.79) 0s;
       transition: all 1.5s cubic-bezier(0.11, 0.52, 0.53, 0.79) 0s; }
   .elementor-events--skin-grid-andrus .elementor-event__content {
-    padding: 30px; }
+    min-height: 185px;
+    padding: 24px; }
   .elementor-events--skin-grid-andrus .elementor-event__date {
     font-size: 14px;
     font-weight: 400;
