@@ -2966,14 +2966,14 @@
           background: #AB3493;
           border-radius: 5px;
           color: #fff;
-          font-weight: 600;
+          font-weight: 400;
           font-size: 12px;
           line-height: 15px;
           text-transform: uppercase;
         }
       }
       &__date {
-        font-weight: 600;
+        font-weight: 400;
         font-size: 14px;
         line-height: 17px;
         color: #AB3493;
@@ -2993,11 +2993,11 @@
       }
       &__title {
         font-size: 22px;
-        line-height: 30px;
+        line-height: 1.25;
         color: #292937;
         margin-top: 0px;
         margin-bottom: 0px;
-        font-weight: 700;
+        font-weight: 600;
         a {
           color: inherit;
         }
@@ -3008,7 +3008,7 @@
         box-sizing: border-box;
         border-radius: 10px;
         padding: 9px 20px 7px;
-        font-weight: 500;
+        font-weight: 400;
         font-size: 14px;
         line-height: 17px;
         color: #AB3493;

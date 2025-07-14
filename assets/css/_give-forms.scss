@@ -2217,9 +2217,9 @@
           }
         }
         &__title {
-          font-weight: bold;
+          font-weight: 600;
           font-size: 22px;
-          line-height: 30px;
+          line-height: 1.25;
           color: #292937;
           margin-bottom: 5px;
           a {
@@ -2228,14 +2228,14 @@
         }
         &__excerpt{
           font-size: 16px;
-          line-height: 28px;
+          line-height: 1.75;
           color: #555555;
         }
         &__category {
           font-size: 13px;
           text-transform: uppercase;
           color: #AB3493;
-          font-weight: 700;
+          font-weight: 400;
           a {
             color: inherit;
           }
@@ -2261,13 +2261,13 @@
           box-sizing: border-box;
           border-radius: 10px;
           padding: 10px 30px;
-          font-weight: 500;
+          font-weight: 400;
           font-size: 14px;
           line-height: 26px;
           text-transform: uppercase;
           color: #6C6C6C;
           span{
-            font-weight: 700;
+            font-weight: 600;
             font-size: 18px;
             color: #AB3493;
           }
@@ -2291,7 +2291,7 @@
           display: none
         }
         .progressbar-text {
-            font-weight: 600;
+            font-weight: 400;
         }
         .give-progress-bar{
           height: 6px !important;

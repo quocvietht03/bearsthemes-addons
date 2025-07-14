@@ -3591,22 +3591,22 @@ body .mfp-active {
         font-size: 18px;
         color: #fff; }
   .elementor-give-forms--skin-grid-cholatse .elementor-give-form .give-card__title {
-    font-weight: bold;
+    font-weight: 600;
     font-size: 22px;
-    line-height: 30px;
+    line-height: 1.25;
     color: #292937;
     margin-bottom: 5px; }
     .elementor-give-forms--skin-grid-cholatse .elementor-give-form .give-card__title a {
       color: inherit; }
   .elementor-give-forms--skin-grid-cholatse .elementor-give-form .give-card__excerpt {
     font-size: 16px;
-    line-height: 28px;
+    line-height: 1.75;
     color: #555555; }
   .elementor-give-forms--skin-grid-cholatse .elementor-give-form .give-card__category {
     font-size: 13px;
     text-transform: uppercase;
     color: #AB3493;
-    font-weight: 700; }
+    font-weight: 400; }
     .elementor-give-forms--skin-grid-cholatse .elementor-give-form .give-card__category a {
       color: inherit; }
     .elementor-give-forms--skin-grid-cholatse .elementor-give-form .give-card__category svg {
@@ -3628,13 +3628,13 @@ body .mfp-active {
       box-sizing: border-box;
       border-radius: 10px;
       padding: 10px 30px;
-      font-weight: 500;
+      font-weight: 400;
       font-size: 14px;
       line-height: 26px;
       text-transform: uppercase;
       color: #6C6C6C; }
       .elementor-give-forms--skin-grid-cholatse .elementor-give-form .give-card__bottom-progress .give-card__raised span {
-        font-weight: 700;
+        font-weight: 600;
         font-size: 18px;
         color: #AB3493; }
     .elementor-give-forms--skin-grid-cholatse .elementor-give-form .give-card__bottom-progress .give-card__progress-bar {
@@ -3651,7 +3651,7 @@ body .mfp-active {
     .elementor-give-forms--skin-grid-cholatse .elementor-give-form .give-goal-progress .raised {
       display: none; }
     .elementor-give-forms--skin-grid-cholatse .elementor-give-form .give-goal-progress .progressbar-text {
-      font-weight: 600; }
+      font-weight: 400; }
     .elementor-give-forms--skin-grid-cholatse .elementor-give-form .give-goal-progress .give-progress-bar {
       height: 6px !important; }
 @media (max-width: 767.98px) {

@@ -75,9 +75,10 @@
   &--default {
     .elementor-icon-box {
       &__icon-wrap {
-        margin-bottom: 24px;
+        margin-bottom: 20px;
       }
       &__icon {
+        line-height: 0;
         -webkit-transition: all .3s;
         transition: all .3s;
         i {
@@ -707,7 +708,7 @@
       }
       &__title {
         font-size: 20px;
-        font-weight: 700;
+        font-weight: 600;
         line-height: 1.25;
         text-transform: uppercase;
         color: #FFFFFF;
@@ -718,7 +719,7 @@
       }
       &__read-more {
         font-size: 14px;
-        font-weight: 600;
+        font-weight: 400;
         line-height: 20px;
         text-transform: uppercase;
         color: #FFFFFF;

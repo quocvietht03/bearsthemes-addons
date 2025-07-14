@@ -2523,12 +2523,12 @@
       background: #AB3493;
       border-radius: 5px;
       color: #fff;
-      font-weight: 600;
+      font-weight: 400;
       font-size: 12px;
       line-height: 15px;
       text-transform: uppercase; }
   .elementor-posts--skin-grid-cholatse .elementor-post__date {
-    font-weight: 600;
+    font-weight: 400;
     font-size: 14px;
     line-height: 17px;
     color: #AB3493;
@@ -2545,11 +2545,11 @@
       color: inherit; }
   .elementor-posts--skin-grid-cholatse .elementor-post__title {
     font-size: 22px;
-    line-height: 30px;
+    line-height: 1.25;
     color: #292937;
     margin-top: 0px;
     margin-bottom: 0px;
-    font-weight: 700; }
+    font-weight: 600; }
     .elementor-posts--skin-grid-cholatse .elementor-post__title a {
       color: inherit; }
   .elementor-posts--skin-grid-cholatse .elementor-post__author {
@@ -2558,7 +2558,7 @@
     box-sizing: border-box;
     border-radius: 10px;
     padding: 9px 20px 7px;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 14px;
     line-height: 17px;
     color: #AB3493;
@@ -3998,15 +3998,15 @@
     margin-left: -100px; }
   .elementor-testimonials--skin-list-cholatse .elementor-testimonial__name {
     display: block;
-    font-size: 26px;
-    font-weight: 700;
+    font-size: 24px;
+    font-weight: 600;
     color: #292937;
     margin-bottom: 0; }
   .elementor-testimonials--skin-list-cholatse .elementor-testimonial__job {
     display: block;
     color: #AB3493;
-    font-size: 15px;
-    font-weight: 500; }
+    font-size: 14px;
+    font-weight: 400; }
 .elementor-testimonials--skin-list-cholatse .elementor-swiper-button {
   width: 68px;
   height: 68px;
@@ -5015,7 +5015,7 @@
     transition: all .3s; }
   .elementor-members--skin-cholatse .elementor-member__title {
     font-size: 22px;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -5027,7 +5027,7 @@
       color: inherit; }
   .elementor-members--skin-cholatse .elementor-member__position {
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 400;
     color: #FFFFFF;
     text-transform: uppercase; }
   .elementor-members--skin-cholatse .elementor-member__content {
@@ -6071,8 +6071,9 @@
   .elementor-icon-box--icon-shape-square .elementor-icon-box__icon {
     border-radius: 0; }
   .elementor-icon-box--default .elementor-icon-box__icon-wrap {
-    margin-bottom: 24px; }
+    margin-bottom: 20px; }
   .elementor-icon-box--default .elementor-icon-box__icon {
+    line-height: 0;
     -webkit-transition: all .3s;
     transition: all .3s; }
     .elementor-icon-box--default .elementor-icon-box__icon i {
@@ -6557,7 +6558,7 @@
       margin-right: auto; }
     .elementor-icon-box--skin-cholatse .elementor-icon-box__title {
       font-size: 20px;
-      font-weight: 700;
+      font-weight: 600;
       line-height: 1.25;
       text-transform: uppercase;
       color: #FFFFFF;
@@ -6566,7 +6567,7 @@
         color: inherit; }
     .elementor-icon-box--skin-cholatse .elementor-icon-box__read-more {
       font-size: 14px;
-      font-weight: 600;
+      font-weight: 400;
       line-height: 20px;
       text-transform: uppercase;
       color: #FFFFFF;
