@@ -931,7 +931,8 @@
       color: inherit; }
   .elementor-posts--skin-grid-changtse .elementor-post__title {
     font-size: 20px;
-    line-height: 28px;
+    font-weight: 600;
+    line-height: 1.25;
     color: #333;
     margin-top: 0px;
     margin-bottom: 15px; }
@@ -939,7 +940,7 @@
       color: inherit; }
   .elementor-posts--skin-grid-changtse .elementor-post__author {
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 400;
     color: #666; }
     .elementor-posts--skin-grid-changtse .elementor-post__author a {
       color: inherit; }
@@ -955,8 +956,8 @@
     .elementor-posts--skin-grid-changtse .elementor-post__meta li {
       list-style: none;
       display: inline-block;
-      font-size: 14px;
-      font-weight: 600;
+      font-size: 13px;
+      font-weight: 400;
       line-height: 20px;
       color: #e05d41; }
       .elementor-posts--skin-grid-changtse .elementor-post__meta li:not(:last-child) {
@@ -3749,7 +3750,7 @@
     fill: #c1c1c1; }
   .elementor-testimonials--skin-list-changtse .elementor-testimonial__content {
     font-size: 22px;
-    line-height: 36px;
+    line-height: 1.75;
     font-style: italic;
     color: #666;
     margin: 15px auto 30px;
@@ -3778,17 +3779,16 @@
     text-align: left;
     padding-left: 20px; }
   .elementor-testimonials--skin-list-changtse .elementor-testimonial__name {
-    font-size: 24px;
-    line-height: 32px;
-    font-weight: 800;
+    font-size: 22px;
+    line-height: 1.25;
+    font-weight: 600;
     text-transform: none;
     color: #333;
     margin-bottom: 0; }
   .elementor-testimonials--skin-list-changtse .elementor-testimonial__job {
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 26px;
-    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
     color: #e05d41; }
 @media (max-width: 991.98px) {
   .elementor-testimonials--skin-list-changtse .elementor-testimonial {

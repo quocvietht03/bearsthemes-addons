@@ -2485,7 +2485,7 @@ body .mfp-active {
     border-top: none; }
   .elementor-give-forms--skin-grid-changtse .elementor-give-form .give-card__title {
     font-size: 22px;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.25;
     color: #333333;
     -webkit-line-clamp: 2;
@@ -2495,8 +2495,8 @@ body .mfp-active {
     .elementor-give-forms--skin-grid-changtse .elementor-give-form .give-card__title a {
       color: inherit; }
   .elementor-give-forms--skin-grid-changtse .elementor-give-form .give-card__date {
-    font-size: 16px;
-    font-weight: 600;
+    font-size: 14px;
+    font-weight: 400;
     line-height: 1.5;
     color: #e05d41;
     margin-bottom: 15px; }
@@ -2510,10 +2510,11 @@ body .mfp-active {
     list-style-type: none;
     margin-top: 0px;
     margin-bottom: 0;
-    position: relative; }
+    position: relative;
+    font-size: 14px; }
     .elementor-give-forms--skin-grid-changtse .elementor-give-form .give-card__set-goal .bt-give-goal {
       font-size: 32px;
-      font-weight: 700;
+      font-weight: 600;
       color: #333;
       line-height: 1; }
       .elementor-give-forms--skin-grid-changtse .elementor-give-form .give-card__set-goal .bt-give-goal sub {

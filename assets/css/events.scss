@@ -452,9 +452,8 @@
       &__content-header {
         width: 100%;
         .event-cate-list{
-          font-size: 14px;
-          font-weight: 600;
-          text-transform: uppercase;
+          font-size: 16px;
+          font-weight: 400;
           color: #667a62;
           a {
             color: inherit;
@@ -496,33 +495,33 @@
         position: relative;
       }
       &__address-tile {
-        font-weight: 600;
+        font-weight: 400;
         display: block;
         text-transform: uppercase;
-        color: #888;
+        color: #999;
         line-height: 20px;
-        font-size: 14px;
+        font-size: 12px;
         margin-bottom: 0;
       }
       .tribe-address {
         display: block;
         color: #e05d41;
         font-size: 14px;
-        font-weight: 600;
+        font-weight: 400;
       }
       .tribe-date {
         display: block;
         color: #e05d41;
         font-size: 14px;
-        font-weight: 600;
+        font-weight: 400;
       }
       &__date-tile {
-        font-weight: 600;
+        font-weight: 400;
         display: block;
         text-transform: uppercase;
-        color: #888;
+        color: #999;
         line-height: 20px;
-        font-size: 14px;
+        font-size: 12px;
         margin-bottom: 0;
       }
 
