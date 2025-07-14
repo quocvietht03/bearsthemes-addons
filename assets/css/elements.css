@@ -3671,6 +3671,20 @@
     font-weight: 400;
     line-height: 1.5;
     color: #fed700; }
+  @media (max-width: 1024.98px) {
+    .elementor-testimonials--skin-list-andrus .elementor-testimonial__content {
+      font-size: 20px; }
+    .elementor-testimonials--skin-list-andrus .elementor-testimonial__name {
+      font-size: 18px; }
+    .elementor-testimonials--skin-list-andrus .elementor-testimonial__job {
+      font-size: 14px; } }
+  @media (max-width: 767.98px) {
+    .elementor-testimonials--skin-list-andrus .elementor-testimonial__content {
+      font-size: 18px; }
+    .elementor-testimonials--skin-list-andrus .elementor-testimonial__name {
+      font-size: 16px; }
+    .elementor-testimonials--skin-list-andrus .elementor-testimonial__job {
+      font-size: 13px; } }
 .elementor-testimonials--skin-list-saltoro .elementor-testimonial {
   overflow: hidden;
   text-align: center; }

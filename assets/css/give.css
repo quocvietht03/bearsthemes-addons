@@ -1160,6 +1160,11 @@ body .mfp-active {
           font-size: 16px; }
       .elementor-give-form--skin-andrus .elementor-gf-form {
         width: 70%; } }
+  @media (max-width: 1024.98px) {
+    .elementor-give-form--skin-andrus {
+      padding: 32px 16px; }
+      .elementor-give-form--skin-andrus .elementor-gf-header__title {
+        font-size: 24px; } }
   @media (max-width: 991.98px) {
     .elementor-give-form--skin-andrus {
       flex-direction: column; }

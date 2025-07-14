@@ -469,6 +469,28 @@
         line-height: 1.5;
         color: #fed700;
       }
+      @media (max-width: $break-tl - 0.02) {
+        &__content {
+          font-size: 20px;
+        }
+        &__name {
+          font-size: 18px;
+        }
+        &__job {
+          font-size: 14px;
+        }
+      }
+      @media (max-width: $break-sm - 0.02) {
+        &__content {
+          font-size: 18px;
+        }
+        &__name {
+          font-size: 16px;
+        }
+        &__job {
+          font-size: 13px;
+        }
+      }
     }
   }
 
