@@ -1910,7 +1910,7 @@
     border-right: #e1e1e1 solid 1px; }
     .elementor-events--skin-list-michelson .elementor-event__date .date {
       font-size: 40px;
-      font-weight: 800;
+      font-weight: 600;
       color: #333333; }
   .elementor-events--skin-list-michelson .elementor-event__inner {
     width: calc(100% - 250px);
@@ -1928,7 +1928,7 @@
       margin: -3px 4px 0 1px; }
   .elementor-events--skin-list-michelson .elementor-event__title {
     font-size: 18px;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.25;
     text-transform: uppercase;
     color: #333333;
@@ -2359,7 +2359,7 @@
       border-right: #e1e1e1 solid 1px; }
       .elementor-events--skin-cobble-michelson .elementor-event__date .date {
         font-size: 40px;
-        font-weight: 800;
+        font-weight: 600;
         color: #FFFFFF; }
     .elementor-events--skin-cobble-michelson .elementor-event__inner {
       padding: 0 20px; }
@@ -2376,7 +2376,7 @@
         margin: -3px 4px 0 1px; }
     .elementor-events--skin-cobble-michelson .elementor-event__title {
       font-size: 20px;
-      font-weight: 700;
+      font-weight: 600;
       line-height: 1.25;
       color: #FFFFFF;
       margin-bottom: 4px; }

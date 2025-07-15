@@ -907,19 +907,42 @@
       border-radius: 10px;
       color: #292937;
     }
-    @media( max-width: $break-sm ) {
+    @media( max-width: $break-tl - 0.02 ) {
+      .elementor-testimonial {
+        &__infor {
+          -webkit-mask-image: none;
+          mask-image: none;
+          padding: 40px 40px 40px 120px;
+          border-radius: 40px;
+        }
+        &__content {
+          &:after{
+            left: 70%;
+            bottom: -80px;
+          }
+        }
+      }
+      .elementor-swiper-button{
+        display: none;
+      }
+    }
+    @media( max-width: $break-sm - 0.02 ) {
       .elementor-testimonial {
         &__item{
             padding-left: 0px;
             text-align: center;
         }
+        &__thumbnail {
+          width: 140px;
+          height: 140px;
+          padding-bottom: 140px;
+        }
         &__infor {
           width: 100%;
           -webkit-mask-image: none;
           mask-image: none;
-          padding: 15px;
-          margin-left: 0px;
-          padding-bottom: 30px;
+          padding: 90px 15px 30px 15px;
+          margin: -70px 0 0;
         }
         &__content {
           font-size: 16px;
