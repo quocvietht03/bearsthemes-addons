@@ -2576,6 +2576,14 @@
       margin-right: 8px;
       border-radius: 40px;
       margin-top: -2px; }
+  @media (max-width: 1024.98px) {
+    .elementor-posts--skin-grid-cholatse .elementor-post__content {
+      padding: 30px 24px 50px 24px; }
+    .elementor-posts--skin-grid-cholatse .elementor-post__title {
+      font-size: 20px; } }
+  @media (max-width: 767.98px) {
+    .elementor-posts--skin-grid-cholatse .elementor-post__content {
+      padding: 30px 16px 50px 16px; } }
   @media (max-width: 575.98px) {
     .elementor-posts--skin-grid-cholatse .elementor-post__date, .elementor-posts--skin-grid-cholatse .elementor-post__meta li {
       font-size: 13px; }

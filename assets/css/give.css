@@ -3654,9 +3654,14 @@ body .mfp-active {
       font-weight: 400; }
     .elementor-give-forms--skin-grid-cholatse .elementor-give-form .give-goal-progress .give-progress-bar {
       height: 6px !important; }
+@media (max-width: 1024.98px) {
+  .elementor-give-forms--skin-grid-cholatse .elementor-give-form .give-card__body {
+    padding: 44px 24px 56px 24px; }
+  .elementor-give-forms--skin-grid-cholatse .elementor-give-form .give-card__title {
+    font-size: 20px; } }
 @media (max-width: 767.98px) {
   .elementor-give-forms--skin-grid-cholatse .elementor-give-form .give-card__body {
-    padding: 44px 20px 56px 20px;
+    padding: 44px 16px 56px 16px;
     position: relative; }
   .elementor-give-forms--skin-grid-cholatse .elementor-give-form .give-card__bottom-progress {
     width: calc(100% - 40px);

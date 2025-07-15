@@ -3031,6 +3031,20 @@
         }
       }
 
+      @media( max-width: $break-tl - 0.02 ) {
+        &__content {
+          padding: 30px 24px 50px 24px;
+        }
+        &__title {
+          font-size: 20px;
+        }
+      }
+
+      @media( max-width: $break-sm - 0.02 ) {
+        &__content {
+          padding: 30px 16px 50px 16px;
+        }
+      }
 
       @media( max-width: $break-xs - 0.02 ) {
         &__date, &__meta li {
