@@ -1991,8 +1991,8 @@
         }
       }
       &__title {
-        font-size: 34px;
-        font-weight: 700;
+        font-size: 24px;
+        font-weight: 600;
         line-height: 1.25;
         color: #1D2440;
         margin-bottom: 16px;
@@ -2001,10 +2001,10 @@
         }
       }
       &__excerpt {
-        font-size: 17px;
+        font-size: 18px;
         line-height: 1.75;
         color: #666666;
-        margin-bottom: 36px;
+        margin-bottom: 30px;
         p {
           margin: 0;
         }
@@ -2012,12 +2012,12 @@
       &__read-more {
         display: inline-block;
         font-size: 14px;
-        font-weight: 700;
+        font-weight: 600;
         line-height: 20px;
         text-transform: uppercase;
         color: #1D2440;
         background: #EFAB23;
-        padding: 18px 46px;
+        padding: 16px 40px;
         &:hover {
           color: #FFFFFF;
           background: #1D2440;

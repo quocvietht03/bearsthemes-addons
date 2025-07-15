@@ -1816,29 +1816,29 @@
         fill: currentColor;
         margin: -3px 4px 0 1px; }
   .elementor-posts--skin-list-ampato .elementor-post__title {
-    font-size: 34px;
-    font-weight: 700;
+    font-size: 24px;
+    font-weight: 600;
     line-height: 1.25;
     color: #1D2440;
     margin-bottom: 16px; }
     .elementor-posts--skin-list-ampato .elementor-post__title a {
       color: inherit; }
   .elementor-posts--skin-list-ampato .elementor-post__excerpt {
-    font-size: 17px;
+    font-size: 18px;
     line-height: 1.75;
     color: #666666;
-    margin-bottom: 36px; }
+    margin-bottom: 30px; }
     .elementor-posts--skin-list-ampato .elementor-post__excerpt p {
       margin: 0; }
   .elementor-posts--skin-list-ampato .elementor-post__read-more {
     display: inline-block;
     font-size: 14px;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 20px;
     text-transform: uppercase;
     color: #1D2440;
     background: #EFAB23;
-    padding: 18px 46px; }
+    padding: 16px 40px; }
     .elementor-posts--skin-list-ampato .elementor-post__read-more:hover {
       color: #FFFFFF;
       background: #1D2440; }
@@ -3604,17 +3604,17 @@
   .elementor-testimonials--skin-list-ampato .elementor-testimonial__content {
     font-size: 20px;
     line-height: 1.75;
-    color: #666666;
+    color: #555555;
     margin-bottom: 24px; }
   .elementor-testimonials--skin-list-ampato .elementor-testimonial__name {
-    font-size: 26px;
-    font-weight: 700;
+    font-size: 24px;
+    font-weight: 600;
     line-height: 1.25;
     color: #1D2440;
     margin-bottom: 8px; }
   .elementor-testimonials--skin-list-ampato .elementor-testimonial__job {
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 400;
     line-height: 1.5;
     text-transform: uppercase;
     color: #EFAB23; }
@@ -6347,7 +6347,7 @@
         transition: all .3s; }
     .elementor-icon-box--skin-ampato .elementor-icon-box__title {
       font-size: 24px;
-      font-weight: 700;
+      font-weight: 600;
       line-height: 1.25;
       color: #FFFFFF;
       margin-bottom: 12px; }
@@ -6363,7 +6363,7 @@
     .elementor-icon-box--skin-ampato .elementor-icon-box__read-more {
       display: inline-block;
       font-size: 15px;
-      font-weight: 700;
+      font-weight: 600;
       line-height: 20px;
       color: #FFFFFF;
       padding: 12px 35px;
@@ -6739,6 +6739,7 @@
       padding: 30px; }
     .elementor-image-box--skin-ampato .elementor-image-box__title {
       font-size: 22px;
+      font-weight: 600;
       line-height: 1.25;
       color: #1D2440;
       margin-bottom: 12px; }
@@ -6755,7 +6756,7 @@
       border-bottom: 4px solid #DEDEDE; }
     .elementor-image-box--skin-ampato .elementor-image-box__read-more {
       font-size: 16px;
-      font-weight: 700;
+      font-weight: 600;
       line-height: 1.5;
       color: #EFAB23; }
       .elementor-image-box--skin-ampato .elementor-image-box__read-more svg {
