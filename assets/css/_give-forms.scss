@@ -1274,6 +1274,9 @@
           line-height: 1.25;
           color: #002f6c;
           margin-bottom: 20px;
+          @media(max-width: $break-sm - 0.02) {
+            font-size: 20px;
+          }
           a {
             color: inherit;
           }

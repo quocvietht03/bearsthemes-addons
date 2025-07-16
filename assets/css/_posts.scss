@@ -2216,7 +2216,7 @@
           }
           &__content {
             width: 65%;
-            padding-right: 30px;
+            padding-right: 60px;
           }
         }
       }
@@ -2271,7 +2271,7 @@
         }
       }
       &__title {
-        font-size: 30px;
+        font-size: 24px;
         font-weight: 600;
         line-height: 1.25;
         color: #002f6c;
@@ -2313,6 +2313,16 @@
         }
       }
 
+      @media( max-width: $break-tl - 0.02 ) {
+        &.has-thumbnail {
+          .elementor-post {
+            &__content {
+              padding-right: 30px;
+            }
+          }
+        }
+      }
+
       @media( max-width: $break-md - 0.02 ) {
         &.has-thumbnail {
           flex-direction: column;
@@ -2328,6 +2338,23 @@
           }
         }
 
+      }
+
+      @media( max-width: $break-sm - 0.02 ) {
+        .elementor-post {
+          &__date {
+            font-size: 14px;
+          }
+          &__title {
+            font-size: 20px;
+          }
+          &__meta li {
+            font-size: 13px;
+          }
+          &__excerpt {
+            font-size: 16px;
+          }
+        }
       }
 
       @media( max-width: $break-xs - 0.02 ) {

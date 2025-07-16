@@ -2883,6 +2883,9 @@ body .mfp-active {
     line-height: 1.25;
     color: #002f6c;
     margin-bottom: 20px; }
+    @media (max-width: 767.98px) {
+      .elementor-give-forms--skin-grid-nevado .elementor-give-form .give-card__title {
+        font-size: 20px; } }
     .elementor-give-forms--skin-grid-nevado .elementor-give-form .give-card__title a {
       color: inherit; }
   .elementor-give-forms--skin-grid-nevado .elementor-give-form .give-card__meta {

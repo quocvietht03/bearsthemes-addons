@@ -1963,7 +1963,7 @@
       width: 35%; }
     .elementor-posts--skin-list-nevado .elementor-post.has-thumbnail .elementor-post__content {
       width: 65%;
-      padding-right: 30px; }
+      padding-right: 60px; }
   .elementor-posts--skin-list-nevado .elementor-post.has-date .elementor-post__content {
     padding-left: 120px; }
   .elementor-posts--skin-list-nevado .elementor-post__thumbnail {
@@ -2003,7 +2003,7 @@
       color: #265ed7;
       margin-bottom: 5px; }
   .elementor-posts--skin-list-nevado .elementor-post__title {
-    font-size: 30px;
+    font-size: 24px;
     font-weight: 600;
     line-height: 1.25;
     color: #002f6c;
@@ -2035,6 +2035,9 @@
     color: #555555; }
     .elementor-posts--skin-list-nevado .elementor-post__excerpt p {
       margin: 0; }
+  @media (max-width: 1024.98px) {
+    .elementor-posts--skin-list-nevado .elementor-post.has-thumbnail .elementor-post__content {
+      padding-right: 30px; } }
   @media (max-width: 991.98px) {
     .elementor-posts--skin-list-nevado .elementor-post.has-thumbnail {
       flex-direction: column; }
@@ -2044,6 +2047,15 @@
       .elementor-posts--skin-list-nevado .elementor-post.has-thumbnail .elementor-post__content {
         width: 100%;
         padding-right: 0; } }
+  @media (max-width: 767.98px) {
+    .elementor-posts--skin-list-nevado .elementor-post .elementor-post__date {
+      font-size: 14px; }
+    .elementor-posts--skin-list-nevado .elementor-post .elementor-post__title {
+      font-size: 20px; }
+    .elementor-posts--skin-list-nevado .elementor-post .elementor-post__meta li {
+      font-size: 13px; }
+    .elementor-posts--skin-list-nevado .elementor-post .elementor-post__excerpt {
+      font-size: 16px; } }
   @media (max-width: 575.98px) {
     .elementor-posts--skin-list-nevado .elementor-post.has-date .elementor-post__content {
       padding-left: 0; }
@@ -3406,14 +3418,14 @@
     padding-left: 20px; }
   .elementor-testimonials--skin-grid-nevado .elementor-testimonial__name {
     font-size: 18px;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.25;
     color: #002f6c;
     margin-bottom: 4px; }
   .elementor-testimonials--skin-grid-nevado .elementor-testimonial__job {
     font-size: 14px;
     line-height: 1.5;
-    color: #666666; }
+    color: #555555; }
   @media (max-width: 991.98px) {
     .elementor-testimonials--skin-grid-nevado .elementor-testimonial__content {
       padding: 30px 20px; }
