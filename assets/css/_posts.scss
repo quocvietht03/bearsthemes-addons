@@ -2049,6 +2049,18 @@
             }
           }
         }
+        &__meta li {
+          font-size: 14px;
+        }
+        &__title {
+          font-size: 20px;
+        }
+        &__excerpt {
+          font-size: 16px;
+        }
+        &__read-more {
+          font-size: 13px;
+        }
       }
 
       @media( max-width: $break-xs - 0.02 ) {
@@ -2066,14 +2078,12 @@
           margin-bottom: 8px;
         }
         &__title {
-          font-size: 24px;
           margin-bottom: 8px;
         }
         &__excerpt {
           margin-bottom: 24px;
         }
         &__read-more {
-          font-size: 13px;
           padding: 12px 30px;
         }
       }

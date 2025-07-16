@@ -1855,7 +1855,15 @@
     .elementor-posts--skin-list-ampato .elementor-post {
       flex-direction: column; }
       .elementor-posts--skin-list-ampato .elementor-post.has-thumbnail .elementor-post__content {
-        padding: 35px 40px; } }
+        padding: 35px 40px; }
+      .elementor-posts--skin-list-ampato .elementor-post__meta li {
+        font-size: 14px; }
+      .elementor-posts--skin-list-ampato .elementor-post__title {
+        font-size: 20px; }
+      .elementor-posts--skin-list-ampato .elementor-post__excerpt {
+        font-size: 16px; }
+      .elementor-posts--skin-list-ampato .elementor-post__read-more {
+        font-size: 13px; } }
   @media (max-width: 575.98px) {
     .elementor-posts--skin-list-ampato .elementor-post {
       flex-direction: column; }
@@ -1866,12 +1874,10 @@
       .elementor-posts--skin-list-ampato .elementor-post__meta {
         margin-bottom: 8px; }
       .elementor-posts--skin-list-ampato .elementor-post__title {
-        font-size: 24px;
         margin-bottom: 8px; }
       .elementor-posts--skin-list-ampato .elementor-post__excerpt {
         margin-bottom: 24px; }
       .elementor-posts--skin-list-ampato .elementor-post__read-more {
-        font-size: 13px;
         padding: 12px 30px; } }
 .elementor-posts--skin-list-hardeol .elementor-post {
   position: relative;
@@ -3628,7 +3634,9 @@
         text-align: center;
         padding: 0; }
         .elementor-testimonials--skin-list-ampato .elementor-testimonial__content-wrap svg {
-          display: none; } }
+          display: none; }
+      .elementor-testimonials--skin-list-ampato .elementor-testimonial__content {
+        font-size: 18px; } }
 .elementor-testimonials--skin-list-andrus .elementor-testimonial {
   overflow: hidden; }
   .elementor-testimonials--skin-list-andrus .elementor-testimonial__content {
