@@ -2869,7 +2869,7 @@ body .mfp-active {
       transition: all 1.5s cubic-bezier(0.11, 0.52, 0.53, 0.79) 0s; }
   .elementor-give-forms--skin-grid-nevado .elementor-give-form .give-card__category {
     font-size: 13px;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 20px;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -2878,7 +2878,7 @@ body .mfp-active {
     .elementor-give-forms--skin-grid-nevado .elementor-give-form .give-card__category a {
       color: inherit; }
   .elementor-give-forms--skin-grid-nevado .elementor-give-form .give-card__title {
-    font-weight: 700;
+    font-weight: 600;
     font-size: 24px;
     line-height: 1.25;
     color: #002f6c;
@@ -2915,7 +2915,7 @@ body .mfp-active {
       margin-bottom: 12px; }
       .elementor-give-forms--skin-grid-nevado .elementor-give-form .give-goal-progress .raised .income, .elementor-give-forms--skin-grid-nevado .elementor-give-form .give-goal-progress .raised .goal-text {
         font-size: 24px;
-        font-weight: 800;
+        font-weight: 600;
         line-height: 1.25;
         color: #265ed7; }
     .elementor-give-forms--skin-grid-nevado .elementor-give-form .give-goal-progress svg {

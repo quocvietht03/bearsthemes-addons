@@ -1989,8 +1989,8 @@
     position: absolute;
     top: 0;
     left: 0;
-    font-size: 17px;
-    font-weight: 500;
+    font-size: 16px;
+    font-weight: 400;
     line-height: 1.5;
     text-transform: uppercase;
     color: #999;
@@ -1998,13 +1998,13 @@
     .elementor-posts--skin-list-nevado .elementor-post__date span {
       display: block;
       font-size: 60px;
-      font-weight: 800;
+      font-weight: 700;
       line-height: 60px;
       color: #265ed7;
       margin-bottom: 5px; }
   .elementor-posts--skin-list-nevado .elementor-post__title {
     font-size: 30px;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.25;
     color: #002f6c;
     margin-bottom: 16px; }
@@ -2019,7 +2019,7 @@
       font-size: 14px;
       line-height: 1.5;
       text-transform: uppercase;
-      color: #666666; }
+      color: #555555; }
       .elementor-posts--skin-list-nevado .elementor-post__meta li:not(:last-child) {
         margin-right: 24px; }
       .elementor-posts--skin-list-nevado .elementor-post__meta li a {
@@ -2032,7 +2032,7 @@
   .elementor-posts--skin-list-nevado .elementor-post__excerpt {
     font-size: 18px;
     line-height: 1.75;
-    color: #666666; }
+    color: #555555; }
     .elementor-posts--skin-list-nevado .elementor-post__excerpt p {
       margin: 0; }
   @media (max-width: 991.98px) {
@@ -3365,8 +3365,9 @@
   .elementor-testimonials--skin-grid-nevado .elementor-testimonial__content {
     position: relative;
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 400;
     line-height: 1.75;
+    color: #555555;
     background: #f7f9ff;
     margin-bottom: 40px;
     padding: 40px 50px;
@@ -6985,7 +6986,7 @@
         height: auto; }
     .elementor-image-box--skin-nevado .elementor-image-box__title {
       font-size: 24px;
-      font-weight: 700;
+      font-weight: 600;
       line-height: 1.25;
       color: #002f6c;
       margin-bottom: 16px; }
@@ -7020,7 +7021,7 @@
     .elementor-image-box--skin-nevado .elementor-image-box__read-more {
       display: inline-block;
       font-size: 14px;
-      font-weight: 700;
+      font-weight: 600;
       line-height: 20px;
       text-transform: uppercase;
       color: #002f6c; }
