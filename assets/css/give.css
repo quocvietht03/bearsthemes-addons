@@ -2770,7 +2770,7 @@ body .mfp-active {
     top: 8px;
     left: 30px;
     font-size: 13px;
-    font-weight: 700;
+    font-weight: 400;
     line-height: 20px;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -2841,7 +2841,7 @@ body .mfp-active {
         color: #638c1c;
         margin-right: 4px; }
   @media (max-width: 575.98px) {
-    .elementor-give-forms--skin-grid-hardeol .elementor-give-form .give-card__body {
+    .elementor-give-forms--skin-grid-hardeol .elementor-give-form.has-thumbnail .give-card__body {
       padding: 24px 16px; } }
 .elementor-give-forms--skin-grid-nevado .elementor-give-form {
   overflow: hidden;

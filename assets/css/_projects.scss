@@ -93,11 +93,14 @@
         }
       }
       &__title {
-        font-size: 26px;
+        font-size: 24px;
         font-weight: 700;
         line-height: 1.25;
         color: #333333;
         margin-bottom: 0;
+        @media(max-width: $break-sm - 0.02) {
+          font-size: 20px;
+        }
         a {
           color: inherit;
           &:hover {

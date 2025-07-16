@@ -282,10 +282,13 @@
         }
       }
       &__desc {
-        font-size: 17px;
+        font-size: 18px;
         font-weight: 400;
-        line-height: 1.75;
+        line-height: 1.5;
         color: #555555;
+        @media(max-width: $break-sm - 0.02) {
+          font-size: 16px;
+        }
       }
     }
   }
@@ -423,11 +426,14 @@
       }
       &__desc {
         max-width: 260px;
-        font-size: 17px;
+        font-size: 18px;
         font-weight: 400;
         line-height: 1.75;
         color: #FFFFFF;
         margin: 0 auto 32px;
+        @media(max-width: $break-sm - 0.02) {
+          font-size: 16px;
+        }
       }
       &__read-more {
         display: inline-block;

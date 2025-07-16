@@ -1123,7 +1123,7 @@
           top: 8px;
           left: 30px;
           font-size: 13px;
-          font-weight: 700;
+          font-weight: 400;
           line-height: 20px;
           letter-spacing: 1px;
           text-transform: uppercase;
@@ -1210,9 +1210,11 @@
       }
 
       @media( max-width: $break-xs - 0.02 ) {
-        .give-card {
-          &__body {
-            padding: 24px 16px;
+        &.has-thumbnail {
+          .give-card {
+            &__body {
+              padding: 24px 16px;
+            }
           }
         }
       }
