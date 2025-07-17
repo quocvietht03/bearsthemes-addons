@@ -3084,7 +3084,7 @@ body .mfp-active {
       -webkit-transition: all 1.5s cubic-bezier(0.11, 0.52, 0.53, 0.79) 0s;
       transition: all 1.5s cubic-bezier(0.11, 0.52, 0.53, 0.79) 0s; }
   .elementor-give-forms--skin-grid-galloway .elementor-give-form .give-card__title {
-    font-weight: 700;
+    font-weight: 600;
     font-size: 22px;
     line-height: 1.25;
     color: #282828;
@@ -3122,7 +3122,7 @@ body .mfp-active {
       margin-bottom: 8px; }
       .elementor-give-forms--skin-grid-galloway .elementor-give-form .give-goal-progress .raised .income, .elementor-give-forms--skin-grid-galloway .elementor-give-form .give-goal-progress .raised .goal-text {
         font-size: 22px;
-        font-weight: 700;
+        font-weight: 7600;
         line-height: 1.25;
         color: #ffba00; }
 .elementor-give-forms--skin-grid-havsula .elementor-give-form {

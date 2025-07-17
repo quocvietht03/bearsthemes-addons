@@ -1509,7 +1509,10 @@
       .elementor-events--skin-list-galloway .elementor-event.has-date .elementor-event__content {
         width: 100%;
         margin: 20px 0 0 0;
-        padding: 0; } }
+        padding: 0; }
+    .elementor-events--skin-list-galloway .elementor-event__date {
+      width: 100px;
+      height: 100px; } }
 .elementor-events--skin-list-taboche .elementor-event {
   position: relative;
   overflow: hidden;
