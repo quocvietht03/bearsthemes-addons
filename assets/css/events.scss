@@ -1967,7 +1967,7 @@
         border-radius: 3px;
         .date {
           font-size: 24px;
-          font-weight: 700;
+          font-weight: 600;
         }
         .time {
           display: inline-block;
@@ -1979,7 +1979,7 @@
       }
       &__title {
         font-size: 20px;
-        font-weight: 700;
+        font-weight: 600;
         line-height: 1.25;
         color: #282828;
         margin-bottom: 8px;
@@ -1991,7 +1991,7 @@
         }
       }
       &__address {
-        font-size: 16px;
+        font-size: 14px;
         font-weight: 400;
         line-height: 1.5;
         color: #7A7A7A;
@@ -2004,7 +2004,7 @@
         }
       }
       &__read-more {
-        font-size: 16px;
+        font-size: 14px;
         font-weight: 400;
         line-height: 1.5;
         color: #ffba00;

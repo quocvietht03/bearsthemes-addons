@@ -1464,7 +1464,7 @@
     border-radius: 3px; }
     .elementor-events--skin-list-galloway .elementor-event__date .date {
       font-size: 24px;
-      font-weight: 700; }
+      font-weight: 600; }
     .elementor-events--skin-list-galloway .elementor-event__date .time {
       display: inline-block;
       background: #eba53a;
@@ -1473,7 +1473,7 @@
       border-radius: 20px; }
   .elementor-events--skin-list-galloway .elementor-event__title {
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.25;
     color: #282828;
     margin-bottom: 8px; }
@@ -1482,7 +1482,7 @@
       .elementor-events--skin-list-galloway .elementor-event__title a:hover {
         color: #ffba00; }
   .elementor-events--skin-list-galloway .elementor-event__address {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
     line-height: 1.5;
     color: #7A7A7A;
@@ -1493,7 +1493,7 @@
       fill: currentColor;
       margin: -3px 4px 0 1px; }
   .elementor-events--skin-list-galloway .elementor-event__read-more {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
     line-height: 1.5;
     color: #ffba00; }

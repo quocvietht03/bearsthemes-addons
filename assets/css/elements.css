@@ -3883,7 +3883,7 @@
   overflow: hidden; }
   .elementor-testimonials--skin-list-galloway .elementor-testimonial__content {
     position: relative;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 400;
     line-height: 1.75;
     font-style: italic;
@@ -3926,13 +3926,13 @@
     text-align: left;
     padding-left: 20px; }
   .elementor-testimonials--skin-list-galloway .elementor-testimonial__name {
-    font-size: 30px;
-    font-weight: 700;
+    font-size: 24px;
+    font-weight: 600;
     line-height: 1.25;
     color: #282828;
     margin-bottom: 0; }
   .elementor-testimonials--skin-list-galloway .elementor-testimonial__job {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
     line-height: 1.5;
     color: #ffba00; }
@@ -5604,10 +5604,10 @@
       fill: currentColor; }
   .elementor-projects--skin-grid-galloway .elementor-project__content {
     background: #424242;
-    padding: 30px; }
+    padding: 20px; }
   .elementor-projects--skin-grid-galloway .elementor-project__title {
-    font-size: 20px;
-    font-weight: 700;
+    font-size: 18px;
+    font-weight: 600;
     line-height: 1.25;
     color: #FFFFFF;
     margin-bottom: 0; }
@@ -7114,11 +7114,11 @@
       color: #FFFFFF;
       margin-bottom: 4px; }
     .elementor-image-box--skin-galloway .elementor-image-box__title {
-      font-size: 36px;
+      font-size: 32px;
       font-weight: 700;
       line-height: 1.25;
       color: #FFFFFF;
-      margin-bottom: 12px; }
+      margin-bottom: 8px; }
       .elementor-image-box--skin-galloway .elementor-image-box__title a {
         color: inherit; }
     .elementor-image-box--skin-galloway .elementor-image-box__desc {
@@ -7129,12 +7129,12 @@
     .elementor-image-box--skin-galloway .elementor-image-box__read-more {
       display: inline-block;
       font-size: 14px;
-      font-weight: 700;
+      font-weight: 600;
       line-height: 20px;
       text-transform: uppercase;
       color: #FFFFFF;
       background: #ffba00;
-      padding: 20px 35px;
+      padding: 16px 30px;
       border-radius: 5px; }
       .elementor-image-box--skin-galloway .elementor-image-box__read-more:hover {
         background: #eba53a; }

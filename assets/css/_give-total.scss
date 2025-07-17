@@ -762,7 +762,7 @@
       z-index: 3;
       margin-bottom: 40px;
       &__title {
-        font-size: 36px;
+        font-size: 32px;
         font-weight: 700;
         line-height: 1.25;
         color: #ffba00;
@@ -807,14 +807,14 @@
       .give-btn-modal {
         display: inline-block;
         font-size: 14px;
-        font-weight: 700;
+        font-weight: 600;
         line-height: 20px;
         text-transform: uppercase;
         color: #FFFFFF;
         background: #ffba00;
         width: auto;
         margin: 0;
-        padding: 20px 35px;
+        padding: 16px 30px;
         border-radius: 5px;
         -webkit-transition: all .3s;
         transition: all .3s;
@@ -825,7 +825,7 @@
       }
       .givewp-donation-form-modal__open {
         color: #fff !important;
-        padding: 20px 35px !important;
+        padding: 16px 30px !important;
         &:hover {
           color: #fff !important;
         }

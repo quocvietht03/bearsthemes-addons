@@ -495,11 +495,11 @@
         margin-bottom: 4px;
       }
       &__title {
-        font-size: 36px;
+        font-size: 32px;
         font-weight: 700;
         line-height: 1.25;
         color: #FFFFFF;
-        margin-bottom: 12px;
+        margin-bottom: 8px;
         a {
           color: inherit;
         }
@@ -513,12 +513,12 @@
       &__read-more {
         display: inline-block;
         font-size: 14px;
-        font-weight: 700;
+        font-weight: 600;
         line-height: 20px;
         text-transform: uppercase;
         color: #FFFFFF;
         background: #ffba00;
-        padding: 20px 35px;
+        padding: 16px 30px;
         border-radius: 5px;
         &:hover {
           background: #eba53a;
