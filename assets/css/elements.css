@@ -2096,7 +2096,7 @@
   .elementor-posts--skin-list-changla .elementor-post-feature {
     position: relative;
     background: #FFFFFF;
-    padding: 30px;
+    padding: 24px;
     border-radius: 5px;
     -webkit-transition: all .3s;
     transition: all .3s; }
@@ -2123,7 +2123,7 @@
       .elementor-posts--skin-list-changla .elementor-post-feature__meta li {
         display: inline-block;
         font-size: 14px;
-        font-weight: 700;
+        font-weight: 400;
         line-height: 1.5;
         text-transform: uppercase;
         color: #666666; }
@@ -2135,7 +2135,7 @@
           color: inherit; }
     .elementor-posts--skin-list-changla .elementor-post-feature__title {
       font-size: 32px;
-      font-weight: 700;
+      font-weight: 500;
       line-height: 1.25;
       color: #333333;
       margin-bottom: 24px; }
@@ -2145,9 +2145,9 @@
           color: #1f3ddc; }
     .elementor-posts--skin-list-changla .elementor-post-feature__author {
       font-size: 16px;
-      font-weight: 500;
+      font-weight: 400;
       line-height: 1.5;
-      color: #666666; }
+      color: #555555; }
       .elementor-posts--skin-list-changla .elementor-post-feature__author a {
         color: inherit; }
       .elementor-posts--skin-list-changla .elementor-post-feature__author img {
@@ -2161,7 +2161,7 @@
   .elementor-posts--skin-list-changla .elementor-post {
     position: relative;
     background: #FFFFFF;
-    padding: 30px; }
+    padding: 24px; }
     .elementor-posts--skin-list-changla .elementor-post__meta {
       list-style: none;
       margin: 0 0 8px;
@@ -2169,7 +2169,7 @@
       .elementor-posts--skin-list-changla .elementor-post__meta li {
         display: inline-block;
         font-size: 14px;
-        font-weight: 700;
+        font-weight: 400;
         line-height: 1.5;
         text-transform: uppercase;
         color: #666666; }
@@ -2181,7 +2181,7 @@
           color: inherit; }
     .elementor-posts--skin-list-changla .elementor-post__title {
       font-size: 22px;
-      font-weight: 700;
+      font-weight: 400;
       line-height: 1.25;
       color: #333333;
       margin-bottom: 8px; }
@@ -2191,9 +2191,9 @@
           color: #1f3ddc; }
     .elementor-posts--skin-list-changla .elementor-post__author {
       font-size: 16px;
-      font-weight: 500;
+      font-weight: 400;
       line-height: 1.5;
-      color: #666666; }
+      color: #555555; }
       .elementor-posts--skin-list-changla .elementor-post__author a {
         color: inherit; }
     @media (max-width: 991.98px) {
@@ -3845,13 +3845,13 @@
 .elementor-testimonials--skin-list-changla .elementor-testimonial {
   overflow: hidden; }
   .elementor-testimonials--skin-list-changla .elementor-testimonial__content {
-    font-size: 38px;
+    font-size: 28px;
     font-weight: 400;
     line-height: 1.75;
     color: #333;
     margin-bottom: 12px; }
   .elementor-testimonials--skin-list-changla .elementor-testimonial__name {
-    font-size: 22px;
+    font-size: 18px;
     line-height: 1.25;
     font-weight: 400;
     text-transform: none;
@@ -4738,7 +4738,7 @@
     transition: all .3s; }
   .elementor-members--skin-changla .elementor-member__title {
     font-size: 22px;
-    font-weight: 700;
+    font-weight: 500;
     line-height: 1.25;
     color: #333333;
     margin-bottom: 4px; }

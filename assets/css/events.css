@@ -809,10 +809,10 @@
       -webkit-transition: all 1.5s cubic-bezier(0.11, 0.52, 0.53, 0.79) 0s;
       transition: all 1.5s cubic-bezier(0.11, 0.52, 0.53, 0.79) 0s; }
   .elementor-events--skin-grid-changla .elementor-event__content {
-    padding: 30px; }
+    padding: 24px; }
   .elementor-events--skin-grid-changla .elementor-event__title {
     font-size: 22px;
-    font-weight: 700;
+    font-weight: 500;
     line-height: 1.25;
     color: #333333;
     margin-bottom: 8px; }
@@ -847,13 +847,13 @@
     color: #333333;
     padding: 0 16px; }
   .elementor-events--skin-grid-changla .elementor-event__date {
-    font-weight: 700;
+    font-weight: 500;
     text-transform: uppercase;
     color: #FFFFFF;
     background: #1f3ddc; }
   @media (max-width: 575.98px) {
     .elementor-events--skin-grid-changla .elementor-event__content {
-      padding: 30px 16px; } }
+      padding: 24px 16px; } }
 .elementor-events--skin-grid-havsula .elementor-event {
   position: relative;
   overflow: hidden;

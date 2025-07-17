@@ -2417,7 +2417,7 @@
     .elementor-post-feature {
       position: relative;
       background: #FFFFFF;
-      padding: 30px;
+      padding: 24px;
       border-radius: 5px;
       -webkit-transition: all .3s;
       transition: all .3s;
@@ -2446,7 +2446,7 @@
           li {
             display: inline-block;
             font-size: 14px;
-            font-weight: 700;
+            font-weight: 400;
             line-height: 1.5;
             text-transform: uppercase;
             color: #666666;
@@ -2463,7 +2463,7 @@
       }
       &__title {
         font-size: 32px;
-        font-weight: 700;
+        font-weight: 500;
         line-height: 1.25;
         color: #333333;
         margin-bottom: 24px;
@@ -2476,9 +2476,9 @@
       }
       &__author {
         font-size: 16px;
-        font-weight: 500;
+        font-weight: 400;
         line-height: 1.5;
-        color: #666666;
+        color: #555555;
         a {
           color: inherit;
         }
@@ -2499,7 +2499,7 @@
     .elementor-post {
       position: relative;
       background: #FFFFFF;
-      padding: 30px;
+      padding: 24px;
       &__meta {
           list-style: none;
           margin: 0 0 8px;
@@ -2507,7 +2507,7 @@
           li {
             display: inline-block;
             font-size: 14px;
-            font-weight: 700;
+            font-weight: 400;
             line-height: 1.5;
             text-transform: uppercase;
             color: #666666;
@@ -2524,7 +2524,7 @@
       }
       &__title {
         font-size: 22px;
-        font-weight: 700;
+        font-weight: 400;
         line-height: 1.25;
         color: #333333;
         margin-bottom: 8px;
@@ -2537,9 +2537,9 @@
       }
       &__author {
         font-size: 16px;
-        font-weight: 500;
+        font-weight: 400;
         line-height: 1.5;
-        color: #666666;
+        color: #555555;
         a {
           color: inherit;
         }

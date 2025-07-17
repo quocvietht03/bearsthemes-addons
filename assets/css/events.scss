@@ -1111,11 +1111,11 @@
         }
       }
       &__content {
-        padding: 30px;
+        padding: 24px;
       }
       &__title {
         font-size: 22px;
-        font-weight: 700;
+        font-weight: 500;
         line-height: 1.25;
         color: #333333;
         margin-bottom: 8px;
@@ -1158,7 +1158,7 @@
         padding: 0 16px;
       }
       &__date {
-        font-weight: 700;
+        font-weight: 500;
         text-transform: uppercase;
         color: #FFFFFF;
         background: #1f3ddc;
@@ -1166,7 +1166,7 @@
 
       @media( max-width: $break-xs - 0.02 ) {
         &__content {
-          padding: 30px 16px;
+          padding: 24px 16px;
         }
       }
 
