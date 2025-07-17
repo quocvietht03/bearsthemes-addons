@@ -2492,10 +2492,20 @@
 
       @media( max-width: $break-md - 0.02 ) {
         padding: 24px 16px;
+        &__thumbnail {
+          margin-bottom: 20px;
+        }
+        &__meta li {
+          font-size: 13px;
+        }
+        &__title {
+          font-size: 24px;
+        }
+        &__author {
+          font-size: 14px; 
+        }
       }
-
     }
-
     .elementor-post {
       position: relative;
       background: #FFFFFF;
@@ -2524,7 +2534,7 @@
       }
       &__title {
         font-size: 22px;
-        font-weight: 400;
+        font-weight: 500;
         line-height: 1.25;
         color: #333333;
         margin-bottom: 8px;
@@ -2545,8 +2555,17 @@
         }
       }
 
-      @media( max-width: $break-md - 0.02 ) {
-        padding: 24px 16px;
+      @media( max-width: $break-tl - 0.02 ) {
+        padding: 16px;
+        &__meta li {
+          font-size: 13px;
+        }
+        &__title {
+          font-size: 18px;
+        }
+        &__author {
+          font-size: 14px;
+        }
       }
 
     }

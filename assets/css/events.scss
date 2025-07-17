@@ -1164,6 +1164,20 @@
         background: #1f3ddc;
       }
 
+      @media( max-width: $break-tl - 0.02 ) {
+        &__title {
+          font-size: 20px;
+        }
+        &__address {
+          font-size: 13px;
+        }
+        &__date,
+        &__organizer {
+          font-size: 13px;
+          line-height: 40px;
+        }
+      }
+
       @media( max-width: $break-xs - 0.02 ) {
         &__content {
           padding: 24px 16px;

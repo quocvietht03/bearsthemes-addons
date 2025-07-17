@@ -678,6 +678,19 @@
         color: #ffe9bc;
         margin-bottom: 0;
       }
+      @media(max-width: $break-tl - 0.02) {
+        &__content {
+          font-size: 24px;
+        }
+      }
+      @media(max-width: $break-sm - 0.02) {
+        &__content {
+          font-size: 22px;
+        }
+        &__name {
+          font-size: 16px;
+        }
+      }
     }
   }
 

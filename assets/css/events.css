@@ -851,6 +851,14 @@
     text-transform: uppercase;
     color: #FFFFFF;
     background: #1f3ddc; }
+  @media (max-width: 1024.98px) {
+    .elementor-events--skin-grid-changla .elementor-event__title {
+      font-size: 20px; }
+    .elementor-events--skin-grid-changla .elementor-event__address {
+      font-size: 13px; }
+    .elementor-events--skin-grid-changla .elementor-event__date, .elementor-events--skin-grid-changla .elementor-event__organizer {
+      font-size: 13px;
+      line-height: 40px; } }
   @media (max-width: 575.98px) {
     .elementor-events--skin-grid-changla .elementor-event__content {
       padding: 24px 16px; } }

@@ -2157,7 +2157,15 @@
         margin-right: 8px; }
     @media (max-width: 991.98px) {
       .elementor-posts--skin-list-changla .elementor-post-feature {
-        padding: 24px 16px; } }
+        padding: 24px 16px; }
+        .elementor-posts--skin-list-changla .elementor-post-feature__thumbnail {
+          margin-bottom: 20px; }
+        .elementor-posts--skin-list-changla .elementor-post-feature__meta li {
+          font-size: 13px; }
+        .elementor-posts--skin-list-changla .elementor-post-feature__title {
+          font-size: 24px; }
+        .elementor-posts--skin-list-changla .elementor-post-feature__author {
+          font-size: 14px; } }
   .elementor-posts--skin-list-changla .elementor-post {
     position: relative;
     background: #FFFFFF;
@@ -2181,7 +2189,7 @@
           color: inherit; }
     .elementor-posts--skin-list-changla .elementor-post__title {
       font-size: 22px;
-      font-weight: 400;
+      font-weight: 500;
       line-height: 1.25;
       color: #333333;
       margin-bottom: 8px; }
@@ -2196,9 +2204,15 @@
       color: #555555; }
       .elementor-posts--skin-list-changla .elementor-post__author a {
         color: inherit; }
-    @media (max-width: 991.98px) {
+    @media (max-width: 1024.98px) {
       .elementor-posts--skin-list-changla .elementor-post {
-        padding: 24px 16px; } }
+        padding: 16px; }
+        .elementor-posts--skin-list-changla .elementor-post__meta li {
+          font-size: 13px; }
+        .elementor-posts--skin-list-changla .elementor-post__title {
+          font-size: 18px; }
+        .elementor-posts--skin-list-changla .elementor-post__author {
+          font-size: 14px; } }
 .elementor-posts--skin-grid-taboche .elementor-post {
   background: #FFFFFF;
   overflow: hidden;
@@ -3857,6 +3871,14 @@
     text-transform: none;
     color: #ffe9bc;
     margin-bottom: 0; }
+  @media (max-width: 1024.98px) {
+    .elementor-testimonials--skin-list-changla .elementor-testimonial__content {
+      font-size: 24px; } }
+  @media (max-width: 767.98px) {
+    .elementor-testimonials--skin-list-changla .elementor-testimonial__content {
+      font-size: 22px; }
+    .elementor-testimonials--skin-list-changla .elementor-testimonial__name {
+      font-size: 16px; } }
 .elementor-testimonials--skin-list-galloway .elementor-testimonial {
   overflow: hidden; }
   .elementor-testimonials--skin-list-galloway .elementor-testimonial__content {
