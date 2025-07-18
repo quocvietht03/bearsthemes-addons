@@ -980,8 +980,8 @@
     width: calc(100% - 50px);
     padding-left: 30px; }
   .elementor-events--skin-grid-castor .elementor-event__date {
-    font-size: 16px;
-    font-weight: 700;
+    font-size: 14px;
+    font-weight: 400;
     line-height: 1.5;
     text-transform: uppercase;
     color: #4892da;
@@ -989,10 +989,11 @@
     .elementor-events--skin-grid-castor .elementor-event__date .date {
       display: block;
       font-size: 36px;
+      font-weight: 600;
       line-height: 1; }
   .elementor-events--skin-grid-castor .elementor-event__title {
     font-size: 22px;
-    font-weight: 800;
+    font-weight: 600;
     line-height: 1.25;
     color: #333333;
     margin-bottom: 16px; }
@@ -1000,7 +1001,7 @@
       color: inherit; }
   .elementor-events--skin-grid-castor .elementor-event__organizer {
     font-size: 14px;
-    font-weight: 700;
+    font-weight: 400;
     line-height: 1.5;
     color: #4C4C4C;
     margin-bottom: 8px; }
@@ -1020,14 +1021,14 @@
       margin: -3px 4px 0 1px; }
   .elementor-events--skin-grid-castor .elementor-event__read-more {
     display: inline-block;
-    font-size: 13px;
-    font-weight: 700;
+    font-size: 14px;
+    font-weight: 600;
     line-height: 20px;
     letter-spacing: 1px;
     text-transform: uppercase;
     color: #FFFFFF;
     background: #4892da;
-    padding: 12px 30px;
+    padding: 10px 20px;
     border-radius: 15px; }
   @media (max-width: 575.98px) {
     .elementor-events--skin-grid-castor .elementor-event {

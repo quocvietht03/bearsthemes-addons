@@ -1084,7 +1084,7 @@
       transition: all 1.5s cubic-bezier(0.11, 0.52, 0.53, 0.79) 0s; }
   .elementor-posts--skin-grid-castor .elementor-post__title {
     font-size: 22px;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.25;
     color: #4892da;
     margin-bottom: 8px; }

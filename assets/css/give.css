@@ -3392,6 +3392,10 @@ body .mfp-active {
       height: 100%;
       background: #e7e6e4;
       overflow: hidden; }
+      @media (max-width: 991.98px) {
+        .elementor-give-forms--skin-cobble-castor .elementor-give-form .give-card__media {
+          min-height: unset;
+          padding-bottom: 66%; } }
       .elementor-give-forms--skin-cobble-castor .elementor-give-form .give-card__media img {
         position: absolute;
         top: 0;
@@ -3424,7 +3428,7 @@ body .mfp-active {
       transition: all .5s; }
     .elementor-give-forms--skin-cobble-castor .elementor-give-form .give-card__title {
       font-size: 20px;
-      font-weight: 700;
+      font-weight: 600;
       line-height: 1.15;
       color: #333333;
       margin-bottom: 0; }
