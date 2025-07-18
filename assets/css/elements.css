@@ -2498,13 +2498,13 @@
     font-size: 14px;
     font-weight: 400;
     line-height: 1.5;
-    color: #808080;
+    color: #999999;
     margin-bottom: 4px; }
     .elementor-posts--skin-grid-cerredo .elementor-post__date a {
       color: inherit; }
   .elementor-posts--skin-grid-cerredo .elementor-post__title {
     font-size: 24px;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.25;
     color: #1a1a1a;
     margin-bottom: 0; }
@@ -5039,8 +5039,8 @@
       .elementor-members--skin-cerredo .elementor-member__socials a svg {
         fill: currentColor; }
   .elementor-members--skin-cerredo .elementor-member__title {
-    font-size: 28px;
-    font-weight: 700;
+    font-size: 24px;
+    font-weight: 600;
     line-height: 1.25;
     color: #1a1a1a;
     margin-bottom: 4px; }
@@ -5051,7 +5051,7 @@
   .elementor-members--skin-cerredo .elementor-member__position {
     font-size: 16px;
     line-height: 1.5;
-    color: #808080; }
+    color: #999999; }
   .elementor-members--skin-cerredo .elementor-member:hover .elementor-member__overlay {
     opacity: 1; }
   .elementor-members--skin-cerredo .elementor-member:hover .elementor-member__socials a {
