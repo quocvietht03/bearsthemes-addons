@@ -1795,7 +1795,7 @@
   .elementor-events--skin-list-jorasses .elementor-event__title {
     width: 45%;
     font-size: 24px;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.25;
     overflow: hidden;
     margin-bottom: 12px;
@@ -1824,7 +1824,7 @@
     border-radius: 2px; }
     .elementor-events--skin-list-jorasses .elementor-event__date .date {
       font-size: 22px;
-      font-weight: 700; }
+      font-weight: 600; }
   .elementor-events--skin-list-jorasses .elementor-event__address {
     display: flex;
     align-items: center;
@@ -1843,7 +1843,7 @@
     display: inline-block;
     width: 150px;
     font-size: 14px;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 20px;
     text-align: center;
     text-transform: uppercase;

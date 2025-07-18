@@ -636,7 +636,7 @@ class Skin_Grid_Jorasses extends Skin_Base {
 
           if( '' !== $this->parent->get_instance_value_skin('show_excerpt') ) {
             ?>
-	            <div class="elementor-post__excerpt">
+	            <div class="elementor-project__excerpt">
 	              <?php echo wp_trim_words( get_the_excerpt(), $this->parent->filter_excerpt_length(), $this->parent->filter_excerpt_more() ); ?>
 	            </div>
             <?php

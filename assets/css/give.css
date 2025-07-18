@@ -863,7 +863,7 @@ body .mfp-active {
         fill: currentColor; }
     .elementor-give-totals--skin-jorasses .elementor-gt-header__title {
       font-size: 36px;
-      font-weight: 700;
+      font-weight: 600;
       line-height: 1.25;
       text-transform: uppercase;
       color: #FFFFFF;
@@ -896,7 +896,7 @@ body .mfp-active {
           text-align: right; }
         .elementor-give-totals--skin-jorasses .elementor-gt-header .give-goal-progress .raised .income, .elementor-give-totals--skin-jorasses .elementor-gt-header .give-goal-progress .raised .goal-text {
           font-size: 24px;
-          font-weight: 700;
+          font-weight: 600;
           line-height: 1.25;
           color: #FFFFFF;
           margin-left: 4px; }
@@ -904,7 +904,7 @@ body .mfp-active {
   .elementor-give-totals--skin-jorasses .elementor-gt-form .give-btn-modal {
     display: inline-block;
     font-size: 14px;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 20px;
     text-align: center;
     text-transform: uppercase;
