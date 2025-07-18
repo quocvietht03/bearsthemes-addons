@@ -412,6 +412,9 @@
         text-transform: uppercase;
         color: #333333;
         margin-bottom: 12px;
+        @media( max-width: $break-sm - 0.02 ) {
+          font-size: 18px;
+        }
         a {
           color: inherit;
           &:hover {

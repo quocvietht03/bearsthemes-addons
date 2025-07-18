@@ -2157,7 +2157,7 @@
     border-right: #e1e1e1 solid 1px; }
     .elementor-events--skin-list-gangri .elementor-event__date .date {
       font-size: 40px;
-      font-weight: 800;
+      font-weight: 700;
       color: #333333; }
   .elementor-events--skin-list-gangri .elementor-event__inner {
     width: calc(100% - 310px);
@@ -2201,10 +2201,14 @@
     padding: 15px; }
     .elementor-events--skin-list-gangri .elementor-event__read-more:hover {
       background: #000000; }
-  @media (max-width: 991.98px) {
+  @media (max-width: 1024.98px) {
     .elementor-events--skin-list-gangri .elementor-event__inner {
-      width: calc(100% - 160px);
+      width: calc(100% - 120px);
       padding: 0 0 0 30px; }
+    .elementor-events--skin-list-gangri .elementor-event__date {
+      width: 120px; }
+    .elementor-events--skin-list-gangri .elementor-event__title {
+      font-size: 18px; }
     .elementor-events--skin-list-gangri .elementor-event__read-more {
       display: none; } }
   @media (max-width: 767.98px) {

@@ -2911,7 +2911,7 @@
         border-right: #e1e1e1 solid 1px;
         .date {
           font-size: 40px;
-          font-weight: 800;
+          font-weight: 700;
           color: #333333;
         }
       }
@@ -2966,10 +2966,16 @@
         }
       }
 
-      @media(max-width: $break-md - 0.02) {
+      @media(max-width: $break-tl - 0.02) {
         &__inner {
-          width: calc(100% - 160px);
+          width: calc(100% - 120px);
           padding: 0 0 0 30px;
+        }
+        &__date {
+          width: 120px;
+        }
+        &__title {
+          font-size: 18px;
         }
         &__read-more {
           display: none;
