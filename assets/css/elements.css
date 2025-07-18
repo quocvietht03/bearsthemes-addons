@@ -1203,7 +1203,7 @@
       display: inline-block;
       font-size: 36px;
       line-height: 1.2;
-      font-weight: 700;
+      font-weight: 600;
       color: #333333; }
     .elementor-posts--skin-grid-gangri .elementor-post__date a {
       color: inherit; }
@@ -1212,7 +1212,7 @@
     padding-left: 30px; }
   .elementor-posts--skin-grid-gangri .elementor-post__title {
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.25;
     color: #333333;
     margin-bottom: 10px; }
