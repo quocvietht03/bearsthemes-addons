@@ -539,7 +539,7 @@ class Skin_Grid_Jorasses extends Skin_Base {
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
-					'{{WRAPPER}} .elementor-post__excerpt' => 'color: {{VALUE}};',
+					'{{WRAPPER}} .elementor-project__excerpt' => 'color: {{VALUE}};',
 				],
 				'condition' => [
 					'skin_grid_jorasses_show_excerpt!' => '',
@@ -552,7 +552,7 @@ class Skin_Grid_Jorasses extends Skin_Base {
 			[
 				'name' => 'excerpt_typography',
 				'default' => '',
-				'selector' => '{{WRAPPER}} .elementor-post__excerpt',
+				'selector' => '{{WRAPPER}} .elementor-project__excerpt',
 				'condition' => [
 					'skin_grid_jorasses_show_excerpt!' => '',
 				],

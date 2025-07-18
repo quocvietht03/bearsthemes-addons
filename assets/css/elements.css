@@ -3982,6 +3982,18 @@
       display: inline-block;
       vertical-align: middle;
       margin: 0 4px; }
+  @media (max-width: 1024.98px) {
+    .elementor-testimonials--skin-list-jorasses .elementor-testimonial__content {
+      font-size: 20px; }
+    .elementor-testimonials--skin-list-jorasses .elementor-testimonial__name {
+      font-size: 18px; } }
+  @media (max-width: 767.98px) {
+    .elementor-testimonials--skin-list-jorasses .elementor-testimonial__content {
+      font-size: 18px; }
+    .elementor-testimonials--skin-list-jorasses .elementor-testimonial__name {
+      font-size: 16px; }
+    .elementor-testimonials--skin-list-jorasses .elementor-testimonial__job {
+      font-size: 14px; } }
 .elementor-testimonials--skin-list-cholatse .elementor-testimonial {
   overflow: hidden; }
   .elementor-testimonials--skin-list-cholatse .elementor-testimonial__item {
