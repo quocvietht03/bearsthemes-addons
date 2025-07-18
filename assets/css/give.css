@@ -794,7 +794,7 @@ body .mfp-active {
   font-weight: 400; }
 .elementor-give-totals--skin-wilson .elementor-gt-header .give-goal-progress .bt-price .bt-goal {
   font-size: 40px;
-  font-weight: 800;
+  font-weight: 700;
   line-height: 55px;
   color: #fff; }
 .elementor-give-totals--skin-wilson .elementor-gt-header .give-goal-progress .bt-price .bt-collected {
@@ -828,7 +828,7 @@ body .mfp-active {
 .elementor-give-totals--skin-wilson .elementor-gt-form .give-btn-modal {
   display: inline-block;
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 20px;
   text-align: center;
   text-transform: uppercase;
@@ -3524,7 +3524,7 @@ body .mfp-active {
     -webkit-transition: all .3s;
     transition: all .3s; }
   .elementor-give-forms--skin-grid-wilson .elementor-give-form .give-card__title {
-    font-weight: 700;
+    font-weight: 600;
     font-size: 22px;
     line-height: 1.25;
     color: #333333;
@@ -4712,7 +4712,7 @@ body .mfp-active {
     transition: all .6s; }
     .elementor-donors--skin-saltoro .elementor-donor__price span {
       display: block;
-      font-size: 16px;
+      font-size: 14px;
       font-weight: 400;
       text-transform: uppercase; }
   .elementor-donors--skin-saltoro .elementor-donor__title {

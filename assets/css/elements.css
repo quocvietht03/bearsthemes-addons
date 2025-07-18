@@ -2348,12 +2348,12 @@
       text-transform: uppercase;
       text-align: center; }
       .elementor-posts--skin-grid-wilson .elementor-post__date span.date {
-        font-weight: 700; }
+        font-weight: 600; }
       .elementor-posts--skin-grid-wilson .elementor-post__date span.month {
         font-size: 13px; }
   .elementor-posts--skin-grid-wilson .elementor-post__title {
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.2;
     margin-top: 0;
     color: #333;
@@ -7266,22 +7266,23 @@
       padding: 40px 50px;
       z-index: 3; }
     .elementor-image-box--skin-wilson .elementor-image-box__title {
-      font-size: 32px;
-      font-weight: 800;
+      font-size: 28px;
+      font-weight: 700;
       line-height: 1.25;
       color: #ffffff;
       margin: 0; }
       .elementor-image-box--skin-wilson .elementor-image-box__title a {
         color: inherit; }
     .elementor-image-box--skin-wilson .elementor-image-box__sub-title {
-      font-size: 13px;
+      font-size: 14px;
+      font-weight: 500;
       line-height: 20px;
       text-transform: uppercase;
       color: #ffffff; }
     .elementor-image-box--skin-wilson .elementor-image-box__desc {
       font-size: 16px;
       line-height: 1.5;
-      color: #e7e7e7;
+      color: #ffffff;
       margin: 0;
       height: 0;
       opacity: 0;

@@ -683,8 +683,8 @@
         z-index: 3;
       }
       &__title {
-        font-size: 32px;
-        font-weight: 800;
+        font-size: 28px;
+        font-weight: 700;
         line-height: 1.25;
         color: #ffffff;
         margin: 0;
@@ -693,7 +693,8 @@
         }
       }
       &__sub-title{
-        font-size: 13px;
+        font-size: 14px;
+        font-weight: 500;
         line-height: 20px;
         text-transform: uppercase;
         color: #ffffff;
@@ -701,7 +702,7 @@
       &__desc {
         font-size: 16px;
         line-height: 1.5;
-        color: #e7e7e7;
+        color: #ffffff;
         margin: 0;
         height: 0;
         opacity: 0;
