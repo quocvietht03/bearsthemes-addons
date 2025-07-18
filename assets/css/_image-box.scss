@@ -576,8 +576,8 @@
         transform: translateY(0);
       }
       &__title {
-        font-size: 22px;
-        font-weight: 700;
+        font-size: 20px;
+        font-weight: 600;
         line-height: 1.25;
         color: #FFFFFF;
         margin-bottom: 12px;
@@ -587,7 +587,7 @@
       }
       &__desc {
         font-size: 16px;
-        line-height: 1.75;
+        line-height: 1.5;
         color: #FFFFFF;
         margin-bottom: 20px;
         opacity: 0;
@@ -598,7 +598,7 @@
         position: relative;
         display: inline-block;
         font-size: 14px;
-        font-weight: 700;
+        font-weight: 600;
         line-height: 20px;
         text-transform: uppercase;
         color: #FFFFFF;

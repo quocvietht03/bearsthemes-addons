@@ -1806,10 +1806,13 @@
         }
         &__title {
           font-size: 22px;
-          font-weight: 700;
+          font-weight: 600;
           line-height: 1.25;
           color: #367978;
           margin-bottom: 24px;
+          @media( max-width: $break-xs - 0.02 ) {
+            font-size: 20px;
+          }
           a {
             color: inherit;
           }
@@ -1854,7 +1857,7 @@
           margin: 12px 0 0 0;
           .income, .goal-text {
             font-size: 22px;
-            font-weight: 700;
+            font-weight: 600;
             line-height: 1.25;
             color: #ef2853;
           }

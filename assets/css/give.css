@@ -3297,10 +3297,13 @@ body .mfp-active {
       object-fit: cover; }
   .elementor-give-forms--skin-cobble-paradis .elementor-give-form .give-card__title {
     font-size: 22px;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.25;
     color: #367978;
     margin-bottom: 24px; }
+    @media (max-width: 575.98px) {
+      .elementor-give-forms--skin-cobble-paradis .elementor-give-form .give-card__title {
+        font-size: 20px; } }
     .elementor-give-forms--skin-cobble-paradis .elementor-give-form .give-card__title a {
       color: inherit; }
   .elementor-give-forms--skin-cobble-paradis .elementor-give-form .give-card__read-more {
@@ -3338,7 +3341,7 @@ body .mfp-active {
       margin: 12px 0 0 0; }
       .elementor-give-forms--skin-cobble-paradis .elementor-give-form .give-goal-progress .raised .income, .elementor-give-forms--skin-cobble-paradis .elementor-give-form .give-goal-progress .raised .goal-text {
         font-size: 22px;
-        font-weight: 700;
+        font-weight: 600;
         line-height: 1.25;
         color: #ef2853; }
   .elementor-give-forms--skin-cobble-paradis .elementor-give-form:hover .give-card__overlay {

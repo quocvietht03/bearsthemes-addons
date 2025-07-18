@@ -352,7 +352,7 @@
       }
       &__title {
         font-size: 24px;
-        font-weight: 700;
+        font-weight: 600;
         line-height: 1.25;
         color: #ef2853;
         margin-bottom: 20px;
@@ -400,6 +400,16 @@
             transform: scale(1);
             -webkit-transform: scale(1);
           }
+        }
+      }
+
+      @media( max-width: $break-tl - 0.02 ) {
+        &__content {
+          width: calc(100% - 40px);
+          padding: 20px;
+        }
+        &__title {
+          font-size: 20px;
         }
       }
 

@@ -1685,8 +1685,8 @@
     background: #ef2853;
     padding: 10px; }
     .elementor-events--skin-list-paradis .elementor-event__date .date {
-      font-size: 50px;
-      font-weight: 700;
+      font-size: 48px;
+      font-weight: 600;
       color: #FFFFFF; }
     .elementor-events--skin-list-paradis .elementor-event__date .month-year {
       display: block;
@@ -1697,7 +1697,7 @@
       padding: 4px 8px; }
   .elementor-events--skin-list-paradis .elementor-event__title {
     font-size: 22px;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.25;
     color: #367978;
     margin-bottom: 12px; }
